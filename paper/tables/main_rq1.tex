@@ -1,0 +1,37 @@
+\begin{table}[t]
+\centering
+\small
+\caption{RQ1: agreement, calibration and error ranking on the test split (mean over the five tasks, design-weighted). Groups: decision models, verbalized LLM confidence, token probabilities, agreement signals.}
+\label{tab:main_rq1}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llrrrrr}
+\toprule
+signal & sample & $\kappa$ (weighted) & ECE & error AUROC & AURC & conf $\geq$ 0.99 \\
+\midrule
+Jev & full & 0.475 & 0.120 & 0.756 & 0.144 & 0.220 \\
+OpenAI Decisions & full & 0.449 & 0.122 & 0.736 & 0.155 & 0.309 \\
+Clef (27B) & full & 0.377 & 0.055 & 0.721 & 0.228 & 0.000 \\
+Clef-flash (9B) & full & 0.369 & 0.065 & 0.712 & 0.234 & 0.000 \\
+pplx-decider & full & 0.482 & 0.052 & 0.764 & 0.122 & 0.084 \\
+Kev-9B & full & 0.300 & 0.100 & 0.694 & 0.281 & 0.000 \\
+Kev-27B & full & 0.474 & 0.073 & 0.788 & 0.105 & 0.003 \\
+\midrule
+Luna verbal & full & 0.483 & 0.180 & 0.741 & 0.146 & 0.226 \\
+Haiku verbal & full & 0.465 & 0.154 & 0.783 & 0.149 & 0.003 \\
+gpt-oss verbal & full & 0.452 & 0.204 & 0.727 & 0.192 & 0.043 \\
+Qwen3.5-9B verbal & full & 0.383 & 0.303 & 0.646 & 0.276 & 0.389 \\
+Sonnet verbal & full & 0.529 & 0.051 & 0.801 & 0.108 & 0.026 \\
+Qwen3.8-2.4T verbal & 270/task & 0.499 & 0.102 & 0.802 & 0.122 & 0.002 \\
+\midrule
+Luna logprob & full & 0.483 & 0.243 & 0.558 & 0.225 & 0.990 \\
+gpt-oss logprob & full & 0.452 & 0.284 & 0.558 & 0.264 & 0.998 \\
+Qwen3.5-9B logprob & full & 0.384 & 0.334 & 0.684 & 0.237 & 0.964 \\
+Qwen3.8-2.4T logprob & 270/task & 0.499 & 0.248 & 0.703 & 0.148 & 0.961 \\
+\midrule
+3-LLM agreement & full & 0.493 & 0.153 & 0.670 & 0.193 & 0.719 \\
+Luna self-consistency & 350/task & 0.506 & 0.196 & 0.624 & 0.197 & 0.851 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\raggedright Error AUROC: probability that a correct decision is more confident than an incorrect one (ties count half). AURC: area under the risk-coverage curve, lower is better. conf $\geq$ 0.99: share of decisions with confidence $\geq$ 0.99.
+\end{table}

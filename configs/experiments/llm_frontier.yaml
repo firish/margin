@@ -1,0 +1,8 @@
+# Frontier reference: Sonnet 5.5 (thinking off via between_tools, effort low) on a nested subset.
+name: llm_frontier
+sample: main
+split: all
+limit: 270
+tasks: [mfrc, annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student, dunivin]
+coders: [sonnet]
+variants: [canonical]

@@ -1,0 +1,132 @@
+# Model registry. Prices are USD per million tokens and must be checked against the provider's
+# pricing page before a paid run; `margin estimate` refuses to price a model whose price is null.
+budget:
+  cap_usd: 100.0        # global soft cap across all runs (the ledger is the cache's cost_usd column)
+  per_run_cap_usd: 40.0 # a single `margin run` aborts before starting if its estimate exceeds this
+
+models:
+  jev:
+    provider: typesafe
+    model: jev-1.13.0          # pinned; responses record the versioned id that answered
+    price_in: 0.042            # docs.typesafe.ai/models (checked 2026-10-09); output tokens are free
+    price_out: 0.0
+    concurrency: 32            # documented limit is 80 req/s
+
+  # LLM baselines. Prices checked against first-party pricing pages on 2026-10-09; limits from
+  # response headers the same day (OpenAI 5,000 RPM / 2M TPM; Anthropic 10,000 RPM / 10M ITPM / 2M OTPM).
+  luna:
+    provider: openai
+    model: gpt-6-luna          # reasoning model: run with reasoning_effort="none" (0 reasoning tokens,
+    price_in: 0.10             # and the only setting that accepts logprobs); batch is half price
+    price_out: 0.50
+    price_cache_read: 0.01
+    concurrency: 32
+    params: {reasoning_effort: none}
+  haiku:
+    provider: anthropic
+    model: claude-haiku-4-5    # claude-api skill model table (cached 2026-09-25); no logprobs on Claude
+    price_in: 1.0
+    price_out: 5.0
+    price_cache_read: 0.10
+    price_cache_write: 1.25
+    concurrency: 32            # accepts temperature (sent via extra_body; SDK 1.13 dropped the kwarg)
+  gpt_oss:
+    provider: together
+    model: openai/gpt-oss-120b # together.ai/pricing 2026-10-09; no batch discount; reasoning tokens billed as output
+    price_in: 0.15
+    price_out: 0.60
+    concurrency: 16
+    reasoning_allowance: 150   # probe: 39 reasoning tokens on a short item at effort low
+    params: {reasoning_effort: low}
+  sonnet:
+    provider: anthropic
+    model: claude-sonnet-5-5   # claude-api skill model table (cached 2026-09-25)
+    price_in: 2.0
+    price_out: 10.0
+    price_cache_read: 0.20
+    price_cache_write: 2.50
+    concurrency: 16            # rejects sampling params; thinking off via between_tools at effort low
+    params: {thinking: between_tools, effort: low}
+
+  # Adjudication panel (deviation 2): not coders, never scored.
+  opus:
+    provider: anthropic
+    model: claude-opus-5-5     # claude-api skill: $4/$20, cache reads $0.20; thinking always on
+    price_in: 4.0
+    price_out: 20.0
+    price_cache_read: 0.20
+    price_cache_write: 5.0
+    concurrency: 8
+    params: {effort: medium}
+  sol:
+    provider: openai
+    model: gpt-6-sol           # OpenAI pricing page 2026-10-09: $2/$10, cached input $0.20
+    price_in: 2.0
+    price_out: 10.0
+    price_cache_read: 0.20
+    concurrency: 8
+    params: {reasoning_effort: medium}
+
+  # Amendment v1.1 (A1): OpenAI Decisions API, public beta 2026-10-06; only gpt-6-luna is supported.
+  oaid:
+    provider: openai_decisions
+    model: gpt-6-luna          # $0.10 / 1M input; output tokens and cache operations free (beta pricing)
+    price_in: 0.10
+    price_out: 0.0
+    concurrency: 8             # 32 and 16 overran the account's 2M tokens/min on this endpoint (429s, 2026-10-10)
+
+
+  # Amendment v1.1 (A2): non-reasoning Qwen with logprobs on Together serverless. Probe 2026-10-10:
+  # Qwen3.6-Plus, 3.7-Plus, 3.7-Max and 3.8-Flash require third-party data sharing (not enabled);
+  # older Qwens and Qwen3-Next are not serverless. Thinking is disabled with reasoning.enabled=false
+  # (0 reasoning tokens; the answer JSON is the first output token).
+  qwen:
+    provider: together
+    model: Qwen/Qwen3.5-9B     # together /v1/models pricing 2026-10-10
+    price_in: 0.17
+    price_out: 0.25
+    concurrency: 16
+    params: {extra_body: {reasoning: {enabled: false}}}
+  qwen_big:
+    provider: together
+    model: Qwen/Qwen3.8-2.4T-A95B  # together /v1/models pricing 2026-10-10
+    price_in: 2.0
+    price_out: 6.0
+    concurrency: 16
+    params: {extra_body: {reasoning: {enabled: false}}}
+
+  # Amendment v1.2 (A5): other System One decision models, sent Jev's exact requests.
+  clef:
+    provider: cloudflare
+    model: "@cf/cloudflare/clef"        # Workers AI, Cloudflare docs 2026-10-11: $0.24 / 1M input, output free
+    price_in: 0.24
+    price_out: 0.0
+    concurrency: 16
+    params: {request_model: clef}
+  clef_flash:
+    provider: cloudflare
+    model: "@cf/cloudflare/clef-flash"  # $0.09 / 1M input, output free
+    price_in: 0.09
+    price_out: 0.0
+    concurrency: 16
+    params: {request_model: clef-flash}
+  pplx:
+    provider: perplexity
+    model: pplx-decider-v1.1-27b        # docs.perplexity.ai 2026-10-11: $0.02 / 1M input, output free
+    price_in: 0.02
+    price_out: 0.0
+    concurrency: 16
+  kev9b:
+    provider: kev
+    model: jaredpalmer/kev-9b           # self-hosted on Modal (H100); cost is GPU time, not tokens
+    price_in: 0.0
+    price_out: 0.0
+    concurrency: 32                     # kev_serve.py targets 32 inputs per container: one container
+    params: {url_env: KEV9B_URL, request_model: kev-latest}
+  kev27b:
+    provider: kev
+    model: jaredpalmer/kev-27b
+    price_in: 0.0
+    price_out: 0.0
+    concurrency: 32
+    params: {url_env: KEV27B_URL, request_model: kev-latest}

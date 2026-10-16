@@ -1,0 +1,43 @@
+{
+ "state": {
+  "setting": "Motivational interviewing session. Target behaviour change: reducing alcohol consumption.",
+  "previous_turn": "Therapist: What do you notice about how the drinking and your mood go together?",
+  "segment": "Honestly, when I'm low I reach for a drink, and afterwards I usually feel worse."
+ },
+ "questions": {
+  "code": {
+   "type": "choice",
+   "instructions": "In this motivational interviewing session, what type of talk is the client's utterance
+  with respect to the target behaviour change given in `setting`? Judge only the client utterance in
+  `segment`; `previous_turn` is context and is not coded.",
+   "criteria": {
+    "Change talk": {
+     "definition": "The client's own language in favor of the change goal.",
+     "applies_when": [
+      "Commitment: an agreement, intention, or obligation regarding future change.",
+      "Taking steps: concrete steps the client has recently taken to make a change.",
+      "Reason: rationale, basis, justification, or motive to make a change.",
+      "Other: other statements that clearly reflect an intention to change."
+     ]
+    },
+    "Sustain talk": {
+     "definition": "The client's language giving reasons against changing or for maintaining the status
+  quo.",
+     "applies_when": [
+      "Commitment: an agreement, intention, or obligation not to change.",
+      "Taking steps: concrete steps the client has recently taken away from change.",
+      "Reason: rationale, basis, justification, or motive not to change.",
+      "Other: other statements that clearly reflect an intention not to change."
+     ]
+    },
+    "Neutral talk": {
+     "definition": "No indication of client inclination toward or away from change.",
+     "applies_when": [
+      "Follow/neutral: responses that show no inclination toward or away from change.",
+      "Ask: asking for clarification or information."
+     ]
+    }
+   }
+  }
+ }
+}

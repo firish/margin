@@ -1,0 +1,9 @@
+# Amendment v1.4: LLM prompt sensitivity. Verbalized-distribution prompt vs the canonical prompt on the
+# first 150 test segments per task (canonical answers served from the cache).
+name: prompt_robust
+sample: main
+split: test
+limit: 150
+tasks: [mfrc, annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student]
+coders: [sonnet, haiku]
+variants: [canonical, dist_prompt]

@@ -1,0 +1,9 @@
+# LLM baselines on the full shared sample (both splits; calib is needed to fit triage thresholds).
+# luna and oss also yield the logprob signal from the same call; multi-model agreement is computed
+# afterwards from the three verbal files.
+name: llm_main
+sample: main
+split: all
+tasks: [mfrc, annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student, dunivin]
+coders: [luna, haiku, oss]
+variants: [canonical]

@@ -1,0 +1,19 @@
+reflection:
+- A reflective listening statement by the clinician that responds to what the client has said. A reflection
+  can bring in new meaning or material, yet it fundamentally gathers up something the client just said
+  and gives it back to them. Reflections can be Simple or Complex.
+- Either Simple or Complex, a reflection is a reflective listening statement from the clinician answering
+  the client's statements; although it may introduce new meaning or material, its essence is to capture
+  something the client has just said and return it to them.
+question:
+- The clinician asks the client a question, whether open, closed, evocative, fact-finding, or another
+  kind.
+- Any question put by the clinician counts (open, closed, evocative, fact-finding, etc.).
+therapist_input:
+- The clinician gives the client input, in the form of information, advice, negotiation, or options.
+- 'Input from the clinician to the client: information, advice, negotiation, or options.'
+none:
+- The utterance includes no reflection, no question, and no therapist input (for instance, a brief acknowledgement,
+  a greeting, or a closing).
+- 'Other applies when an utterance is none of the following: reflection, question, or therapist input;
+  examples are a brief acknowledgement, greeting, or closing.'

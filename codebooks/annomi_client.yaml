@@ -1,0 +1,37 @@
+name: annomi_client
+version: "1"
+dataset: annomi
+unit: client utterance
+mode: exclusive
+instructions: >-
+  In this motivational interviewing session, what type of talk is the client's utterance with
+  respect to the target behaviour change given in `setting`?
+source: >-
+  AnnoMI client talk types (Wu et al., ICASSP 2022) follow MISC. Change and sustain talk
+  definitions use MITI 4.2.1 wording (Moyers et al.: "the client's own language in favor of the
+  change goal"; "reasons against changing or for maintaining the status quo"). The MISC subcode
+  descriptions and the AnnoMI-to-MISC mapping are from Sun et al. (LREC-COLING 2024, BiMISC),
+  Tables 2-3. No examples are given for any code, so all three are described symmetrically.
+codes:
+  - id: change
+    label: Change talk
+    definition: The client's own language in favor of the change goal.
+    include:
+      - "Commitment: an agreement, intention, or obligation regarding future change."
+      - "Taking steps: concrete steps the client has recently taken to make a change."
+      - "Reason: rationale, basis, justification, or motive to make a change."
+      - "Other: other statements that clearly reflect an intention to change."
+  - id: sustain
+    label: Sustain talk
+    definition: The client's language giving reasons against changing or for maintaining the status quo.
+    include:
+      - "Commitment: an agreement, intention, or obligation not to change."
+      - "Taking steps: concrete steps the client has recently taken away from change."
+      - "Reason: rationale, basis, justification, or motive not to change."
+      - "Other: other statements that clearly reflect an intention not to change."
+  - id: neutral
+    label: Neutral talk
+    definition: No indication of client inclination toward or away from change.
+    include:
+      - "Follow/neutral: responses that show no inclination toward or away from change."
+      - "Ask: asking for clarification or information."

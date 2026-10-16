@@ -1,0 +1,7 @@
+# Amendment v1.2 (A5): yes/no-per-option format arm on the exclusive tasks (canonical served from dm_main's cache).
+name: dm_format
+sample: main
+split: all
+tasks: [annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student]
+coders: [clef, clef_flash, pplx, kev9b, kev27b]
+variants: [canonical, noul_format]

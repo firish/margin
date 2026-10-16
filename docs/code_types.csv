@@ -1,0 +1,37 @@
+task,code_id,label,def_words,n_include,n_exclude,n_examples,prevalence,inference,context_dependent,residual,rationale,implied
+mfrc,care,Care,26,0,0,0,0.265,I,False,False,"moral intuition about harm/kindness; usually carried by stance, not stated",True
+mfrc,equality,Equality,12,0,0,0,0.173,I,False,False,intuition about egalitarian treatment; inferred from the argument's framing,True
+mfrc,proportionality,Proportionality,15,0,0,0,0.19,I,False,False,intuition about reward matching merit; inferred from framing,True
+mfrc,loyalty,Loyalty,17,0,0,0,0.111,I,False,False,in-group/out-group intuition; inferred from framing,True
+mfrc,authority,Authority,18,0,0,0,0.192,I,False,False,deference to legitimate authority/tradition; inferred from framing,True
+mfrc,purity,Purity,17,0,0,0,0.098,I,False,False,"sanctity/degradation intuition; inferred, often metaphorical",True
+mfrc,thin_morality,Thin Morality,18,0,0,0,0.454,I,False,False,a moral judgment present but not in the six domains; needs both inferences,True
+mfrc,non_moral,Non-Moral,5,0,0,0,0.781,I,False,True,absence of moral sentiment; requires ruling out all implied sentiment,True
+annomi_client,change,Change talk,10,4,0,0,0.262,I,True,False,"direction relative to the change goal; reasons/steps often implicit, agreement inherits the prior turn",True
+annomi_client,sustain,Sustain talk,13,4,0,0,0.121,I,True,False,direction toward the status quo; same inference as change talk,True
+annomi_client,neutral,Neutral talk,10,2,0,0,0.655,I,True,True,no inclination either way; ruling out implied direction,True
+annomi_therapist,reflection,Reflection,42,2,0,4,0.272,M,True,False,returns content of the client's last statement; must compare with previous turn,False
+annomi_therapist,question,Question,10,0,0,0,0.289,S,False,False,grammatical/interrogative form,False
+annomi_therapist,therapist_input,Therapist input,12,4,0,0,0.134,M,False,False,information/advice/options stated explicitly,False
+annomi_therapist,none,Other,18,0,0,0,0.334,S,False,True,none of the three; mostly backchannels and closings,False
+talkmoves_teacher,keeping_together,Keeping Everyone Together,45,7,0,7,0.13,M,True,False,"turn-taking, attention, yes/no questions not about another student's idea",False
+talkmoves_teacher,relate,Getting Students to Relate,52,2,0,6,0.016,M,True,False,prompt to engage with another student's contribution,False
+talkmoves_teacher,restating,Restating,27,0,0,3,0.015,S,True,False,word-for-word repetition of a student; a string match against the previous turn,False
+talkmoves_teacher,press_accuracy,Pressing for Accuracy,65,4,0,6,0.132,M,False,False,"prompt for an answer, procedure, or term",False
+talkmoves_teacher,revoicing,Revoicing,42,0,0,4,0.023,M,True,False,repeats a student with changes; compare with previous turn,False
+talkmoves_teacher,press_reasoning,Pressing for Reasoning,38,3,0,5,0.012,M,False,False,prompt to explain/justify; distinguished from accuracy by phrasing,False
+talkmoves_teacher,none,,15,10,0,0,0.672,M,False,True,not a talk move; explicit 'not coded' list,False
+talkmoves_student,relating,Relating to Another Student,55,5,0,6,0.109,M,True,False,builds on/answers/agrees with another student,False
+talkmoves_student,asking_info,Asking for More Information,35,0,0,5,0.031,M,False,False,asks for information or states confusion,False
+talkmoves_student,claim,Making a Claim,89,6,0,6,0.302,M,False,False,states an answer or math fact without reasoning,False
+talkmoves_student,evidence,Providing Evidence or Reasoning,54,0,0,6,0.131,M,False,False,"reasoning markers: multi-step procedure, because, if/then, pattern",False
+talkmoves_student,none,,11,0,0,0,0.427,M,False,True,none of the four moves,False
+dunivin,scholar,Scholar,87,0,0,0,0.242,M,False,False,described as scholar/intellectual; explicit wording with tie-break rules,False
+dunivin,activist,Activist,62,0,0,0,0.233,M,False,False,called activist/leader or activism noted; allows 'clearly implied',False
+dunivin,monumental_memorialization,Monumental Memorialization,43,0,0,0,0.133,S,False,False,an object named after Du Bois; lexical,False
+dunivin,scholarly_work,Mention of Scholarly Work,125,0,0,0,0.217,M,False,False,his academic works or concepts mentioned or quoted,False
+dunivin,advocacy,Social/Political Advocacy,103,0,0,0,0.475,I,False,False,"'mentions or implies' activism, critique, or engagement with Black identity",True
+dunivin,coalition_building,Coalition Building,15,0,0,0,0.083,I,False,False,"reputation built through organizational sponsorship; abstract, one sentence",True
+dunivin,mouth_of_academics,Out of the Mouth of Academics,97,0,0,0,0.275,M,False,False,a member of an academic organization engages with Du Bois; speaker role must be identified,False
+dunivin,mouth_of_activists,Out of the Mouth of Activists,130,0,0,0,0.1,I,False,False,activist/political speaker whose role may be 'implied through actions or affiliations',True
+dunivin,collective_synecdoche,Collective Synecdoche,39,0,0,0,0.225,I,False,False,listed with others 'in order to represent' a culture or era; intent of the listing,True

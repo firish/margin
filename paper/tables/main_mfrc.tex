@@ -1,0 +1,28 @@
+\begin{table}[t]
+\centering
+\small
+\caption{MFRC: what the accepted decisions are (percent). 11\% of test decisions are codes that apply. The prevalence baseline reads no text: it predicts 'absent' for every code, with confidence equal to that code's share of 'absent' labels.}
+\label{tab:main_mfrc}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+coder & \makecell[br]{naive: \\{} accepted} & naive: error & \makecell[br]{naive: \\{} applying \\{} codes found} & \makecell[br]{corpus LTT: \\{} accepted} & \makecell[br]{corpus LTT: \\{} error} & \makecell[br]{corpus LTT: \\{} share \\{} 'absent'} & \makecell[br]{corpus LTT: \\{} applying \\{} codes found} & \makecell[br]{corpus LTT: \\{} applying \\{} codes \\{} deferred} \\
+\midrule
+Jev & 77.8 & 3.8 & 34.6 & 59.8 & 1.6 & 96.6 & 17.1 & 75.8 \\
+OpenAI Decisions & 72.5 & 4.4 & 12.9 & 0.0 & -- & -- & 0.0 & 100.0 \\
+Clef (27B) & 90.2 & 4.9 & 53.8 & 82.3 & 3.0 & 94.6 & 34.9 & 48.2 \\
+Clef-flash (9B) & 89.1 & 4.7 & 57.4 & 77.9 & 2.7 & 94.1 & 35.4 & 52.3 \\
+pplx-decider & 91.8 & 4.9 & 61.5 & 77.1 & 2.3 & 93.9 & 38.0 & 51.7 \\
+Kev-9B & 87.1 & 4.7 & 39.0 & 67.1 & 2.4 & 99.5 & 2.2 & 83.9 \\
+Kev-27B & 94.0 & 4.9 & 54.8 & 76.6 & 2.1 & 96.7 & 21.1 & 66.6 \\
+Luna verbal & 79.5 & 3.9 & 45.0 & 64.0 & 2.2 & 93.9 & 30.4 & 62.6 \\
+Haiku verbal & 74.9 & 3.4 & 30.2 & 65.8 & 1.7 & 96.1 & 21.3 & 70.7 \\
+gpt-oss verbal & 83.0 & 4.4 & 39.1 & 0.0 & -- & -- & 0.0 & 100.0 \\
+Sonnet verbal & 89.9 & 4.5 & 52.8 & 82.7 & 2.5 & 94.6 & 35.8 & 50.4 \\
+\midrule
+prevalence baseline & 75.0 & 3.6 & 0.0 & 0.0 & -- & -- & 0.0 & 100.0 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\raggedright Accepted: share of test decisions; error: among them; share 'absent': accepted decisions that say a code does not apply; applying codes found: applying codes accepted with the right label, over all applying codes; deferred: applying codes left for a person. The baseline's naive scores are fitted on all calibration comments; for corpus LTT they are fitted on half and certified on the other half. Design-weighted.
+\end{table}

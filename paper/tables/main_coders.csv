@@ -1,0 +1,15 @@
+model,kind,confidence signals,sample,USD / 1k segments
+Jev,decision model,probability,full,0.04730499620000002
+OpenAI Decisions,decision model,probability,full,0.10167514333329333
+Clef,decision model,probability,full,0.21302196
+Clef-flash,decision model,probability,full,0.07988323499998003
+pplx-decider,decision model,probability,full,0.019087581333333343
+Kev-9B,open decision model,probability,full,0.073
+Kev-27B,open decision model,probability,full,0.315
+Luna,LLM,"verbalized; token prob.; self-consistency (350/task, $0.28)",full,0.1065713213333
+Haiku,LLM,verbalized,full,1.9063251666666
+gpt-oss,LLM,verbalized; token prob.,full,0.23246258999997998
+Qwen3.5-9B,LLM,verbalized; token prob.,full,0.17587230233331336
+Sonnet,LLM (frontier),verbalized,full,1.9640497333333002
+Qwen3.8-2.4T,LLM (frontier),verbalized; token prob.,270/task,2.48081037037032
+3-LLM agreement,ensemble,vote share,full,2.24535907799994

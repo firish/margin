@@ -1,0 +1,10 @@
+task,unit,units_in_corpus,mean_unit_share_of_bound,calib_units,frozen split certifies a perfect coder (grid of 16),fewest possible (grid of 16),"procedure, median of 20 sequences (grid of 16)",frozen split certifies a perfect coder (one threshold),fewest possible (one threshold),"procedure, median of 20 sequences (one threshold)"
+mfrc,comment,2000,1.0,608.0,True,119.0,123.0,True,62.0,64.0
+annomi_client,transcript or lesson,128,0.12263968058792761,51.0,False,,,False,,
+annomi_client,utterance or sentence,1500,0.8540434244571943,,,119.0,146.5,,62.0,75.0
+annomi_therapist,transcript or lesson,132,0.1338309825440407,51.0,False,,,False,,
+annomi_therapist,utterance or sentence,1500,0.8670568678915136,,,119.0,145.0,,62.0,75.0
+talkmoves_teacher,transcript or lesson,444,0.2688778820566289,116.0,False,388.0,,False,114.0,
+talkmoves_teacher,utterance or sentence,1500,0.7837642000798689,,,119.0,163.0,,62.0,81.5
+talkmoves_student,transcript or lesson,436,0.07869207186971204,115.0,False,,,False,,
+talkmoves_student,utterance or sentence,1500,0.9001786097897806,,,119.0,139.0,,62.0,70.5

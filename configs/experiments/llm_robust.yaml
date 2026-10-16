@@ -1,0 +1,9 @@
+# RQ3 for one LLM: Luna under order and label perturbations on test-split segments (canonical is
+# included so the comparison is on identical items; it is served from llm_main's cache).
+name: llm_robust
+sample: main
+split: test
+limit: 85
+tasks: [mfrc, annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student, dunivin]
+coders: [luna]
+variants: [canonical, reversed, shuffle1, neutral_labels]

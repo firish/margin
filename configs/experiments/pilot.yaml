@@ -1,0 +1,8 @@
+# Build step 3: Jev only, calib split, 200 segments per task. Sanity-check before any LLM spend.
+name: pilot
+sample: main
+split: calib
+limit: 200
+tasks: [mfrc, annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student]
+coders: [jev]
+variants: [canonical]

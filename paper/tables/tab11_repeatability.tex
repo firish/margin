@@ -1,0 +1,44 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Run-to-run repeatability (identical requests sent twice; 100 test segments per task; mean over tasks)}
+\label{tab:tab11_repeatability}
+\par\textit{A. How much the outputs change}\par\smallskip
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrr}
+\toprule
+signal & segments & decisions & \makecell[br]{label flip \\{} rate} & \makecell[br]{share \\{} identical} & mean |$\Delta$p| & \makecell[br]{mean |$\Delta$ \\{} confidence|} \\
+\midrule
+Jev & 100 & 240 & 0.021 & 0.612 & 0.008 & 0.013 \\
+OpenAI Decisions & 100 & 240 & 0.000 & 1.000 & 0.000 & 0.000 \\
+Luna verbal & 100 & 240 & 0.066 & 0.567 & 0.030 & 0.020 \\
+Luna logprob & 100 & 240 & 0.066 & 0.455 & 0.031 & 0.003 \\
+Haiku verbal & 100 & 240 & 0.000 & 0.989 & 0.001 & 0.001 \\
+Sonnet verbal & 100 & 240 & 0.033 & 0.514 & 0.016 & 0.023 \\
+Clef (27B) & 100 & 240 & 0.000 & 1.000 & 0.000 & 0.000 \\
+Clef-flash (9B) & 100 & 240 & 0.000 & 1.000 & 0.000 & 0.000 \\
+pplx-decider & 100 & 240 & 0.000 & 1.000 & 0.000 & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\medskip
+\par\textit{B. Accuracy in each run, and where the changes fall}\par\smallskip
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrr}
+\toprule
+signal & \makecell[br]{accuracy, \\{} run 1} & \makecell[br]{accuracy, \\{} run 2} & \makecell[br]{flips at low \\{} confidence \\{} (AUROC)} \\
+\midrule
+Jev & 0.743 & 0.741 & 0.967 \\
+OpenAI Decisions & 0.723 & 0.723 & -- \\
+Luna verbal & 0.742 & 0.742 & 0.874 \\
+Luna logprob & 0.742 & 0.742 & 0.647 \\
+Haiku verbal & 0.702 & 0.703 & 0.895 \\
+Sonnet verbal & 0.764 & 0.765 & 0.921 \\
+Clef (27B) & 0.693 & 0.693 & -- \\
+Clef-flash (9B) & 0.685 & 0.685 & -- \\
+pplx-decider & 0.759 & 0.759 & -- \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\raggedright Flips at low confidence: AUROC of low confidence for the decisions whose label changed (-- : no changes).
+\end{table}

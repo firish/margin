@@ -1,0 +1,8 @@
+# Amendment v1.1 (A1), oaid mirror of robustness. Plan section 8: RQ3 arms for Jev on the full test split of the five confirmatory tasks.
+# isolated runs only where the codebook is multi-label; no_context only where segments have context.
+name: oaid_robustness
+sample: main
+split: test
+tasks: [mfrc, annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student]
+coders: [oaid]
+variants: [canonical, reversed, shuffle1, shuffle2, shuffle3, isolated, neutral_labels, no_context, paraphrase0, paraphrase1]

@@ -1,0 +1,8 @@
+# Amendment v1.1 A4, run 2026-10-11 (author's decision): Sonnet 5.5 on the full shared sample, same
+# prompt and settings as llm_frontier (whose nested subset is reused from the cache).
+name: sonnet_main
+sample: main
+split: all
+tasks: [mfrc, annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student, dunivin]
+coders: [sonnet]
+variants: [canonical]

@@ -1,0 +1,31 @@
+model,task,items,accuracy guided,accuracy general,difference,p (Bonferroni),evidence of label leakage
+Haiku,AnnoMI client,100,0.51,0.62,-0.11,1.0,False
+Haiku,AnnoMI therapist,100,0.58,0.56,0.02,1.0,False
+Haiku,MFRC,100,0.3141666666666667,0.1736666666666666,0.1404999999999999,0.0143159496153478,True
+Haiku,TalkMoves student,100,0.44,0.47,-0.03,1.0,False
+Haiku,TalkMoves teacher,100,0.16,0.28,-0.12,1.0,False
+Luna,AnnoMI client,100,0.58,0.71,-0.13,1.0,False
+Luna,AnnoMI therapist,100,0.53,0.56,-0.03,1.0,False
+Luna,MFRC,100,0.4083333333333332,0.2204285714285714,0.1879047619047619,0.0145670175670527,True
+Luna,TalkMoves student,100,0.53,0.52,0.01,1.0,False
+Luna,TalkMoves teacher,100,0.52,0.47,0.05,1.0,False
+gpt-oss-120b,AnnoMI client,100,0.56,0.51,0.05,1.0,False
+gpt-oss-120b,AnnoMI therapist,100,0.68,0.44,0.24,0.0040730885143602,True
+gpt-oss-120b,MFRC,100,0.26,0.2225,0.0375,1.0,False
+gpt-oss-120b,TalkMoves student,100,0.51,0.41,0.1,0.6208419799804688,False
+gpt-oss-120b,TalkMoves teacher,100,0.2,0.27,-0.07,1.0,False
+Qwen3.5-9B,AnnoMI client,100,0.72,0.64,0.08,1.0,False
+Qwen3.5-9B,AnnoMI therapist,100,0.57,0.56,0.01,1.0,False
+Qwen3.5-9B,MFRC,100,0.1743333333333333,0.1697619047619047,0.0045714285714285,1.0,False
+Qwen3.5-9B,TalkMoves student,100,0.42,0.4,0.02,1.0,False
+Qwen3.5-9B,TalkMoves teacher,100,0.36,0.3,0.06,1.0,False
+Qwen3.8-2.4T,AnnoMI client,100,0.72,0.62,0.1,0.9587198495864868,False
+Qwen3.8-2.4T,AnnoMI therapist,100,0.73,0.7,0.03,1.0,False
+Qwen3.8-2.4T,MFRC,100,0.1854166666666666,0.1595,0.0259166666666666,1.0,False
+Qwen3.8-2.4T,TalkMoves student,100,0.49,0.45,0.04,1.0,False
+Qwen3.8-2.4T,TalkMoves teacher,100,0.28,0.21,0.07,1.0,False
+Sonnet,AnnoMI client,100,0.72,0.74,-0.02,1.0,False
+Sonnet,AnnoMI therapist,100,0.73,0.77,-0.04,1.0,False
+Sonnet,MFRC,100,0.5733333333333333,0.5183333333333333,0.055,1.0,False
+Sonnet,TalkMoves student,100,0.59,0.56,0.03,1.0,False
+Sonnet,TalkMoves teacher,100,0.63,0.5,0.13,0.287359356880188,False

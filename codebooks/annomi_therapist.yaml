@@ -1,0 +1,52 @@
+name: annomi_therapist
+version: "1"
+dataset: annomi
+unit: therapist utterance
+mode: exclusive
+instructions: >-
+  In this motivational interviewing session, what is the main behaviour in the therapist's
+  utterance? If it contains more than one behaviour, choose the main one.
+source: >-
+  AnnoMI therapist behaviours (Wu et al., ICASSP 2022; AnnoMI README for the input subtypes).
+  Reflection, question, and information wording from MITI 4.2.1 (Moyers et al.) sections E.4.a,
+  E.4.d, E.4.e. "Other" in AnnoMI is used exactly when none of reflection, question, or input is
+  present (verified on AnnoMI-full: 2,143 of 2,143 'other' rows have all three flags false).
+codes:
+  - id: reflection
+    label: Reflection
+    definition: >-
+      A reflective listening statement made by the clinician in response to client statements.
+      Reflections may introduce new meaning or material, but they essentially capture and return to
+      clients something about what they have just said. Reflections may be either Simple or Complex.
+    include:
+      - >-
+        Simple reflections typically convey understanding or facilitate client-clinician exchanges.
+        These reflections add little or no meaning (or emphasis) to what clients have said.
+      - >-
+        Complex reflections typically add substantial meaning or emphasis to what the client has
+        said, conveying a deeper or more complex picture of what the client has said.
+    examples_pos:
+      - You're furious about this.
+      - This is the last straw for you.
+      - You are pretty discouraged about this.
+      - You don't know why you're sabotaging yourself.
+  - id: question
+    label: Question
+    definition: A question from the clinician (open, closed, evocative, fact-finding, etc.).
+  - id: therapist_input
+    label: Therapist input
+    definition: >-
+      The clinician provides input to the client: information, advice, negotiation, or options.
+    include:
+      - >-
+        Information: the clinician gives information, educates, provides feedback, or expresses a
+        professional opinion without persuading, advising, or warning.
+      - "Advice: the clinician advises the client on what to do."
+      - "Negotiation: the clinician negotiates goals or a plan with the client."
+      - "Options: the clinician offers the client options to choose from."
+none_option:
+  id: none
+  label: Other
+  definition: >-
+    The utterance contains none of reflection, question, or therapist input (for example, a brief
+    acknowledgement, greeting, or closing).

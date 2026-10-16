@@ -1,0 +1,65 @@
+{
+  "config": {
+    "experiment": "pilot",
+    "coders": [
+      "jev"
+    ],
+    "n_per_task": 40,
+    "hi_conf": 0.9,
+    "control_share": 0.1,
+    "seed": 0,
+    "variant": "canonical"
+  },
+  "counts": {
+    "mfrc": {
+      "units": 1598,
+      "disagreements": 202,
+      "high_conf_disagreements": 7,
+      "selected": {
+        "other_disagreement": 29,
+        "high_conf_disagreement": 7,
+        "control": 4
+      }
+    },
+    "annomi_client": {
+      "units": 197,
+      "disagreements": 40,
+      "high_conf_disagreements": 10,
+      "selected": {
+        "other_disagreement": 26,
+        "high_conf_disagreement": 10,
+        "control": 4
+      }
+    },
+    "annomi_therapist": {
+      "units": 200,
+      "disagreements": 37,
+      "high_conf_disagreements": 13,
+      "selected": {
+        "other_disagreement": 23,
+        "high_conf_disagreement": 13,
+        "control": 4
+      }
+    },
+    "talkmoves_teacher": {
+      "units": 200,
+      "disagreements": 67,
+      "high_conf_disagreements": 9,
+      "selected": {
+        "other_disagreement": 27,
+        "high_conf_disagreement": 9,
+        "control": 4
+      }
+    },
+    "talkmoves_student": {
+      "units": 200,
+      "disagreements": 72,
+      "high_conf_disagreements": 19,
+      "selected": {
+        "high_conf_disagreement": 19,
+        "other_disagreement": 17,
+        "control": 4
+      }
+    }
+  }
+}

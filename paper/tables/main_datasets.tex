@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Tasks, codebooks and samples. Calib and test are segments; clusters are conversations or transcripts (comments for MFRC). Dunivin is the replication task.}
+\label{tab:main_datasets}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lllrrrrlr}
+\toprule
+task & unit & codebook & codes & calib & test & clusters & annot./item & human $\alpha$ \\
+\midrule
+MFRC & Reddit comment & multi-label & 8 & 608 & 1392 & 2000 & 3 & 0.17 \\
+AnnoMI client & client utterance & exclusive & 3 & 569 & 931 & 128 & 1 (10 on a subset) & 0.47 \\
+AnnoMI therapist & therapist utterance & exclusive & 4 & 602 & 898 & 132 & 1 (10 on a subset) & 0.74 \\
+TalkMoves teacher & teacher sentence & exclusive & 7 & 370 & 1130 & 444 & 1 & -- \\
+TalkMoves student & student sentence & exclusive & 5 & 383 & 1117 & 436 & 1 & -- \\
+Dunivin & historical passage & multi-label & 9 & 34 & 86 & 120 & 1 & -- \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\raggedright Multi-label: one yes/no decision per code; exclusive: one choice among the codes (counts include any 'none' or 'other' option). Dialogue units include the previous turn as context. $\alpha$: Krippendorff's alpha on multiply-coded items (macro over codes for multi-label); -- where items are single-coded. RQ2 uses MFRC and AnnoMI's ten-annotator subset.
+\end{table}

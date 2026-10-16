@@ -1,0 +1,34 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+.claude/
+.env
+
+# Data: raw and processed dataset text, and the response cache (which contains dataset text), are not
+# redistributed. Model outputs, samples and adjudication verdicts contain ids, labels and probabilities only.
+data/*
+!data/.gitkeep
+!data/runs/
+!data/samples/
+!data/adjudication/
+!data/ledger.csv.gz
+data/adjudication/**/to_adjudicator/
+data/adjudication/**/to_author/
+*.xlsx
+results/cache/
+
+# LLM-panel input/answer files quote item text (AnnoMI has no stated licence); the verdicts are in verdicts_*.parquet.
+data/adjudication/**/panel/*.csv
+# Operational run logs: not needed to reproduce anything.
+data/runs/*.log
+data/runs/*.txt
+# External review drafts of the paper (the changes they led to are in docs/ANALYSIS_PLAN.md, deviations 16-18).
+docs/PAPER_REVIEW_*.md
+# LaTeX build artefacts
+paper/*.log
+paper/*.blg
+paper/*.aux
+paper/*.bbl
+paper/*.out

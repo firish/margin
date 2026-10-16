@@ -1,0 +1,7 @@
+# Plan section 6: pre-registered secondary arm, exclusive tasks asked as one Noul per option.
+name: jev_format
+sample: main
+split: all
+tasks: [annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student]
+coders: [jev]
+variants: [canonical, noul_format]

@@ -1,0 +1,20 @@
+signal,model,kind,settings,sample,USD / 1k segments,with batch API
+Jev,TypeSafe jev-1.13.0,decision model,Choice (exclusive) / Noul per code (multi),full,0.04730499620000002,
+OpenAI Decisions,"OpenAI Decisions API, gpt-6-luna",decision model,Jev's requests mapped to choice / predicate,full,0.10167514333329333,
+Luna verbal,OpenAI gpt-6-luna,LLM,reasoning effort none; verbal 0–100,full,0.1065713213333,0.05328566066665
+Luna logprob,OpenAI gpt-6-luna,LLM,"answer-token logprobs, same call",full,0.1065713213333,0.05328566066665
+Luna self-consistency,OpenAI gpt-6-luna,LLM,"5 samples at T = 1, vote share",350/task,0.28316870857138,0.14158435428569
+Haiku verbal,Anthropic claude-haiku-4-5,LLM,T = 0; verbal,full,1.9063251666666,0.9531625833333
+gpt-oss verbal,openai/gpt-oss-120b (Together),LLM,reasoning low; verbal,full,0.23246258999997998,
+gpt-oss logprob,openai/gpt-oss-120b (Together),LLM,answer-token logprobs,full,0.23246258999997998,
+Qwen3.5-9B verbal,Qwen/Qwen3.5-9B (Together),LLM,thinking off; verbal,full,0.17587230233331336,
+Qwen3.5-9B logprob,Qwen/Qwen3.5-9B (Together),LLM,thinking off; logprobs,full,0.17587230233331336,
+3-LLM agreement,Luna + Haiku + gpt-oss,ensemble,vote share of three verbal runs,full,2.24535907799994,
+Sonnet verbal,Anthropic claude-sonnet-5-5,LLM (frontier),"thinking off, effort low; verbal",full,1.9640497333333002,0.9820248666666501
+Qwen3.8-2.4T verbal,Qwen/Qwen3.8-2.4T-A95B (Together),LLM (frontier),thinking off; verbal,270/task,2.48081037037032,
+Qwen3.8-2.4T logprob,Qwen/Qwen3.8-2.4T-A95B (Together),LLM (frontier),thinking off; logprobs,270/task,2.48081037037032,
+Clef (27B),Cloudflare @cf/cloudflare/clef (27B),decision model,Jev's exact requests,full,0.21302196,
+Clef-flash (9B),Cloudflare @cf/cloudflare/clef-flash (9B),decision model,Jev's exact requests,full,0.07988323499998003,
+pplx-decider,Perplexity pplx-decider-v1.1-27b,decision model,Jev's exact requests,full,0.019087581333333343,
+Kev-9B,"jaredpalmer/kev-9b (Modal, H100, bf16)",decision model (open),Jev's exact requests,full,0.073,
+Kev-27B,"jaredpalmer/kev-27b (Modal, B200, bf16)",decision model (open),Jev's exact requests,full,0.315,

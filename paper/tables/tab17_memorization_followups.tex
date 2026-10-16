@@ -1,0 +1,32 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Flagged label-probe cells: decoy-name control and coding accuracy on 'recalled' items}
+\label{tab:tab17_memorization_followups}
+\par\textit{A. Label recall with the real name, a decoy name and no name}\par\smallskip
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llrrrrrrr}
+\toprule
+model & task & items & real name & decoy name & no name & real -- decoy & \makecell[br]{p (real > \\{} decoy)} & \makecell[br]{p \\{} (Bonferroni, \\{} 3 cells)} \\
+\midrule
+Haiku & MFRC & 100 & 0.314 & 0.246 & 0.174 & 0.068 & 0.021 & 0.063 \\
+Luna & MFRC & 100 & 0.408 & 0.280 & 0.220 & 0.128 & 0.012 & 0.035 \\
+gpt-oss-120b & AnnoMI therapist & 100 & 0.680 & 0.650 & 0.440 & 0.030 & 0.304 & 0.911 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\medskip
+\par\textit{B. Coding accuracy on 'recalled' and other items}\par\smallskip
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llrrrrr}
+\toprule
+model & task & \makecell[br]{recalled \\{} items} & other items & \makecell[br]{coding \\{} accuracy, \\{} recalled} & \makecell[br]{coding \\{} accuracy, \\{} other} & \makecell[br]{p (recalled \\{} > other)} \\
+\midrule
+Haiku & MFRC & 22 & 78 & 0.841 & 0.782 & 0.085 \\
+Luna & MFRC & 35 & 65 & 0.868 & 0.883 & 0.779 \\
+gpt-oss-120b & AnnoMI therapist & 33 & 67 & 0.970 & 0.672 & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\raggedright Decoy: the same dataset description with a fictitious name (deviation 14). Memory is supported only if the real name beats the decoy. Recalled items: guided better than no name. Coding accuracy is the model's RQ1 accuracy on those items.
+\end{table}

@@ -1,0 +1,8 @@
+# Self-consistency: Luna, 5 samples at temperature 1 in one call (n=5), on a nested subset.
+name: llm_sc
+sample: main
+split: all
+limit: 350
+tasks: [mfrc, annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student, dunivin]
+coders: [luna_sc]
+variants: [canonical]

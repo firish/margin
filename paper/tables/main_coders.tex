@@ -1,0 +1,29 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Models and confidence signals, with realized API cost per 1,000 segments (October 2026 prices).}
+\label{tab:main_coders}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llllr}
+\toprule
+model & kind & \makecell[bl]{confidence \\{} signals} & sample & \makecell[br]{USD / 1k \\{} segments} \\
+\midrule
+Jev & decision model & probability & full & 0.047 \\
+OpenAI Decisions & decision model & probability & full & 0.102 \\
+Clef & decision model & probability & full & 0.213 \\
+Clef-flash & decision model & probability & full & 0.080 \\
+pplx-decider & decision model & probability & full & 0.019 \\
+Kev-9B & open decision model & probability & full & 0.073 \\
+Kev-27B & open decision model & probability & full & 0.315 \\
+Luna & LLM & verbalized; token prob.; self-consistency (350/task, \$0.28) & full & 0.107 \\
+Haiku & LLM & verbalized & full & 1.906 \\
+gpt-oss & LLM & verbalized; token prob. & full & 0.232 \\
+Qwen3.5-9B & LLM & verbalized; token prob. & full & 0.176 \\
+Sonnet & LLM (frontier) & verbalized & full & 1.964 \\
+Qwen3.8-2.4T & LLM (frontier) & verbalized; token prob. & 270/task & 2.481 \\
+3-LLM agreement & ensemble & vote share & full & 2.245 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\raggedright Kev: estimated serving cost from observed throughput on Modal (Kev-9B 30 calls/s on 2 H100s at \$3.95/h; Kev-27B 11 calls/s on 2 B200s at \$6.25/h), excluding cold starts and idle time. Model identifiers, settings, versions returned and call dates are in Table~\ref{tab:tab18_model_snapshot} (appendix).
+\end{table}

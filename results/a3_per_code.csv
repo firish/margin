@@ -1,0 +1,361 @@
+task,signal,status,method,error_auroc,empirical_coverage,empirical_risk,ltt_coverage,ltt_risk,oracle_coverage,codes_with_own_threshold
+mfrc,jev,exploratory,task threshold,0.8706151565906207,0.7784571120302105,0.0377685377685377,0.5984535155547563,0.0160757211538461,0.8155008092069772,
+mfrc,jev,exploratory,per-code thresholds,,0.7558892285560153,0.034732960628048,,,,8.0
+mfrc,jev,exploratory,per-code calibrated ranking,0.8893536322869877,0.7998561409818379,0.0402428057553956,0.0,,0.8381586045675237,
+mfrc,oaid,exploratory; coder listed in an amendment,task threshold,0.8138095316383959,0.724509980219385,0.0439314966492926,0.0,,0.7495054846250676,
+mfrc,oaid,exploratory; coder listed in an amendment,per-code thresholds,,0.7688365401906132,0.0366039059759092,,,,8.0
+mfrc,oaid,exploratory; coder listed in an amendment,per-code calibrated ranking,0.866234505203059,0.7769286099622371,0.0403888438838097,0.0,,0.802283761913325,
+mfrc,luna-verbal,exploratory,task threshold,0.8831260846379103,0.795360546664269,0.0392267691612028,0.6401726308217947,0.022191011235955,0.7957201942096747,
+mfrc,luna-verbal,exploratory,per-code thresholds,,0.6428699874123359,0.0311888111888111,,,,8.0
+mfrc,luna-verbal,exploratory,per-code calibrated ranking,0.9054352787519422,0.8343823053407661,0.0439655172413793,0.0,,0.8503866211113109,
+mfrc,haiku-verbal,exploratory,task threshold,0.94446751499974,0.7493256608523647,0.0339572834173266,0.6580650962057184,0.0169422052192922,0.7759395792123719,
+mfrc,haiku-verbal,exploratory,per-code thresholds,,0.7216327998561409,0.0388736606030401,,,,8.0
+mfrc,haiku-verbal,exploratory,per-code calibrated ranking,0.9581531661028502,0.7652400647365584,0.0412407472682411,0.0,,0.7673979500089914,
+mfrc,oss-verbal,exploratory,task threshold,0.894841807056147,0.8297068872504945,0.0436714347637624,0.0,,0.8297068872504945,
+mfrc,oss-verbal,exploratory,per-code thresholds,,0.711832404243841,0.0366300366300366,,,,8.0
+mfrc,oss-verbal,exploratory,per-code calibrated ranking,0.9300718136021512,0.8404963136126596,0.0459991442019683,0.0,,0.842024815680633,
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,task threshold,0.7767985175960962,0.0,,0.0,,0.0,
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,per-code thresholds,,0.5765700917761383,0.0259051186017478,,,,8.0
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,per-code calibrated ranking,0.911136305788461,0.6630376102213427,0.0412539014791694,0.0,,0.6873312938635955,
+mfrc,luna-logprob,exploratory,task threshold,0.6777319694011558,0.0,,0.0,,0.5918899478511059,
+mfrc,luna-logprob,exploratory,per-code thresholds,,0.6229095486423305,0.0215069284064665,,,,8.0
+mfrc,luna-logprob,exploratory,per-code calibrated ranking,0.8122472944309849,0.7319726667865492,0.0533104041272571,0.0,,0.7073368099262722,
+mfrc,oss-logprob,exploratory,task threshold,0.5348244679786983,0.0,,0.0,,8.991188635137566e-05,
+mfrc,oss-logprob,exploratory,per-code thresholds,,0.3372594857040101,0.0359904025593175,,,,8.0
+mfrc,oss-logprob,exploratory,per-code calibrated ranking,0.8064959593514203,0.3319546844092789,0.0387323943661971,0.0,,0.5427081460169034,
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,task threshold,0.7875905414265725,0.379611301061724,0.0431381844038871,0.0,,0.3949973007018176,
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,per-code thresholds,,0.4901925499370165,0.0398311306901615,,,,8.0
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,per-code calibrated ranking,0.8717926842532047,0.5704516825625339,0.0433753943217665,0.0,,0.5951052726291165,
+mfrc,agree3,exploratory,task threshold,0.7057976178222474,0.0,,0.0,,0.0,
+mfrc,agree3,exploratory,per-code thresholds,,0.5960258946232693,0.0285110876451953,,,,8.0
+mfrc,agree3,exploratory,per-code calibrated ranking,0.8485716434809437,0.6573458011149075,0.0363835316646149,0.0,,0.6573458011149075,
+mfrc,sonnet-verbal,exploratory,task threshold,0.934506374021886,0.8993885991728106,0.0446865940217934,0.8271893544326561,0.0254347826086956,0.8993885991728106,
+mfrc,sonnet-verbal,exploratory,per-code thresholds,,0.8140622190253551,0.0388778440468301,,,,8.0
+mfrc,sonnet-verbal,exploratory,per-code calibrated ranking,0.9390932549728992,0.8990289516274051,0.0453045304530453,0.6888149613378889,0.0091371883566114,0.9087394353533536,
+mfrc,clef,exploratory; coder listed in an amendment,task threshold,0.8762009624188064,0.9024456033087572,0.0489189997011059,0.8226937601150873,0.0304918032786885,0.9064017263082178,
+mfrc,clef,exploratory; coder listed in an amendment,per-code thresholds,,0.8490379428160402,0.0378057820607857,,,,8.0
+mfrc,clef,exploratory; coder listed in an amendment,per-code calibrated ranking,0.8837892311497411,0.90784031648984,0.0492225413489155,0.7540010789426366,0.0203911280705938,0.9108074087394352,
+mfrc,clef_flash,exploratory; coder listed in an amendment,task threshold,0.8735131858263302,0.8905772343103757,0.0468450277637556,0.7790864952346701,0.0268897864974033,0.9040640172630822,
+mfrc,clef_flash,exploratory; coder listed in an amendment,per-code thresholds,,0.8386081639992807,0.0364533076015867,,,,8.0
+mfrc,clef_flash,exploratory; coder listed in an amendment,per-code calibrated ranking,0.8854298477391672,0.8908469699694298,0.0443076301978199,0.6552778277288258,0.0116630076838638,0.9113468800575436,
+mfrc,pplx,exploratory; coder listed in an amendment,task threshold,0.8780213023102997,0.9181801834202482,0.0490599294947121,0.7714439848948033,0.0228438228438228,0.9217766588743032,
+mfrc,pplx,exploratory; coder listed in an amendment,per-code thresholds,,0.8466103218845532,0.0327102803738317,,,,8.0
+mfrc,pplx,exploratory; coder listed in an amendment,per-code calibrated ranking,0.8957440668340887,0.9224959539651142,0.0455165692007797,0.7201042977881676,0.0149831439630415,0.9376011508721456,
+mfrc,kev9b,exploratory; coder listed in an amendment,task threshold,0.8391448940896714,0.8707966193130732,0.0474961280330407,0.670652760294911,0.0237297224829065,0.8849127854702391,
+mfrc,kev9b,exploratory; coder listed in an amendment,per-code thresholds,,0.8021039381406223,0.0380002241901132,,,,8.0
+mfrc,kev9b,exploratory; coder listed in an amendment,per-code calibrated ranking,0.8541821826405896,0.8694479410178027,0.0477766287487073,0.0,,0.8848228735838877,
+mfrc,kev27b,exploratory; coder listed in an amendment,task threshold,0.8632693216103399,0.940118683689984,0.0487758224942616,0.7657795360546666,0.020781965480803,0.9468620751663372,
+mfrc,kev27b,exploratory; coder listed in an amendment,per-code thresholds,,0.8357309836360368,0.0319526627218934,,,,8.0
+mfrc,kev27b,exploratory; coder listed in an amendment,per-code calibrated ranking,0.8717449384898286,0.9393094767128216,0.0469034172489709,0.0,,0.9489300485524188,
+mfrc,dm_committee,exploratory,task threshold,0.8829688423131863,0.9344542348498476,0.0470508996439911,0.8445423484984714,0.0290641967422548,0.9442546304621472,
+mfrc,dm_committee,exploratory,per-code thresholds,,0.8551519510879338,0.0349069498475449,,,,8.0
+mfrc,dm_committee,exploratory,per-code calibrated ranking,0.8835667998734758,0.9310375831684948,0.0453887011105746,0.0,,0.9433555115986336,
+mfrc,luna_sc-vote,exploratory,task threshold,0.6471399541134075,0.0,,0.0,,0.0,
+mfrc,luna_sc-vote,exploratory,per-code thresholds,,0.4942708333333334,0.0252897787144362,,,,8.0
+mfrc,luna_sc-vote,exploratory,per-code calibrated ranking,0.7920865290068888,0.7291666666666667,0.0414285714285714,0.0,,0.7291666666666667,
+mfrc,qwen_big-verbal,exploratory,task threshold,0.948217933006539,0.8237704918032787,0.0398009950248756,0.0,,0.8237704918032787,
+mfrc,qwen_big-verbal,exploratory,per-code thresholds,,0.6816939890710382,0.0340681362725451,,,,8.0
+mfrc,qwen_big-verbal,exploratory,per-code calibrated ranking,0.9569648692810488,0.8060109289617486,0.0381355932203389,0.0,,0.8265027322404372,
+mfrc,qwen_big-logprob,exploratory,task threshold,0.7671228213507714,0.5013661202185792,0.0517711171662125,0.0,,0.4474043715846995,
+mfrc,qwen_big-logprob,exploratory,per-code thresholds,,0.546448087431694,0.0575,,,,8.0
+mfrc,qwen_big-logprob,exploratory,per-code calibrated ranking,0.8104132625272414,0.4754098360655738,0.035919540229885,0.0,,0.6024590163934427,
+annomi_client,jev,exploratory,task threshold,0.6848543135932523,0.3015929491590718,0.1227424147384844,0.0,,0.0,
+annomi_client,jev,exploratory,per-code thresholds,,0.3047759624639957,0.1166113974689804,,,,3.0
+annomi_client,jev,exploratory,per-code calibrated ranking,0.7039956602644661,0.3015929491590718,0.1227424147384844,0.0,,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,task threshold,0.6889478436309637,0.0,,0.0,,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,per-code thresholds,,0.0420132438948641,0.2544570955340121,,,,3.0
+annomi_client,oaid,exploratory; coder listed in an amendment,per-code calibrated ranking,0.6600747521033689,0.009014189212482,0.5399693163132109,0.0,,0.0,
+annomi_client,luna-verbal,exploratory,task threshold,0.6873235665434719,0.1286513691113843,0.0690681125338592,0.0,,0.0073010783792727,
+annomi_client,luna-verbal,exploratory,per-code thresholds,,0.0315500307613224,0.1511688919000387,,,,3.0
+annomi_client,luna-verbal,exploratory,per-code calibrated ranking,0.6891856266683315,0.0073010783792727,0.0,0.0,,0.0165754466329497,
+annomi_client,haiku-verbal,exploratory,task threshold,0.7165126853005378,0.0076246946332308,0.0,0.0,,0.0076246946332308,
+annomi_client,haiku-verbal,exploratory,per-code thresholds,,0.0120325478129909,0.1011295708488013,,,,3.0
+annomi_client,haiku-verbal,exploratory,per-code calibrated ranking,0.7345194258188984,0.0076246946332308,0.0,0.0,,0.1158628725938957,
+annomi_client,oss-verbal,exploratory,task threshold,0.62849131881826,0.0369211839150363,0.1238686821897256,0.0,,0.0,
+annomi_client,oss-verbal,exploratory,per-code thresholds,,0.0347485406754053,0.0965949054162814,,,,3.0
+annomi_client,oss-verbal,exploratory,per-code calibrated ranking,0.6544966457919322,0.0347485406754053,0.0965949054162814,0.0,,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,task threshold,0.5849920401934914,0.1692238316286911,0.1136993295712513,0.0,,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,per-code thresholds,,0.1359732593953538,0.0877427132550606,,,,3.0
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,per-code calibrated ranking,0.7202342629135832,0.1359732593953538,0.0877427132550606,0.0,,0.0,
+annomi_client,luna-logprob,exploratory,task threshold,0.5050928931135921,0.0,,0.0,,0.0,
+annomi_client,luna-logprob,exploratory,per-code thresholds,,0.0,,,,,3.0
+annomi_client,luna-logprob,exploratory,per-code calibrated ranking,0.5150243617656873,0.0,,0.0,,0.0,
+annomi_client,oss-logprob,exploratory,task threshold,0.6277430451687862,0.0602401741242566,0.2970865894730261,0.0,,0.0,
+annomi_client,oss-logprob,exploratory,per-code thresholds,,0.0613590181242214,0.29166939802728,,,,3.0
+annomi_client,oss-logprob,exploratory,per-code calibrated ranking,0.6413106108606803,0.0,,0.0,,0.0,
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,task threshold,0.7230705510804404,0.0442051818183485,0.1989796154442852,0.0,,0.0060916445784816,
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,per-code thresholds,,0.0870984298509021,0.2238791532272999,,,,3.0
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,per-code calibrated ranking,0.7268196608292693,0.0036549867470889,0.0,0.0,,0.0060916445784816,
+annomi_client,agree3,exploratory,task threshold,0.6276350006937462,0.0,,0.0,,0.0,
+annomi_client,agree3,exploratory,per-code thresholds,,0.0,,,,,3.0
+annomi_client,agree3,exploratory,per-code calibrated ranking,0.6519966997463023,0.0,,0.0,,0.0,
+annomi_client,sonnet-verbal,exploratory,task threshold,0.690939162565429,0.3971075374596137,0.1360827111173222,0.0,,0.0174870772663914,
+annomi_client,sonnet-verbal,exploratory,per-code thresholds,,0.3781042246654393,0.1307394391418033,,,,3.0
+annomi_client,sonnet-verbal,exploratory,per-code calibrated ranking,0.7008002709580796,0.3920049369902281,0.1378540554043453,0.0,,0.0152493892664617,
+annomi_client,clef,exploratory; coder listed in an amendment,task threshold,0.7188372230403346,0.0447690143458441,0.1412120641498692,0.0,,0.0100583874263217,
+annomi_client,clef,exploratory; coder listed in an amendment,per-code thresholds,,0.0557434748833719,0.1870984628032286,,,,3.0
+annomi_client,clef,exploratory; coder listed in an amendment,per-code calibrated ranking,0.7304912781497456,0.0,,0.0,,0.0100583874263217,
+annomi_client,clef_flash,exploratory; coder listed in an amendment,task threshold,0.6926305742660973,0.1824716159133285,0.1122133858941834,0.0,,0.0224524652491538,
+annomi_client,clef_flash,exploratory; coder listed in an amendment,per-code thresholds,,0.1813527719133637,0.1129056789989363,,,,2.0
+annomi_client,clef_flash,exploratory; coder listed in an amendment,per-code calibrated ranking,0.6966354206943953,0.002757309047049,0.0,0.0,,0.0224524652491538,
+annomi_client,pplx,exploratory; coder listed in an amendment,task threshold,0.720830804172929,0.3372889819858959,0.125178496863612,0.0,,0.0580384165937705,
+annomi_client,pplx,exploratory; coder listed in an amendment,per-code thresholds,,0.3459699539185935,0.1277508804435713,,,,3.0
+annomi_client,pplx,exploratory; coder listed in an amendment,per-code calibrated ranking,0.7173242522404475,0.3082923265256984,0.1221176984892423,0.0,,0.0712106869573812,
+annomi_client,kev9b,exploratory; coder listed in an amendment,task threshold,0.5816184503743285,0.0420116363473285,0.1737870507806826,0.0,,0.0123081545118784,
+annomi_client,kev9b,exploratory; coder listed in an amendment,per-code thresholds,,0.0484194845840139,0.17591936074905,,,,3.0
+annomi_client,kev9b,exploratory; coder listed in an amendment,per-code calibrated ranking,0.7619532638888039,0.0102840012836992,0.0,0.0,,0.0247527199495817,
+annomi_client,kev27b,exploratory; coder listed in an amendment,task threshold,0.7135027540464723,0.3970449707591156,0.1381449306927509,0.0,,0.0373782382616574,
+annomi_client,kev27b,exploratory; coder listed in an amendment,per-code thresholds,,0.3906638277049513,0.1427636377339476,,,,3.0
+annomi_client,kev27b,exploratory; coder listed in an amendment,per-code calibrated ranking,0.7187059643536453,0.2149111713747446,0.0955334311118209,0.0,,0.0373782382616574,
+annomi_client,dm_committee,exploratory,task threshold,0.7087195698460502,0.3447109746818345,0.1238878836512416,0.0,,0.0491784750731398,
+annomi_client,dm_committee,exploratory,per-code thresholds,,0.4116742585220769,0.1357955909310067,,,,3.0
+annomi_client,dm_committee,exploratory,per-code calibrated ranking,0.7106527944493019,0.3124795720506731,0.1254111165428788,0.0,,0.0512531159161902,
+annomi_client,luna_sc-vote,exploratory,task threshold,0.6123775395289187,0.0,,0.0,,0.0,
+annomi_client,luna_sc-vote,exploratory,per-code thresholds,,0.0,,,,,1.0
+annomi_client,luna_sc-vote,exploratory,per-code calibrated ranking,0.5982320452750657,0.0,,0.0,,0.0,
+annomi_client,qwen_big-verbal,exploratory,task threshold,0.7219246162606399,0.0829617252511559,0.0797964020252073,0.0,,0.2530186960008962,
+annomi_client,qwen_big-verbal,exploratory,per-code thresholds,,0.0829617252511559,0.0797964020252073,,,,1.0
+annomi_client,qwen_big-verbal,exploratory,per-code calibrated ranking,0.689867458079673,0.0,,0.0,,0.0,
+annomi_client,qwen_big-logprob,exploratory,task threshold,0.6464671621266542,0.0475677443296297,0.1279623784947961,0.0,,0.0,
+annomi_client,qwen_big-logprob,exploratory,per-code thresholds,,0.0409476971487837,0.148650159297971,,,,1.0
+annomi_client,qwen_big-logprob,exploratory,per-code calibrated ranking,0.6581873928632357,0.0,,0.0,,0.0,
+annomi_therapist,jev,exploratory,task threshold,0.7723657391704741,0.5662785560998637,0.0797548131058636,0.0,,0.0,
+annomi_therapist,jev,exploratory,per-code thresholds,,0.5615630611722244,0.0919832909831604,,,,4.0
+annomi_therapist,jev,exploratory,per-code calibrated ranking,0.7727122043243446,0.3660956987801324,0.034603094342976,0.0,,0.4729067413948091,
+annomi_therapist,oaid,exploratory; coder listed in an amendment,task threshold,0.8023270103521964,0.4083307778788453,0.0534921155891327,0.0,,0.1311525961309832,
+annomi_therapist,oaid,exploratory; coder listed in an amendment,per-code thresholds,,0.4553545308789279,0.0788545042579675,,,,4.0
+annomi_therapist,oaid,exploratory; coder listed in an amendment,per-code calibrated ranking,0.8053716538967255,0.3325294384553248,0.0306733057594726,0.0,,0.4408763452930579,
+annomi_therapist,luna-verbal,exploratory,task threshold,0.73823088065981,0.0742661184927822,0.0731299267809416,0.0,,0.0,
+annomi_therapist,luna-verbal,exploratory,per-code thresholds,,0.3831729994483157,0.0721545961770326,,,,4.0
+annomi_therapist,luna-verbal,exploratory,per-code calibrated ranking,0.7642766051014276,0.3225534767144503,0.0423104921465306,0.0,,0.3225534767144503,
+annomi_therapist,haiku-verbal,exploratory,task threshold,0.7865351747500909,0.0473140450143694,0.0,0.0,,0.0473140450143694,
+annomi_therapist,haiku-verbal,exploratory,per-code thresholds,,0.3373393725463625,0.0550300181149316,,,,4.0
+annomi_therapist,haiku-verbal,exploratory,per-code calibrated ranking,0.8144943234186595,0.3792314785848757,0.047195891955373,0.0,,0.3792314785848757,
+annomi_therapist,oss-verbal,exploratory,task threshold,0.7481264461021699,0.2018287861089921,0.0807723360123375,0.0,,0.1513913045916439,
+annomi_therapist,oss-verbal,exploratory,per-code thresholds,,0.2126420339963999,0.0766649106113879,,,,4.0
+annomi_therapist,oss-verbal,exploratory,per-code calibrated ranking,0.777429895309656,0.3986533259008985,0.0759688724383154,0.0,,0.077167581623746,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,task threshold,0.6694298224307683,0.0,,0.0,,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,per-code thresholds,,0.0,,,,,4.0
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,per-code calibrated ranking,0.7186688964118928,0.0,,0.0,,0.0,
+annomi_therapist,luna-logprob,exploratory,task threshold,0.5286542773207143,0.0,,0.0,,0.0,
+annomi_therapist,luna-logprob,exploratory,per-code thresholds,,0.0,,,,,4.0
+annomi_therapist,luna-logprob,exploratory,per-code calibrated ranking,0.6357271170878451,0.0,,0.0,,0.0,
+annomi_therapist,oss-logprob,exploratory,task threshold,0.5364238175873948,0.0,,0.0,,0.0,
+annomi_therapist,oss-logprob,exploratory,per-code thresholds,,0.0033530831508841,0.3721308806771936,,,,4.0
+annomi_therapist,oss-logprob,exploratory,per-code calibrated ranking,0.618883920787424,0.0,,0.0,,0.0024955715718447,
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,task threshold,0.670588812765993,0.0238712067880937,0.102977521882037,0.0,,0.0079877172133801,
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,per-code thresholds,,0.0508402366027017,0.0963638291688815,,,,4.0
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,per-code calibrated ranking,0.7001173454735558,0.0,,0.0,,0.0579896805566948,
+annomi_therapist,agree3,exploratory,task threshold,0.6885147920199489,0.0,,0.0,,0.0,
+annomi_therapist,agree3,exploratory,per-code thresholds,,0.0,,,,,4.0
+annomi_therapist,agree3,exploratory,per-code calibrated ranking,0.7436236050680608,0.0,,0.0,,0.0,
+annomi_therapist,sonnet-verbal,exploratory,task threshold,0.8150976720033525,0.6063726828955025,0.0580936312257023,0.0,,0.5723999308910271,
+annomi_therapist,sonnet-verbal,exploratory,per-code thresholds,,0.5626198043933619,0.0576833022447293,,,,4.0
+annomi_therapist,sonnet-verbal,exploratory,per-code calibrated ranking,0.8282038928675287,0.5706355810440595,0.0565789041253676,0.0,,0.5556527791019101,
+annomi_therapist,clef,exploratory; coder listed in an amendment,task threshold,0.7665245371142034,0.2390434174718948,0.0747945057841105,0.0,,0.0790480418736358,
+annomi_therapist,clef,exploratory; coder listed in an amendment,per-code thresholds,,0.4091576978574135,0.0773579990255128,,,,4.0
+annomi_therapist,clef,exploratory; coder listed in an amendment,per-code calibrated ranking,0.8461752679907506,0.4044050857539489,0.0485273609196846,0.0,,0.4236638159546576,
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,task threshold,0.6891199418939319,0.1769130354436836,0.1465254043115606,0.0,,0.0847349840465527,
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,per-code thresholds,,0.504608200110558,0.1128633785508415,,,,4.0
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,per-code calibrated ranking,0.7637547391160359,0.4687476031767532,0.1092719575602333,0.0,,0.0586426441044574,
+annomi_therapist,pplx,exploratory; coder listed in an amendment,task threshold,0.7987781975159796,0.6301466013246618,0.0878628351690229,0.0,,0.5042446515357621,
+annomi_therapist,pplx,exploratory; coder listed in an amendment,per-code thresholds,,0.6178361655170499,0.0809452501341772,,,,4.0
+annomi_therapist,pplx,exploratory; coder listed in an amendment,per-code calibrated ranking,0.8254902732716474,0.6412646169983721,0.084867212440623,0.0,,0.4961912194980434,
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,task threshold,0.8110572637335004,0.2708730483686108,0.0738601156222978,0.0,,0.0593743688722517,
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,per-code thresholds,,0.3575160353122819,0.1111979914593696,,,,3.0
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,per-code calibrated ranking,0.8429674252403734,0.3862336154715939,0.0924919128183197,0.0,,0.1859429816894314,
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,task threshold,0.815106704233665,0.5050695078378467,0.059334933772677,0.0,,0.4706957448969132,
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,per-code thresholds,,0.6004778473264419,0.0709219647979976,,,,4.0
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,per-code calibrated ranking,0.8696625527297972,0.5741448214749256,0.0607086525389837,0.0,,0.5360294027183038,
+annomi_therapist,dm_committee,exploratory,task threshold,0.7747733401863144,0.5489039159203007,0.0829485307750472,0.0,,0.4666375286224752,
+annomi_therapist,dm_committee,exploratory,per-code thresholds,,0.5826137715759689,0.0817787796354707,,,,4.0
+annomi_therapist,dm_committee,exploratory,per-code calibrated ranking,0.8233576679211053,0.5837929814780191,0.0691955100454339,0.0,,0.5303217605529741,
+annomi_therapist,luna_sc-vote,exploratory,task threshold,0.6288630432474945,0.0,,0.0,,0.0,
+annomi_therapist,luna_sc-vote,exploratory,per-code thresholds,,0.0,,,,,0.0
+annomi_therapist,luna_sc-vote,exploratory,per-code calibrated ranking,0.6288630432474945,0.0,,0.0,,0.0,
+annomi_therapist,qwen_big-verbal,exploratory,task threshold,0.7771470773021771,0.3070687169702779,0.0413540526304891,0.0,,0.3070687169702779,
+annomi_therapist,qwen_big-verbal,exploratory,per-code thresholds,,0.3070687169702779,0.0413540526304891,,,,0.0
+annomi_therapist,qwen_big-verbal,exploratory,per-code calibrated ranking,0.7771470773021771,0.3070687169702779,0.0413540526304891,0.0,,0.3070687169702779,
+annomi_therapist,qwen_big-logprob,exploratory,task threshold,0.7038940323845514,0.2450384882528045,0.1074260489250883,0.0,,0.0859671021740686,
+annomi_therapist,qwen_big-logprob,exploratory,per-code thresholds,,0.2450384882528045,0.1074260489250883,,,,0.0
+annomi_therapist,qwen_big-logprob,exploratory,per-code calibrated ranking,0.7038940323845514,0.1249891546844097,0.1554988070204743,0.0,,0.0859671021740686,
+talkmoves_teacher,jev,exploratory,task threshold,0.7369086462009898,0.0,,0.0,,0.0,
+talkmoves_teacher,jev,exploratory,per-code thresholds,,0.4207099134639264,0.0261628573525798,,,,2.0
+talkmoves_teacher,jev,exploratory,per-code calibrated ranking,0.8429899664219261,0.364750966939897,0.0271463089780623,0.0,,0.4959863561398516,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,task threshold,0.7132119167462424,0.0,,0.0,,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,per-code thresholds,,0.3936800166301124,0.0623389088701421,,,,3.0
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,per-code calibrated ranking,0.8035165554037367,0.2180892867460361,0.0712248047524765,0.0,,0.0,
+talkmoves_teacher,luna-verbal,exploratory,task threshold,0.6886299411196543,0.0093653994010501,0.0385396463694137,0.0,,0.0093653994010501,
+talkmoves_teacher,luna-verbal,exploratory,per-code thresholds,,0.4406647185953298,0.034502360995898,,,,2.0
+talkmoves_teacher,luna-verbal,exploratory,per-code calibrated ranking,0.8288680591933839,0.3998305784661005,0.0316103612022309,0.0,,0.529340108504654,
+talkmoves_teacher,haiku-verbal,exploratory,task threshold,0.7515124333231838,0.0,,0.0,,0.0022022781695182,
+talkmoves_teacher,haiku-verbal,exploratory,per-code thresholds,,0.2682620915567049,0.022392979990603,,,,2.0
+talkmoves_teacher,haiku-verbal,exploratory,per-code calibrated ranking,0.7965148858023974,0.2684760497314191,0.0223751342232432,0.0,,0.2912489021318196,
+talkmoves_teacher,oss-verbal,exploratory,task threshold,0.7384336345139574,0.020260035495057,0.0,0.0,,0.0471694176228998,
+talkmoves_teacher,oss-verbal,exploratory,per-code thresholds,,0.0218259749929154,0.0129291108262151,,,,3.0
+talkmoves_teacher,oss-verbal,exploratory,per-code calibrated ranking,0.8276369728499746,0.0258878231325728,0.0,0.0,,0.0292644957150823,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,task threshold,0.5652550462255979,0.0,,0.0,,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,per-code thresholds,,0.0,,,,,2.0
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,per-code calibrated ranking,0.8060590631821982,0.0,,0.0,,0.0,
+talkmoves_teacher,luna-logprob,exploratory,task threshold,0.5222669828483805,0.0,,0.0,,0.0,
+talkmoves_teacher,luna-logprob,exploratory,per-code thresholds,,0.0,,,,,2.0
+talkmoves_teacher,luna-logprob,exploratory,per-code calibrated ranking,0.7919781248335166,0.0,,0.0,,0.5223499450523142,
+talkmoves_teacher,oss-logprob,exploratory,task threshold,0.5562690417654694,0.0,,0.0,,0.0,
+talkmoves_teacher,oss-logprob,exploratory,per-code thresholds,,0.0522975179811745,0.074545493725757,,,,3.0
+talkmoves_teacher,oss-logprob,exploratory,per-code calibrated ranking,0.8108213570504245,0.0285312715756947,0.0532009557159646,0.0,,0.0886021638507812,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,task threshold,0.6356361494293128,0.0187958575852048,0.48109937754638,0.0,,0.0,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,per-code thresholds,,0.2449038761446923,0.1099310953338587,,,,2.0
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,per-code calibrated ranking,0.8201347104474371,0.0,,0.0,,0.0318790924087676,
+talkmoves_teacher,agree3,exploratory,task threshold,0.7070283028652937,0.0,,0.0,,0.0,
+talkmoves_teacher,agree3,exploratory,per-code thresholds,,0.4905643496321911,0.0340518640742679,,,,2.0
+talkmoves_teacher,agree3,exploratory,per-code calibrated ranking,0.8133753551909287,0.4905643496321911,0.0340518640742679,0.0,,0.4905643496321911,
+talkmoves_teacher,sonnet-verbal,exploratory,task threshold,0.80551798310116,0.2660886099116927,0.0219866050368897,0.0,,0.4285401938004585,
+talkmoves_teacher,sonnet-verbal,exploratory,per-code thresholds,,0.5721296661765988,0.04360663444698,,,,2.0
+talkmoves_teacher,sonnet-verbal,exploratory,per-code calibrated ranking,0.8444773994151102,0.5665423549947973,0.0476595905355838,0.0,,0.5665423549947973,
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,task threshold,0.6108211527214952,0.0025553295506669,0.3374073034925284,0.0,,0.001410952247868,
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,per-code thresholds,,0.3071154588659378,0.0367963909167072,,,,4.0
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,per-code calibrated ranking,0.9469936148499708,0.2563808746683985,0.0382700204432302,0.0,,0.329422877424081,
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,task threshold,0.6177980267736481,0.0017862518269413,0.482679340181095,0.0,,0.0006418745241423,
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,per-code thresholds,,0.3001774358687318,0.0860315154977758,,,,5.0
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,per-code calibrated ranking,0.9011939174873804,0.2819795009314373,0.0546623520722533,0.0,,0.2748174842032058,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,task threshold,0.7051291370966961,0.0,,0.0,,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,per-code thresholds,,0.5467315435936171,0.0488795025644557,,,,2.0
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,per-code calibrated ranking,0.8463285809611465,0.5320580506328727,0.0374848122753656,0.0,,0.5803413707722836,
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,task threshold,0.578501767196045,0.0099705829139406,0.5116673665992729,0.0,,0.0020002100016554,
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,per-code thresholds,,0.1664053538837869,0.1189157606773515,,,,2.0
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,per-code calibrated ranking,0.8306195970837015,0.0628447706102478,0.086583762733935,0.0,,0.0177461253798484,
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,task threshold,0.7878578785496114,0.12741864813035,0.060063198606585,0.0,,0.233310218978483,
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,per-code thresholds,,0.5702019845154519,0.0652623924680199,,,,2.0
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,per-code calibrated ranking,0.849889877464742,0.406395287404266,0.0352336407006108,0.0,,0.5045093577705754,
+talkmoves_teacher,dm_committee,exploratory,task threshold,0.7254343353651173,0.0076130748066214,0.1132508053743822,0.0,,0.0002139581747141,
+talkmoves_teacher,dm_committee,exploratory,per-code thresholds,,0.580680631573813,0.0492580864420046,,,,3.0
+talkmoves_teacher,dm_committee,exploratory,per-code calibrated ranking,0.8485690033550968,0.5618843113656371,0.0417790014446081,0.0,,0.5761717779629613,
+talkmoves_teacher,luna_sc-vote,exploratory,task threshold,0.6191759990127976,0.0,,0.0,,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,per-code thresholds,,0.0,,,,,0.0
+talkmoves_teacher,luna_sc-vote,exploratory,per-code calibrated ranking,0.6191759990127976,0.0,,0.0,,0.0,
+talkmoves_teacher,qwen_big-verbal,exploratory,task threshold,0.8103333476792383,0.400209109480067,0.0163635801897438,0.0,,0.400209109480067,
+talkmoves_teacher,qwen_big-verbal,exploratory,per-code thresholds,,0.400209109480067,0.0163635801897438,,,,0.0
+talkmoves_teacher,qwen_big-verbal,exploratory,per-code calibrated ranking,0.8103333476792383,0.400209109480067,0.0163635801897438,0.0,,0.400209109480067,
+talkmoves_teacher,qwen_big-logprob,exploratory,task threshold,0.7551301592715807,0.0589396847007874,0.0,0.0,,0.4432112706097089,
+talkmoves_teacher,qwen_big-logprob,exploratory,per-code thresholds,,0.0589396847007874,0.0,,,,0.0
+talkmoves_teacher,qwen_big-logprob,exploratory,per-code calibrated ranking,0.7551301592715807,0.0,,0.0,,0.4432112706097089,
+talkmoves_student,jev,exploratory,task threshold,0.7174521777183096,0.0,,0.0,,0.0,
+talkmoves_student,jev,exploratory,per-code thresholds,,0.1718866610205084,0.1082950092278565,,,,4.0
+talkmoves_student,jev,exploratory,per-code calibrated ranking,0.7752096446768595,0.0534154141427714,0.0366228288076889,0.0,,0.0840448937736632,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,task threshold,0.6635529530050971,0.0,,0.0,,0.00868291230789,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,per-code thresholds,,0.0019905360671,0.0,,,,2.0
+talkmoves_student,oaid,exploratory; coder listed in an amendment,per-code calibrated ranking,0.7181801075613524,0.0,,0.0,,0.0315397645802829,
+talkmoves_student,luna-verbal,exploratory,task threshold,0.7061463080396422,0.0,,0.0,,0.0,
+talkmoves_student,luna-verbal,exploratory,per-code thresholds,,0.08626155201192,0.0423630823007195,,,,2.0
+talkmoves_student,luna-verbal,exploratory,per-code calibrated ranking,0.7257851948372354,0.0,,0.0,,0.0,
+talkmoves_student,haiku-verbal,exploratory,task threshold,0.7141739688596708,0.0,,0.0,,0.0057477787921413,
+talkmoves_student,haiku-verbal,exploratory,per-code thresholds,,0.1417304561831324,0.0730617542156952,,,,2.0
+talkmoves_student,haiku-verbal,exploratory,per-code calibrated ranking,0.7547824831406107,0.1425018948075237,0.0726662320421557,0.0,,0.0626602029256945,
+talkmoves_student,oss-verbal,exploratory,task threshold,0.6261993412380454,0.0174879237124965,0.2595422776340316,0.0,,0.0,
+talkmoves_student,oss-verbal,exploratory,per-code thresholds,,0.162235509394679,0.1520755976072779,,,,3.0
+talkmoves_student,oss-verbal,exploratory,per-code calibrated ranking,0.7456469323176373,0.0345658814762777,0.2801658810342655,0.0,,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,task threshold,0.634744593027707,0.0,,0.0,,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,per-code thresholds,,0.0803212692090198,0.1078415577681885,,,,2.0
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,per-code calibrated ranking,0.6659881536471347,0.0803212692090198,0.1078415577681885,0.0,,0.0,
+talkmoves_student,luna-logprob,exploratory,task threshold,0.5586862982462603,0.0,,0.0,,0.0,
+talkmoves_student,luna-logprob,exploratory,per-code thresholds,,0.0,,,,,2.0
+talkmoves_student,luna-logprob,exploratory,per-code calibrated ranking,0.6006036913688264,0.0,,0.0,,0.0,
+talkmoves_student,oss-logprob,exploratory,task threshold,0.5354968095578481,0.0,,0.0,,0.0,
+talkmoves_student,oss-logprob,exploratory,per-code thresholds,,0.1649576174474461,0.1721350775398239,,,,3.0
+talkmoves_student,oss-logprob,exploratory,per-code calibrated ranking,0.7096330576536719,0.0,,0.0,,0.0306294796308916,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,task threshold,0.6039959750603939,0.0,,0.0,,0.00099526803355,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,per-code thresholds,,0.0052450658010811,0.0839432995345614,,,,2.0
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,per-code calibrated ranking,0.666867931218224,0.0014355561631686,0.3067021276595745,0.0,,0.0,
+talkmoves_student,agree3,exploratory,task threshold,0.6206162518317694,0.0,,0.0,,0.0,
+talkmoves_student,agree3,exploratory,per-code thresholds,,0.1202421151499344,0.1060624017685512,,,,3.0
+talkmoves_student,agree3,exploratory,per-code calibrated ranking,0.7631674161448426,0.1202421151499344,0.1060624017685512,0.0,,0.0,
+talkmoves_student,sonnet-verbal,exploratory,task threshold,0.759376301552007,0.0,,0.0,,0.088213247209425,
+talkmoves_student,sonnet-verbal,exploratory,per-code thresholds,,0.1667813255277861,0.051167048626867,,,,2.0
+talkmoves_student,sonnet-verbal,exploratory,per-code calibrated ranking,0.8197824300221613,0.2542856496633149,0.0531670956285183,0.0,,0.2226682726875721,
+talkmoves_student,clef,exploratory; coder listed in an amendment,task threshold,0.6308512552849482,0.0088224250107729,0.0,0.0,,0.0173367985569378,
+talkmoves_student,clef,exploratory; coder listed in an amendment,per-code thresholds,,0.0247989804604444,0.1009651500419028,,,,3.0
+talkmoves_student,clef,exploratory; coder listed in an amendment,per-code calibrated ranking,0.7371969660779699,0.0158899760375427,0.0604755810847096,0.0,,0.0213066043349114,
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,task threshold,0.6847540360673634,0.0196759771223748,0.0,0.0,,0.0214426837803161,
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,per-code thresholds,,0.066863933917428,0.0805621068094002,,,,3.0
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,per-code calibrated ranking,0.7590310920228115,0.0859347851049887,0.0850483357305009,0.0,,0.0542577705276757,
+talkmoves_student,pplx,exploratory; coder listed in an amendment,task threshold,0.7193657999876137,0.1542306498328957,0.0736126762173343,0.0,,0.120601573886104,
+talkmoves_student,pplx,exploratory; coder listed in an amendment,per-code thresholds,,0.2840013473561191,0.0981156069810124,,,,3.0
+talkmoves_student,pplx,exploratory; coder listed in an amendment,per-code calibrated ranking,0.777686197832027,0.2292040993306193,0.0642570324666071,0.0,,0.2022520233730534,
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,task threshold,0.6598143224120292,0.00099526803355,1.0,0.0,,0.0,
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,per-code thresholds,,0.0690018947676647,0.2078630041185273,,,,3.0
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,per-code calibrated ranking,0.7529783418692184,0.0631792908399348,0.1663658001840637,0.0,,0.0308189965407929,
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,task threshold,0.7610964874871189,0.2404274629776368,0.0681633769520195,0.0,,0.1702291963241093,
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,per-code thresholds,,0.1922129111633848,0.072252751103987,,,,2.0
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,per-code calibrated ranking,0.7624724626455373,0.1952972376702498,0.072807287464258,0.0,,0.1428484332614085,
+talkmoves_student,dm_committee,exploratory,task threshold,0.7286904871741842,0.0393437656784343,0.024424594792136,0.0,,0.086725267503663,
+talkmoves_student,dm_committee,exploratory,per-code thresholds,,0.1776379554292991,0.0609737734921106,,,,2.0
+talkmoves_student,dm_committee,exploratory,per-code calibrated ranking,0.7805284919384513,0.1802658886140954,0.0512792108311605,0.0,,0.1601073621488858,
+talkmoves_student,luna_sc-vote,exploratory,task threshold,0.6130602069206902,0.0,,0.0,,0.0,
+talkmoves_student,luna_sc-vote,exploratory,per-code thresholds,,0.0,,,,,0.0
+talkmoves_student,luna_sc-vote,exploratory,per-code calibrated ranking,0.6130602069206902,0.0,,0.0,,0.0,
+talkmoves_student,qwen_big-verbal,exploratory,task threshold,0.7535484554001427,0.2834542614146689,0.082635045954,0.0,,0.1141023700848664,
+talkmoves_student,qwen_big-verbal,exploratory,per-code thresholds,,0.2834542614146689,0.082635045954,,,,0.0
+talkmoves_student,qwen_big-verbal,exploratory,per-code calibrated ranking,0.7535484554001427,0.2834542614146689,0.082635045954,0.0,,0.1141023700848664,
+talkmoves_student,qwen_big-logprob,exploratory,task threshold,0.642790357500294,0.0945061917993292,0.047241234372647,0.0,,0.1102806929333697,
+talkmoves_student,qwen_big-logprob,exploratory,per-code thresholds,,0.0945061917993292,0.047241234372647,,,,0.0
+talkmoves_student,qwen_big-logprob,exploratory,per-code calibrated ranking,0.642790357500294,0.0,,0.0,,0.1102806929333697,
+POOLED,jev,,task threshold,0.7564392066547294,0.3292657234578292,0.0800885885376286,0.1196907031109512,0.0160757211538461,0.1631001618413954,
+POOLED,jev,,per-code thresholds,,0.4429649653353341,0.075557103132125,,,,4.2
+POOLED,jev,,per-code calibrated ranking,0.7968522215949168,0.3771422340007421,0.0522714905245214,0.0,,0.3782193191751695,
+POOLED,oaid,,task threshold,0.7363698510745791,0.226568151619646,0.0487118061192127,0.0,,0.1778681986127882,
+POOLED,oaid,,per-code thresholds,,0.3323749735323235,0.0864508829276062,,,,4.0
+POOLED,oaid,,per-code calibrated ranking,0.7706755148336485,0.267312304875216,0.1705640676772424,0.0,,0.2549399743573332,
+POOLED,luna-verbal,,task threshold,0.7406913562000977,0.2015286867338971,0.0549911137113543,0.1280345261643589,0.022191011235955,0.1624773343979995,
+POOLED,luna-verbal,,per-code thresholds,,0.3169038576458448,0.0662755485125,,,,3.8
+POOLED,luna-verbal,,per-code calibrated ranking,0.7827101529104641,0.3128134877801179,0.0294715926475352,0.0,,0.343771130592673,
+POOLED,haiku-verbal,,task threshold,0.7826403554466447,0.160852880099993,0.0113190944724422,0.1316130192411436,0.0169422052192922,0.1677656751643263,
+POOLED,haiku-verbal,,per-code thresholds,,0.2961994535910663,0.0580975967546142,,,,3.8
+POOLED,haiku-verbal,,per-code calibrated ranking,0.8116928568566832,0.3126148364987215,0.0366956010978026,0.0,,0.3232802812490554,
+POOLED,oss-verbal,,task threshold,0.727218509545716,0.2212409632964153,0.1015709461199714,0.0,,0.2056535218930076,
+POOLED,oss-verbal,,per-code thresholds,,0.2286568926606481,0.0749789122182398,,,,4.2
+POOLED,oss-verbal,,per-code calibrated ranking,0.7870564519742703,0.2668703769595628,0.0997457606181661,0.0,,0.1896913786038923,
+POOLED,qwen-verbal,,task threshold,0.6462440038947321,0.0338447663257382,0.1136993295712513,0.0,,0.0,
+POOLED,qwen-verbal,,per-code thresholds,,0.1585729240761024,0.0738297965416656,,,,3.8
+POOLED,qwen-verbal,,per-code calibrated ranking,0.764417336388654,0.1758664277651432,0.0789460575008062,0.0,,0.1374662587727191,
+POOLED,luna-logprob,,task threshold,0.5584864841860206,0.0,,0.0,,0.1183779895702211,
+POOLED,luna-logprob,,per-code thresholds,,0.1245819097284661,0.0215069284064665,,,,3.8
+POOLED,luna-logprob,,per-code calibrated ranking,0.6711161178973721,0.1463945333573098,0.0533104041272571,0.0,,0.2459373509957172,
+POOLED,oss-logprob,,task threshold,0.5581514364116393,0.0120480348248513,0.2970865894730261,0.0,,1.798237727027513e-05,
+POOLED,oss-logprob,,per-code thresholds,,0.1238453444815472,0.1892942505058744,,,,4.2
+POOLED,oss-logprob,,per-code calibrated ranking,0.7174289811407242,0.0720971911969947,0.0459666750410809,0.0,,0.1328870722140842,
+POOLED,qwen-logprob,,task threshold,0.6841764059525425,0.0932967094506742,0.2065486748191473,0.0,,0.0820143861054459,
+POOLED,qwen-logprob,,per-code thresholds,,0.1756560316672787,0.1107897015909526,,,,3.8
+POOLED,qwen-logprob,,per-code calibrated ranking,0.7571464664443381,0.1151084450945583,0.1166925073271136,0.0,,0.1382131380346121,
+POOLED,agree3,,task threshold,0.6699183930466012,0.0,,0.0,,0.0,
+POOLED,agree3,,per-code thresholds,,0.241366471881079,0.0562084511626715,,,,4.0
+POOLED,agree3,,per-code calibrated ranking,0.7641469439262156,0.2536304531794066,0.0588325991691447,0.0,,0.2295820301494197,
+POOLED,sonnet-verbal,,task threshold,0.8010874986487669,0.4337914858879239,0.0652123853504269,0.1654378708865312,0.0254347826086956,0.4012058096680225,
+POOLED,sonnet-verbal,,per-code thresholds,,0.4987394479577082,0.0644148537014419,,,,3.8
+POOLED,sonnet-verbal,,per-code calibrated ranking,0.8264714496471559,0.536499494863961,0.0681128352293721,0.1377629922675777,0.0091371883566114,0.453770446280819,
+POOLED,clef,,task threshold,0.7206470261159575,0.2395271579375872,0.1204665746255228,0.1645387520230174,0.0304918032786885,0.2028511812825962,
+POOLED,clef,,per-code thresholds,,0.3291707109766416,0.0880047569696274,,,,4.4
+POOLED,clef,,per-code calibrated ranking,0.8289292716436355,0.316903250589946,0.049123875949135,0.1508002157885273,0.0203911280705938,0.3390518187758814,
+POOLED,clef_flash,,task threshold,0.7115631529654742,0.2542848229233408,0.1576526316301189,0.155817299046934,0.0268897864974033,0.2066672049726494,
+POOLED,clef_flash,,per-code thresholds,,0.3783221011618724,0.0857631974917081,,,,4.4
+POOLED,clef_flash,,per-code calibrated ranking,0.8012090034119581,0.3460532336459316,0.0586580551121615,0.1310555655457651,0.0116630076838638,0.2643034488284073,
+POOLED,pplx,,task threshold,0.7644250482167037,0.4079692833127403,0.0839284844361703,0.1542887969789606,0.0228438228438228,0.320932260177988,
+POOLED,pplx,,per-code thresholds,,0.5282298664539866,0.0776803040994097,,,,4.0
+POOLED,pplx,,per-code calibrated ranking,0.8125146742278714,0.5266630094905353,0.0708486649745235,0.1440208595576335,0.0149831439630415,0.4575192902945814,
+POOLED,kev9b,,task threshold,0.6940273395611148,0.2389294309953006,0.3613621322070588,0.1341305520589822,0.0237297224829065,0.1917191037712049,
+POOLED,kev9b,,per-code thresholds,,0.288689341337674,0.1303792682388823,,,,3.8
+POOLED,kev9b,,per-code calibrated ranking,0.8085401621445374,0.2783979238446557,0.0786436208970051,0.0,,0.2288167394287084,
+POOLED,kev27b,,task threshold,0.7881666291854416,0.4420158546789866,0.0748964525036588,0.1531559072109333,0.020781965480803,0.3716950947255,
+POOLED,kev27b,,per-code thresholds,,0.5178575108692534,0.0766306817651691,,,,3.8
+POOLED,kev27b,,per-code calibrated ranking,0.81449515913671,0.4660115989274015,0.0622372858129289,0.0,,0.4339390961128728,
+POOLED,dm_committee,,task threshold,0.7641173149769704,0.3750051931874077,0.0783125428473596,0.1689084696996942,0.0290641967422548,0.3094019719672279,
+POOLED,dm_committee,,per-code thresholds,,0.5215517136378184,0.0725426360696275,,,,4.0
+POOLED,dm_committee,,per-code calibrated ranking,0.8093349515074862,0.513892067335384,0.0666107079949312,0.0,,0.452241905635929,
+POOLED,luna_sc-vote,,task threshold,0.6241233485646618,0.0,,0.0,,0.0,
+POOLED,luna_sc-vote,,per-code thresholds,,0.0988541666666666,0.0252897787144362,,,,1.8
+POOLED,luna_sc-vote,,per-code calibrated ranking,0.6502835646925874,0.1458333333333333,0.0414285714285714,0.0,,0.1458333333333333,
+POOLED,qwen_big-verbal,,task threshold,0.8022342859297474,0.3794928609838897,0.0519900151648631,0.0,,0.3796338768678772,
+POOLED,qwen_big-verbal,,per-code thresholds,,0.3510775604374416,0.050843443414397,,,,1.8
+POOLED,qwen_big-verbal,,per-code calibrated ranking,0.797572241548456,0.3593486033653524,0.0446220679986429,0.0,,0.3295765857551297,
+POOLED,qwen_big-logprob,,task threshold,0.7030809065267704,0.189483645860226,0.0668801557917488,0.0,,0.2173726874603693,
+POOLED,qwen_big-logprob,,per-code thresholds,,0.1971760298666798,0.0721634885191412,,,,1.8
+POOLED,qwen_big-logprob,,per-code calibrated ranking,0.7140830409093806,0.1200797981499967,0.0957091736251797,0.0,,0.2483836164221179,

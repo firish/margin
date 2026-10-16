@@ -1,0 +1,46 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Top-confidence tie blocks on the dialogue tasks (test split)}
+\label{tab:tab13_top_blocks}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llrrrr}
+\toprule
+task & signal & \makecell[br]{top \\{} confidence} & \makecell[br]{decisions at \\{} top} & share at top & error at top \\
+\midrule
+AnnoMI client & Jev & 1.000 & 274 & 0.302 & 0.123 \\
+AnnoMI client & OpenAI Decisions & 1.000 & 176 & 0.198 & 0.121 \\
+AnnoMI client & Clef (27B) & 0.979 & 1 & 0.001 & 0.000 \\
+AnnoMI client & pplx-decider & 0.998 & 1 & 0.001 & 0.000 \\
+AnnoMI client & Kev-27B & 0.995 & 1 & 0.001 & 0.000 \\
+AnnoMI client & Luna verbal & 1.000 & 6 & 0.007 & 0.000 \\
+AnnoMI client & Haiku verbal & 0.990 & 1 & 0.001 & 0.000 \\
+AnnoMI client & Sonnet verbal & 0.970 & 16 & 0.017 & 0.000 \\
+AnnoMI therapist & Jev & 1.000 & 214 & 0.225 & 0.068 \\
+AnnoMI therapist & OpenAI Decisions & 1.000 & 117 & 0.131 & 0.027 \\
+AnnoMI therapist & Clef (27B) & 0.963 & 2 & 0.002 & 0.000 \\
+AnnoMI therapist & pplx-decider & 0.998 & 1 & 0.001 & 0.000 \\
+AnnoMI therapist & Kev-27B & 0.996 & 1 & 0.001 & 0.000 \\
+AnnoMI therapist & Luna verbal & 1.000 & 72 & 0.074 & 0.073 \\
+AnnoMI therapist & Haiku verbal & 0.990 & 4 & 0.004 & 0.000 \\
+AnnoMI therapist & Sonnet verbal & 0.980 & 15 & 0.013 & 0.000 \\
+TalkMoves teacher & Jev & 1.000 & 104 & 0.082 & 0.083 \\
+TalkMoves teacher & OpenAI Decisions & 1.000 & 271 & 0.249 & 0.107 \\
+TalkMoves teacher & Clef (27B) & 0.948 & 1 & 0.000 & 0.000 \\
+TalkMoves teacher & pplx-decider & 0.997 & 1 & 0.001 & 1.000 \\
+TalkMoves teacher & Kev-27B & 0.978 & 1 & 0.001 & 0.000 \\
+TalkMoves teacher & Luna verbal & 1.000 & 9 & 0.009 & 0.039 \\
+TalkMoves teacher & Haiku verbal & 0.980 & 3 & 0.002 & 0.000 \\
+TalkMoves teacher & Sonnet verbal & 0.960 & 36 & 0.037 & 0.000 \\
+TalkMoves student & Jev & 1.000 & 119 & 0.106 & 0.065 \\
+TalkMoves student & OpenAI Decisions & 1.000 & 9 & 0.009 & 0.000 \\
+TalkMoves student & Clef (27B) & 0.945 & 1 & 0.000 & 0.000 \\
+TalkMoves student & pplx-decider & 0.995 & 1 & 0.001 & 0.000 \\
+TalkMoves student & Kev-27B & 0.983 & 1 & 0.001 & 0.000 \\
+TalkMoves student & Luna verbal & 1.000 & 11 & 0.011 & 0.088 \\
+TalkMoves student & Haiku verbal & 0.990 & 5 & 0.005 & 0.000 \\
+TalkMoves student & Sonnet verbal & 0.960 & 16 & 0.015 & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

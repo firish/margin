@@ -1,0 +1,49 @@
+keeping_together:
+- When a teacher prompts students to listen actively, the sentence is coded as Keeping Everyone Together.
+  The code covers yes/no questions, managing turns, capturing students' attention, keeping students on
+  task, asking a student to read a question, call-and-response, and asking students to repeat one another.
+- Yes/no questions, turn management, attention-getting, keeping students on task, asking a student to
+  read a question, call-and-response, and asking students to repeat each other all fall under Keeping
+  Everyone Together, which is the code for teacher prompts that get students to listen actively.
+relate:
+- A teacher prompt that asks for a student contribution tied to another student's work or contribution
+  is coded as Getting Students to Relate. The prompt has to do more than ask a student to repeat what
+  another student said. It applies when teachers ask students to comment on, or to agree or disagree with,
+  someone else's work or ideas.
+- Getting Students to Relate is used when a teacher asks students to comment on another's work or ideas,
+  or to agree/disagree with them. Merely asking a student to repeat another student's utterance does not
+  suffice; the prompt must go further and elicit a contribution connected to another student's work or
+  contribution.
+restating:
+- Restating is the code for when the teacher says all or part of a student's words exactly as spoken,
+  with nothing added and no wording changed.
+- If a teacher repeats all or part of a student's utterance word for word, adding nothing and altering
+  no wording, the code is Restating.
+press_accuracy:
+- Teacher prompts that ask for an answer tied to a mathematical procedure, or for a short math-related
+  answer, are coded as Pressing for Accuracy. The teacher might be asking students to walk through problem-solving
+  procedures, think about language accuracy, or define elements of a problem. The code may also be used
+  when the teacher has students write their answers at the board in front of the class.
+- 'Pressing for Accuracy covers teacher prompts seeking an answer about a mathematical procedure or a
+  short math-related answer: for instance, having students walk through problem-solving procedures, attend
+  to language accuracy, or define elements of a problem. It may also be applied when students are asked
+  to write their answers at the board in front of the class.'
+revoicing:
+- Revoicing is coded when the teacher repeats what a student says and also adds to it or changes its wording
+  in any way. This includes teacher corrections of a student and teacher repetition of a student's utterance
+  in another language.
+- When a teacher repeats a student's utterance but also adds to it or alters the wording in any manner,
+  the code is Revoicing; this covers correcting a student as well as repeating a student's utterance in
+  another language.
+press_reasoning:
+- Teacher prompts asking students to give evidence, explain their idea, or share the thinking behind a
+  decision are coded as Press for Reasoning. The teacher may also be prompting students to connect concepts
+  or compare mathematical representations.
+- Press for Reasoning is the code for prompts in which the teacher asks students to explain an idea, offer
+  evidence, or share the thinking underlying a decision, and may also include prompts for students to
+  connect concepts or compare mathematical representations.
+none:
+- A sentence that is not any of the teacher talk moves described above (i.e., what is not coded) receives
+  the code None.
+- None is assigned to any sentence that does not match one of the other teacher talk move codes, serving
+  as the code for what is not coded.

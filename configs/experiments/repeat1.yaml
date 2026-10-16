@@ -1,0 +1,10 @@
+# Repeatability: the same canonical requests re-sent fresh (cache_tag) for 100 test segments per task;
+# compared with the original run's answers to measure run-to-run label flips and probability drift.
+name: repeat1
+sample: main
+split: test
+limit: 100
+tasks: [mfrc, annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student]
+coders: [jev, oaid, luna, haiku, sonnet, clef, clef_flash, pplx]
+variants: [canonical]
+cache_tag: repeat1

@@ -1,0 +1,9 @@
+change:
+- Language coming from the client that supports the change goal.
+- What the client says in favor of the change goal, in the client's own words.
+sustain:
+- Client statements that offer reasons not to change or to keep things as they are.
+- Language from the client that argues against changing, or in support of the status quo.
+neutral:
+- The client shows no leaning either toward change or away from it.
+- There is no sign of the client being inclined in the direction of change or against it.

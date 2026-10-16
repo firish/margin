@@ -1,0 +1,301 @@
+task,signal,status,threshold_from,threshold,test_coverage,test_risk,violates_5%
+mfrc,jev,exploratory,"own calib, empirical",0.74,0.7784571120302105,0.037768537768537766,0.0
+mfrc,jev,exploratory,"other tasks, empirical",inf,0.0,,0.0
+mfrc,jev,exploratory,"other tasks, ltt",inf,0.0,,0.0
+mfrc,jev,exploratory,fixed 0.95,0.95,0.1698435533177486,0.005823186871360508,0.0
+mfrc,jev,exploratory,fixed 0.99,0.99,0.00035964754540550266,0.0,0.0
+annomi_client,jev,exploratory,"own calib, empirical",1.0,0.3015929491590718,0.12274241473848448,1.0
+annomi_client,jev,exploratory,"other tasks, empirical",0.84,0.6697995744627632,0.19441247141836923,1.0
+annomi_client,jev,exploratory,"other tasks, ltt",inf,0.0,,0.0
+annomi_client,jev,exploratory,fixed 0.95,0.95,0.5194431651475607,0.15317660292047278,1.0
+annomi_client,jev,exploratory,fixed 0.99,0.99,0.3992530496948291,0.1336938582938404,1.0
+annomi_therapist,jev,exploratory,"own calib, empirical",0.96,0.5662785560998637,0.07975481310586362,1.0
+annomi_therapist,jev,exploratory,"other tasks, empirical",0.86,0.7149719546184596,0.10808624205466168,1.0
+annomi_therapist,jev,exploratory,"other tasks, ltt",inf,0.0,,0.0
+annomi_therapist,jev,exploratory,fixed 0.95,0.95,0.5861299637915973,0.08717864050247653,1.0
+annomi_therapist,jev,exploratory,fixed 0.99,0.99,0.3935065716919134,0.07216749606169161,1.0
+talkmoves_teacher,jev,exploratory,"own calib, empirical",inf,0.0,,0.0
+talkmoves_teacher,jev,exploratory,"other tasks, empirical",0.86,0.42833995523796586,0.11624089840352193,1.0
+talkmoves_teacher,jev,exploratory,"other tasks, ltt",inf,0.0,,0.0
+talkmoves_teacher,jev,exploratory,fixed 0.95,0.95,0.2344898805245805,0.10665242708841154,1.0
+talkmoves_teacher,jev,exploratory,fixed 0.99,0.99,0.12654489831094487,0.08523808248681874,1.0
+talkmoves_student,jev,exploratory,"own calib, empirical",inf,0.0,,0.0
+talkmoves_student,jev,exploratory,"other tasks, empirical",0.8200000000000001,0.5350195365019293,0.2822035043873891,1.0
+talkmoves_student,jev,exploratory,"other tasks, ltt",inf,0.0,,0.0
+talkmoves_student,jev,exploratory,fixed 0.95,0.95,0.30997575915300235,0.20209605944076653,1.0
+talkmoves_student,jev,exploratory,fixed 0.99,0.99,0.18180905898330796,0.09703329678912018,1.0
+mfrc,oaid,pre-specified,"own calib, empirical",0.9299999999999999,0.724509980219385,0.043931496649292634,0.0
+mfrc,oaid,pre-specified,"other tasks, empirical",inf,0.0,,0.0
+mfrc,oaid,pre-specified,"other tasks, ltt",inf,0.0,,0.0
+mfrc,oaid,pre-specified,fixed 0.95,0.95,0.6556374752742313,0.03688974218321448,0.0
+mfrc,oaid,pre-specified,fixed 0.99,0.99,0.4372415033267398,0.029611351017890194,0.0
+annomi_client,oaid,pre-specified,"own calib, empirical",inf,0.0,,0.0
+annomi_client,oaid,pre-specified,"other tasks, empirical",0.98,0.46038466285415225,0.1621875798858943,1.0
+annomi_client,oaid,pre-specified,"other tasks, ltt",0.99,0.3668568087992676,0.14943873917031436,1.0
+annomi_client,oaid,pre-specified,fixed 0.95,0.95,0.5944743778574982,0.17875513777170415,1.0
+annomi_client,oaid,pre-specified,fixed 0.99,0.99,0.3668568087992676,0.14943873917031436,1.0
+annomi_therapist,oaid,pre-specified,"own calib, empirical",0.98,0.4083307778788453,0.05349211558913276,1.0
+annomi_therapist,oaid,pre-specified,"other tasks, empirical",0.99,0.31207261609408204,0.05187561713113499,1.0
+annomi_therapist,oaid,pre-specified,"other tasks, ltt",1.0,0.13115259613098326,0.02705413662404367,0.0
+annomi_therapist,oaid,pre-specified,fixed 0.95,0.95,0.5426646028231453,0.07070131589467753,1.0
+annomi_therapist,oaid,pre-specified,fixed 0.99,0.99,0.31207261609408204,0.05187561713113499,1.0
+talkmoves_teacher,oaid,pre-specified,"own calib, empirical",inf,0.0,,0.0
+talkmoves_teacher,oaid,pre-specified,"other tasks, empirical",0.95,0.5978828994238929,0.1682335501421549,1.0
+talkmoves_teacher,oaid,pre-specified,"other tasks, ltt",0.98,0.49785745104301005,0.13831457670301675,1.0
+talkmoves_teacher,oaid,pre-specified,fixed 0.95,0.95,0.5978828994238929,0.1682335501421549,1.0
+talkmoves_teacher,oaid,pre-specified,fixed 0.99,0.99,0.4075094591890512,0.11710644619279323,1.0
+talkmoves_student,oaid,pre-specified,"own calib, empirical",inf,0.0,,0.0
+talkmoves_student,oaid,pre-specified,"other tasks, empirical",0.98,0.041020889988994204,0.1624453910310537,1.0
+talkmoves_student,oaid,pre-specified,"other tasks, ltt",0.99,0.022892577512062858,0.18804575142337632,1.0
+talkmoves_student,oaid,pre-specified,fixed 0.95,0.95,0.10043259715186764,0.16976798110089214,1.0
+talkmoves_student,oaid,pre-specified,fixed 0.99,0.99,0.022892577512062858,0.18804575142337632,1.0
+mfrc,luna-verbal,exploratory,"own calib, empirical",0.94,0.795360546664269,0.03922676916120281,0.0
+mfrc,luna-verbal,exploratory,"other tasks, empirical",1.0,0.00017982377270275133,0.0,0.0
+mfrc,luna-verbal,exploratory,"other tasks, ltt",inf,0.0,,0.0
+mfrc,luna-verbal,exploratory,fixed 0.95,0.95,0.7450998021938502,0.03414987329552311,0.0
+mfrc,luna-verbal,exploratory,fixed 0.99,0.99,0.3413954324761734,0.011588095865156703,0.0
+annomi_client,luna-verbal,exploratory,"own calib, empirical",0.99,0.12865136911138433,0.06906811253385929,1.0
+annomi_client,luna-verbal,exploratory,"other tasks, empirical",0.97,0.3904891272843396,0.14657369234193032,1.0
+annomi_client,luna-verbal,exploratory,"other tasks, ltt",0.97,0.3904891272843396,0.14657369234193032,1.0
+annomi_client,luna-verbal,exploratory,fixed 0.95,0.95,0.5739711088370224,0.1782610932042633,1.0
+annomi_client,luna-verbal,exploratory,fixed 0.99,0.99,0.12865136911138433,0.06906811253385929,1.0
+annomi_therapist,luna-verbal,exploratory,"own calib, empirical",1.0,0.07426611849278225,0.07312992678094168,1.0
+annomi_therapist,luna-verbal,exploratory,"other tasks, empirical",0.97,0.646996676071258,0.10558650068285154,1.0
+annomi_therapist,luna-verbal,exploratory,"other tasks, ltt",0.97,0.646996676071258,0.10558650068285154,1.0
+annomi_therapist,luna-verbal,exploratory,fixed 0.95,0.95,0.7840709294923545,0.1451282442708649,1.0
+annomi_therapist,luna-verbal,exploratory,fixed 0.99,0.99,0.4607710836940004,0.09026668637190774,1.0
+talkmoves_teacher,luna-verbal,exploratory,"own calib, empirical",1.0,0.009365399401050143,0.038539646369413774,0.0
+talkmoves_teacher,luna-verbal,exploratory,"other tasks, empirical",0.97,0.32954137304682296,0.1254828360055959,1.0
+talkmoves_teacher,luna-verbal,exploratory,"other tasks, ltt",0.97,0.32954137304682296,0.1254828360055959,1.0
+talkmoves_teacher,luna-verbal,exploratory,fixed 0.95,0.95,0.6273858013147715,0.17857214473802052,1.0
+talkmoves_teacher,luna-verbal,exploratory,fixed 0.99,0.99,0.09918944202392488,0.1352431222658755,1.0
+talkmoves_student,luna-verbal,exploratory,"own calib, empirical",inf,0.0,,0.0
+talkmoves_student,luna-verbal,exploratory,"other tasks, empirical",0.97,0.2401995788967041,0.12365328660394159,1.0
+talkmoves_student,luna-verbal,exploratory,"other tasks, ltt",0.97,0.2401995788967041,0.12365328660394159,1.0
+talkmoves_student,luna-verbal,exploratory,fixed 0.95,0.95,0.44628172505208774,0.20045113823565727,1.0
+talkmoves_student,luna-verbal,exploratory,fixed 0.99,0.99,0.09784515580409273,0.09836692607340804,1.0
+mfrc,haiku-verbal,exploratory,"own calib, empirical",0.82,0.7493256608523647,0.03395728341732661,0.0
+mfrc,haiku-verbal,exploratory,"other tasks, empirical",0.98,0.08919259126056464,0.0030241935483870976,0.0
+mfrc,haiku-verbal,exploratory,"other tasks, ltt",inf,0.0,,0.0
+mfrc,haiku-verbal,exploratory,fixed 0.95,0.95,0.5487322424024456,0.008356545961002788,0.0
+mfrc,haiku-verbal,exploratory,fixed 0.99,0.99,0.005664448840136666,0.0,0.0
+annomi_client,haiku-verbal,exploratory,"own calib, empirical",0.98,0.007624694633230855,0.0,0.0
+annomi_client,haiku-verbal,exploratory,"other tasks, empirical",0.88,0.4528209774568748,0.1404047953760828,1.0
+annomi_client,haiku-verbal,exploratory,"other tasks, ltt",0.92,0.4528209774568748,0.1404047953760828,1.0
+annomi_client,haiku-verbal,exploratory,fixed 0.95,0.95,0.13374486332830485,0.05239132939506352,1.0
+annomi_client,haiku-verbal,exploratory,fixed 0.99,0.99,0.0012168463965454607,0.0,0.0
+annomi_therapist,haiku-verbal,exploratory,"own calib, empirical",0.98,0.04731404501436949,0.0,0.0
+annomi_therapist,haiku-verbal,exploratory,"other tasks, empirical",0.88,0.6724093168997592,0.1285415968280782,1.0
+annomi_therapist,haiku-verbal,exploratory,"other tasks, ltt",0.88,0.6724093168997592,0.1285415968280782,1.0
+annomi_therapist,haiku-verbal,exploratory,fixed 0.95,0.95,0.42440651407286933,0.06031588961541818,1.0
+annomi_therapist,haiku-verbal,exploratory,fixed 0.99,0.99,0.004057085804945549,0.0,0.0
+talkmoves_teacher,haiku-verbal,exploratory,"own calib, empirical",inf,0.0,,0.0
+talkmoves_teacher,haiku-verbal,exploratory,"other tasks, empirical",0.88,0.6613585444255795,0.11580687856703988,1.0
+talkmoves_teacher,haiku-verbal,exploratory,"other tasks, ltt",0.88,0.6613585444255795,0.11580687856703988,1.0
+talkmoves_teacher,haiku-verbal,exploratory,fixed 0.95,0.95,0.2995031923359054,0.052248789370351205,1.0
+talkmoves_teacher,haiku-verbal,exploratory,fixed 0.99,0.99,0.0,,0.0
+talkmoves_student,haiku-verbal,exploratory,"own calib, empirical",inf,0.0,,0.0
+talkmoves_student,haiku-verbal,exploratory,"other tasks, empirical",0.88,0.4377615113822972,0.2527699896274657,1.0
+talkmoves_student,haiku-verbal,exploratory,"other tasks, ltt",0.88,0.4377615113822972,0.2527699896274657,1.0
+talkmoves_student,haiku-verbal,exploratory,fixed 0.95,0.95,0.14478538649740816,0.10674213881611395,1.0
+talkmoves_student,haiku-verbal,exploratory,fixed 0.99,0.99,0.0047525107585913015,0.0,0.0
+mfrc,oss-verbal,exploratory,"own calib, empirical",0.88,0.8297068872504945,0.04367143476376247,0.0
+mfrc,oss-verbal,exploratory,"other tasks, empirical",0.97,0.04873224240244561,0.014760147601476018,0.0
+mfrc,oss-verbal,exploratory,"other tasks, ltt",0.98,0.03479590001798238,0.007751937984496125,0.0
+mfrc,oss-verbal,exploratory,fixed 0.95,0.95,0.7183959719474913,0.025531914893617027,0.0
+mfrc,oss-verbal,exploratory,fixed 0.99,0.99,0.008721452976083437,0.030927835051546396,0.0
+annomi_client,oss-verbal,exploratory,"own calib, empirical",0.96,0.03692118391503636,0.12386868218972563,1.0
+annomi_client,oss-verbal,exploratory,"other tasks, empirical",0.97,0.032089234024936956,0.06973329429399248,1.0
+annomi_client,oss-verbal,exploratory,"other tasks, ltt",0.97,0.032089234024936956,0.06973329429399248,1.0
+annomi_client,oss-verbal,exploratory,fixed 0.95,0.95,0.40540907366497714,0.17768230969238907,1.0
+annomi_client,oss-verbal,exploratory,fixed 0.99,0.99,0.026005002042209655,0.08604836855223676,1.0
+annomi_therapist,oss-verbal,exploratory,"own calib, empirical",0.98,0.2018287861089921,0.08077233601233753,1.0
+annomi_therapist,oss-verbal,exploratory,"other tasks, empirical",0.9299999999999999,0.6550787630530663,0.1214966727361362,1.0
+annomi_therapist,oss-verbal,exploratory,"other tasks, ltt",0.98,0.2018287861089921,0.08077233601233753,1.0
+annomi_therapist,oss-verbal,exploratory,fixed 0.95,0.95,0.6550787630530663,0.1214966727361362,1.0
+annomi_therapist,oss-verbal,exploratory,fixed 0.99,0.99,0.15139130459164393,0.046514105359733625,0.0
+talkmoves_teacher,oss-verbal,exploratory,"own calib, empirical",0.99,0.020260035495057043,0.0,0.0
+talkmoves_teacher,oss-verbal,exploratory,"other tasks, empirical",0.97,0.027013380660076053,0.0,0.0
+talkmoves_teacher,oss-verbal,exploratory,"other tasks, ltt",0.97,0.027013380660076053,0.0,0.0
+talkmoves_teacher,oss-verbal,exploratory,fixed 0.95,0.95,0.526985624294199,0.09446671755177379,1.0
+talkmoves_teacher,oss-verbal,exploratory,fixed 0.99,0.99,0.020260035495057043,0.0,0.0
+talkmoves_student,oss-verbal,exploratory,"own calib, empirical",0.98,0.017487923712496595,0.2595422776340316,1.0
+talkmoves_student,oss-verbal,exploratory,"other tasks, empirical",0.9299999999999999,0.31073765494491545,0.30075758195683405,1.0
+talkmoves_student,oss-verbal,exploratory,"other tasks, ltt",0.97,0.03452937541172981,0.20753269211590786,1.0
+talkmoves_student,oss-verbal,exploratory,fixed 0.95,0.95,0.31073765494491545,0.30075758195683405,1.0
+talkmoves_student,oss-verbal,exploratory,fixed 0.99,0.99,0.007893519269885116,0.12173980976504238,1.0
+mfrc,qwen-verbal,pre-specified,"own calib, empirical",inf,0.0,,0.0
+mfrc,qwen-verbal,pre-specified,"other tasks, empirical",inf,0.0,,0.0
+mfrc,qwen-verbal,pre-specified,"other tasks, ltt",inf,0.0,,0.0
+mfrc,qwen-verbal,pre-specified,fixed 0.95,0.95,0.8374122728090697,0.15826797034490173,1.0
+mfrc,qwen-verbal,pre-specified,fixed 0.99,0.99,0.647021774338672,0.08288137950215549,1.0
+annomi_client,qwen-verbal,pre-specified,"own calib, empirical",1.0,0.16922383162869112,0.11369932957125137,1.0
+annomi_client,qwen-verbal,pre-specified,"other tasks, empirical",inf,0.0,,0.0
+annomi_client,qwen-verbal,pre-specified,"other tasks, ltt",inf,0.0,,0.0
+annomi_client,qwen-verbal,pre-specified,fixed 0.95,0.95,0.9943659666106661,0.3413891559548557,1.0
+annomi_client,qwen-verbal,pre-specified,fixed 0.99,0.99,0.16922383162869112,0.11369932957125137,1.0
+annomi_therapist,qwen-verbal,pre-specified,"own calib, empirical",inf,0.0,,0.0
+annomi_therapist,qwen-verbal,pre-specified,"other tasks, empirical",inf,0.0,,0.0
+annomi_therapist,qwen-verbal,pre-specified,"other tasks, ltt",inf,0.0,,0.0
+annomi_therapist,qwen-verbal,pre-specified,fixed 0.95,0.95,1.0,0.2520371881905138,1.0
+annomi_therapist,qwen-verbal,pre-specified,fixed 0.99,0.99,0.713260652188952,0.16247674862980943,1.0
+talkmoves_teacher,qwen-verbal,pre-specified,"own calib, empirical",inf,0.0,,0.0
+talkmoves_teacher,qwen-verbal,pre-specified,"other tasks, empirical",inf,0.0,,0.0
+talkmoves_teacher,qwen-verbal,pre-specified,"other tasks, ltt",inf,0.0,,0.0
+talkmoves_teacher,qwen-verbal,pre-specified,fixed 0.95,0.95,0.9982756262935495,0.38755110810072885,1.0
+talkmoves_teacher,qwen-verbal,pre-specified,fixed 0.99,0.99,0.15832067044920053,0.18745506664993922,1.0
+talkmoves_student,qwen-verbal,pre-specified,"own calib, empirical",inf,0.0,,0.0
+talkmoves_student,qwen-verbal,pre-specified,"other tasks, empirical",inf,0.0,,0.0
+talkmoves_student,qwen-verbal,pre-specified,"other tasks, ltt",inf,0.0,,0.0
+talkmoves_student,qwen-verbal,pre-specified,fixed 0.95,0.95,0.9982332933420588,0.4867210199603751,1.0
+talkmoves_student,qwen-verbal,pre-specified,fixed 0.99,0.99,0.2555318478827347,0.22630965612021112,1.0
+mfrc,luna-logprob,exploratory,"own calib, empirical",inf,0.0,,0.0
+mfrc,luna-logprob,exploratory,"other tasks, empirical",inf,0.0,,0.0
+mfrc,luna-logprob,exploratory,"other tasks, ltt",inf,0.0,,0.0
+mfrc,luna-logprob,exploratory,fixed 0.95,0.95,0.9963136126595937,0.12029600216586951,1.0
+mfrc,luna-logprob,exploratory,fixed 0.99,0.99,0.9940658155008092,0.11939218523878437,1.0
+annomi_client,luna-logprob,exploratory,"own calib, empirical",inf,0.0,,0.0
+annomi_client,luna-logprob,exploratory,"other tasks, empirical",inf,0.0,,0.0
+annomi_client,luna-logprob,exploratory,"other tasks, ltt",inf,0.0,,0.0
+annomi_client,luna-logprob,exploratory,fixed 0.95,0.95,0.9987831536034546,0.27339718215641895,1.0
+annomi_client,luna-logprob,exploratory,fixed 0.99,0.99,0.9978273567603693,0.27365906329431633,1.0
+annomi_therapist,luna-logprob,exploratory,"own calib, empirical",inf,0.0,,0.0
+annomi_therapist,luna-logprob,exploratory,"other tasks, empirical",inf,0.0,,0.0
+annomi_therapist,luna-logprob,exploratory,"other tasks, ltt",inf,0.0,,0.0
+annomi_therapist,luna-logprob,exploratory,fixed 0.95,0.95,0.9975044284281552,0.20805930781999768,1.0
+annomi_therapist,luna-logprob,exploratory,fixed 0.99,0.99,0.9975044284281552,0.20805930781999768,1.0
+talkmoves_teacher,luna-logprob,exploratory,"own calib, empirical",inf,0.0,,0.0
+talkmoves_teacher,luna-logprob,exploratory,"other tasks, empirical",inf,0.0,,0.0
+talkmoves_teacher,luna-logprob,exploratory,"other tasks, ltt",inf,0.0,,0.0
+talkmoves_teacher,luna-logprob,exploratory,fixed 0.95,0.95,0.9889701558486548,0.25061428836910427,1.0
+talkmoves_teacher,luna-logprob,exploratory,fixed 0.99,0.99,0.9829875273170979,0.2480755461272503,1.0
+talkmoves_student,luna-logprob,exploratory,"own calib, empirical",inf,0.0,,0.0
+talkmoves_student,luna-logprob,exploratory,"other tasks, empirical",inf,0.0,,0.0
+talkmoves_student,luna-logprob,exploratory,"other tasks, ltt",inf,0.0,,0.0
+talkmoves_student,luna-logprob,exploratory,fixed 0.95,0.95,0.9885644732867747,0.35438262419658073,1.0
+talkmoves_student,luna-logprob,exploratory,fixed 0.99,0.99,0.9794592272628795,0.3504131185054081,1.0
+mfrc,oss-logprob,exploratory,"own calib, empirical",inf,0.0,,0.0
+mfrc,oss-logprob,exploratory,"other tasks, empirical",inf,0.0,,0.0
+mfrc,oss-logprob,exploratory,"other tasks, ltt",inf,0.0,,0.0
+mfrc,oss-logprob,exploratory,fixed 0.95,0.95,0.9924474015464846,0.14631273781482151,1.0
+mfrc,oss-logprob,exploratory,fixed 0.99,0.99,0.9884912785470239,0.1450791340731308,1.0
+annomi_client,oss-logprob,exploratory,"own calib, empirical",0.9999999999999996,0.0602401741242566,0.29708658947302613,1.0
+annomi_client,oss-logprob,exploratory,"other tasks, empirical",inf,0.0,,0.0
+annomi_client,oss-logprob,exploratory,"other tasks, ltt",inf,0.0,,0.0
+annomi_client,oss-logprob,exploratory,fixed 0.95,0.95,1.0,0.2852427026747003,1.0
+annomi_client,oss-logprob,exploratory,fixed 0.99,0.99,1.0,0.2852427026747003,1.0
+annomi_therapist,oss-logprob,exploratory,"own calib, empirical",inf,0.0,,0.0
+annomi_therapist,oss-logprob,exploratory,"other tasks, empirical",0.9999999999999996,0.003493610837997608,1.0,1.0
+annomi_therapist,oss-logprob,exploratory,"other tasks, ltt",inf,0.0,,0.0
+annomi_therapist,oss-logprob,exploratory,fixed 0.95,0.95,1.0,0.24004785232730008,1.0
+annomi_therapist,oss-logprob,exploratory,fixed 0.99,0.99,1.0,0.24004785232730008,1.0
+talkmoves_teacher,oss-logprob,exploratory,"own calib, empirical",inf,0.0,,0.0
+talkmoves_teacher,oss-logprob,exploratory,"other tasks, empirical",inf,0.0,,0.0
+talkmoves_teacher,oss-logprob,exploratory,"other tasks, ltt",inf,0.0,,0.0
+talkmoves_teacher,oss-logprob,exploratory,fixed 0.95,0.95,1.0,0.24292630484311534,1.0
+talkmoves_teacher,oss-logprob,exploratory,fixed 0.99,0.99,1.0,0.24292630484311534,1.0
+talkmoves_student,oss-logprob,exploratory,"own calib, empirical",inf,0.0,,0.0
+talkmoves_student,oss-logprob,exploratory,"other tasks, empirical",inf,0.0,,0.0
+talkmoves_student,oss-logprob,exploratory,"other tasks, ltt",inf,0.0,,0.0
+talkmoves_student,oss-logprob,exploratory,fixed 0.95,0.95,1.0,0.5075313427572524,1.0
+talkmoves_student,oss-logprob,exploratory,fixed 0.99,0.99,1.0,0.5075313427572524,1.0
+mfrc,qwen-logprob,pre-specified,"own calib, empirical",0.999988520711195,0.379611301061724,0.043138184403887184,0.0
+mfrc,qwen-logprob,pre-specified,"other tasks, empirical",0.9999990057730296,0.2203527082958431,0.0004083299305839118,0.0
+mfrc,qwen-logprob,pre-specified,"other tasks, ltt",inf,0.0,,0.0
+mfrc,qwen-logprob,pre-specified,fixed 0.95,0.95,0.9777757782976427,0.21017760191405174,1.0
+mfrc,qwen-logprob,pre-specified,fixed 0.99,0.99,0.9391758142882853,0.1965893849396436,1.0
+annomi_client,qwen-logprob,pre-specified,"own calib, empirical",0.9999988218396468,0.04420518181834854,0.19897961544428525,1.0
+annomi_client,qwen-logprob,pre-specified,"other tasks, empirical",0.9999945163727092,0.48464011624495046,0.18580053636466662,1.0
+annomi_client,qwen-logprob,pre-specified,"other tasks, ltt",0.9999955892564643,0.4607996257781104,0.18290942202255242,1.0
+annomi_client,qwen-logprob,pre-specified,fixed 0.95,0.95,0.990439999542864,0.33774656295567174,1.0
+annomi_client,qwen-logprob,pre-specified,fixed 0.99,0.99,0.9816231654764074,0.33401428710940134,1.0
+annomi_therapist,qwen-logprob,pre-specified,"own calib, empirical",0.9999990592302234,0.023871206788093714,0.10297752188203708,1.0
+annomi_therapist,qwen-logprob,pre-specified,"other tasks, empirical",0.9999938555122645,0.5036517905294079,0.15849850285614758,1.0
+annomi_therapist,qwen-logprob,pre-specified,"other tasks, ltt",0.9999952146308244,0.38664011435440315,0.16052580028222824,1.0
+annomi_therapist,qwen-logprob,pre-specified,fixed 0.95,0.95,0.9965063891620024,0.25292079502115467,1.0
+annomi_therapist,qwen-logprob,pre-specified,fixed 0.99,0.99,0.9884392140953623,0.25021578742311684,1.0
+talkmoves_teacher,qwen-logprob,pre-specified,"own calib, empirical",0.999997939188183,0.01879585758520482,0.48109937754638,1.0
+talkmoves_teacher,qwen-logprob,pre-specified,"other tasks, empirical",0.9999945776790415,0.21678540773366814,0.24873238687094992,1.0
+talkmoves_teacher,qwen-logprob,pre-specified,"other tasks, ltt",0.9999956477991547,0.15835668579144474,0.24305693272535284,1.0
+talkmoves_teacher,qwen-logprob,pre-specified,fixed 0.95,0.95,0.97143126801761,0.3822145792619545,1.0
+talkmoves_teacher,qwen-logprob,pre-specified,fixed 0.99,0.99,0.9503816507748686,0.375734887627833,1.0
+talkmoves_student,qwen-logprob,pre-specified,"own calib, empirical",0.9999980157009626,0.0,,0.0
+talkmoves_student,qwen-logprob,pre-specified,"other tasks, empirical",0.9999954950439315,0.02581493786445353,0.34938144549115524,1.0
+talkmoves_student,qwen-logprob,pre-specified,"other tasks, ltt",0.9999964237213419,0.009525369921180665,0.477569878238045,1.0
+talkmoves_student,qwen-logprob,pre-specified,fixed 0.95,0.95,0.9855742855982833,0.48788577131113914,1.0
+talkmoves_student,qwen-logprob,pre-specified,fixed 0.99,0.99,0.9614731577347215,0.48225135768668687,1.0
+mfrc,agree3,exploratory,"own calib, empirical",inf,0.0,,0.0
+mfrc,agree3,exploratory,"other tasks, empirical",inf,0.0,,0.0
+mfrc,agree3,exploratory,"other tasks, ltt",inf,0.0,,0.0
+mfrc,agree3,exploratory,fixed 0.95,0.95,0.8039920877540011,0.08678148065309775,1.0
+mfrc,agree3,exploratory,fixed 0.99,0.99,0.8039920877540011,0.08678148065309775,1.0
+annomi_client,agree3,exploratory,"own calib, empirical",inf,0.0,,0.0
+annomi_client,agree3,exploratory,"other tasks, empirical",inf,0.0,,0.0
+annomi_client,agree3,exploratory,"other tasks, ltt",inf,0.0,,0.0
+annomi_client,agree3,exploratory,fixed 0.95,0.95,0.7480969345154015,0.2090086557354109,1.0
+annomi_client,agree3,exploratory,fixed 0.99,0.99,0.7480969345154015,0.2090086557354109,1.0
+annomi_therapist,agree3,exploratory,"own calib, empirical",inf,0.0,,0.0
+annomi_therapist,agree3,exploratory,"other tasks, empirical",inf,0.0,,0.0
+annomi_therapist,agree3,exploratory,"other tasks, ltt",inf,0.0,,0.0
+annomi_therapist,agree3,exploratory,fixed 0.95,0.95,0.7573269265697016,0.13264716428483586,1.0
+annomi_therapist,agree3,exploratory,fixed 0.99,0.99,0.7573269265697016,0.13264716428483586,1.0
+talkmoves_teacher,agree3,exploratory,"own calib, empirical",inf,0.0,,0.0
+talkmoves_teacher,agree3,exploratory,"other tasks, empirical",inf,0.0,,0.0
+talkmoves_teacher,agree3,exploratory,"other tasks, ltt",inf,0.0,,0.0
+talkmoves_teacher,agree3,exploratory,fixed 0.95,0.95,0.7012467210087153,0.11693177972568947,1.0
+talkmoves_teacher,agree3,exploratory,fixed 0.99,0.99,0.7012467210087153,0.11693177972568947,1.0
+talkmoves_student,agree3,exploratory,"own calib, empirical",inf,0.0,,0.0
+talkmoves_student,agree3,exploratory,"other tasks, empirical",inf,0.0,,0.0
+talkmoves_student,agree3,exploratory,"other tasks, ltt",inf,0.0,,0.0
+talkmoves_student,agree3,exploratory,fixed 0.95,0.95,0.5865792600449139,0.3249318025148415,1.0
+talkmoves_student,agree3,exploratory,fixed 0.99,0.99,0.5865792600449139,0.3249318025148415,1.0
+POOLED,jev,,"own calib, empirical",inf,0.32926572345782923,0.08008858853762862,0.4
+POOLED,jev,,"other tasks, empirical",inf,0.4696262041642236,0.17523577906598548,0.8
+POOLED,jev,,"other tasks, ltt",inf,0.0,,0.0
+POOLED,jev,,fixed 0.95,0.95,0.3639764643868979,0.11098538336469757,0.8
+POOLED,jev,,fixed 0.99,0.99,0.22029464524528017,0.07762654672629418,0.8
+POOLED,oaid,,"own calib, empirical",inf,0.22656815161964605,0.0487118061192127,0.2
+POOLED,oaid,,"other tasks, empirical",inf,0.28227221367222427,0.1361855345475595,0.8
+POOLED,oaid,,"other tasks, ltt",inf,0.20375188669706473,0.1257133009801878,0.6
+POOLED,oaid,,fixed 0.95,0.95,0.49821839050612715,0.12486954541852864,0.8
+POOLED,oaid,,fixed 0.99,0.99,0.3093145929842407,0.10721558098710182,0.8
+POOLED,luna-verbal,,"own calib, empirical",inf,0.20152868673389715,0.054991113711354386,0.4
+POOLED,luna-verbal,,"other tasks, empirical",0.976,0.3214813158143655,0.10025926312686387,0.8
+POOLED,luna-verbal,,"other tasks, ltt",inf,0.3214453510598249,0.12532407890857983,0.8
+POOLED,luna-verbal,,fixed 0.95,0.95,0.6353618733780173,0.14731249874886582,0.8
+POOLED,luna-verbal,,fixed 0.99,0.99,0.22557049662191514,0.08090658862204145,0.8
+POOLED,haiku-verbal,,"own calib, empirical",inf,0.16085288009999302,0.011319094472442203,0.0
+POOLED,haiku-verbal,,"other tasks, empirical",0.9,0.46270858828501504,0.12810949078941075,0.8
+POOLED,haiku-verbal,,"other tasks, ltt",inf,0.44487007003290213,0.15938081509966665,0.8
+POOLED,haiku-verbal,,fixed 0.95,0.95,0.3102344397273867,0.05601093863158992,0.8
+POOLED,haiku-verbal,,fixed 0.99,0.99,0.0031381783600437953,0.0,0.0
+POOLED,oss-verbal,,"own calib, empirical",0.958,0.22124096329641532,0.10157094611997146,0.6
+POOLED,oss-verbal,,"other tasks, empirical",0.954,0.21473025501708812,0.10134953931768775,0.6
+POOLED,oss-verbal,,"other tasks, ltt",0.974,0.06605133524474346,0.0731580520813468,0.6
+POOLED,oss-verbal,,fixed 0.95,0.95,0.5233214175809298,0.14398703936615004,0.8
+POOLED,oss-verbal,,fixed 0.99,0.99,0.04285426287497583,0.05704602374571184,0.4
+POOLED,qwen-verbal,,"own calib, empirical",inf,0.033844766325738226,0.11369932957125137,0.2
+POOLED,qwen-verbal,,"other tasks, empirical",inf,0.0,,0.0
+POOLED,qwen-verbal,,"other tasks, ltt",inf,0.0,,0.0
+POOLED,qwen-verbal,,fixed 0.95,0.95,0.9656574318110689,0.325193288510275,1.0
+POOLED,qwen-verbal,,fixed 0.99,0.99,0.3886717552976501,0.15456443609467332,1.0
+POOLED,luna-logprob,,"own calib, empirical",inf,0.0,,0.0
+POOLED,luna-logprob,,"other tasks, empirical",inf,0.0,,0.0
+POOLED,luna-logprob,,"other tasks, ltt",inf,0.0,,0.0
+POOLED,luna-logprob,,fixed 0.95,0.95,0.9940271647653265,0.2413498809415942,1.0
+POOLED,luna-logprob,,fixed 0.99,0.99,0.9903688710538623,0.23991984419715137,1.0
+POOLED,oss-logprob,,"own calib, empirical",inf,0.01204803482485132,0.29708658947302613,0.2
+POOLED,oss-logprob,,"other tasks, empirical",inf,0.0006987221675995215,1.0,0.2
+POOLED,oss-logprob,,"other tasks, ltt",inf,0.0,,0.0
+POOLED,oss-logprob,,fixed 0.95,0.95,0.9984894803092969,0.28441218808343793,1.0
+POOLED,oss-logprob,,fixed 0.99,0.99,0.9976982557094047,0.2841654673350998,1.0
+POOLED,qwen-logprob,,"own calib, empirical",0.9999964713340421,0.09329670945067423,0.20654867481914738,0.6
+POOLED,qwen-logprob,,"other tasks, empirical",0.9999954900761953,0.2902489921336646,0.18856424030270064,0.8
+POOLED,qwen-logprob,,"other tasks, ltt",inf,0.20306435916902782,0.2660155083170446,0.8
+POOLED,qwen-logprob,,fixed 0.95,0.95,0.9843455441236806,0.33418906209279436,1.0
+POOLED,qwen-logprob,,fixed 0.99,0.99,0.964218600473929,0.3277611409573363,1.0
+POOLED,agree3,,"own calib, empirical",inf,0.0,,0.0
+POOLED,agree3,,"other tasks, empirical",inf,0.0,,0.0
+POOLED,agree3,,"other tasks, ltt",inf,0.0,,0.0
+POOLED,agree3,,fixed 0.95,0.95,0.7194483859785467,0.1740601765827751,1.0
+POOLED,agree3,,fixed 0.99,0.99,0.7194483859785467,0.1740601765827751,1.0

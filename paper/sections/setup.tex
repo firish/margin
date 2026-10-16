@@ -1,0 +1,152 @@
+\section{Study design}
+\label{sec:setup}
+
+\subsection{Tasks and codebooks}
+We use five tasks from three public, human-coded datasets (Table~\ref{tab:main_datasets}).
+\begin{itemize}
+  \item \textbf{MFRC} \citep{trager2022mfrc}: Reddit comments coded for moral foundations with the dataset's guidelines. The
+  codebook is multi-label with 8 codes; 1,988 of the 2,000 sampled comments have three annotators and 12 have two.
+  \item \textbf{AnnoMI} \citep{wu2022annomi,wu2023annomi}, full version: transcribed motivational-interviewing demonstrations, with mutually exclusive
+  codes for client talk (change, sustain, neutral) and therapist behaviour (reflection, question, input, other). AnnoMI
+  publishes labels rather than full definitions, so its codebooks combine AnnoMI's labels with MITI~4 wording
+  \citep{moyers2016miti} and the AnnoMI-to-MISC mapping of \citet{sun2024bimisc}. A subset is coded by ten annotators.
+  \item \textbf{TalkMoves} \citep{suresh2022talkmoves}: K-12 mathematics classroom transcripts coded with the dataset's
+  manual, with mutually exclusive teacher moves (six plus none) and student moves (four plus none).
+\end{itemize}
+For dialogue tasks the coder also sees the previous turn. Dunivin's coded passages about W.~E.~B.~Du Bois
+\citep{dunivin2025scaling} serve as a replication task. We draw stratified samples of 2,000 comments (MFRC) or 1,500
+segments (each dialogue task) that keep rare codes, and weight each segment by its inverse inclusion probability
+\citep{horvitz1952generalization}. A hash of the cluster id (comment, transcript or lesson) assigns about 30\% of clusters to a
+calibration split and the rest to a test split; because clusters differ in size, the calibration split holds 25--40\% of
+segments. The reference label is the annotator majority; ties are dropped.
+
+\input{tables/main_datasets}
+
+\subsection{Coders and confidence}
+Table~\ref{tab:main_coders} lists the models. \textbf{Decision models} receive identical requests: the segment and its
+context, and either one multiple-choice question (exclusive codebooks) or one yes/no question per code (multi-label), whose
+criteria are the code's definition, inclusion and exclusion rules and examples. OpenAI Decisions receives the same content
+mapped to its own choice and predicate types; Clef, pplx-decider and Kev accepted Jev's requests unchanged. We self-host Kev
+on Modal GPUs from the authors' release. \textbf{LLMs} receive the same codebook text in one prompt and return JSON with a
+one-sentence rationale, an answer and a probability from 0 to 100 (per code for multi-label tasks). Appendix~\ref{app:prompts}
+shows both requests.
+
+\paragraph{From outputs to confidence.} For decision models, an exclusive decision is the most probable option and its
+confidence is that probability; a multi-label decision says a code applies if its probability is at least 0.5, with
+confidence $\max(p, 1-p)$. LLM signals are derived as follows.
+\begin{itemize}
+  \item \emph{Verbalized, exclusive:} the chosen option gets the stated probability (at least $1/K$), and the other options
+  share the remainder equally. RQ2's model entropy for these signals therefore comes from a reconstructed, not an elicited,
+  distribution.
+  \item \emph{Verbalized, multi-label:} we read the stated probability as confidence in the stated yes/no answer. Read as
+  ``probability that the code applies'', it contradicted the answer for 85\% of Luna's code decisions (0.2--4.6\% for the
+  other LLMs). Confidence is therefore $c=\max(q, 1-q)$, and $p(\text{applies})$ is $c$ for ``yes'' and $1-c$ for ``no''.
+  \item \emph{Token probability:} the probability of the answer token, read after the generated rationale: the option letter
+  for exclusive codebooks and the yes/no token for each multi-label code (Luna, gpt-oss and both Qwen models).
+  \item \emph{3-LLM agreement:} the vote share of the Luna, Haiku and gpt-oss verbal runs; \emph{self-consistency:} the vote
+  share of five Luna samples at temperature 1 on 350 segments per task.
+\end{itemize}
+We run reasoning models with minimal reasoning so that answer-token probabilities exist. Sonnet and Qwen3.8-2.4T are the
+frontier references; Qwen3.8-2.4T runs on a 270-segment-per-task subset. Every model was called on 10--12 October 2026 (UTC),
+several of them in public beta (Table~\ref{tab:tab18_model_snapshot} lists the versions).
+
+\input{tables/main_coders}
+
+\subsection{Decisions and metrics}
+A \emph{decision} is one label to accept or reject: one per segment for exclusive codebooks, one per segment and code for
+multi-label ones. \textbf{Error AUROC} (RQ1, primary) is the probability that a correct decision has higher confidence than an
+incorrect one, with ties counted as one half \citep{hendrycks2017baseline}. \textbf{Coverage@5\%} (RQ1, primary) is the share of
+test decisions accepted by the threshold rule below, reported with the error among them. Secondary metrics are the area under
+the risk--coverage curve (AURC), expected calibration error (ECE, 10 bins), Cohen's $\kappa$ \citep{cohen1960coefficient} and
+cost. RQ1 and EQ1--EQ5 use design weights, as do RQ3's changes; RQ2's correlations and leave-one-annotator-out $\kappa$ are
+unweighted. Pooled estimates are equal-weight means over the five tasks; this describes these five tasks, not a population
+of codebooks. Confidence intervals come from a cluster bootstrap that resamples calibration and test clusters separately and
+refits thresholds in every replicate (1,000 replicates), unless stated otherwise.
+
+\subsection{Threshold rules}
+\label{sec:rules}
+\begin{figure}[tb]
+  \centering
+  \begin{tikzpicture}[node distance=4mm and 7mm, every node/.style={font=\footnotesize, align=center},
+      box/.style={draw, rounded corners=2pt, minimum height=8mm, inner sep=3pt}, ->, >=Stealth]
+    \node[box] (corpus) {corpus of\\sampling units};
+    \node[box, right=of corpus, yshift=6mm] (cal) {random sample:\\human labels\\+ model scores};
+    \node[box, right=of corpus, yshift=-6mm] (rest) {remainder,\\uncoded};
+    \node[box, right=of cal] (fit) {threshold $\hat t$\\(naive or LTT)};
+    \node[box, right=of rest] (model) {model: label +\\confidence $c$};
+    \node[box, right=of model, xshift=3mm] (gate) {$c \ge \hat t$?};
+    \node[box, right=of gate, yshift=6mm] (acc) {accept label};
+    \node[box, right=of gate, yshift=-6mm] (hum) {human codes it};
+    \draw (corpus) -- (cal); \draw (corpus) -- (rest); \draw (rest) -- (model); \draw (model) -- (gate);
+    \draw (cal) -- (fit); \draw (fit) -| (gate); \draw (gate) -- node[above, sloped] {yes} (acc); \draw (gate) -- node[below, sloped] {no} (hum);
+  \end{tikzpicture}
+  \caption{The triage workflow we evaluate. A random sample of the corpus's units (here comments, transcripts or lessons) is
+  coded by hand and by the model; comparing the two fixes a threshold. The model's confidence then decides which labels in the
+  rest of the corpus are accepted and which go to a person. A guaranteed rule bounds the error rate among the accepted labels
+  of the remainder.}
+  \label{fig:workflow}
+\end{figure}
+Each rule picks a confidence threshold $t$ from the hand-coded calibration clusters and accepts the other decisions with
+confidence $\ge t$. We distinguish two targets. The \emph{corpus target} is the design-weighted error among the accepted
+decisions of the uncoded remainder of the corpus, the quantity a researcher coding their own data cares about. The
+\emph{population target} is the expected error among accepted decisions for new clusters from the same source. Whether one
+particular test set has error above 5\% is exactly the corpus target when that test set is the uncoded remainder of a
+random split, and only a diagnostic for the population target.
+\begin{itemize}
+  \item \textbf{Naive} (the pre-specified primary rule): the lowest threshold whose calibration error is at most 5\%. No guarantee.
+  \item \textbf{LTT on decisions:} Learn-then-Test \citep{angelopoulos2025ltt} with binomial tests of ``risk $>$5\%'' on
+  decision counts, fixed-sequence from the most confident tie block. With design weights the counts are Kish-effective and
+  fractional, so the test is an approximation even for independent decisions. It treats decisions as independent; we show it
+  only for comparison.
+  \item \textbf{Corpus LTT} (our guaranteed rule). For each threshold on a grid of 16 values from 0.5 to 1.0, cluster $i$
+  contributes $Z_i(t)=\sum_j w_{ij}\,\mathbf{1}\{c_{ij}\ge t\}\,(e_{ij}-0.05)$, so a set of clusters has error at most 5\% among
+  its accepted decisions exactly when its $Z$-sum is at most 0. Rescaled by $B$, the largest total weight of one cluster in the
+  corpus (known before anything is coded), $Y_i=(Z_i+0.05B)/B$ lies in $[0,1]$. A betting test for sampling without
+  replacement \citep{waudbysmith2024betting} visits the hand-coded clusters in random order and asks whether the corpus mean
+  of $Y$ is low enough for the remainder's $Z$-sum to be at most 0 (Appendix~\ref{app:ltt}). So that the result does not
+  depend on one arbitrary order, we average the test's final wealth over 100 random orders. Each threshold is tested at
+  $0.05/16$, and the lowest certified one is used.
+\end{itemize}
+\noindent\textbf{Proposition} (corpus LTT; Appendix~\ref{app:ltt}). Suppose the hand-coded clusters are a uniformly random
+subset of the corpus's clusters, the orders in which the test visits them are uniformly random and independent of the labels,
+and the confidence scores, the threshold grid and $B$ are fixed before the hand-coded labels are used. Then, with probability
+at least 0.95 over the random choice of clusters and orders, every certified threshold has error at most 5\% among the
+accepted decisions of the uncoded clusters (counting a remainder with no accepted decision as within the target). No
+assumption is made about how errors depend on each other within or across clusters.
+
+The construction adapts existing testing machinery to the coding workflow; the statistical tools are not new. Nothing in
+it requires the unit to be a cluster: any unit can be sampled, such as a comment, a whole transcript, a fixed-size block of
+turns or a single utterance coded with its context, provided the hand-coded units are a random sample of the corpus's units
+and $B$ is the largest unit's weight. What the guarantee must respect is how the hand-coded sample was drawn.
+
+In our evaluation, each task's sample is the corpus, its calibration split the hand-coded clusters (assigned by a hash of the
+cluster id, which we treat as random) and its test split the remainder. The visiting orders come from a pseudo-random
+generator with a seed recorded before this analysis was run. The guarantee holds for each configuration on its
+own; picking the best of several certified configurations would need a further correction. Learned scores, such as per-code
+maps or the prevalence baseline below, are fitted on half of the calibration clusters, frozen, certified on the other half
+and applied unchanged to the remainder. Multi-stage cascades are certified jointly over all combinations of per-stage
+thresholds. For the population target we also report the same test with a constant null mean (\emph{LTT on i.i.d.
+clusters}); it needs clusters to be independent draws, which we assume rather than know, and $B$ to bound every future
+cluster's weight, which is true for MFRC (eight codes per comment at one weight) but not for transcripts of unbounded
+length. The \textbf{oracle} applies the naive rule to
+the test split itself: not deployable, an upper bound for comparison.
+
+\paragraph{Analysis plan.} The plan fixed the tasks, splits, decision units, metrics, primary rule and RQ1 contrasts before
+any test-split outcome was computed. Four amendments, each dated before the data it governs, added OpenAI Decisions and a
+Qwen comparator (v1.1), five more decision models (v1.2), a memorization probe (v1.3) and a prompt-sensitivity check (v1.4).
+The plan and amendments were kept in the project repository, not registered with an external service, so their timing
+cannot be verified independently; we call the plan prospectively specified. A claim needs the pooled 95\% CI to exclude
+zero; for the v1.2 family the plan also requires Holm's correction \citep{holm1979simple}, which we apply to the earlier
+families as a sensitivity analysis. Jev anchors the confirmatory contrasts because the original plan was written for it;
+the other decision models were added by amendment. Pooled intervals resample each corpus's clusters jointly, so AnnoMI's two
+tasks share transcript draws and TalkMoves' two share lesson draws. Sonnet was specified on a nested subset; that result is the
+confirmatory one, and its later full-sample run is a labelled extension. Everything changed after results were seen,
+including the corpus guarantee, which replaced decision-level LTT and was revised after external reviews, is labelled exploratory and
+logged (Appendix~\ref{app:deviations}).
+
+\paragraph{Adjudicated reference.} Human majority labels contain errors. We sampled 200 items for blinded adjudication from
+disagreements between the human label and six label sources (Jev in both question formats, Luna, Haiku, gpt-oss and Sonnet's
+subset run), oversampling high-confidence disagreements, plus hidden controls. A two-family LLM panel (Claude Opus 5.5 and GPT-6 Sol) judged each item. The author
+adjudicated 36 of the 52 items the panel disputed, plus a 12-item audit of panel-agreed items (agreement 10 of 12); a planned
+second sitting to measure the author's own consistency was not done. Of the 200 items, 184 were resolved; unresolved items
+keep the human label. We use this reference as a sensitivity analysis, not as a corrected gold standard.

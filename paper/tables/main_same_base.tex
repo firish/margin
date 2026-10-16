@@ -1,0 +1,25 @@
+\begin{table}[t]
+\centering
+\small
+\caption{EQ4: two 9B decision models built on Qwen3.5-9B vs the Qwen3.5-9B instruct model's own confidence (pooled over tasks).}
+\label{tab:main_same_base}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llrll}
+\toprule
+comparison & metric & difference & 95\% CI & p (bootstrap) \\
+\midrule
+Clef-flash (9B) -- Qwen3.5-9B verbal & error AUROC & 0.065 & [0.048, 0.085] & <0.001 \\
+Clef-flash (9B) -- Qwen3.5-9B verbal & coverage@5\% & 0.221 & [0.181, 0.297] & <0.001 \\
+Clef-flash (9B) -- Qwen3.5-9B logprob & error AUROC & 0.027 & [0.004, 0.052] & 0.026 \\
+Clef-flash (9B) -- Qwen3.5-9B logprob & coverage@5\% & 0.161 & [0.110, 0.211] & <0.001 \\
+Kev-9B -- Qwen3.5-9B verbal & error AUROC & 0.048 & [0.030, 0.066] & <0.001 \\
+Kev-9B -- Qwen3.5-9B verbal & coverage@5\% & 0.205 & [0.152, 0.280] & <0.001 \\
+Kev-9B -- Qwen3.5-9B logprob & error AUROC & 0.010 & [-0.018, 0.036] & 0.512 \\
+Kev-9B -- Qwen3.5-9B logprob & coverage@5\% & 0.146 & [0.079, 0.189] & <0.001 \\
+Clef-flash (9B) -- Kev-9B & error AUROC & 0.018 & [-0.007, 0.043] & 0.142 \\
+Clef-flash (9B) -- Kev-9B & coverage@5\% & 0.015 & [-0.043, 0.097] & 0.560 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\raggedright Coverage is the naive rule's share accepted. Kev-9B starts from the base checkpoint and Clef-flash's exact variant is unspecified, so these contrasts compare related systems with different training and read-out, not a controlled training ablation.
+\end{table}

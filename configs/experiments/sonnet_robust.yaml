@@ -1,0 +1,9 @@
+# RQ3 for Sonnet: the same order and label perturbations and the same 85 test segments per task as
+# llm_robust (Luna); canonical is served from sonnet_main's cache.
+name: sonnet_robust
+sample: main
+split: test
+limit: 85
+tasks: [mfrc, annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student]
+coders: [sonnet]
+variants: [canonical, reversed, shuffle1, neutral_labels]

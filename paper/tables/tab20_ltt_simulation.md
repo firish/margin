@@ -1,0 +1,21 @@
+**Table 20. LTT on synthetic clustered corpora (300 simulations per row, 30% of clusters hand-coded, δ = 0.05)**
+
+| clusters in corpus | decisions per cluster | copula loading | within-cluster error correlation | LTT on | P(remainder risk > 5%) | P(population risk > 5%) | mean share accepted |
+|---|---|---|---|---|---|---|---|
+| 2000 | 8 | 0.000 | -0.002 | decisions | 0.103 | 0.057 | 0.775 |
+| 2000 | 8 | 0.000 | -0.002 | i.i.d. clusters | 0.000 | 0.000 | 0.522 |
+| 2000 | 8 | 0.000 | -0.002 | corpus | 0.000 | 0.000 | 0.289 |
+| 2000 | 8 | 0.500 | 0.070 | decisions | 0.113 | 0.067 | 0.772 |
+| 2000 | 8 | 0.500 | 0.070 | i.i.d. clusters | 0.000 | 0.000 | 0.477 |
+| 2000 | 8 | 0.500 | 0.070 | corpus | 0.000 | 0.000 | 0.249 |
+| 2000 | 8 | 0.900 | 0.364 | decisions | 0.163 | 0.137 | 0.763 |
+| 2000 | 8 | 0.900 | 0.364 | i.i.d. clusters | 0.003 | 0.000 | 0.362 |
+| 2000 | 8 | 0.900 | 0.364 | corpus | 0.003 | 0.000 | 0.146 |
+| 400 | 10 | 0.900 | 0.329 | decisions | 0.193 | 0.180 | 0.616 |
+| 400 | 10 | 0.900 | 0.329 | i.i.d. clusters | 0.000 | 0.000 | 0.000 |
+| 400 | 10 | 0.900 | 0.329 | corpus | 0.000 | 0.000 | 0.000 |
+| 170 | 30 | 0.900 | 0.328 | decisions | 0.297 | 0.313 | 0.656 |
+| 170 | 30 | 0.900 | 0.328 | i.i.d. clusters | 0.000 | 0.000 | 0.000 |
+| 170 | 30 | 0.900 | 0.328 | corpus | 0.000 | 0.000 | 0.000 |
+
+_Calibrated confidence conf = 1 − 0.5·Beta(1, 6); errors correlated within a cluster through a Gaussian copula (the loading is not the error correlation, which is shown). Remainder: the uncoded clusters of the corpus; population: closed form. The best threshold with population risk ≤ 5% accepts 0.841 of decisions._

@@ -1,0 +1,8 @@
+# Amendment v1.1 (A2): non-reasoning Qwen (verbal + logprob from the same call) on the full shared
+# sample, same prompt as llm_main.
+name: qwen_big_main
+sample: main
+split: all
+tasks: [mfrc, annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student, dunivin]
+coders: [qwen_big]
+variants: [canonical]

@@ -1,0 +1,11 @@
+comparison,metric,difference,95% CI,p (bootstrap)
+Clef-flash (9B) − Qwen3.5-9B verbal,error AUROC,0.0653233836685294,"[0.048, 0.085]",<0.001
+Clef-flash (9B) − Qwen3.5-9B verbal,coverage@5%,0.220504756546692,"[0.181, 0.297]",<0.001
+Clef-flash (9B) − Qwen3.5-9B logprob,error AUROC,0.0273909816107191,"[0.004, 0.052]",0.026
+Clef-flash (9B) − Qwen3.5-9B logprob,coverage@5%,0.1610528134217559,"[0.110, 0.211]",<0.001
+Kev-9B − Qwen3.5-9B verbal,error AUROC,0.0475283304838315,"[0.030, 0.066]",<0.001
+Kev-9B − Qwen3.5-9B verbal,coverage@5%,0.2050942963383487,"[0.152, 0.280]",<0.001
+Kev-9B − Qwen3.5-9B logprob,error AUROC,0.0095959284260211,"[-0.018, 0.036]",0.512
+Kev-9B − Qwen3.5-9B logprob,coverage@5%,0.1456423532134127,"[0.079, 0.189]",<0.001
+Clef-flash (9B) − Kev-9B,error AUROC,0.0175358134043593,"[-0.007, 0.043]",0.142
+Clef-flash (9B) − Kev-9B,coverage@5%,0.0153553919280401,"[-0.043, 0.097]",0.560

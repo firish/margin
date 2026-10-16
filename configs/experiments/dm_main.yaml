@@ -1,0 +1,7 @@
+# Amendment v1.2 (A5): other System One decision models on the full shared sample, Jev's exact requests.
+name: dm_main
+sample: main
+split: all
+tasks: [mfrc, annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student, dunivin]
+coders: [clef, clef_flash, pplx, kev9b, kev27b]
+variants: [canonical]

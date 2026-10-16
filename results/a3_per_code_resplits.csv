@@ -1,0 +1,73 @@
+task,signal,status,rule,reps,mean_coverage,violation_rate,share_zero_coverage
+mfrc,jev,exploratory,empirical,250.0,0.8262696266039956,0.5,0.0
+mfrc,jev,exploratory,ltt,250.0,0.1562499501971463,0.0,0.748
+mfrc,oaid,exploratory; coder listed in an amendment,empirical,250.0,0.7889362014728803,0.308,0.0
+mfrc,oaid,exploratory; coder listed in an amendment,ltt,250.0,0.0171114710333682,0.0,0.972
+mfrc,luna-verbal,exploratory,empirical,250.0,0.8398168007057428,0.448,0.0
+mfrc,luna-verbal,exploratory,ltt,250.0,0.0663160121416426,0.0,0.892
+mfrc,haiku-verbal,exploratory,empirical,250.0,0.7717823291977218,0.576,0.0
+mfrc,haiku-verbal,exploratory,ltt,250.0,0.4737223937616131,0.0,0.26
+mfrc,oss-verbal,exploratory,empirical,250.0,0.8406460826988271,0.356,0.0
+mfrc,oss-verbal,exploratory,ltt,250.0,0.3447528165044075,0.0,0.488
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,empirical,250.0,0.6745564123509721,0.432,0.0
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,ltt,250.0,0.0271404099842572,0.0,0.948
+annomi_client,jev,exploratory,empirical,250.0,0.0545748696959452,0.408,0.592
+annomi_client,jev,exploratory,ltt,250.0,0.0,0.0,1.0
+annomi_client,oaid,exploratory; coder listed in an amendment,empirical,250.0,0.0387057833699338,0.36,0.64
+annomi_client,oaid,exploratory; coder listed in an amendment,ltt,250.0,0.0,0.0,1.0
+annomi_client,luna-verbal,exploratory,empirical,250.0,0.0516745494089436,0.348,0.088
+annomi_client,luna-verbal,exploratory,ltt,250.0,0.0,0.0,1.0
+annomi_client,haiku-verbal,exploratory,empirical,250.0,0.0572766180449389,0.372,0.148
+annomi_client,haiku-verbal,exploratory,ltt,250.0,0.0,0.0,1.0
+annomi_client,oss-verbal,exploratory,empirical,250.0,0.0213277775683651,0.428,0.472
+annomi_client,oss-verbal,exploratory,ltt,250.0,0.0,0.0,1.0
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,empirical,250.0,0.0561265278883524,0.58,0.42
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,ltt,250.0,0.0,0.0,1.0
+annomi_therapist,jev,exploratory,empirical,250.0,0.2974596618843479,0.44,0.064
+annomi_therapist,jev,exploratory,ltt,250.0,0.0,0.0,1.0
+annomi_therapist,oaid,exploratory; coder listed in an amendment,empirical,250.0,0.413035952184175,0.384,0.008
+annomi_therapist,oaid,exploratory; coder listed in an amendment,ltt,250.0,0.0,0.0,1.0
+annomi_therapist,luna-verbal,exploratory,empirical,250.0,0.2930336185120289,0.324,0.076
+annomi_therapist,luna-verbal,exploratory,ltt,250.0,0.0,0.0,1.0
+annomi_therapist,haiku-verbal,exploratory,empirical,250.0,0.3522330052024852,0.38,0.0
+annomi_therapist,haiku-verbal,exploratory,ltt,250.0,0.0,0.0,1.0
+annomi_therapist,oss-verbal,exploratory,empirical,250.0,0.2124048262349005,0.424,0.0
+annomi_therapist,oss-verbal,exploratory,ltt,250.0,0.0,0.0,1.0
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,empirical,250.0,0.0075269245754676,0.048,0.952
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,ltt,250.0,0.0,0.0,1.0
+talkmoves_teacher,jev,exploratory,empirical,250.0,0.4483705762215441,0.448,0.0
+talkmoves_teacher,jev,exploratory,ltt,250.0,0.0,0.0,1.0
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,empirical,250.0,0.1766330076599818,0.224,0.112
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,ltt,250.0,0.0,0.0,1.0
+talkmoves_teacher,luna-verbal,exploratory,empirical,250.0,0.3870147480762931,0.364,0.028
+talkmoves_teacher,luna-verbal,exploratory,ltt,250.0,0.0,0.0,1.0
+talkmoves_teacher,haiku-verbal,exploratory,empirical,250.0,0.3053166716943005,0.172,0.024
+talkmoves_teacher,haiku-verbal,exploratory,ltt,250.0,0.0,0.0,1.0
+talkmoves_teacher,oss-verbal,exploratory,empirical,250.0,0.0299789380272721,0.024,0.052
+talkmoves_teacher,oss-verbal,exploratory,ltt,250.0,0.0,0.0,1.0
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,empirical,250.0,0.0161316701329809,0.112,0.796
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,ltt,250.0,0.0,0.0,1.0
+talkmoves_student,jev,exploratory,empirical,250.0,0.07135667766103,0.516,0.128
+talkmoves_student,jev,exploratory,ltt,250.0,0.0,0.0,1.0
+talkmoves_student,oaid,exploratory; coder listed in an amendment,empirical,250.0,0.0170153391861539,0.684,0.308
+talkmoves_student,oaid,exploratory; coder listed in an amendment,ltt,250.0,0.0,0.0,1.0
+talkmoves_student,luna-verbal,exploratory,empirical,250.0,0.063862971400901,0.34,0.416
+talkmoves_student,luna-verbal,exploratory,ltt,250.0,0.0,0.0,1.0
+talkmoves_student,haiku-verbal,exploratory,empirical,250.0,0.0765844238365693,0.404,0.096
+talkmoves_student,haiku-verbal,exploratory,ltt,250.0,0.0,0.0,1.0
+talkmoves_student,oss-verbal,exploratory,empirical,250.0,0.0353196127621509,0.468,0.512
+talkmoves_student,oss-verbal,exploratory,ltt,250.0,0.0,0.0,1.0
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,empirical,250.0,0.0315463365123086,0.468,0.532
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,ltt,250.0,0.0,0.0,1.0
+POOLED,jev,,empirical,250.0,0.3396062824133726,0.4624,0.1568
+POOLED,jev,,ltt,250.0,0.0312499900394292,0.0,0.9496
+POOLED,oaid,,empirical,250.0,0.286865256774625,0.392,0.2136
+POOLED,oaid,,ltt,250.0,0.0034222942066736,0.0,0.9944
+POOLED,luna-verbal,,empirical,250.0,0.3270805376207819,0.3648,0.1216
+POOLED,luna-verbal,,ltt,250.0,0.0132632024283285,0.0,0.9784
+POOLED,haiku-verbal,,empirical,250.0,0.3126386095952032,0.3807999999999999,0.0536
+POOLED,haiku-verbal,,ltt,250.0,0.0947444787523226,0.0,0.852
+POOLED,oss-verbal,,empirical,250.0,0.2279354474583031,0.3399999999999999,0.2072
+POOLED,oss-verbal,,ltt,250.0,0.0689505633008814,0.0,0.8976
+POOLED,qwen-verbal,,empirical,250.0,0.1571775742920163,0.3279999999999999,0.54
+POOLED,qwen-verbal,,ltt,250.0,0.0054280819968514,0.0,0.9896

@@ -1,0 +1,8 @@
+# Task six: Dunivin (2025) Du Bois passages. All 120 gold-coded passages; the paper's published GPT
+# baselines are on the 111-passage test subset (segments.published_split == "test").
+name: dunivin
+sample: main
+split: all
+tasks: [dunivin]
+coders: [jev]
+variants: [canonical]

@@ -1,0 +1,2161 @@
+task,signal,status,eps,rule,threshold,test_coverage,test_risk
+mfrc,jev,exploratory,0.02,empirical,0.87,0.5466642690163639,0.0139802631578947
+mfrc,jev,exploratory,0.02,cp,0.91,0.3924653839237547,0.0103092783505154
+mfrc,jev,exploratory,0.02,ltt_dec,0.91,0.3924653839237547,0.0103092783505154
+mfrc,jev,exploratory,0.02,ltt_iid,inf,0.0,
+mfrc,jev,exploratory,0.02,ltt,inf,0.0,
+mfrc,jev,exploratory,0.02,oracle,0.84,0.6229994605286819,0.0187617260787992
+mfrc,jev,exploratory,0.05,empirical,0.74,0.7784571120302105,0.0377685377685377
+mfrc,jev,exploratory,0.05,cp,0.77,0.7437511238985794,0.0325193423597678
+mfrc,jev,exploratory,0.05,ltt_dec,0.77,0.7437511238985794,0.0325193423597678
+mfrc,jev,exploratory,0.05,ltt_iid,0.8,0.6960079122459989,0.025965637514533
+mfrc,jev,exploratory,0.05,ltt,0.85,0.5984535155547563,0.0160757211538461
+mfrc,jev,exploratory,0.05,oracle,0.7,0.8155008092069772,0.0471885336273428
+mfrc,jev,exploratory,0.1,empirical,0.5700000000000001,0.9313972307139006,0.0880393860411236
+mfrc,jev,exploratory,0.1,cp,0.61,0.8967811544686207,0.0762983757770202
+mfrc,jev,exploratory,0.1,ltt_dec,0.61,0.8967811544686207,0.0762983757770202
+mfrc,jev,exploratory,0.1,ltt_iid,0.65,0.8582988671102321,0.0618059920385501
+mfrc,jev,exploratory,0.1,ltt,0.65,0.8582988671102321,0.0618059920385501
+mfrc,jev,exploratory,0.1,oracle,0.55,0.9561229994605288,0.099492194846718
+mfrc,oaid,exploratory; coder listed in an amendment,0.02,empirical,inf,0.0,
+mfrc,oaid,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+mfrc,oaid,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+mfrc,oaid,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+mfrc,oaid,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+mfrc,oaid,exploratory; coder listed in an amendment,0.02,oracle,1.0,0.3300665347959,0.0193407790792699
+mfrc,oaid,exploratory; coder listed in an amendment,0.05,empirical,0.93,0.724509980219385,0.0439314966492926
+mfrc,oaid,exploratory; coder listed in an amendment,0.05,cp,0.95,0.6556374752742313,0.0368897421832144
+mfrc,oaid,exploratory; coder listed in an amendment,0.05,ltt_dec,0.95,0.6556374752742313,0.0368897421832144
+mfrc,oaid,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+mfrc,oaid,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+mfrc,oaid,exploratory; coder listed in an amendment,0.05,oracle,0.92,0.7495054846250676,0.0476247600767754
+mfrc,oaid,exploratory; coder listed in an amendment,0.1,empirical,0.69,0.9500989030749868,0.0921737484621936
+mfrc,oaid,exploratory; coder listed in an amendment,0.1,cp,0.76,0.921956482647006,0.0813341135166764
+mfrc,oaid,exploratory; coder listed in an amendment,0.1,ltt_dec,0.76,0.921956482647006,0.0813341135166764
+mfrc,oaid,exploratory; coder listed in an amendment,0.1,ltt_iid,0.85,0.8634238446322604,0.0671665104654795
+mfrc,oaid,exploratory; coder listed in an amendment,0.1,ltt,0.85,0.8634238446322604,0.0671665104654795
+mfrc,oaid,exploratory; coder listed in an amendment,0.1,oracle,0.63,0.9675418090271536,0.09989777901682
+mfrc,luna-verbal,exploratory,0.02,empirical,0.99,0.3413954324761734,0.0115880958651567
+mfrc,luna-verbal,exploratory,0.02,cp,0.99,0.3413954324761734,0.0115880958651567
+mfrc,luna-verbal,exploratory,0.02,ltt_dec,0.99,0.3413954324761734,0.0115880958651567
+mfrc,luna-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+mfrc,luna-verbal,exploratory,0.02,ltt,inf,0.0,
+mfrc,luna-verbal,exploratory,0.02,oracle,0.99,0.3413954324761734,0.0115880958651567
+mfrc,luna-verbal,exploratory,0.05,empirical,0.94,0.795360546664269,0.0392267691612028
+mfrc,luna-verbal,exploratory,0.05,cp,0.94,0.795360546664269,0.0392267691612028
+mfrc,luna-verbal,exploratory,0.05,ltt_dec,0.94,0.795360546664269,0.0392267691612028
+mfrc,luna-verbal,exploratory,0.05,ltt_iid,0.97,0.6401726308217947,0.022191011235955
+mfrc,luna-verbal,exploratory,0.05,ltt,0.97,0.6401726308217947,0.022191011235955
+mfrc,luna-verbal,exploratory,0.05,oracle,0.92,0.7957201942096747,0.0392090395480226
+mfrc,luna-verbal,exploratory,0.1,empirical,0.8,0.927261283941737,0.0762144865703481
+mfrc,luna-verbal,exploratory,0.1,cp,0.8,0.927261283941737,0.0762144865703481
+mfrc,luna-verbal,exploratory,0.1,ltt_dec,0.8,0.927261283941737,0.0762144865703481
+mfrc,luna-verbal,exploratory,0.1,ltt_iid,0.85,0.8979500089911886,0.0645839591468909
+mfrc,luna-verbal,exploratory,0.1,ltt,0.85,0.8979500089911886,0.0645839591468909
+mfrc,luna-verbal,exploratory,0.1,oracle,0.78,0.96340586225499,0.0969668688754083
+mfrc,haiku-verbal,exploratory,0.02,empirical,0.92,0.592878978600971,0.0121322414316044
+mfrc,haiku-verbal,exploratory,0.02,cp,0.92,0.592878978600971,0.0121322414316044
+mfrc,haiku-verbal,exploratory,0.02,ltt_dec,0.92,0.592878978600971,0.0121322414316044
+mfrc,haiku-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+mfrc,haiku-verbal,exploratory,0.02,ltt,inf,0.0,
+mfrc,haiku-verbal,exploratory,0.02,oracle,0.88,0.6629203380686928,0.0172250101722501
+mfrc,haiku-verbal,exploratory,0.05,empirical,0.82,0.7493256608523647,0.0339572834173266
+mfrc,haiku-verbal,exploratory,0.05,cp,0.8200000000000001,0.7488761014206079,0.0337375435226317
+mfrc,haiku-verbal,exploratory,0.05,ltt_dec,0.8200000000000001,0.7488761014206079,0.0337375435226317
+mfrc,haiku-verbal,exploratory,0.05,ltt_iid,0.9,0.6580650962057184,0.0169422052192922
+mfrc,haiku-verbal,exploratory,0.05,ltt,0.9,0.6580650962057184,0.0169422052192922
+mfrc,haiku-verbal,exploratory,0.05,oracle,0.78,0.7759395792123719,0.0463499420625724
+mfrc,haiku-verbal,exploratory,0.1,empirical,0.75,0.8172091350476534,0.0729453185168885
+mfrc,haiku-verbal,exploratory,0.1,cp,0.75,0.8172091350476534,0.0729453185168885
+mfrc,haiku-verbal,exploratory,0.1,ltt_dec,0.75,0.8172091350476534,0.0729453185168885
+mfrc,haiku-verbal,exploratory,0.1,ltt_iid,0.75,0.8172091350476534,0.0729453185168885
+mfrc,haiku-verbal,exploratory,0.1,ltt,0.8,0.7700953065995327,0.0421482778750729
+mfrc,haiku-verbal,exploratory,0.1,oracle,0.71,0.8474195288617156,0.0990981432360743
+mfrc,oss-verbal,exploratory,0.02,empirical,1.0,0.0035065635677036,0.0256410256410256
+mfrc,oss-verbal,exploratory,0.02,cp,inf,0.0,
+mfrc,oss-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+mfrc,oss-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+mfrc,oss-verbal,exploratory,0.02,ltt,inf,0.0,
+mfrc,oss-verbal,exploratory,0.02,oracle,0.96,0.0541269555835281,0.0199335548172757
+mfrc,oss-verbal,exploratory,0.05,empirical,0.88,0.8297068872504945,0.0436714347637624
+mfrc,oss-verbal,exploratory,0.05,cp,0.92,0.7253191871965473,0.0282632949051692
+mfrc,oss-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+mfrc,oss-verbal,exploratory,0.05,ltt_iid,0.925,0.7198345621291136,0.0258556082937796
+mfrc,oss-verbal,exploratory,0.05,ltt,inf,0.0,
+mfrc,oss-verbal,exploratory,0.05,oracle,0.88,0.8297068872504945,0.0436714347637624
+mfrc,oss-verbal,exploratory,0.1,empirical,0.75,0.9180902715338968,0.0914699833512878
+mfrc,oss-verbal,exploratory,0.1,cp,0.85,0.8758316849487501,0.0675495329021661
+mfrc,oss-verbal,exploratory,0.1,ltt_dec,0.85,0.8758316849487501,0.0675495329021661
+mfrc,oss-verbal,exploratory,0.1,ltt_iid,0.85,0.8758316849487501,0.0675495329021661
+mfrc,oss-verbal,exploratory,0.1,ltt,0.85,0.8758316849487501,0.0675495329021661
+mfrc,oss-verbal,exploratory,0.1,oracle,0.72,0.9181801834202482,0.0915589502546024
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.02,empirical,inf,0.0,
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.02,oracle,inf,0.0,
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.05,empirical,inf,0.0,
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.05,oracle,inf,0.0,
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.1,empirical,0.98,0.647651610581249,0.0830786329535982
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.1,cp,0.98,0.647651610581249,0.0830786329535982
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.1,ltt_dec,0.98,0.647651610581249,0.0830786329535982
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+mfrc,qwen-verbal,exploratory; coder listed in an amendment,0.1,oracle,0.98,0.647651610581249,0.0830786329535982
+mfrc,luna-logprob,exploratory,0.02,empirical,inf,0.0,
+mfrc,luna-logprob,exploratory,0.02,cp,inf,0.0,
+mfrc,luna-logprob,exploratory,0.02,ltt_dec,inf,0.0,
+mfrc,luna-logprob,exploratory,0.02,ltt_iid,inf,0.0,
+mfrc,luna-logprob,exploratory,0.02,ltt,inf,0.0,
+mfrc,luna-logprob,exploratory,0.02,oracle,inf,0.0,
+mfrc,luna-logprob,exploratory,0.05,empirical,inf,0.0,
+mfrc,luna-logprob,exploratory,0.05,cp,inf,0.0,
+mfrc,luna-logprob,exploratory,0.05,ltt_dec,inf,0.0,
+mfrc,luna-logprob,exploratory,0.05,ltt_iid,inf,0.0,
+mfrc,luna-logprob,exploratory,0.05,ltt,inf,0.0,
+mfrc,luna-logprob,exploratory,0.05,oracle,0.999999999999,0.5918899478511059,0.0416223606258544
+mfrc,luna-logprob,exploratory,0.1,empirical,0.999999999999,0.5918899478511059,0.0416223606258544
+mfrc,luna-logprob,exploratory,0.1,cp,0.999999999999,0.5918899478511059,0.0416223606258544
+mfrc,luna-logprob,exploratory,0.1,ltt_dec,0.999999999999,0.5918899478511059,0.0416223606258544
+mfrc,luna-logprob,exploratory,0.1,ltt_iid,inf,0.0,
+mfrc,luna-logprob,exploratory,0.1,ltt,inf,0.0,
+mfrc,luna-logprob,exploratory,0.1,oracle,0.999999999999,0.5918899478511059,0.0416223606258544
+mfrc,oss-logprob,exploratory,0.02,empirical,inf,0.0,
+mfrc,oss-logprob,exploratory,0.02,cp,inf,0.0,
+mfrc,oss-logprob,exploratory,0.02,ltt_dec,inf,0.0,
+mfrc,oss-logprob,exploratory,0.02,ltt_iid,inf,0.0,
+mfrc,oss-logprob,exploratory,0.02,ltt,inf,0.0,
+mfrc,oss-logprob,exploratory,0.02,oracle,0.9999999999999964,8.991188635137566e-05,0.0
+mfrc,oss-logprob,exploratory,0.05,empirical,inf,0.0,
+mfrc,oss-logprob,exploratory,0.05,cp,inf,0.0,
+mfrc,oss-logprob,exploratory,0.05,ltt_dec,inf,0.0,
+mfrc,oss-logprob,exploratory,0.05,ltt_iid,inf,0.0,
+mfrc,oss-logprob,exploratory,0.05,ltt,inf,0.0,
+mfrc,oss-logprob,exploratory,0.05,oracle,0.9999999999999964,8.991188635137566e-05,0.0
+mfrc,oss-logprob,exploratory,0.1,empirical,inf,0.0,
+mfrc,oss-logprob,exploratory,0.1,cp,inf,0.0,
+mfrc,oss-logprob,exploratory,0.1,ltt_dec,inf,0.0,
+mfrc,oss-logprob,exploratory,0.1,ltt_iid,inf,0.0,
+mfrc,oss-logprob,exploratory,0.1,ltt,inf,0.0,
+mfrc,oss-logprob,exploratory,0.1,oracle,0.9999999999999964,8.991188635137566e-05,0.0
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.02,empirical,0.9999930375059308,0.324365664927119,0.0169209431345353
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.02,cp,0.9999938556368696,0.3146481914702178,0.0122962539319416
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.02,ltt_dec,0.9999938556368696,0.3146481914702178,0.0122962539319416
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.02,oracle,0.9999930373429188,0.3275148461400036,0.0197802197802197
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.05,empirical,0.999988520711195,0.379611301061724,0.0431381844038871
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.05,cp,0.9999898696584696,0.3618859096634875,0.0338140228741919
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.05,ltt_dec,0.9999898696584696,0.3618859096634875,0.0338140228741919
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.05,oracle,0.9999869923608488,0.3949973007018176,0.049886104783599
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.1,empirical,0.9999339469662434,0.6146301961490013,0.0998389694041868
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.1,cp,0.9999646434944398,0.5364405254633795,0.0784971486078497
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.1,ltt_dec,0.9999687965559584,0.5288824905524564,0.0791085403198366
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+mfrc,qwen-logprob,exploratory; coder listed in an amendment,0.1,oracle,0.9999339464834702,0.616519704876732,0.0999708114419147
+mfrc,agree3,exploratory,0.02,empirical,inf,0.0,
+mfrc,agree3,exploratory,0.02,cp,inf,0.0,
+mfrc,agree3,exploratory,0.02,ltt_dec,inf,0.0,
+mfrc,agree3,exploratory,0.02,ltt_iid,inf,0.0,
+mfrc,agree3,exploratory,0.02,ltt,inf,0.0,
+mfrc,agree3,exploratory,0.02,oracle,inf,0.0,
+mfrc,agree3,exploratory,0.05,empirical,inf,0.0,
+mfrc,agree3,exploratory,0.05,cp,inf,0.0,
+mfrc,agree3,exploratory,0.05,ltt_dec,inf,0.0,
+mfrc,agree3,exploratory,0.05,ltt_iid,inf,0.0,
+mfrc,agree3,exploratory,0.05,ltt,inf,0.0,
+mfrc,agree3,exploratory,0.05,oracle,inf,0.0,
+mfrc,agree3,exploratory,0.1,empirical,inf,0.0,
+mfrc,agree3,exploratory,0.1,cp,inf,0.0,
+mfrc,agree3,exploratory,0.1,ltt_dec,inf,0.0,
+mfrc,agree3,exploratory,0.1,ltt_iid,inf,0.0,
+mfrc,agree3,exploratory,0.1,ltt,inf,0.0,
+mfrc,agree3,exploratory,0.1,oracle,0.6666666666666667,0.9235748966013306,0.0948208722741433
+mfrc,sonnet-verbal,exploratory,0.02,empirical,0.9,0.7520230174429061,0.0160210425633668
+mfrc,sonnet-verbal,exploratory,0.02,cp,0.92,0.7040999820176228,0.0127697612054654
+mfrc,sonnet-verbal,exploratory,0.02,ltt_dec,0.92,0.7040999820176228,0.0127697612054654
+mfrc,sonnet-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+mfrc,sonnet-verbal,exploratory,0.02,ltt,inf,0.0,
+mfrc,sonnet-verbal,exploratory,0.02,oracle,0.9,0.7520230174429061,0.0160210425633668
+mfrc,sonnet-verbal,exploratory,0.05,empirical,0.72,0.8993885991728106,0.0446865940217934
+mfrc,sonnet-verbal,exploratory,0.05,cp,0.78,0.8747527423125336,0.0358721348545585
+mfrc,sonnet-verbal,exploratory,0.05,ltt_dec,0.78,0.8747527423125336,0.0358721348545585
+mfrc,sonnet-verbal,exploratory,0.05,ltt_iid,0.8,0.859018162201043,0.0312957923382876
+mfrc,sonnet-verbal,exploratory,0.05,ltt,0.85,0.8271893544326561,0.0254347826086956
+mfrc,sonnet-verbal,exploratory,0.05,oracle,0.72,0.8993885991728106,0.0446865940217934
+mfrc,sonnet-verbal,exploratory,0.1,empirical,0.58,0.9670922495953966,0.0878579397545555
+mfrc,sonnet-verbal,exploratory,0.1,cp,0.58,0.9670922495953966,0.0878579397545555
+mfrc,sonnet-verbal,exploratory,0.1,ltt_dec,0.58,0.9670922495953966,0.0878579397545555
+mfrc,sonnet-verbal,exploratory,0.1,ltt_iid,0.65,0.9313073188275492,0.0642015833172427
+mfrc,sonnet-verbal,exploratory,0.1,ltt,0.65,0.9313073188275492,0.0642015833172427
+mfrc,sonnet-verbal,exploratory,0.1,oracle,0.52,0.9862434813882396,0.0997356185614003
+mfrc,clef,exploratory; coder listed in an amendment,0.02,empirical,0.7767,0.7458190972846611,0.0213381555153707
+mfrc,clef,exploratory; coder listed in an amendment,0.02,cp,0.8106,0.708235928789786,0.0182810714739113
+mfrc,clef,exploratory; coder listed in an amendment,0.02,ltt_dec,0.8106,0.708235928789786,0.0182810714739113
+mfrc,clef,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+mfrc,clef,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+mfrc,clef,exploratory; coder listed in an amendment,0.02,oracle,0.7875,0.7345801114907391,0.0199510403916768
+mfrc,clef,exploratory; coder listed in an amendment,0.05,empirical,0.6091,0.9024456033087572,0.0489189997011059
+mfrc,clef,exploratory; coder listed in an amendment,0.05,cp,0.6313,0.8838338428340226,0.0439471007121058
+mfrc,clef,exploratory; coder listed in an amendment,0.05,ltt_dec,0.6313,0.8838338428340226,0.0439471007121058
+mfrc,clef,exploratory; coder listed in an amendment,0.05,ltt_iid,0.7,0.8226937601150873,0.0304918032786885
+mfrc,clef,exploratory; coder listed in an amendment,0.05,ltt,0.7,0.8226937601150873,0.0304918032786885
+mfrc,clef,exploratory; coder listed in an amendment,0.05,oracle,0.6053,0.9064017263082178,0.0499950401745858
+mfrc,clef,exploratory; coder listed in an amendment,0.1,empirical,0.5,1.0,0.0811005214889408
+mfrc,clef,exploratory; coder listed in an amendment,0.1,cp,0.5,1.0,0.0811005214889408
+mfrc,clef,exploratory; coder listed in an amendment,0.1,ltt_dec,0.5,1.0,0.0811005214889408
+mfrc,clef,exploratory; coder listed in an amendment,0.1,ltt_iid,0.55,0.9555835281424204,0.0659578471960858
+mfrc,clef,exploratory; coder listed in an amendment,0.1,ltt,0.55,0.9555835281424204,0.0659578471960858
+mfrc,clef,exploratory; coder listed in an amendment,0.1,oracle,0.5002,1.0,0.0811005214889408
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.02,empirical,0.7885,0.7228016543787087,0.0202761537504664
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.02,cp,0.8102,0.6862974285200504,0.0150661600943272
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.02,ltt_dec,0.8102,0.6862974285200504,0.0150661600943272
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.02,oracle,0.7901,0.7197446502427621,0.0199875078076202
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.05,empirical,0.6378,0.8905772343103757,0.0468450277637556
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.05,cp,0.6652,0.8671102319726668,0.0419950228121111
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.05,ltt_dec,0.6652,0.8671102319726668,0.0419950228121111
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.05,ltt_iid,0.75,0.7790864952346701,0.0268897864974033
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.05,ltt,0.75,0.7790864952346701,0.0268897864974033
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.05,oracle,0.6231,0.9040640172630822,0.0499254102436598
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.1,empirical,0.5003,0.999730264340946,0.0813922115298138
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.1,cp,0.5003,0.999730264340946,0.0813922115298138
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.1,ltt_dec,0.5003,0.999730264340946,0.0813922115298138
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.1,ltt_iid,0.55,0.9617874483006656,0.0672151070393568
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.1,ltt,0.55,0.9617874483006656,0.0672151070393568
+mfrc,clef_flash,exploratory; coder listed in an amendment,0.1,oracle,0.5001,1.0,0.0814601690343463
+mfrc,pplx,exploratory; coder listed in an amendment,0.02,empirical,0.9255178834449193,0.7243301564466822,0.0178748758689175
+mfrc,pplx,exploratory; coder listed in an amendment,0.02,cp,0.9503728002498923,0.6549181801834203,0.0127677100494233
+mfrc,pplx,exploratory; coder listed in an amendment,0.02,ltt_dec,0.9503728002498923,0.6549181801834203,0.0127677100494233
+mfrc,pplx,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+mfrc,pplx,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+mfrc,pplx,exploratory; coder listed in an amendment,0.02,oracle,0.9133647653651288,0.7476173350116888,0.0199639206253758
+mfrc,pplx,exploratory; coder listed in an amendment,0.05,empirical,0.7169791780440911,0.9181801834202482,0.0490599294947121
+mfrc,pplx,exploratory; coder listed in an amendment,0.05,cp,0.7674416036567122,0.8903074986513216,0.0421127045041405
+mfrc,pplx,exploratory; coder listed in an amendment,0.05,ltt_dec,0.7764481867201045,0.8848228735838877,0.0406462757849812
+mfrc,pplx,exploratory; coder listed in an amendment,0.05,ltt_iid,0.85,0.831954684409279,0.029828163838755
+mfrc,pplx,exploratory; coder listed in an amendment,0.05,ltt,0.9,0.7714439848948033,0.0228438228438228
+mfrc,pplx,exploratory; coder listed in an amendment,0.05,oracle,0.7105094335063711,0.9217766588743032,0.0499414748341787
+mfrc,pplx,exploratory; coder listed in an amendment,0.1,empirical,0.5008411399535752,0.9998201762272972,0.0763489208633093
+mfrc,pplx,exploratory; coder listed in an amendment,0.1,cp,0.5008411399535752,0.9998201762272972,0.0763489208633093
+mfrc,pplx,exploratory; coder listed in an amendment,0.1,ltt_dec,0.5008411399535752,0.9998201762272972,0.0763489208633093
+mfrc,pplx,exploratory; coder listed in an amendment,0.1,ltt_iid,0.5,1.0,0.0763351915123179
+mfrc,pplx,exploratory; coder listed in an amendment,0.1,ltt,0.5,1.0,0.0763351915123179
+mfrc,pplx,exploratory; coder listed in an amendment,0.1,oracle,0.5005331037408605,1.0,0.0763351915123179
+mfrc,kev9b,exploratory; coder listed in an amendment,0.02,empirical,0.8661,0.5459449739255529,0.0184453227931488
+mfrc,kev9b,exploratory; coder listed in an amendment,0.02,cp,0.9099,0.4019061319906492,0.016331096196868
+mfrc,kev9b,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+mfrc,kev9b,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+mfrc,kev9b,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+mfrc,kev9b,exploratory; coder listed in an amendment,0.02,oracle,0.8437,0.5970149253731343,0.0198795180722891
+mfrc,kev9b,exploratory; coder listed in an amendment,0.05,empirical,0.6299,0.8707966193130732,0.0474961280330407
+mfrc,kev9b,exploratory; coder listed in an amendment,0.05,cp,0.6704,0.8284481208415754,0.0395051009333622
+mfrc,kev9b,exploratory; coder listed in an amendment,0.05,ltt_dec,0.6704,0.8284481208415754,0.0395051009333622
+mfrc,kev9b,exploratory; coder listed in an amendment,0.05,ltt_iid,0.75,0.7360187016723612,0.0282189103347178
+mfrc,kev9b,exploratory; coder listed in an amendment,0.05,ltt,0.8,0.670652760294911,0.0237297224829065
+mfrc,kev9b,exploratory; coder listed in an amendment,0.05,oracle,0.6164000000000001,0.8849127854702391,0.0499898394635236
+mfrc,kev9b,exploratory; coder listed in an amendment,0.1,empirical,0.5002,0.9999100881136488,0.0883014117435482
+mfrc,kev9b,exploratory; coder listed in an amendment,0.1,cp,0.5002,0.9999100881136488,0.0883014117435482
+mfrc,kev9b,exploratory; coder listed in an amendment,0.1,ltt_dec,0.5002,0.9999100881136488,0.0883014117435482
+mfrc,kev9b,exploratory; coder listed in an amendment,0.1,ltt_iid,0.55,0.9498291674159326,0.06900795153351
+mfrc,kev9b,exploratory; coder listed in an amendment,0.1,ltt,0.55,0.9498291674159326,0.06900795153351
+mfrc,kev9b,exploratory; coder listed in an amendment,0.1,oracle,0.5,1.0,0.0882934723970509
+mfrc,kev27b,exploratory; coder listed in an amendment,0.02,empirical,0.8405,0.7040999820176228,0.0167283871791597
+mfrc,kev27b,exploratory; coder listed in an amendment,0.02,cp,0.8697,0.6509620571839598,0.0138121546961325
+mfrc,kev27b,exploratory; coder listed in an amendment,0.02,ltt_dec,0.8712,0.648624348138824,0.0133074577210978
+mfrc,kev27b,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+mfrc,kev27b,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+mfrc,kev27b,exploratory; coder listed in an amendment,0.02,oracle,0.8075,0.7558892285560153,0.0199833472106577
+mfrc,kev27b,exploratory; coder listed in an amendment,0.05,empirical,0.6189,0.940118683689984,0.0487758224942616
+mfrc,kev27b,exploratory; coder listed in an amendment,0.05,cp,0.6542,0.913145117784571,0.0415517920441118
+mfrc,kev27b,exploratory; coder listed in an amendment,0.05,ltt_dec,0.6542,0.913145117784571,0.0415517920441118
+mfrc,kev27b,exploratory; coder listed in an amendment,0.05,ltt_iid,0.75,0.8219744650242762,0.0278932399912491
+mfrc,kev27b,exploratory; coder listed in an amendment,0.05,ltt,0.8,0.7657795360546666,0.020781965480803
+mfrc,kev27b,exploratory; coder listed in an amendment,0.05,oracle,0.6078,0.9468620751663372,0.0499477732409077
+mfrc,kev27b,exploratory; coder listed in an amendment,0.1,empirical,0.5003,0.9998201762272972,0.0681654676258992
+mfrc,kev27b,exploratory; coder listed in an amendment,0.1,cp,0.5003,0.9998201762272972,0.0681654676258992
+mfrc,kev27b,exploratory; coder listed in an amendment,0.1,ltt_dec,0.5003,0.9998201762272972,0.0681654676258992
+mfrc,kev27b,exploratory; coder listed in an amendment,0.1,ltt_iid,0.5,1.0,0.0683330336270455
+mfrc,kev27b,exploratory; coder listed in an amendment,0.1,ltt,0.5,1.0,0.0683330336270455
+mfrc,kev27b,exploratory; coder listed in an amendment,0.1,oracle,0.5,1.0,0.0683330336270455
+mfrc,dm_committee,exploratory,0.02,empirical,0.8023537345343745,0.7417730623988492,0.0169696969696969
+mfrc,dm_committee,exploratory,0.02,cp,0.8366476834416938,0.6875561949289696,0.0136001046161893
+mfrc,dm_committee,exploratory,0.02,ltt_dec,0.8464248331339138,0.6682251393634239,0.0123789020452099
+mfrc,dm_committee,exploratory,0.02,ltt_iid,inf,0.0,
+mfrc,dm_committee,exploratory,0.02,ltt,inf,0.0,
+mfrc,dm_committee,exploratory,0.02,oracle,0.7728375710888356,0.7771983456212914,0.0198981952799629
+mfrc,dm_committee,exploratory,0.05,empirical,0.5763966587230245,0.9344542348498476,0.0470508996439911
+mfrc,dm_committee,exploratory,0.05,cp,0.6059502558770249,0.9112569681711924,0.0410458806117414
+mfrc,dm_committee,exploratory,0.05,ltt_dec,0.6085714779916971,0.9099982017622728,0.0407074399762869
+mfrc,dm_committee,exploratory,0.05,ltt_iid,0.7,0.8445423484984714,0.0290641967422548
+mfrc,dm_committee,exploratory,0.05,ltt,0.7,0.8445423484984714,0.0290641967422548
+mfrc,dm_committee,exploratory,0.05,oracle,0.5638491781673055,0.9442546304621472,0.0499904780041896
+mfrc,dm_committee,exploratory,0.1,empirical,0.5000278129776163,1.0,0.0718395971947491
+mfrc,dm_committee,exploratory,0.1,cp,0.5000278129776163,1.0,0.0718395971947491
+mfrc,dm_committee,exploratory,0.1,ltt_dec,0.5000278129776163,1.0,0.0718395971947491
+mfrc,dm_committee,exploratory,0.1,ltt_iid,0.5,1.0,0.0718395971947491
+mfrc,dm_committee,exploratory,0.1,ltt,0.5,1.0,0.0718395971947491
+mfrc,dm_committee,exploratory,0.1,oracle,0.5001775291606397,1.0,0.0718395971947491
+mfrc,luna_sc-vote,exploratory,0.02,empirical,inf,0.0,
+mfrc,luna_sc-vote,exploratory,0.02,cp,inf,0.0,
+mfrc,luna_sc-vote,exploratory,0.02,ltt_dec,inf,0.0,
+mfrc,luna_sc-vote,exploratory,0.02,ltt_iid,inf,0.0,
+mfrc,luna_sc-vote,exploratory,0.02,ltt,inf,0.0,
+mfrc,luna_sc-vote,exploratory,0.02,oracle,inf,0.0,
+mfrc,luna_sc-vote,exploratory,0.05,empirical,inf,0.0,
+mfrc,luna_sc-vote,exploratory,0.05,cp,inf,0.0,
+mfrc,luna_sc-vote,exploratory,0.05,ltt_dec,inf,0.0,
+mfrc,luna_sc-vote,exploratory,0.05,ltt_iid,inf,0.0,
+mfrc,luna_sc-vote,exploratory,0.05,ltt,inf,0.0,
+mfrc,luna_sc-vote,exploratory,0.05,oracle,inf,0.0,
+mfrc,luna_sc-vote,exploratory,0.1,empirical,1.0,0.8786458333333333,0.0829875518672199
+mfrc,luna_sc-vote,exploratory,0.1,cp,1.0,0.8786458333333333,0.0829875518672199
+mfrc,luna_sc-vote,exploratory,0.1,ltt_dec,1.0,0.8786458333333333,0.0829875518672199
+mfrc,luna_sc-vote,exploratory,0.1,ltt_iid,inf,0.0,
+mfrc,luna_sc-vote,exploratory,0.1,ltt,inf,0.0,
+mfrc,luna_sc-vote,exploratory,0.1,oracle,1.0,0.8786458333333333,0.0829875518672199
+mfrc,qwen_big-verbal,exploratory,0.02,empirical,0.92,0.5812841530054644,0.0047003525264394
+mfrc,qwen_big-verbal,exploratory,0.02,cp,0.96,0.2281420765027322,0.0029940119760479
+mfrc,qwen_big-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+mfrc,qwen_big-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+mfrc,qwen_big-verbal,exploratory,0.02,ltt,inf,0.0,
+mfrc,qwen_big-verbal,exploratory,0.02,oracle,0.88,0.6844262295081968,0.0139720558882235
+mfrc,qwen_big-verbal,exploratory,0.05,empirical,0.75,0.8237704918032787,0.0398009950248756
+mfrc,qwen_big-verbal,exploratory,0.05,cp,0.82,0.7479508196721312,0.0255707762557077
+mfrc,qwen_big-verbal,exploratory,0.05,ltt_dec,0.82,0.7479508196721312,0.0255707762557077
+mfrc,qwen_big-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+mfrc,qwen_big-verbal,exploratory,0.05,ltt,inf,0.0,
+mfrc,qwen_big-verbal,exploratory,0.05,oracle,0.75,0.8237704918032787,0.0398009950248756
+mfrc,qwen_big-verbal,exploratory,0.1,empirical,0.65,0.891393442622951,0.0827586206896551
+mfrc,qwen_big-verbal,exploratory,0.1,cp,0.68,0.8784153005464482,0.0715396578538102
+mfrc,qwen_big-verbal,exploratory,0.1,ltt_dec,0.68,0.8784153005464482,0.0715396578538102
+mfrc,qwen_big-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+mfrc,qwen_big-verbal,exploratory,0.1,ltt,inf,0.0,
+mfrc,qwen_big-verbal,exploratory,0.1,oracle,0.65,0.891393442622951,0.0827586206896551
+mfrc,qwen_big-logprob,exploratory,0.02,empirical,0.9999934082125844,0.2096994535519125,0.0423452768729641
+mfrc,qwen_big-logprob,exploratory,0.02,cp,inf,0.0,
+mfrc,qwen_big-logprob,exploratory,0.02,ltt_dec,inf,0.0,
+mfrc,qwen_big-logprob,exploratory,0.02,ltt_iid,inf,0.0,
+mfrc,qwen_big-logprob,exploratory,0.02,ltt,inf,0.0,
+mfrc,qwen_big-logprob,exploratory,0.02,oracle,0.999999265581705,0.0122950819672131,0.0
+mfrc,qwen_big-logprob,exploratory,0.05,empirical,0.9999706372071014,0.5013661202185792,0.0517711171662125
+mfrc,qwen_big-logprob,exploratory,0.05,cp,0.9999962723996844,0.1188524590163934,0.0402298850574712
+mfrc,qwen_big-logprob,exploratory,0.05,ltt_dec,inf,0.0,
+mfrc,qwen_big-logprob,exploratory,0.05,ltt_iid,inf,0.0,
+mfrc,qwen_big-logprob,exploratory,0.05,ltt,inf,0.0,
+mfrc,qwen_big-logprob,exploratory,0.05,oracle,0.9999771501162124,0.4474043715846995,0.048854961832061
+mfrc,qwen_big-logprob,exploratory,0.1,empirical,0.9998415636675064,0.7459016393442625,0.0961538461538461
+mfrc,qwen_big-logprob,exploratory,0.1,cp,0.9999251512700876,0.6591530054644809,0.0766839378238342
+mfrc,qwen_big-logprob,exploratory,0.1,ltt_dec,0.9999251512700876,0.6591530054644809,0.0766839378238342
+mfrc,qwen_big-logprob,exploratory,0.1,ltt_iid,inf,0.0,
+mfrc,qwen_big-logprob,exploratory,0.1,ltt,inf,0.0,
+mfrc,qwen_big-logprob,exploratory,0.1,oracle,0.9998087582570224,0.7745901639344263,0.0996472663139329
+annomi_client,jev,exploratory,0.02,empirical,inf,0.0,
+annomi_client,jev,exploratory,0.02,cp,inf,0.0,
+annomi_client,jev,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_client,jev,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_client,jev,exploratory,0.02,ltt,inf,0.0,
+annomi_client,jev,exploratory,0.02,oracle,inf,0.0,
+annomi_client,jev,exploratory,0.05,empirical,1.0,0.3015929491590718,0.1227424147384844
+annomi_client,jev,exploratory,0.05,cp,inf,0.0,
+annomi_client,jev,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_client,jev,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_client,jev,exploratory,0.05,ltt,inf,0.0,
+annomi_client,jev,exploratory,0.05,oracle,inf,0.0,
+annomi_client,jev,exploratory,0.1,empirical,0.88,0.6212820874821686,0.1776018622636898
+annomi_client,jev,exploratory,0.1,cp,1.0,0.3015929491590718,0.1227424147384844
+annomi_client,jev,exploratory,0.1,ltt_dec,1.0,0.3015929491590718,0.1227424147384844
+annomi_client,jev,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_client,jev,exploratory,0.1,ltt,inf,0.0,
+annomi_client,jev,exploratory,0.1,oracle,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.02,empirical,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.02,oracle,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.05,empirical,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.05,oracle,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.1,empirical,0.95,0.5944743778574982,0.1787551377717041
+annomi_client,oaid,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+annomi_client,oaid,exploratory; coder listed in an amendment,0.1,oracle,inf,0.0,
+annomi_client,luna-verbal,exploratory,0.02,empirical,1.0,0.0073010783792727,0.0
+annomi_client,luna-verbal,exploratory,0.02,cp,inf,0.0,
+annomi_client,luna-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_client,luna-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_client,luna-verbal,exploratory,0.02,ltt,inf,0.0,
+annomi_client,luna-verbal,exploratory,0.02,oracle,1.0,0.0073010783792727,0.0
+annomi_client,luna-verbal,exploratory,0.05,empirical,0.99,0.1286513691113843,0.0690681125338592
+annomi_client,luna-verbal,exploratory,0.05,cp,inf,0.0,
+annomi_client,luna-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_client,luna-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_client,luna-verbal,exploratory,0.05,ltt,inf,0.0,
+annomi_client,luna-verbal,exploratory,0.05,oracle,1.0,0.0073010783792727,0.0
+annomi_client,luna-verbal,exploratory,0.1,empirical,0.97,0.3904891272843396,0.1465736923419303
+annomi_client,luna-verbal,exploratory,0.1,cp,inf,0.0,
+annomi_client,luna-verbal,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_client,luna-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_client,luna-verbal,exploratory,0.1,ltt,inf,0.0,
+annomi_client,luna-verbal,exploratory,0.1,oracle,0.99,0.1286513691113843,0.0690681125338592
+annomi_client,haiku-verbal,exploratory,0.02,empirical,0.98,0.0076246946332308,0.0
+annomi_client,haiku-verbal,exploratory,0.02,cp,inf,0.0,
+annomi_client,haiku-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_client,haiku-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_client,haiku-verbal,exploratory,0.02,ltt,inf,0.0,
+annomi_client,haiku-verbal,exploratory,0.02,oracle,0.98,0.0076246946332308,0.0
+annomi_client,haiku-verbal,exploratory,0.05,empirical,0.98,0.0076246946332308,0.0
+annomi_client,haiku-verbal,exploratory,0.05,cp,inf,0.0,
+annomi_client,haiku-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_client,haiku-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_client,haiku-verbal,exploratory,0.05,ltt,inf,0.0,
+annomi_client,haiku-verbal,exploratory,0.05,oracle,0.98,0.0076246946332308,0.0
+annomi_client,haiku-verbal,exploratory,0.1,empirical,0.88,0.4528209774568748,0.1404047953760828
+annomi_client,haiku-verbal,exploratory,0.1,cp,inf,0.0,
+annomi_client,haiku-verbal,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_client,haiku-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_client,haiku-verbal,exploratory,0.1,ltt,inf,0.0,
+annomi_client,haiku-verbal,exploratory,0.1,oracle,0.95,0.1337448633283048,0.0523913293950635
+annomi_client,oss-verbal,exploratory,0.02,empirical,0.96,0.0369211839150363,0.1238686821897256
+annomi_client,oss-verbal,exploratory,0.02,cp,inf,0.0,
+annomi_client,oss-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_client,oss-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_client,oss-verbal,exploratory,0.02,ltt,inf,0.0,
+annomi_client,oss-verbal,exploratory,0.02,oracle,inf,0.0,
+annomi_client,oss-verbal,exploratory,0.05,empirical,0.96,0.0369211839150363,0.1238686821897256
+annomi_client,oss-verbal,exploratory,0.05,cp,inf,0.0,
+annomi_client,oss-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_client,oss-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_client,oss-verbal,exploratory,0.05,ltt,inf,0.0,
+annomi_client,oss-verbal,exploratory,0.05,oracle,inf,0.0,
+annomi_client,oss-verbal,exploratory,0.1,empirical,0.95,0.4054090736649771,0.177682309692389
+annomi_client,oss-verbal,exploratory,0.1,cp,inf,0.0,
+annomi_client,oss-verbal,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_client,oss-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_client,oss-verbal,exploratory,0.1,ltt,inf,0.0,
+annomi_client,oss-verbal,exploratory,0.1,oracle,0.98,0.0320892340249369,0.0697332942939924
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.02,empirical,inf,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.02,oracle,inf,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.05,empirical,1.0,0.1692238316286911,0.1136993295712513
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.05,oracle,inf,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.1,empirical,1.0,0.1692238316286911,0.1136993295712513
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+annomi_client,qwen-verbal,exploratory; coder listed in an amendment,0.1,oracle,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.02,empirical,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.02,cp,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.02,ltt,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.02,oracle,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.05,empirical,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.05,cp,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.05,ltt,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.05,oracle,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.1,empirical,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.1,cp,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.1,ltt,inf,0.0,
+annomi_client,luna-logprob,exploratory,0.1,oracle,inf,0.0,
+annomi_client,oss-logprob,exploratory,0.02,empirical,0.9999999999999998,0.0374849711717995,0.2685641105002855
+annomi_client,oss-logprob,exploratory,0.02,cp,inf,0.0,
+annomi_client,oss-logprob,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_client,oss-logprob,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_client,oss-logprob,exploratory,0.02,ltt,inf,0.0,
+annomi_client,oss-logprob,exploratory,0.02,oracle,inf,0.0,
+annomi_client,oss-logprob,exploratory,0.05,empirical,0.9999999999999996,0.0602401741242566,0.2970865894730261
+annomi_client,oss-logprob,exploratory,0.05,cp,inf,0.0,
+annomi_client,oss-logprob,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_client,oss-logprob,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_client,oss-logprob,exploratory,0.05,ltt,inf,0.0,
+annomi_client,oss-logprob,exploratory,0.05,oracle,inf,0.0,
+annomi_client,oss-logprob,exploratory,0.1,empirical,0.9999999999999992,0.0788081816347298,0.2918685082169993
+annomi_client,oss-logprob,exploratory,0.1,cp,inf,0.0,
+annomi_client,oss-logprob,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_client,oss-logprob,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_client,oss-logprob,exploratory,0.1,ltt,inf,0.0,
+annomi_client,oss-logprob,exploratory,0.1,oracle,inf,0.0,
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.02,empirical,0.9999989596193862,0.0319592497340666,0.2452801247235425
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.02,oracle,0.9999993446720286,0.0060916445784816,0.0
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.05,empirical,0.9999988218396468,0.0442051818183485,0.1989796154442852
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.05,oracle,0.9999993446720286,0.0060916445784816,0.0
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.1,empirical,0.9999988210943396,0.0442051818183485,0.1989796154442852
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+annomi_client,qwen-logprob,exploratory; coder listed in an amendment,0.1,oracle,0.9999993446720286,0.0060916445784816,0.0
+annomi_client,agree3,exploratory,0.02,empirical,inf,0.0,
+annomi_client,agree3,exploratory,0.02,cp,inf,0.0,
+annomi_client,agree3,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_client,agree3,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_client,agree3,exploratory,0.02,ltt,inf,0.0,
+annomi_client,agree3,exploratory,0.02,oracle,inf,0.0,
+annomi_client,agree3,exploratory,0.05,empirical,inf,0.0,
+annomi_client,agree3,exploratory,0.05,cp,inf,0.0,
+annomi_client,agree3,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_client,agree3,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_client,agree3,exploratory,0.05,ltt,inf,0.0,
+annomi_client,agree3,exploratory,0.05,oracle,inf,0.0,
+annomi_client,agree3,exploratory,0.1,empirical,inf,0.0,
+annomi_client,agree3,exploratory,0.1,cp,inf,0.0,
+annomi_client,agree3,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_client,agree3,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_client,agree3,exploratory,0.1,ltt,inf,0.0,
+annomi_client,agree3,exploratory,0.1,oracle,inf,0.0,
+annomi_client,sonnet-verbal,exploratory,0.02,empirical,0.9,0.2561451099546558,0.1044433214429758
+annomi_client,sonnet-verbal,exploratory,0.02,cp,inf,0.0,
+annomi_client,sonnet-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_client,sonnet-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_client,sonnet-verbal,exploratory,0.02,ltt,inf,0.0,
+annomi_client,sonnet-verbal,exploratory,0.02,oracle,0.97,0.0174870772663914,0.0
+annomi_client,sonnet-verbal,exploratory,0.05,empirical,0.88,0.3971075374596137,0.1360827111173222
+annomi_client,sonnet-verbal,exploratory,0.05,cp,0.93,0.2091392781211469,0.1065188244662325
+annomi_client,sonnet-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_client,sonnet-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_client,sonnet-verbal,exploratory,0.05,ltt,inf,0.0,
+annomi_client,sonnet-verbal,exploratory,0.05,oracle,0.97,0.0174870772663914,0.0
+annomi_client,sonnet-verbal,exploratory,0.1,empirical,0.78,0.5877567835600025,0.1779971362195335
+annomi_client,sonnet-verbal,exploratory,0.1,cp,0.85,0.4449832428252546,0.1516157516092472
+annomi_client,sonnet-verbal,exploratory,0.1,ltt_dec,0.85,0.4449832428252546,0.1516157516092472
+annomi_client,sonnet-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_client,sonnet-verbal,exploratory,0.1,ltt,inf,0.0,
+annomi_client,sonnet-verbal,exploratory,0.1,oracle,0.95,0.1042848321162587,0.0845824105013466
+annomi_client,clef,exploratory; coder listed in an amendment,0.02,empirical,0.972,0.0051910018401399,0.0
+annomi_client,clef,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+annomi_client,clef,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+annomi_client,clef,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+annomi_client,clef,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+annomi_client,clef,exploratory; coder listed in an amendment,0.02,oracle,0.9656,0.0100583874263217,0.0
+annomi_client,clef,exploratory; coder listed in an amendment,0.05,empirical,0.9127,0.0447690143458441,0.1412120641498692
+annomi_client,clef,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+annomi_client,clef,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+annomi_client,clef,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+annomi_client,clef,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+annomi_client,clef,exploratory; coder listed in an amendment,0.05,oracle,0.9656,0.0100583874263217,0.0
+annomi_client,clef,exploratory; coder listed in an amendment,0.1,empirical,0.6958,0.5274601116290234,0.1710611328352895
+annomi_client,clef,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+annomi_client,clef,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+annomi_client,clef,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+annomi_client,clef,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+annomi_client,clef,exploratory; coder listed in an amendment,0.1,oracle,0.9333,0.0231622644575682,0.0895698625171557
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.02,empirical,0.9288,0.0039741554435944,0.0
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.02,oracle,0.8911,0.0176830820595526,0.0
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.05,empirical,0.7993,0.1824716159133285,0.1122133858941834
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.05,oracle,0.8796,0.0224524652491538,0.0498316771699279
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.1,empirical,0.6909,0.4907683849167912,0.1777246607289002
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.1,cp,0.7999,0.181254769516783,0.112966725818057
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+annomi_client,clef_flash,exploratory; coder listed in an amendment,0.1,oracle,0.8198,0.1153970187822467,0.0990233853136251
+annomi_client,pplx,exploratory; coder listed in an amendment,0.02,empirical,0.9622409881260344,0.1971260513942661,0.1013413255805429
+annomi_client,pplx,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+annomi_client,pplx,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+annomi_client,pplx,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+annomi_client,pplx,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+annomi_client,pplx,exploratory; coder listed in an amendment,0.02,oracle,0.9862154050908218,0.0531710310075886,0.0
+annomi_client,pplx,exploratory; coder listed in an amendment,0.05,empirical,0.9313845158493844,0.3372889819858959,0.125178496863612
+annomi_client,pplx,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+annomi_client,pplx,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+annomi_client,pplx,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+annomi_client,pplx,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+annomi_client,pplx,exploratory; coder listed in an amendment,0.05,oracle,0.9860400813319112,0.0580384165937705,0.0419324464022703
+annomi_client,pplx,exploratory; coder listed in an amendment,0.1,empirical,0.84515140770011,0.554071217328195,0.1573616438735615
+annomi_client,pplx,exploratory; coder listed in an amendment,0.1,cp,0.9237710495701292,0.3637243331922056,0.1305644113577157
+annomi_client,pplx,exploratory; coder listed in an amendment,0.1,ltt_dec,0.9237710495701292,0.3637243331922056,0.1305644113577157
+annomi_client,pplx,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+annomi_client,pplx,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+annomi_client,pplx,exploratory; coder listed in an amendment,0.1,oracle,0.955571125292182,0.2282715676617445,0.0980204091160296
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.02,empirical,0.9234,0.0420116363473285,0.1737870507806826
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.02,oracle,0.9655,0.0123081545118784,0.0
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.05,empirical,0.9234,0.0420116363473285,0.1737870507806826
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.05,oracle,0.9655,0.0123081545118784,0.0
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.1,empirical,0.9086,0.0558272958734287,0.1696969461028974
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+annomi_client,kev9b,exploratory; coder listed in an amendment,0.1,oracle,0.9563,0.0152910774163049,0.0795788526482725
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.02,empirical,0.9448,0.1853832416036954,0.0926441324319413
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.02,oracle,0.9812,0.0237673140422799,0.0
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.05,empirical,0.8545,0.3970449707591156,0.1381449306927509
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.05,oracle,0.9773,0.0373782382616574,0.0299330319458252
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.1,empirical,0.7836,0.5188230636440602,0.163067586182764
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.1,cp,0.8423,0.4221654731722993,0.145440048303699
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.1,ltt_dec,0.8423,0.4221654731722993,0.145440048303699
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+annomi_client,kev27b,exploratory; coder listed in an amendment,0.1,oracle,0.9111,0.280710129802743,0.0998788867768579
+annomi_client,dm_committee,exploratory,0.02,empirical,0.8662571174273842,0.1856388903471839,0.0950303297183571
+annomi_client,dm_committee,exploratory,0.02,cp,inf,0.0,
+annomi_client,dm_committee,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_client,dm_committee,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_client,dm_committee,exploratory,0.02,ltt,inf,0.0,
+annomi_client,dm_committee,exploratory,0.02,oracle,0.9587016444610766,0.0103820036802798,0.0
+annomi_client,dm_committee,exploratory,0.05,empirical,0.821632528814897,0.3447109746818345,0.1238878836512416
+annomi_client,dm_committee,exploratory,0.05,cp,inf,0.0,
+annomi_client,dm_committee,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_client,dm_committee,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_client,dm_committee,exploratory,0.05,ltt,inf,0.0,
+annomi_client,dm_committee,exploratory,0.05,oracle,0.9129107733840992,0.0491784750731398,0.049486951140137
+annomi_client,dm_committee,exploratory,0.1,empirical,0.7038457677572174,0.5974097170287487,0.1590892663959808
+annomi_client,dm_committee,exploratory,0.1,cp,0.7641009108743505,0.4888601398026858,0.1293750719003865
+annomi_client,dm_committee,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_client,dm_committee,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_client,dm_committee,exploratory,0.1,ltt,inf,0.0,
+annomi_client,dm_committee,exploratory,0.1,oracle,0.8566275648250833,0.2212723564735099,0.0992155285509023
+annomi_client,luna_sc-vote,exploratory,0.02,empirical,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.02,cp,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.02,ltt,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.02,oracle,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.05,empirical,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.05,cp,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.05,ltt,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.05,oracle,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.1,empirical,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.1,cp,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.1,ltt,inf,0.0,
+annomi_client,luna_sc-vote,exploratory,0.1,oracle,inf,0.0,
+annomi_client,qwen_big-verbal,exploratory,0.02,empirical,0.97,0.0829617252511559,0.0797964020252073
+annomi_client,qwen_big-verbal,exploratory,0.02,cp,inf,0.0,
+annomi_client,qwen_big-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_client,qwen_big-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_client,qwen_big-verbal,exploratory,0.02,ltt,inf,0.0,
+annomi_client,qwen_big-verbal,exploratory,0.02,oracle,0.98,0.0150006739021938,0.0
+annomi_client,qwen_big-verbal,exploratory,0.05,empirical,0.97,0.0829617252511559,0.0797964020252073
+annomi_client,qwen_big-verbal,exploratory,0.05,cp,inf,0.0,
+annomi_client,qwen_big-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_client,qwen_big-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_client,qwen_big-verbal,exploratory,0.05,ltt,inf,0.0,
+annomi_client,qwen_big-verbal,exploratory,0.05,oracle,0.95,0.2530186960008962,0.0467155137888346
+annomi_client,qwen_big-verbal,exploratory,0.1,empirical,0.97,0.0829617252511559,0.0797964020252073
+annomi_client,qwen_big-verbal,exploratory,0.1,cp,inf,0.0,
+annomi_client,qwen_big-verbal,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_client,qwen_big-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_client,qwen_big-verbal,exploratory,0.1,ltt,inf,0.0,
+annomi_client,qwen_big-verbal,exploratory,0.1,oracle,0.95,0.2530186960008962,0.0467155137888346
+annomi_client,qwen_big-logprob,exploratory,0.02,empirical,0.9999840543761828,0.0475677443296297,0.1279623784947961
+annomi_client,qwen_big-logprob,exploratory,0.02,cp,inf,0.0,
+annomi_client,qwen_big-logprob,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_client,qwen_big-logprob,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_client,qwen_big-logprob,exploratory,0.02,ltt,inf,0.0,
+annomi_client,qwen_big-logprob,exploratory,0.02,oracle,inf,0.0,
+annomi_client,qwen_big-logprob,exploratory,0.05,empirical,0.9999840543761828,0.0475677443296297,0.1279623784947961
+annomi_client,qwen_big-logprob,exploratory,0.05,cp,inf,0.0,
+annomi_client,qwen_big-logprob,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_client,qwen_big-logprob,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_client,qwen_big-logprob,exploratory,0.05,ltt,inf,0.0,
+annomi_client,qwen_big-logprob,exploratory,0.05,oracle,inf,0.0,
+annomi_client,qwen_big-logprob,exploratory,0.1,empirical,0.9999387781306388,0.4267417357453327,0.1602389100279443
+annomi_client,qwen_big-logprob,exploratory,0.1,cp,inf,0.0,
+annomi_client,qwen_big-logprob,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_client,qwen_big-logprob,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_client,qwen_big-logprob,exploratory,0.1,ltt,inf,0.0,
+annomi_client,qwen_big-logprob,exploratory,0.1,oracle,inf,0.0,
+annomi_therapist,jev,exploratory,0.02,empirical,inf,0.0,
+annomi_therapist,jev,exploratory,0.02,cp,inf,0.0,
+annomi_therapist,jev,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_therapist,jev,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_therapist,jev,exploratory,0.02,ltt,inf,0.0,
+annomi_therapist,jev,exploratory,0.02,oracle,inf,0.0,
+annomi_therapist,jev,exploratory,0.05,empirical,0.96,0.5662785560998637,0.0797548131058636
+annomi_therapist,jev,exploratory,0.05,cp,inf,0.0,
+annomi_therapist,jev,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_therapist,jev,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_therapist,jev,exploratory,0.05,ltt,inf,0.0,
+annomi_therapist,jev,exploratory,0.05,oracle,inf,0.0,
+annomi_therapist,jev,exploratory,0.1,empirical,0.8,0.7752898953318734,0.1276376323567847
+annomi_therapist,jev,exploratory,0.1,cp,0.9,0.66983380910132,0.0972694569792078
+annomi_therapist,jev,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_therapist,jev,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_therapist,jev,exploratory,0.1,ltt,inf,0.0,
+annomi_therapist,jev,exploratory,0.1,oracle,0.88,0.6944290696882057,0.0993732906777079
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.02,empirical,inf,0.0,
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.02,oracle,inf,0.0,
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.05,empirical,0.98,0.4083307778788453,0.0534921155891327
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.05,oracle,1.0,0.1311525961309832,0.0270541366240436
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.1,empirical,0.79,0.733230241257392,0.1161543816444167
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.1,cp,0.9,0.6349876648036525,0.0947702039731139
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+annomi_therapist,oaid,exploratory; coder listed in an amendment,0.1,oracle,0.86,0.6739102306801842,0.0981028043462699
+annomi_therapist,luna-verbal,exploratory,0.02,empirical,1.0,0.0742661184927822,0.0731299267809416
+annomi_therapist,luna-verbal,exploratory,0.02,cp,inf,0.0,
+annomi_therapist,luna-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_therapist,luna-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_therapist,luna-verbal,exploratory,0.02,ltt,inf,0.0,
+annomi_therapist,luna-verbal,exploratory,0.02,oracle,inf,0.0,
+annomi_therapist,luna-verbal,exploratory,0.05,empirical,1.0,0.0742661184927822,0.0731299267809416
+annomi_therapist,luna-verbal,exploratory,0.05,cp,inf,0.0,
+annomi_therapist,luna-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_therapist,luna-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_therapist,luna-verbal,exploratory,0.05,ltt,inf,0.0,
+annomi_therapist,luna-verbal,exploratory,0.05,oracle,inf,0.0,
+annomi_therapist,luna-verbal,exploratory,0.1,empirical,0.99,0.4607710836940004,0.0902666863719077
+annomi_therapist,luna-verbal,exploratory,0.1,cp,1.0,0.0742661184927822,0.0731299267809416
+annomi_therapist,luna-verbal,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_therapist,luna-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_therapist,luna-verbal,exploratory,0.1,ltt,inf,0.0,
+annomi_therapist,luna-verbal,exploratory,0.1,oracle,0.99,0.4607710836940004,0.0902666863719077
+annomi_therapist,haiku-verbal,exploratory,0.02,empirical,0.99,0.0040570858049455,0.0
+annomi_therapist,haiku-verbal,exploratory,0.02,cp,inf,0.0,
+annomi_therapist,haiku-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_therapist,haiku-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_therapist,haiku-verbal,exploratory,0.02,ltt,inf,0.0,
+annomi_therapist,haiku-verbal,exploratory,0.02,oracle,0.98,0.0473140450143694,0.0
+annomi_therapist,haiku-verbal,exploratory,0.05,empirical,0.98,0.0473140450143694,0.0
+annomi_therapist,haiku-verbal,exploratory,0.05,cp,inf,0.0,
+annomi_therapist,haiku-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_therapist,haiku-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_therapist,haiku-verbal,exploratory,0.05,ltt,inf,0.0,
+annomi_therapist,haiku-verbal,exploratory,0.05,oracle,0.98,0.0473140450143694,0.0
+annomi_therapist,haiku-verbal,exploratory,0.1,empirical,0.95,0.4244065140728693,0.0603158896154181
+annomi_therapist,haiku-verbal,exploratory,0.1,cp,0.95,0.4244065140728693,0.0603158896154181
+annomi_therapist,haiku-verbal,exploratory,0.1,ltt_dec,0.95,0.4244065140728693,0.0603158896154181
+annomi_therapist,haiku-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_therapist,haiku-verbal,exploratory,0.1,ltt,inf,0.0,
+annomi_therapist,haiku-verbal,exploratory,0.1,oracle,0.95,0.4244065140728693,0.0603158896154181
+annomi_therapist,oss-verbal,exploratory,0.02,empirical,0.98,0.2018287861089921,0.0807723360123375
+annomi_therapist,oss-verbal,exploratory,0.02,cp,inf,0.0,
+annomi_therapist,oss-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_therapist,oss-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_therapist,oss-verbal,exploratory,0.02,ltt,inf,0.0,
+annomi_therapist,oss-verbal,exploratory,0.02,oracle,inf,0.0,
+annomi_therapist,oss-verbal,exploratory,0.05,empirical,0.98,0.2018287861089921,0.0807723360123375
+annomi_therapist,oss-verbal,exploratory,0.05,cp,inf,0.0,
+annomi_therapist,oss-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_therapist,oss-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_therapist,oss-verbal,exploratory,0.05,ltt,inf,0.0,
+annomi_therapist,oss-verbal,exploratory,0.05,oracle,0.99,0.1513913045916439,0.0465141053597336
+annomi_therapist,oss-verbal,exploratory,0.1,empirical,0.96,0.2291000819600127,0.08107946592546
+annomi_therapist,oss-verbal,exploratory,0.1,cp,0.98,0.2018287861089921,0.0807723360123375
+annomi_therapist,oss-verbal,exploratory,0.1,ltt_dec,0.98,0.2018287861089921,0.0807723360123375
+annomi_therapist,oss-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_therapist,oss-verbal,exploratory,0.1,ltt,inf,0.0,
+annomi_therapist,oss-verbal,exploratory,0.1,oracle,0.96,0.2291000819600127,0.08107946592546
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.02,empirical,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.02,oracle,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.05,empirical,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.05,oracle,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.1,empirical,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+annomi_therapist,qwen-verbal,exploratory; coder listed in an amendment,0.1,oracle,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.02,empirical,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.02,cp,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.02,ltt,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.02,oracle,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.05,empirical,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.05,cp,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.05,ltt,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.05,oracle,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.1,empirical,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.1,cp,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.1,ltt,inf,0.0,
+annomi_therapist,luna-logprob,exploratory,0.1,oracle,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.02,empirical,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.02,cp,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.02,ltt,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.02,oracle,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.05,empirical,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.05,cp,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.05,ltt,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.05,oracle,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.1,empirical,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.1,cp,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.1,ltt,inf,0.0,
+annomi_therapist,oss-logprob,exploratory,0.1,oracle,inf,0.0,
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.02,empirical,0.9999990592302234,0.0238712067880937,0.102977521882037
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.02,oracle,0.9999993309418482,0.0079877172133801,0.0
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.05,empirical,0.9999990592302234,0.0238712067880937,0.102977521882037
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.05,oracle,0.9999993309418482,0.0079877172133801,0.0
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.1,empirical,0.9999983690477072,0.0847839313229128,0.1244484180806376
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+annomi_therapist,qwen-logprob,exploratory; coder listed in an amendment,0.1,oracle,0.9999975489462948,0.1840045465554612,0.0965163013059568
+annomi_therapist,agree3,exploratory,0.02,empirical,inf,0.0,
+annomi_therapist,agree3,exploratory,0.02,cp,inf,0.0,
+annomi_therapist,agree3,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_therapist,agree3,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_therapist,agree3,exploratory,0.02,ltt,inf,0.0,
+annomi_therapist,agree3,exploratory,0.02,oracle,inf,0.0,
+annomi_therapist,agree3,exploratory,0.05,empirical,inf,0.0,
+annomi_therapist,agree3,exploratory,0.05,cp,inf,0.0,
+annomi_therapist,agree3,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_therapist,agree3,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_therapist,agree3,exploratory,0.05,ltt,inf,0.0,
+annomi_therapist,agree3,exploratory,0.05,oracle,inf,0.0,
+annomi_therapist,agree3,exploratory,0.1,empirical,inf,0.0,
+annomi_therapist,agree3,exploratory,0.1,cp,inf,0.0,
+annomi_therapist,agree3,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_therapist,agree3,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_therapist,agree3,exploratory,0.1,ltt,inf,0.0,
+annomi_therapist,agree3,exploratory,0.1,oracle,inf,0.0,
+annomi_therapist,sonnet-verbal,exploratory,0.02,empirical,0.96,0.2432067012626291,0.0377227811479665
+annomi_therapist,sonnet-verbal,exploratory,0.02,cp,inf,0.0,
+annomi_therapist,sonnet-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_therapist,sonnet-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_therapist,sonnet-verbal,exploratory,0.02,ltt,inf,0.0,
+annomi_therapist,sonnet-verbal,exploratory,0.02,oracle,0.98,0.0130750689038986,0.0
+annomi_therapist,sonnet-verbal,exploratory,0.05,empirical,0.85,0.6063726828955025,0.0580936312257023
+annomi_therapist,sonnet-verbal,exploratory,0.05,cp,0.9,0.4607889849128673,0.0374955376275925
+annomi_therapist,sonnet-verbal,exploratory,0.05,ltt_dec,0.96,0.2432067012626291,0.0377227811479665
+annomi_therapist,sonnet-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_therapist,sonnet-verbal,exploratory,0.05,ltt,inf,0.0,
+annomi_therapist,sonnet-verbal,exploratory,0.05,oracle,0.88,0.5723999308910271,0.046798797890289
+annomi_therapist,sonnet-verbal,exploratory,0.1,empirical,0.66,0.8037767535978718,0.1158843483487122
+annomi_therapist,sonnet-verbal,exploratory,0.1,cp,0.8,0.6875734402729828,0.0827024372081974
+annomi_therapist,sonnet-verbal,exploratory,0.1,ltt_dec,0.8,0.6875734402729828,0.0827024372081974
+annomi_therapist,sonnet-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_therapist,sonnet-verbal,exploratory,0.1,ltt,inf,0.0,
+annomi_therapist,sonnet-verbal,exploratory,0.1,oracle,0.75,0.6900144024284995,0.0841786492333076
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.02,empirical,0.9442,0.0487177959965019,0.0216070670059964
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.02,oracle,0.9388,0.0717564642615431,0.0146697401176863
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.05,empirical,0.9118,0.2390434174718948,0.0747945057841105
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.05,oracle,0.9377,0.0790480418736358,0.0424182948926717
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.1,empirical,0.8297,0.4969708159672342,0.1272089023505532
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.1,cp,0.8937,0.3126853992006525,0.0840524507864369
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+annomi_therapist,clef,exploratory; coder listed in an amendment,0.1,oracle,0.859,0.4320416743757405,0.0996671193731357
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.02,empirical,0.9231,0.0,
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.02,oracle,0.8973,0.0303191685754987,0.0
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.05,empirical,0.8247,0.1769130354436836,0.1465254043115606
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.05,oracle,0.8653,0.0847349840465527,0.0434944145652329
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.1,empirical,0.7664,0.286356432719514,0.1790357960568218
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.1,cp,0.8247,0.1769130354436836,0.1465254043115606
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.1,ltt_dec,0.8247,0.1769130354436836,0.1465254043115606
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+annomi_therapist,clef_flash,exploratory; coder listed in an amendment,0.1,oracle,0.8502,0.1239374519001726,0.0964019391330098
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.02,empirical,0.8982311209604528,0.558481785880176,0.0630109511627472
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.02,oracle,0.9963296247283864,0.0118014681889484,0.0
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.05,empirical,0.8464151422978263,0.6301466013246618,0.0878628351690229
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.05,cp,0.8698341090356733,0.5967301578675887,0.0810739069421201
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.05,oracle,0.9208125634510314,0.5042446515357621,0.0489320282449153
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.1,empirical,0.6952447926079804,0.7553035691287188,0.1316926707882718
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.1,cp,0.7714665186916698,0.6973780335352421,0.1095140205052841
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.1,ltt_dec,0.7714665186916698,0.6973780335352421,0.1095140205052841
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+annomi_therapist,pplx,exploratory; coder listed in an amendment,0.1,oracle,0.8257903617150771,0.6492189119650114,0.099286981351738
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.02,empirical,0.9447,0.0118370439866634,0.0
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.02,oracle,0.9415,0.0155804013444306,0.0
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.05,empirical,0.7978,0.2708730483686108,0.0738601156222978
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.05,oracle,0.9097,0.0593743688722517,0.0384298407798827
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.1,empirical,0.6469,0.496530812401732,0.1337314927174065
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.1,cp,0.7489,0.3507288439796565,0.0930558902772661
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+annomi_therapist,kev9b,exploratory; coder listed in an amendment,0.1,oracle,0.7205,0.3985500946677972,0.0998862501607315
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.02,empirical,0.9149,0.3885987411179018,0.0325290279091444
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.02,oracle,0.9875,0.0174825987920218,0.0
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.05,empirical,0.8247,0.5050695078378467,0.059334933772677
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.05,cp,0.8773,0.4446442719071768,0.035531066834531
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.05,ltt_dec,0.8941,0.4227332117925056,0.0323925057122901
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.05,oracle,0.856,0.4706957448969132,0.0487655553780819
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.1,empirical,0.6966,0.6335238737544168,0.1129222569868731
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.1,cp,0.7576,0.5761898725652055,0.0861010451621922
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.1,ltt_dec,0.7576,0.5761898725652055,0.0861010451621922
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+annomi_therapist,kev27b,exploratory; coder listed in an amendment,0.1,oracle,0.7262,0.6040592142720388,0.098968811763565
+annomi_therapist,dm_committee,exploratory,0.02,empirical,0.8980246564421553,0.2342960133809318,0.0382080395849026
+annomi_therapist,dm_committee,exploratory,0.02,cp,inf,0.0,
+annomi_therapist,dm_committee,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_therapist,dm_committee,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_therapist,dm_committee,exploratory,0.02,ltt,inf,0.0,
+annomi_therapist,dm_committee,exploratory,0.02,oracle,0.9341286885905384,0.064858211127798,0.0162299987029664
+annomi_therapist,dm_committee,exploratory,0.05,empirical,0.7651837100303939,0.5489039159203007,0.0829485307750472
+annomi_therapist,dm_committee,exploratory,0.05,cp,0.8857388288196797,0.2918630643022059,0.0349471323620609
+annomi_therapist,dm_committee,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_therapist,dm_committee,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_therapist,dm_committee,exploratory,0.05,ltt,inf,0.0,
+annomi_therapist,dm_committee,exploratory,0.05,oracle,0.8284391085257201,0.4666375286224752,0.0493066832799479
+annomi_therapist,dm_committee,exploratory,0.1,empirical,0.586107143132872,0.7576547053798361,0.1332449938054248
+annomi_therapist,dm_committee,exploratory,0.1,cp,0.6827334441479534,0.6566648488023279,0.1164735668860632
+annomi_therapist,dm_committee,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_therapist,dm_committee,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_therapist,dm_committee,exploratory,0.1,ltt,inf,0.0,
+annomi_therapist,dm_committee,exploratory,0.1,oracle,0.7051777280909344,0.6252461947884309,0.09965018495223
+annomi_therapist,luna_sc-vote,exploratory,0.02,empirical,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.02,cp,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.02,ltt,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.02,oracle,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.05,empirical,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.05,cp,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.05,ltt,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.05,oracle,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.1,empirical,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.1,cp,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.1,ltt,inf,0.0,
+annomi_therapist,luna_sc-vote,exploratory,0.1,oracle,inf,0.0,
+annomi_therapist,qwen_big-verbal,exploratory,0.02,empirical,0.97,0.1327398578439893,0.0518898565625073
+annomi_therapist,qwen_big-verbal,exploratory,0.02,cp,inf,0.0,
+annomi_therapist,qwen_big-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_therapist,qwen_big-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_therapist,qwen_big-verbal,exploratory,0.02,ltt,inf,0.0,
+annomi_therapist,qwen_big-verbal,exploratory,0.02,oracle,inf,0.0,
+annomi_therapist,qwen_big-verbal,exploratory,0.05,empirical,0.95,0.3070687169702779,0.0413540526304891
+annomi_therapist,qwen_big-verbal,exploratory,0.05,cp,inf,0.0,
+annomi_therapist,qwen_big-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_therapist,qwen_big-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_therapist,qwen_big-verbal,exploratory,0.05,ltt,inf,0.0,
+annomi_therapist,qwen_big-verbal,exploratory,0.05,oracle,0.95,0.3070687169702779,0.0413540526304891
+annomi_therapist,qwen_big-verbal,exploratory,0.1,empirical,0.88,0.5620488303397742,0.1002598842219733
+annomi_therapist,qwen_big-verbal,exploratory,0.1,cp,0.95,0.3070687169702779,0.0413540526304891
+annomi_therapist,qwen_big-verbal,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_therapist,qwen_big-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_therapist,qwen_big-verbal,exploratory,0.1,ltt,inf,0.0,
+annomi_therapist,qwen_big-verbal,exploratory,0.1,oracle,0.95,0.3070687169702779,0.0413540526304891
+annomi_therapist,qwen_big-logprob,exploratory,0.02,empirical,0.9999625940347991,0.1122906188016441,0.1213367678459202
+annomi_therapist,qwen_big-logprob,exploratory,0.02,cp,inf,0.0,
+annomi_therapist,qwen_big-logprob,exploratory,0.02,ltt_dec,inf,0.0,
+annomi_therapist,qwen_big-logprob,exploratory,0.02,ltt_iid,inf,0.0,
+annomi_therapist,qwen_big-logprob,exploratory,0.02,ltt,inf,0.0,
+annomi_therapist,qwen_big-logprob,exploratory,0.02,oracle,0.9999686381141004,0.0859671021740686,0.0
+annomi_therapist,qwen_big-logprob,exploratory,0.05,empirical,0.9999380312805688,0.2450384882528045,0.1074260489250883
+annomi_therapist,qwen_big-logprob,exploratory,0.05,cp,inf,0.0,
+annomi_therapist,qwen_big-logprob,exploratory,0.05,ltt_dec,inf,0.0,
+annomi_therapist,qwen_big-logprob,exploratory,0.05,ltt_iid,inf,0.0,
+annomi_therapist,qwen_big-logprob,exploratory,0.05,ltt,inf,0.0,
+annomi_therapist,qwen_big-logprob,exploratory,0.05,oracle,0.9999686381141004,0.0859671021740686,0.0
+annomi_therapist,qwen_big-logprob,exploratory,0.1,empirical,0.999890754052896,0.4395431798015482,0.1305458737765709
+annomi_therapist,qwen_big-logprob,exploratory,0.1,cp,inf,0.0,
+annomi_therapist,qwen_big-logprob,exploratory,0.1,ltt_dec,inf,0.0,
+annomi_therapist,qwen_big-logprob,exploratory,0.1,ltt_iid,inf,0.0,
+annomi_therapist,qwen_big-logprob,exploratory,0.1,ltt,inf,0.0,
+annomi_therapist,qwen_big-logprob,exploratory,0.1,oracle,0.9999663271647036,0.0986656380568342,0.0698100404487792
+talkmoves_teacher,jev,exploratory,0.02,empirical,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.02,cp,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.02,ltt,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.02,oracle,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.05,empirical,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.05,cp,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.05,ltt,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.05,oracle,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.1,empirical,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.1,cp,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.1,ltt,inf,0.0,
+talkmoves_teacher,jev,exploratory,0.1,oracle,0.96,0.2133438446173189,0.0827619544089642
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.02,empirical,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.02,oracle,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.05,empirical,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.05,oracle,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.1,empirical,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+talkmoves_teacher,oaid,exploratory; coder listed in an amendment,0.1,oracle,inf,0.0,
+talkmoves_teacher,luna-verbal,exploratory,0.02,empirical,1.0,0.0093653994010501,0.0385396463694137
+talkmoves_teacher,luna-verbal,exploratory,0.02,cp,inf,0.0,
+talkmoves_teacher,luna-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,luna-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,luna-verbal,exploratory,0.02,ltt,inf,0.0,
+talkmoves_teacher,luna-verbal,exploratory,0.02,oracle,inf,0.0,
+talkmoves_teacher,luna-verbal,exploratory,0.05,empirical,1.0,0.0093653994010501,0.0385396463694137
+talkmoves_teacher,luna-verbal,exploratory,0.05,cp,inf,0.0,
+talkmoves_teacher,luna-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,luna-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,luna-verbal,exploratory,0.05,ltt,inf,0.0,
+talkmoves_teacher,luna-verbal,exploratory,0.05,oracle,1.0,0.0093653994010501,0.0385396463694137
+talkmoves_teacher,luna-verbal,exploratory,0.1,empirical,1.0,0.0093653994010501,0.0385396463694137
+talkmoves_teacher,luna-verbal,exploratory,0.1,cp,inf,0.0,
+talkmoves_teacher,luna-verbal,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,luna-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,luna-verbal,exploratory,0.1,ltt,inf,0.0,
+talkmoves_teacher,luna-verbal,exploratory,0.1,oracle,1.0,0.0093653994010501,0.0385396463694137
+talkmoves_teacher,haiku-verbal,exploratory,0.02,empirical,inf,0.0,
+talkmoves_teacher,haiku-verbal,exploratory,0.02,cp,inf,0.0,
+talkmoves_teacher,haiku-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,haiku-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,haiku-verbal,exploratory,0.02,ltt,inf,0.0,
+talkmoves_teacher,haiku-verbal,exploratory,0.02,oracle,0.98,0.0022022781695182,0.0
+talkmoves_teacher,haiku-verbal,exploratory,0.05,empirical,inf,0.0,
+talkmoves_teacher,haiku-verbal,exploratory,0.05,cp,inf,0.0,
+talkmoves_teacher,haiku-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,haiku-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,haiku-verbal,exploratory,0.05,ltt,inf,0.0,
+talkmoves_teacher,haiku-verbal,exploratory,0.05,oracle,0.98,0.0022022781695182,0.0
+talkmoves_teacher,haiku-verbal,exploratory,0.1,empirical,0.95,0.2995031923359054,0.0522487893703512
+talkmoves_teacher,haiku-verbal,exploratory,0.1,cp,inf,0.0,
+talkmoves_teacher,haiku-verbal,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,haiku-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,haiku-verbal,exploratory,0.1,ltt,inf,0.0,
+talkmoves_teacher,haiku-verbal,exploratory,0.1,oracle,0.95,0.2995031923359054,0.0522487893703512
+talkmoves_teacher,oss-verbal,exploratory,0.02,empirical,0.99,0.020260035495057,0.0
+talkmoves_teacher,oss-verbal,exploratory,0.02,cp,inf,0.0,
+talkmoves_teacher,oss-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,oss-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,oss-verbal,exploratory,0.02,ltt,inf,0.0,
+talkmoves_teacher,oss-verbal,exploratory,0.02,oracle,0.97,0.027013380660076,0.0
+talkmoves_teacher,oss-verbal,exploratory,0.05,empirical,0.99,0.020260035495057,0.0
+talkmoves_teacher,oss-verbal,exploratory,0.05,cp,inf,0.0,
+talkmoves_teacher,oss-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,oss-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,oss-verbal,exploratory,0.05,ltt,inf,0.0,
+talkmoves_teacher,oss-verbal,exploratory,0.05,oracle,0.96,0.0471694176228998,0.0418094811343727
+talkmoves_teacher,oss-verbal,exploratory,0.1,empirical,0.99,0.020260035495057,0.0
+talkmoves_teacher,oss-verbal,exploratory,0.1,cp,inf,0.0,
+talkmoves_teacher,oss-verbal,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,oss-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,oss-verbal,exploratory,0.1,ltt,inf,0.0,
+talkmoves_teacher,oss-verbal,exploratory,0.1,oracle,0.95,0.526985624294199,0.0944667175517737
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.02,empirical,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.02,oracle,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.05,empirical,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.05,oracle,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.1,empirical,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+talkmoves_teacher,qwen-verbal,exploratory; coder listed in an amendment,0.1,oracle,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.02,empirical,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.02,cp,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.02,ltt,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.02,oracle,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.05,empirical,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.05,cp,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.05,ltt,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.05,oracle,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.1,empirical,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.1,cp,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.1,ltt,inf,0.0,
+talkmoves_teacher,luna-logprob,exploratory,0.1,oracle,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.02,empirical,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.02,cp,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.02,ltt,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.02,oracle,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.05,empirical,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.05,cp,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.05,ltt,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.05,oracle,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.1,empirical,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.1,cp,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.1,ltt,inf,0.0,
+talkmoves_teacher,oss-logprob,exploratory,0.1,oracle,inf,0.0,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.02,empirical,0.999997939188183,0.0187958575852048,0.48109937754638
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.02,oracle,inf,0.0,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.05,empirical,0.999997939188183,0.0187958575852048,0.48109937754638
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.05,oracle,inf,0.0,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.1,empirical,0.9999970197676546,0.0661240935674817,0.2942285161631364
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+talkmoves_teacher,qwen-logprob,exploratory; coder listed in an amendment,0.1,oracle,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.02,empirical,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.02,cp,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.02,ltt,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.02,oracle,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.05,empirical,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.05,cp,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.05,ltt,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.05,oracle,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.1,empirical,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.1,cp,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.1,ltt,inf,0.0,
+talkmoves_teacher,agree3,exploratory,0.1,oracle,inf,0.0,
+talkmoves_teacher,sonnet-verbal,exploratory,0.02,empirical,0.96,0.0371297497466786,0.0
+talkmoves_teacher,sonnet-verbal,exploratory,0.02,cp,inf,0.0,
+talkmoves_teacher,sonnet-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,sonnet-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,sonnet-verbal,exploratory,0.02,ltt,inf,0.0,
+talkmoves_teacher,sonnet-verbal,exploratory,0.02,oracle,0.95,0.072586413998424,0.0
+talkmoves_teacher,sonnet-verbal,exploratory,0.05,empirical,0.9,0.2660886099116927,0.0219866050368897
+talkmoves_teacher,sonnet-verbal,exploratory,0.05,cp,inf,0.0,
+talkmoves_teacher,sonnet-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,sonnet-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,sonnet-verbal,exploratory,0.05,ltt,inf,0.0,
+talkmoves_teacher,sonnet-verbal,exploratory,0.05,oracle,0.85,0.4285401938004585,0.0373673967620795
+talkmoves_teacher,sonnet-verbal,exploratory,0.1,empirical,0.82,0.4517313450684208,0.0504664175693197
+talkmoves_teacher,sonnet-verbal,exploratory,0.1,cp,0.9,0.2660886099116927,0.0219866050368897
+talkmoves_teacher,sonnet-verbal,exploratory,0.1,ltt_dec,0.9,0.2660886099116927,0.0219866050368897
+talkmoves_teacher,sonnet-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,sonnet-verbal,exploratory,0.1,ltt,inf,0.0,
+talkmoves_teacher,sonnet-verbal,exploratory,0.1,oracle,0.72,0.6955366134110149,0.0996719010146226
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.02,empirical,0.9199,0.0025553295506669,0.3374073034925284
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.02,oracle,0.9232,0.001410952247868,0.0
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.05,empirical,0.9199,0.0025553295506669,0.3374073034925284
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.05,oracle,0.9232,0.001410952247868,0.0
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.1,empirical,0.9199,0.0025553295506669,0.3374073034925284
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+talkmoves_teacher,clef,exploratory; coder listed in an amendment,0.1,oracle,0.9232,0.001410952247868,0.0
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.02,empirical,0.8289,0.0017862518269413,0.482679340181095
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.02,oracle,0.8317,0.0006418745241423,0.0
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.05,empirical,0.8289,0.0017862518269413,0.482679340181095
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.05,oracle,0.8317,0.0006418745241423,0.0
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.1,empirical,0.8289,0.0017862518269413,0.482679340181095
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+talkmoves_teacher,clef_flash,exploratory; coder listed in an amendment,0.1,oracle,0.8317,0.0006418745241423,0.0
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.02,empirical,inf,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.02,oracle,inf,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.05,empirical,inf,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.05,oracle,inf,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.1,empirical,0.8915635307997667,0.1603141444827578,0.105463893137835
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+talkmoves_teacher,pplx,exploratory; coder listed in an amendment,0.1,oracle,0.8111015254854178,0.3175793428140033,0.0975822012087437
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.02,empirical,0.8017,0.0099705829139406,0.5116673665992729
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.02,oracle,0.8514,0.0020002100016554,0.0
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.05,empirical,0.8017,0.0099705829139406,0.5116673665992729
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.05,oracle,0.8514,0.0020002100016554,0.0
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.1,empirical,0.8017,0.0099705829139406,0.5116673665992729
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+talkmoves_teacher,kev9b,exploratory; coder listed in an amendment,0.1,oracle,0.8514,0.0020002100016554,0.0
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.02,empirical,0.872,0.0829785873716768,0.0617010511558
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.02,oracle,0.9228,0.0252606805458184,0.0111711340896679
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.05,empirical,0.8394,0.12741864813035,0.060063198606585
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.05,oracle,0.7664,0.233310218978483,0.0499276516251266
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.1,empirical,0.524,0.6084452473736476,0.1111860398537744
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+talkmoves_teacher,kev27b,exploratory; coder listed in an amendment,0.1,oracle,0.5427,0.57636537648717,0.0998904309933913
+talkmoves_teacher,dm_committee,exploratory,0.02,empirical,0.8399150540537123,0.0076130748066214,0.1132508053743822
+talkmoves_teacher,dm_committee,exploratory,0.02,cp,inf,0.0,
+talkmoves_teacher,dm_committee,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,dm_committee,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,dm_committee,exploratory,0.02,ltt,inf,0.0,
+talkmoves_teacher,dm_committee,exploratory,0.02,oracle,0.9077122224134856,0.0002139581747141,0.0
+talkmoves_teacher,dm_committee,exploratory,0.05,empirical,0.8399150540537123,0.0076130748066214,0.1132508053743822
+talkmoves_teacher,dm_committee,exploratory,0.05,cp,inf,0.0,
+talkmoves_teacher,dm_committee,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,dm_committee,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,dm_committee,exploratory,0.05,ltt,inf,0.0,
+talkmoves_teacher,dm_committee,exploratory,0.05,oracle,0.9077122224134856,0.0002139581747141,0.0
+talkmoves_teacher,dm_committee,exploratory,0.1,empirical,0.5449455095460876,0.4751780301519028,0.0923078008425721
+talkmoves_teacher,dm_committee,exploratory,0.1,cp,inf,0.0,
+talkmoves_teacher,dm_committee,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,dm_committee,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,dm_committee,exploratory,0.1,ltt,inf,0.0,
+talkmoves_teacher,dm_committee,exploratory,0.1,oracle,0.5162444379581079,0.538354343785985,0.099754998671268
+talkmoves_teacher,luna_sc-vote,exploratory,0.02,empirical,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.02,cp,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.02,ltt,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.02,oracle,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.05,empirical,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.05,cp,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.05,ltt,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.05,oracle,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.1,empirical,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.1,cp,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.1,ltt,inf,0.0,
+talkmoves_teacher,luna_sc-vote,exploratory,0.1,oracle,inf,0.0,
+talkmoves_teacher,qwen_big-verbal,exploratory,0.02,empirical,0.95,0.1142172670017604,0.0
+talkmoves_teacher,qwen_big-verbal,exploratory,0.02,cp,inf,0.0,
+talkmoves_teacher,qwen_big-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,qwen_big-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,qwen_big-verbal,exploratory,0.02,ltt,inf,0.0,
+talkmoves_teacher,qwen_big-verbal,exploratory,0.02,oracle,0.88,0.400209109480067,0.0163635801897438
+talkmoves_teacher,qwen_big-verbal,exploratory,0.05,empirical,0.88,0.400209109480067,0.0163635801897438
+talkmoves_teacher,qwen_big-verbal,exploratory,0.05,cp,inf,0.0,
+talkmoves_teacher,qwen_big-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,qwen_big-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,qwen_big-verbal,exploratory,0.05,ltt,inf,0.0,
+talkmoves_teacher,qwen_big-verbal,exploratory,0.05,oracle,0.88,0.400209109480067,0.0163635801897438
+talkmoves_teacher,qwen_big-verbal,exploratory,0.1,empirical,0.88,0.400209109480067,0.0163635801897438
+talkmoves_teacher,qwen_big-verbal,exploratory,0.1,cp,inf,0.0,
+talkmoves_teacher,qwen_big-verbal,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,qwen_big-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,qwen_big-verbal,exploratory,0.1,ltt,inf,0.0,
+talkmoves_teacher,qwen_big-verbal,exploratory,0.1,oracle,0.82,0.6521407802453001,0.0801459590164524
+talkmoves_teacher,qwen_big-logprob,exploratory,0.02,empirical,0.999985814296118,0.0589396847007874,0.0
+talkmoves_teacher,qwen_big-logprob,exploratory,0.02,cp,inf,0.0,
+talkmoves_teacher,qwen_big-logprob,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_teacher,qwen_big-logprob,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_teacher,qwen_big-logprob,exploratory,0.02,ltt,inf,0.0,
+talkmoves_teacher,qwen_big-logprob,exploratory,0.02,oracle,0.9999024963037944,0.3953994223977198,0.0172725875676178
+talkmoves_teacher,qwen_big-logprob,exploratory,0.05,empirical,0.999985814296118,0.0589396847007874,0.0
+talkmoves_teacher,qwen_big-logprob,exploratory,0.05,cp,inf,0.0,
+talkmoves_teacher,qwen_big-logprob,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_teacher,qwen_big-logprob,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_teacher,qwen_big-logprob,exploratory,0.05,ltt,inf,0.0,
+talkmoves_teacher,qwen_big-logprob,exploratory,0.05,oracle,0.9998486271080324,0.4432112706097089,0.0484443850265858
+talkmoves_teacher,qwen_big-logprob,exploratory,0.1,empirical,0.9999275260063668,0.3341043952193761,0.0
+talkmoves_teacher,qwen_big-logprob,exploratory,0.1,cp,inf,0.0,
+talkmoves_teacher,qwen_big-logprob,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_teacher,qwen_big-logprob,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_teacher,qwen_big-logprob,exploratory,0.1,ltt,inf,0.0,
+talkmoves_teacher,qwen_big-logprob,exploratory,0.1,oracle,0.9997345913870992,0.5510316270256949,0.0971060532135288
+talkmoves_student,jev,exploratory,0.02,empirical,inf,0.0,
+talkmoves_student,jev,exploratory,0.02,cp,inf,0.0,
+talkmoves_student,jev,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_student,jev,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_student,jev,exploratory,0.02,ltt,inf,0.0,
+talkmoves_student,jev,exploratory,0.02,oracle,inf,0.0,
+talkmoves_student,jev,exploratory,0.05,empirical,inf,0.0,
+talkmoves_student,jev,exploratory,0.05,cp,inf,0.0,
+talkmoves_student,jev,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_student,jev,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_student,jev,exploratory,0.05,ltt,inf,0.0,
+talkmoves_student,jev,exploratory,0.05,oracle,inf,0.0,
+talkmoves_student,jev,exploratory,0.1,empirical,inf,0.0,
+talkmoves_student,jev,exploratory,0.1,cp,inf,0.0,
+talkmoves_student,jev,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_student,jev,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_student,jev,exploratory,0.1,ltt,inf,0.0,
+talkmoves_student,jev,exploratory,0.1,oracle,0.99,0.1818090589833079,0.0970332967891201
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.02,empirical,inf,0.0,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.02,oracle,1.0,0.00868291230789,0.0
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.05,empirical,inf,0.0,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.05,oracle,1.0,0.00868291230789,0.0
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.1,empirical,inf,0.0,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+talkmoves_student,oaid,exploratory; coder listed in an amendment,0.1,oracle,1.0,0.00868291230789,0.0
+talkmoves_student,luna-verbal,exploratory,0.02,empirical,inf,0.0,
+talkmoves_student,luna-verbal,exploratory,0.02,cp,inf,0.0,
+talkmoves_student,luna-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_student,luna-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_student,luna-verbal,exploratory,0.02,ltt,inf,0.0,
+talkmoves_student,luna-verbal,exploratory,0.02,oracle,inf,0.0,
+talkmoves_student,luna-verbal,exploratory,0.05,empirical,inf,0.0,
+talkmoves_student,luna-verbal,exploratory,0.05,cp,inf,0.0,
+talkmoves_student,luna-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_student,luna-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_student,luna-verbal,exploratory,0.05,ltt,inf,0.0,
+talkmoves_student,luna-verbal,exploratory,0.05,oracle,inf,0.0,
+talkmoves_student,luna-verbal,exploratory,0.1,empirical,0.98,0.2339524674838473,0.1187401723163838
+talkmoves_student,luna-verbal,exploratory,0.1,cp,inf,0.0,
+talkmoves_student,luna-verbal,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_student,luna-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_student,luna-verbal,exploratory,0.1,ltt,inf,0.0,
+talkmoves_student,luna-verbal,exploratory,0.1,oracle,0.99,0.0978451558040927,0.098366926073408
+talkmoves_student,haiku-verbal,exploratory,0.02,empirical,inf,0.0,
+talkmoves_student,haiku-verbal,exploratory,0.02,cp,inf,0.0,
+talkmoves_student,haiku-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_student,haiku-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_student,haiku-verbal,exploratory,0.02,ltt,inf,0.0,
+talkmoves_student,haiku-verbal,exploratory,0.02,oracle,0.98,0.0057477787921413,0.0
+talkmoves_student,haiku-verbal,exploratory,0.05,empirical,inf,0.0,
+talkmoves_student,haiku-verbal,exploratory,0.05,cp,inf,0.0,
+talkmoves_student,haiku-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_student,haiku-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_student,haiku-verbal,exploratory,0.05,ltt,inf,0.0,
+talkmoves_student,haiku-verbal,exploratory,0.05,oracle,0.98,0.0057477787921413,0.0
+talkmoves_student,haiku-verbal,exploratory,0.1,empirical,0.95,0.1447853864974081,0.1067421388161139
+talkmoves_student,haiku-verbal,exploratory,0.1,cp,inf,0.0,
+talkmoves_student,haiku-verbal,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_student,haiku-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_student,haiku-verbal,exploratory,0.1,ltt,inf,0.0,
+talkmoves_student,haiku-verbal,exploratory,0.1,oracle,0.98,0.0057477787921413,0.0
+talkmoves_student,oss-verbal,exploratory,0.02,empirical,0.98,0.0174879237124965,0.2595422776340316
+talkmoves_student,oss-verbal,exploratory,0.02,cp,inf,0.0,
+talkmoves_student,oss-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_student,oss-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_student,oss-verbal,exploratory,0.02,ltt,inf,0.0,
+talkmoves_student,oss-verbal,exploratory,0.02,oracle,inf,0.0,
+talkmoves_student,oss-verbal,exploratory,0.05,empirical,0.98,0.0174879237124965,0.2595422776340316
+talkmoves_student,oss-verbal,exploratory,0.05,cp,inf,0.0,
+talkmoves_student,oss-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_student,oss-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_student,oss-verbal,exploratory,0.05,ltt,inf,0.0,
+talkmoves_student,oss-verbal,exploratory,0.05,oracle,inf,0.0,
+talkmoves_student,oss-verbal,exploratory,0.1,empirical,0.98,0.0174879237124965,0.2595422776340316
+talkmoves_student,oss-verbal,exploratory,0.1,cp,inf,0.0,
+talkmoves_student,oss-verbal,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_student,oss-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_student,oss-verbal,exploratory,0.1,ltt,inf,0.0,
+talkmoves_student,oss-verbal,exploratory,0.1,oracle,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.02,empirical,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.02,oracle,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.05,empirical,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.05,oracle,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.1,empirical,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+talkmoves_student,qwen-verbal,exploratory; coder listed in an amendment,0.1,oracle,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.02,empirical,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.02,cp,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.02,ltt,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.02,oracle,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.05,empirical,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.05,cp,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.05,ltt,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.05,oracle,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.1,empirical,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.1,cp,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.1,ltt,inf,0.0,
+talkmoves_student,luna-logprob,exploratory,0.1,oracle,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.02,empirical,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.02,cp,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.02,ltt,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.02,oracle,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.05,empirical,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.05,cp,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.05,ltt,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.05,oracle,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.1,empirical,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.1,cp,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.1,ltt,inf,0.0,
+talkmoves_student,oss-logprob,exploratory,0.1,oracle,inf,0.0,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.02,empirical,0.9999980157009626,0.0,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.02,oracle,0.9999978304474674,0.00099526803355,0.0
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.05,empirical,0.9999980157009626,0.0,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.05,oracle,0.9999978304474674,0.00099526803355,0.0
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.1,empirical,0.9999980157009626,0.0,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+talkmoves_student,qwen-logprob,exploratory; coder listed in an amendment,0.1,oracle,0.9999978304474674,0.00099526803355,0.0
+talkmoves_student,agree3,exploratory,0.02,empirical,inf,0.0,
+talkmoves_student,agree3,exploratory,0.02,cp,inf,0.0,
+talkmoves_student,agree3,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_student,agree3,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_student,agree3,exploratory,0.02,ltt,inf,0.0,
+talkmoves_student,agree3,exploratory,0.02,oracle,inf,0.0,
+talkmoves_student,agree3,exploratory,0.05,empirical,inf,0.0,
+talkmoves_student,agree3,exploratory,0.05,cp,inf,0.0,
+talkmoves_student,agree3,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_student,agree3,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_student,agree3,exploratory,0.05,ltt,inf,0.0,
+talkmoves_student,agree3,exploratory,0.05,oracle,inf,0.0,
+talkmoves_student,agree3,exploratory,0.1,empirical,inf,0.0,
+talkmoves_student,agree3,exploratory,0.1,cp,inf,0.0,
+talkmoves_student,agree3,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_student,agree3,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_student,agree3,exploratory,0.1,ltt,inf,0.0,
+talkmoves_student,agree3,exploratory,0.1,oracle,inf,0.0,
+talkmoves_student,sonnet-verbal,exploratory,0.02,empirical,inf,0.0,
+talkmoves_student,sonnet-verbal,exploratory,0.02,cp,inf,0.0,
+talkmoves_student,sonnet-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_student,sonnet-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_student,sonnet-verbal,exploratory,0.02,ltt,inf,0.0,
+talkmoves_student,sonnet-verbal,exploratory,0.02,oracle,0.96,0.0149232461425213,0.0
+talkmoves_student,sonnet-verbal,exploratory,0.05,empirical,inf,0.0,
+talkmoves_student,sonnet-verbal,exploratory,0.05,cp,inf,0.0,
+talkmoves_student,sonnet-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_student,sonnet-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_student,sonnet-verbal,exploratory,0.05,ltt,inf,0.0,
+talkmoves_student,sonnet-verbal,exploratory,0.05,oracle,0.92,0.088213247209425,0.0452387067925487
+talkmoves_student,sonnet-verbal,exploratory,0.1,empirical,0.77,0.4313077069312049,0.1567240219425351
+talkmoves_student,sonnet-verbal,exploratory,0.1,cp,inf,0.0,
+talkmoves_student,sonnet-verbal,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_student,sonnet-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_student,sonnet-verbal,exploratory,0.1,ltt,inf,0.0,
+talkmoves_student,sonnet-verbal,exploratory,0.1,oracle,0.82,0.3224802373716711,0.0990131897793728
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.02,empirical,0.8563,0.0088224250107729,0.0
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.02,oracle,0.8187,0.0173367985569378,0.0
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.05,empirical,0.8563,0.0088224250107729,0.0
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.05,oracle,0.8187,0.0173367985569378,0.0
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.1,empirical,0.8563,0.0088224250107729,0.0
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+talkmoves_student,clef,exploratory; coder listed in an amendment,0.1,oracle,0.8132,0.019103505214879,0.0924807587963084
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.02,empirical,0.7297,0.0196759771223748,0.0
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.02,oracle,0.7265,0.0206712451559248,0.0
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.05,empirical,0.7297,0.0196759771223748,0.0
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.05,oracle,0.7188,0.0214426837803161,0.0359767756823146
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.1,empirical,0.7297,0.0196759771223748,0.0
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+talkmoves_student,clef_flash,exploratory; coder listed in an amendment,0.1,oracle,0.6986,0.0357165903951625,0.0939079170455906
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.02,empirical,0.9444972714171084,0.0341009142419533,0.0
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.02,oracle,0.9012092501588812,0.0659319993119894,0.0150953716546713
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.05,empirical,0.8343420566630816,0.1542306498328957,0.0736126762173343
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.05,oracle,0.8616463788255694,0.120601573886104,0.0443162265869576
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.1,empirical,0.8161800279919023,0.1808735037742282,0.1149407015057107
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.1,cp,0.8441228504082232,0.1397923672387955,0.0709464681203063
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+talkmoves_student,pplx,exploratory; coder listed in an amendment,0.1,oracle,0.8253656893821852,0.1688357069425147,0.0997595122363408
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.02,empirical,0.8411,0.00099526803355,1.0
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.02,oracle,inf,0.0,
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.05,empirical,0.8411,0.00099526803355,1.0
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.05,oracle,inf,0.0,
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.1,empirical,0.8411,0.00099526803355,1.0
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.1,cp,inf,0.0,
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+talkmoves_student,kev9b,exploratory; coder listed in an amendment,0.1,oracle,inf,0.0,
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.02,empirical,0.8706,0.1181221261349555,0.0391851374319082
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.02,cp,inf,0.0,
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.02,ltt_dec,inf,0.0,
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.02,ltt_iid,inf,0.0,
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.02,ltt,inf,0.0,
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.02,oracle,0.8956,0.0856191956175532,0.0180202259277727
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.05,empirical,0.7885,0.2404274629776368,0.0681633769520195
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.05,cp,inf,0.0,
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.05,ltt_dec,inf,0.0,
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.05,ltt_iid,inf,0.0,
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.05,ltt,inf,0.0,
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.05,oracle,0.8367,0.1702291963241093,0.0492787263632329
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.1,empirical,0.6656,0.4355948816931079,0.1283497522998972
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.1,cp,0.8325,0.1760635545283794,0.0531037416802481
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.1,ltt_dec,inf,0.0,
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.1,ltt_iid,inf,0.0,
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.1,ltt,inf,0.0,
+talkmoves_student,kev27b,exploratory; coder listed in an amendment,0.1,oracle,0.6989,0.3920625836803989,0.0977725752000442
+talkmoves_student,dm_committee,exploratory,0.02,empirical,0.7735215544802925,0.0393437656784343,0.024424594792136
+talkmoves_student,dm_committee,exploratory,0.02,cp,inf,0.0,
+talkmoves_student,dm_committee,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_student,dm_committee,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_student,dm_committee,exploratory,0.02,ltt,inf,0.0,
+talkmoves_student,dm_committee,exploratory,0.02,oracle,0.7522692328268289,0.0517915122054345,0.018554305394305
+talkmoves_student,dm_committee,exploratory,0.05,empirical,0.7735215544802925,0.0393437656784343,0.024424594792136
+talkmoves_student,dm_committee,exploratory,0.05,cp,inf,0.0,
+talkmoves_student,dm_committee,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_student,dm_committee,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_student,dm_committee,exploratory,0.05,ltt,inf,0.0,
+talkmoves_student,dm_committee,exploratory,0.05,oracle,0.7229788550662536,0.086725267503663,0.0466612574205843
+talkmoves_student,dm_committee,exploratory,0.1,empirical,0.6525146264807349,0.2133398723813171,0.0790826837451521
+talkmoves_student,dm_committee,exploratory,0.1,cp,inf,0.0,
+talkmoves_student,dm_committee,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_student,dm_committee,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_student,dm_committee,exploratory,0.1,ltt,inf,0.0,
+talkmoves_student,dm_committee,exploratory,0.1,oracle,0.6433821991442029,0.2288366669162403,0.0994757783131304
+talkmoves_student,luna_sc-vote,exploratory,0.02,empirical,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.02,cp,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.02,ltt,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.02,oracle,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.05,empirical,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.05,cp,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.05,ltt,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.05,oracle,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.1,empirical,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.1,cp,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.1,ltt,inf,0.0,
+talkmoves_student,luna_sc-vote,exploratory,0.1,oracle,inf,0.0,
+talkmoves_student,qwen_big-verbal,exploratory,0.02,empirical,0.88,0.2834542614146689,0.082635045954
+talkmoves_student,qwen_big-verbal,exploratory,0.02,cp,inf,0.0,
+talkmoves_student,qwen_big-verbal,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_student,qwen_big-verbal,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_student,qwen_big-verbal,exploratory,0.02,ltt,inf,0.0,
+talkmoves_student,qwen_big-verbal,exploratory,0.02,oracle,0.95,0.1141023700848664,0.0
+talkmoves_student,qwen_big-verbal,exploratory,0.05,empirical,0.88,0.2834542614146689,0.082635045954
+talkmoves_student,qwen_big-verbal,exploratory,0.05,cp,inf,0.0,
+talkmoves_student,qwen_big-verbal,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_student,qwen_big-verbal,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_student,qwen_big-verbal,exploratory,0.05,ltt,inf,0.0,
+talkmoves_student,qwen_big-verbal,exploratory,0.05,oracle,0.95,0.1141023700848664,0.0
+talkmoves_student,qwen_big-verbal,exploratory,0.1,empirical,0.82,0.4974728676281785,0.1652586711449614
+talkmoves_student,qwen_big-verbal,exploratory,0.1,cp,inf,0.0,
+talkmoves_student,qwen_big-verbal,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_student,qwen_big-verbal,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_student,qwen_big-verbal,exploratory,0.1,ltt,inf,0.0,
+talkmoves_student,qwen_big-verbal,exploratory,0.1,oracle,0.88,0.2834542614146689,0.082635045954
+talkmoves_student,qwen_big-logprob,exploratory,0.02,empirical,0.999961724012315,0.0945061917993292,0.047241234372647
+talkmoves_student,qwen_big-logprob,exploratory,0.02,cp,inf,0.0,
+talkmoves_student,qwen_big-logprob,exploratory,0.02,ltt_dec,inf,0.0,
+talkmoves_student,qwen_big-logprob,exploratory,0.02,ltt_iid,inf,0.0,
+talkmoves_student,qwen_big-logprob,exploratory,0.02,ltt,inf,0.0,
+talkmoves_student,qwen_big-logprob,exploratory,0.02,oracle,0.9999699325834666,0.0476007632649919,0.0
+talkmoves_student,qwen_big-logprob,exploratory,0.05,empirical,0.999961724012315,0.0945061917993292,0.047241234372647
+talkmoves_student,qwen_big-logprob,exploratory,0.05,cp,inf,0.0,
+talkmoves_student,qwen_big-logprob,exploratory,0.05,ltt_dec,inf,0.0,
+talkmoves_student,qwen_big-logprob,exploratory,0.05,ltt_iid,inf,0.0,
+talkmoves_student,qwen_big-logprob,exploratory,0.05,ltt,inf,0.0,
+talkmoves_student,qwen_big-logprob,exploratory,0.05,oracle,0.9999600712914696,0.1102806929333697,0.0404838692767
+talkmoves_student,qwen_big-logprob,exploratory,0.1,empirical,0.9997408985030378,0.6735773248419259,0.2999517577617259
+talkmoves_student,qwen_big-logprob,exploratory,0.1,cp,inf,0.0,
+talkmoves_student,qwen_big-logprob,exploratory,0.1,ltt_dec,inf,0.0,
+talkmoves_student,qwen_big-logprob,exploratory,0.1,ltt_iid,inf,0.0,
+talkmoves_student,qwen_big-logprob,exploratory,0.1,ltt,inf,0.0,
+talkmoves_student,qwen_big-logprob,exploratory,0.1,oracle,0.9999441966662134,0.1516845316025881,0.0919271226263947
+POOLED,jev,,0.02,empirical,inf,0.1093328538032727,0.0139802631578947
+POOLED,jev,,0.02,cp,inf,0.0784930767847509,0.0103092783505154
+POOLED,jev,,0.02,ltt_dec,inf,0.0784930767847509,0.0103092783505154
+POOLED,jev,,0.02,ltt_iid,inf,0.0,
+POOLED,jev,,0.02,ltt,inf,0.0,
+POOLED,jev,,0.02,oracle,inf,0.1245998921057363,0.0187617260787992
+POOLED,jev,,0.05,empirical,inf,0.3292657234578292,0.0800885885376286
+POOLED,jev,,0.05,cp,inf,0.1487502247797159,0.0325193423597678
+POOLED,jev,,0.05,ltt_dec,inf,0.1487502247797159,0.0325193423597678
+POOLED,jev,,0.05,ltt_iid,inf,0.1392015824491997,0.025965637514533
+POOLED,jev,,0.05,ltt,inf,0.1196907031109512,0.0160757211538461
+POOLED,jev,,0.05,oracle,inf,0.1631001618413954,0.0471885336273428
+POOLED,jev,,0.1,empirical,inf,0.4655938427055884,0.1310929602205327
+POOLED,jev,,0.1,cp,inf,0.3736415825458025,0.0987700824982375
+POOLED,jev,,0.1,ltt_dec,inf,0.2396748207255385,0.0995203952577523
+POOLED,jev,,0.1,ltt_iid,inf,0.1716597734220464,0.0618059920385501
+POOLED,jev,,0.1,ltt,inf,0.1716597734220464,0.0618059920385501
+POOLED,jev,,0.1,oracle,inf,0.4091409945498722,0.0946651841806276
+POOLED,oaid,,0.02,empirical,inf,0.0,
+POOLED,oaid,,0.02,cp,inf,0.0,
+POOLED,oaid,,0.02,ltt_dec,inf,0.0,
+POOLED,oaid,,0.02,ltt_iid,inf,0.0,
+POOLED,oaid,,0.02,ltt,inf,0.0,
+POOLED,oaid,,0.02,oracle,inf,0.067749889420758,0.0096703895396349
+POOLED,oaid,,0.05,empirical,inf,0.226568151619646,0.0487118061192127
+POOLED,oaid,,0.05,cp,inf,0.1311274950548462,0.0368897421832144
+POOLED,oaid,,0.05,ltt_dec,inf,0.1311274950548462,0.0368897421832144
+POOLED,oaid,,0.05,ltt_iid,inf,0.0,
+POOLED,oaid,,0.05,ltt,inf,0.0,
+POOLED,oaid,,0.05,oracle,inf,0.1778681986127882,0.0248929655669396
+POOLED,oaid,,0.1,empirical,inf,0.4555607044379754,0.1290277559594381
+POOLED,oaid,,0.1,cp,inf,0.3113888294901317,0.0880521587448951
+POOLED,oaid,,0.1,ltt_dec,inf,0.1843912965294012,0.0813341135166764
+POOLED,oaid,,0.1,ltt_iid,inf,0.172684768926452,0.0671665104654795
+POOLED,oaid,,0.1,ltt,inf,0.172684768926452,0.0671665104654795
+POOLED,oaid,,0.1,oracle,inf,0.3300269904030455,0.0660001944543633
+POOLED,luna-verbal,,0.02,empirical,inf,0.0864656057498557,0.030814417253878
+POOLED,luna-verbal,,0.02,cp,inf,0.0682790864952346,0.0115880958651567
+POOLED,luna-verbal,,0.02,ltt_dec,inf,0.0682790864952346,0.0115880958651567
+POOLED,luna-verbal,,0.02,ltt_iid,inf,0.0,
+POOLED,luna-verbal,,0.02,ltt,inf,0.0,
+POOLED,luna-verbal,,0.02,oracle,inf,0.0697393021710892,0.0057940479325783
+POOLED,luna-verbal,,0.05,empirical,inf,0.2015286867338971,0.0549911137113543
+POOLED,luna-verbal,,0.05,cp,inf,0.1590721093328538,0.0392267691612028
+POOLED,luna-verbal,,0.05,ltt_dec,inf,0.1590721093328538,0.0392267691612028
+POOLED,luna-verbal,,0.05,ltt_iid,inf,0.1280345261643589,0.022191011235955
+POOLED,luna-verbal,,0.05,ltt,inf,0.1280345261643589,0.022191011235955
+POOLED,luna-verbal,,0.05,oracle,inf,0.1624773343979995,0.0259162286391454
+POOLED,luna-verbal,,0.1,empirical,0.948,0.4043678723609948,0.0940669367939967
+POOLED,luna-verbal,,0.1,cp,inf,0.2003054804869038,0.0746722066756448
+POOLED,luna-verbal,,0.1,ltt_dec,inf,0.1854522567883474,0.0762144865703481
+POOLED,luna-verbal,,0.1,ltt_iid,inf,0.1795900017982377,0.0645839591468909
+POOLED,luna-verbal,,0.1,ltt,inf,0.1795900017982377,0.0645839591468909
+POOLED,luna-verbal,,0.1,oracle,0.95,0.3320077740531035,0.0786416480447994
+POOLED,haiku-verbal,,0.02,empirical,inf,0.1209121518078294,0.0040440804772014
+POOLED,haiku-verbal,,0.02,cp,inf,0.1185757957201942,0.0121322414316044
+POOLED,haiku-verbal,,0.02,ltt_dec,inf,0.1185757957201942,0.0121322414316044
+POOLED,haiku-verbal,,0.02,ltt_iid,inf,0.0,
+POOLED,haiku-verbal,,0.02,ltt,inf,0.0,
+POOLED,haiku-verbal,,0.02,oracle,0.96,0.1451618269355905,0.00344500203445
+POOLED,haiku-verbal,,0.05,empirical,inf,0.160852880099993,0.0113190944724422
+POOLED,haiku-verbal,,0.05,cp,inf,0.1497752202841215,0.0337375435226317
+POOLED,haiku-verbal,,0.05,ltt_dec,inf,0.1497752202841215,0.0337375435226317
+POOLED,haiku-verbal,,0.05,ltt_iid,inf,0.1316130192411436,0.0169422052192922
+POOLED,haiku-verbal,,0.05,ltt,inf,0.1316130192411436,0.0169422052192922
+POOLED,haiku-verbal,,0.05,oracle,0.94,0.1677656751643263,0.0092699884125144
+POOLED,haiku-verbal,,0.1,empirical,0.8959999999999999,0.4277450410821422,0.0865313863389709
+POOLED,haiku-verbal,,0.1,cp,inf,0.2483231298241045,0.0666306040661533
+POOLED,haiku-verbal,,0.1,ltt_dec,inf,0.2483231298241045,0.0666306040661533
+POOLED,haiku-verbal,,0.1,ltt_iid,inf,0.1634418270095306,0.0729453185168885
+POOLED,haiku-verbal,,0.1,ltt,inf,0.1540190613199065,0.0421482778750729
+POOLED,haiku-verbal,,0.1,oracle,0.908,0.3421643754781873,0.0528108303233814
+POOLED,oss-verbal,,0.02,empirical,0.982,0.0560008985598571,0.097964864295424
+POOLED,oss-verbal,,0.02,cp,inf,0.0,
+POOLED,oss-verbal,,0.02,ltt_dec,inf,0.0,
+POOLED,oss-verbal,,0.02,ltt_iid,inf,0.0,
+POOLED,oss-verbal,,0.02,ltt,inf,0.0,
+POOLED,oss-verbal,,0.02,oracle,inf,0.0162280672487208,0.0099667774086378
+POOLED,oss-verbal,,0.05,empirical,0.958,0.2212409632964153,0.1015709461199714
+POOLED,oss-verbal,,0.05,cp,inf,0.1450638374393094,0.0282632949051692
+POOLED,oss-verbal,,0.05,ltt_dec,inf,0.0,
+POOLED,oss-verbal,,0.05,ltt_iid,inf,0.1439669124258227,0.0258556082937796
+POOLED,oss-verbal,,0.05,ltt,inf,0.0,
+POOLED,oss-verbal,,0.05,oracle,inf,0.2056535218930076,0.0439983404192896
+POOLED,oss-verbal,,0.1,empirical,0.926,0.318069477273288,0.1219548073206337
+POOLED,oss-verbal,,0.1,cp,inf,0.2155320942115484,0.0741609344572518
+POOLED,oss-verbal,,0.1,ltt_dec,inf,0.2155320942115484,0.0741609344572518
+POOLED,oss-verbal,,0.1,ltt_iid,inf,0.17516633698975,0.0675495329021661
+POOLED,oss-verbal,,0.1,ltt,inf,0.17516633698975,0.0675495329021661
+POOLED,oss-verbal,,0.1,oracle,inf,0.3412710247398794,0.0842096070064571
+POOLED,qwen-verbal,,0.02,empirical,inf,0.0,
+POOLED,qwen-verbal,,0.02,cp,inf,0.0,
+POOLED,qwen-verbal,,0.02,ltt_dec,inf,0.0,
+POOLED,qwen-verbal,,0.02,ltt_iid,inf,0.0,
+POOLED,qwen-verbal,,0.02,ltt,inf,0.0,
+POOLED,qwen-verbal,,0.02,oracle,inf,0.0,
+POOLED,qwen-verbal,,0.05,empirical,inf,0.0338447663257382,0.1136993295712513
+POOLED,qwen-verbal,,0.05,cp,inf,0.0,
+POOLED,qwen-verbal,,0.05,ltt_dec,inf,0.0,
+POOLED,qwen-verbal,,0.05,ltt_iid,inf,0.0,
+POOLED,qwen-verbal,,0.05,ltt,inf,0.0,
+POOLED,qwen-verbal,,0.05,oracle,inf,0.0,
+POOLED,qwen-verbal,,0.1,empirical,inf,0.163375088441988,0.0983889812624247
+POOLED,qwen-verbal,,0.1,cp,inf,0.1295303221162498,0.0830786329535982
+POOLED,qwen-verbal,,0.1,ltt_dec,inf,0.1295303221162498,0.0830786329535982
+POOLED,qwen-verbal,,0.1,ltt_iid,inf,0.0,
+POOLED,qwen-verbal,,0.1,ltt,inf,0.0,
+POOLED,qwen-verbal,,0.1,oracle,inf,0.1295303221162498,0.0830786329535982
+POOLED,luna-logprob,,0.02,empirical,inf,0.0,
+POOLED,luna-logprob,,0.02,cp,inf,0.0,
+POOLED,luna-logprob,,0.02,ltt_dec,inf,0.0,
+POOLED,luna-logprob,,0.02,ltt_iid,inf,0.0,
+POOLED,luna-logprob,,0.02,ltt,inf,0.0,
+POOLED,luna-logprob,,0.02,oracle,inf,0.0,
+POOLED,luna-logprob,,0.05,empirical,inf,0.0,
+POOLED,luna-logprob,,0.05,cp,inf,0.0,
+POOLED,luna-logprob,,0.05,ltt_dec,inf,0.0,
+POOLED,luna-logprob,,0.05,ltt_iid,inf,0.0,
+POOLED,luna-logprob,,0.05,ltt,inf,0.0,
+POOLED,luna-logprob,,0.05,oracle,inf,0.1183779895702211,0.0416223606258544
+POOLED,luna-logprob,,0.1,empirical,inf,0.1183779895702211,0.0416223606258544
+POOLED,luna-logprob,,0.1,cp,inf,0.1183779895702211,0.0416223606258544
+POOLED,luna-logprob,,0.1,ltt_dec,inf,0.1183779895702211,0.0416223606258544
+POOLED,luna-logprob,,0.1,ltt_iid,inf,0.0,
+POOLED,luna-logprob,,0.1,ltt,inf,0.0,
+POOLED,luna-logprob,,0.1,oracle,inf,0.1183779895702211,0.0416223606258544
+POOLED,oss-logprob,,0.02,empirical,inf,0.0074969942343598,0.2685641105002855
+POOLED,oss-logprob,,0.02,cp,inf,0.0,
+POOLED,oss-logprob,,0.02,ltt_dec,inf,0.0,
+POOLED,oss-logprob,,0.02,ltt_iid,inf,0.0,
+POOLED,oss-logprob,,0.02,ltt,inf,0.0,
+POOLED,oss-logprob,,0.02,oracle,inf,1.798237727027513e-05,0.0
+POOLED,oss-logprob,,0.05,empirical,inf,0.0120480348248513,0.2970865894730261
+POOLED,oss-logprob,,0.05,cp,inf,0.0,
+POOLED,oss-logprob,,0.05,ltt_dec,inf,0.0,
+POOLED,oss-logprob,,0.05,ltt_iid,inf,0.0,
+POOLED,oss-logprob,,0.05,ltt,inf,0.0,
+POOLED,oss-logprob,,0.05,oracle,inf,1.798237727027513e-05,0.0
+POOLED,oss-logprob,,0.1,empirical,inf,0.0157616363269459,0.2918685082169993
+POOLED,oss-logprob,,0.1,cp,inf,0.0,
+POOLED,oss-logprob,,0.1,ltt_dec,inf,0.0,
+POOLED,oss-logprob,,0.1,ltt_iid,inf,0.0,
+POOLED,oss-logprob,,0.1,ltt,inf,0.0,
+POOLED,oss-logprob,,0.1,oracle,inf,1.798237727027513e-05,0.0
+POOLED,qwen-logprob,,0.02,empirical,0.9999974022489372,0.0797983958068968,0.2115694918216237
+POOLED,qwen-logprob,,0.02,cp,inf,0.0629296382940435,0.0122962539319416
+POOLED,qwen-logprob,,0.02,ltt_dec,inf,0.0629296382940435,0.0122962539319416
+POOLED,qwen-logprob,,0.02,ltt_iid,inf,0.0,
+POOLED,qwen-logprob,,0.02,ltt,inf,0.0,
+POOLED,qwen-logprob,,0.02,oracle,inf,0.0685178951930831,0.0049450549450549
+POOLED,qwen-logprob,,0.05,empirical,0.999996471334042,0.0932967094506742,0.2065486748191473
+POOLED,qwen-logprob,,0.05,cp,inf,0.0723771819326975,0.0338140228741919
+POOLED,qwen-logprob,,0.05,ltt_dec,inf,0.0723771819326975,0.0338140228741919
+POOLED,qwen-logprob,,0.05,ltt_iid,inf,0.0,
+POOLED,qwen-logprob,,0.05,ltt,inf,0.0,
+POOLED,qwen-logprob,,0.05,oracle,inf,0.0820143861054459,0.0124715261958997
+POOLED,qwen-logprob,,0.1,empirical,0.9999852345153816,0.1619486805715488,0.1793738797730615
+POOLED,qwen-logprob,,0.1,cp,inf,0.1072881050926759,0.0784971486078497
+POOLED,qwen-logprob,,0.1,ltt_dec,inf,0.1057764981104912,0.0791085403198366
+POOLED,qwen-logprob,,0.1,ltt_iid,inf,0.0,
+POOLED,qwen-logprob,,0.1,ltt,inf,0.0,
+POOLED,qwen-logprob,,0.1,oracle,inf,0.1615222328088449,0.0491217781869679
+POOLED,agree3,,0.02,empirical,inf,0.0,
+POOLED,agree3,,0.02,cp,inf,0.0,
+POOLED,agree3,,0.02,ltt_dec,inf,0.0,
+POOLED,agree3,,0.02,ltt_iid,inf,0.0,
+POOLED,agree3,,0.02,ltt,inf,0.0,
+POOLED,agree3,,0.02,oracle,inf,0.0,
+POOLED,agree3,,0.05,empirical,inf,0.0,
+POOLED,agree3,,0.05,cp,inf,0.0,
+POOLED,agree3,,0.05,ltt_dec,inf,0.0,
+POOLED,agree3,,0.05,ltt_iid,inf,0.0,
+POOLED,agree3,,0.05,ltt,inf,0.0,
+POOLED,agree3,,0.05,oracle,inf,0.0,
+POOLED,agree3,,0.1,empirical,inf,0.0,
+POOLED,agree3,,0.1,cp,inf,0.0,
+POOLED,agree3,,0.1,ltt_dec,inf,0.0,
+POOLED,agree3,,0.1,ltt_iid,inf,0.0,
+POOLED,agree3,,0.1,ltt,inf,0.0,
+POOLED,agree3,,0.1,oracle,inf,0.1847149793202661,0.0948208722741433
+POOLED,sonnet-verbal,,0.02,empirical,inf,0.2577009156813739,0.0395467862885772
+POOLED,sonnet-verbal,,0.02,cp,inf,0.1408199964035245,0.0127697612054654
+POOLED,sonnet-verbal,,0.02,ltt_dec,inf,0.1408199964035245,0.0127697612054654
+POOLED,sonnet-verbal,,0.02,ltt_iid,inf,0.0,
+POOLED,sonnet-verbal,,0.02,ltt,inf,0.0,
+POOLED,sonnet-verbal,,0.02,oracle,0.952,0.1740189647508283,0.0032042085126733
+POOLED,sonnet-verbal,,0.05,empirical,inf,0.4337914858879239,0.0652123853504269
+POOLED,sonnet-verbal,,0.05,cp,inf,0.3089362010693096,0.0599621656494612
+POOLED,sonnet-verbal,,0.05,ltt_dec,inf,0.2235918887150325,0.0367974580012625
+POOLED,sonnet-verbal,,0.05,ltt_iid,inf,0.1718036324402086,0.0312957923382876
+POOLED,sonnet-verbal,,0.05,ltt,inf,0.1654378708865312,0.0254347826086956
+POOLED,sonnet-verbal,,0.05,oracle,0.868,0.4012058096680225,0.0348182990933421
+POOLED,sonnet-verbal,,0.1,empirical,0.722,0.6483329677505794,0.1177859727669312
+POOLED,sonnet-verbal,,0.1,cp,inf,0.4731475085210653,0.0860406834022225
+POOLED,sonnet-verbal,,0.1,ltt_dec,inf,0.4731475085210653,0.0860406834022225
+POOLED,sonnet-verbal,,0.1,ltt_iid,inf,0.1862614637655098,0.0642015833172427
+POOLED,sonnet-verbal,,0.1,ltt,inf,0.1862614637655098,0.0642015833172427
+POOLED,sonnet-verbal,,0.1,oracle,0.752,0.5597119133431369,0.09343635381801
+POOLED,clef,,0.02,empirical,0.8938200000000001,0.1622211299365485,0.0760705052027791
+POOLED,clef,,0.02,cp,inf,0.1416471857579572,0.0182810714739113
+POOLED,clef,,0.02,ltt_dec,inf,0.1416471857579572,0.0182810714739113
+POOLED,clef,,0.02,ltt_iid,inf,0.0,
+POOLED,clef,,0.02,ltt,inf,0.0,
+POOLED,clef,,0.02,oracle,0.88676,0.1670285427966819,0.0069241561018726
+POOLED,clef,,0.05,empirical,0.8419599999999999,0.2395271579375872,0.1204665746255228
+POOLED,clef,,0.05,cp,inf,0.1767667685668045,0.0439471007121058
+POOLED,clef,,0.05,ltt_dec,inf,0.1767667685668045,0.0439471007121058
+POOLED,clef,,0.05,ltt_iid,inf,0.1645387520230174,0.0304918032786885
+POOLED,clef,,0.05,ltt,inf,0.1645387520230174,0.0304918032786885
+POOLED,clef,,0.05,oracle,0.8501,0.2028511812825962,0.0184826670134515
+POOLED,clef,,0.1,empirical,0.76034,0.4071617364315394,0.1433555720334624
+POOLED,clef,,0.1,cp,inf,0.2625370798401305,0.0825764861376889
+POOLED,clef,,0.1,ltt_dec,inf,0.2,0.0811005214889408
+POOLED,clef,,0.1,ltt_iid,inf,0.1911167056284841,0.0659578471960858
+POOLED,clef,,0.1,ltt,inf,0.1911167056284841,0.0659578471960858
+POOLED,clef,,0.1,oracle,0.80578,0.2951436792592111,0.0725636524351081
+POOLED,clef_flash,,0.02,empirical,0.8398,0.1496476077543238,0.1257388734828903
+POOLED,clef_flash,,0.02,cp,inf,0.1372594857040101,0.0150661600943272
+POOLED,clef_flash,,0.02,ltt_dec,inf,0.1372594857040101,0.0150661600943272
+POOLED,clef_flash,,0.02,ltt_iid,inf,0.0,
+POOLED,clef_flash,,0.02,ltt,inf,0.0,
+POOLED,clef_flash,,0.02,oracle,0.8273400000000001,0.1578120041115761,0.003997501561524
+POOLED,clef_flash,,0.05,empirical,0.7640800000000001,0.2542848229233408,0.1576526316301189
+POOLED,clef_flash,,0.05,cp,inf,0.1734220463945333,0.0419950228121111
+POOLED,clef_flash,,0.05,ltt_dec,inf,0.1734220463945333,0.0419950228121111
+POOLED,clef_flash,,0.05,ltt_iid,inf,0.155817299046934,0.0268897864974033
+POOLED,clef_flash,,0.05,ltt,inf,0.155817299046934,0.0268897864974033
+POOLED,clef_flash,,0.05,oracle,0.7837,0.2066672049726494,0.035845655532227
+POOLED,clef_flash,,0.1,empirical,0.70324,0.3596634621853135,0.1841664016993262
+POOLED,clef_flash,,0.1,cp,inf,0.2715796138602825,0.1136281138864771
+POOLED,clef_flash,,0.1,ltt_dec,inf,0.2353286599569259,0.1139588079206872
+POOLED,clef_flash,,0.1,ltt_iid,inf,0.1923574896601331,0.0672151070393568
+POOLED,clef_flash,,0.1,ltt,inf,0.1923574896601331,0.0672151070393568
+POOLED,clef_flash,,0.1,oracle,0.7400800000000001,0.2551385871203449,0.0741586821053144
+POOLED,pplx,,0.02,empirical,inf,0.3028077815926155,0.0455567881530519
+POOLED,pplx,,0.02,cp,inf,0.130983636036684,0.0127677100494233
+POOLED,pplx,,0.02,ltt_dec,inf,0.130983636036684,0.0127677100494233
+POOLED,pplx,,0.02,ltt_iid,inf,0.0,
+POOLED,pplx,,0.02,ltt,inf,0.0,
+POOLED,pplx,,0.02,oracle,inf,0.175704366704043,0.0087648230700117
+POOLED,pplx,,0.05,empirical,inf,0.4079692833127403,0.0839284844361703
+POOLED,pplx,,0.05,cp,inf,0.297407531303782,0.0615933057231303
+POOLED,pplx,,0.05,ltt_dec,inf,0.1769645747167775,0.0406462757849812
+POOLED,pplx,,0.05,ltt_iid,inf,0.1663909368818558,0.029828163838755
+POOLED,pplx,,0.05,ltt,inf,0.1542887969789606,0.0228438228438228
+POOLED,pplx,,0.05,oracle,inf,0.320932260177988,0.0462805440170805
+POOLED,pplx,,0.1,empirical,0.7497961798106669,0.5300765221882394,0.1171615660337376
+POOLED,pplx,,0.1,cp,inf,0.4401429820387081,0.0968434552116539
+POOLED,pplx,,0.1,ltt_dec,inf,0.4121845085909489,0.105475784242103
+POOLED,pplx,,0.1,ltt_iid,inf,0.2,0.0763351915123179
+POOLED,pplx,,0.1,ltt,inf,0.2,0.0763351915123179
+POOLED,pplx,,0.1,oracle,0.7836723611231445,0.4727811058766548,0.094196859085034
+POOLED,kev9b,,0.02,empirical,0.8754,0.1221519010414071,0.3407799480346208
+POOLED,kev9b,,0.02,cp,inf,0.0803812263981298,0.016331096196868
+POOLED,kev9b,,0.02,ltt_dec,inf,0.0,
+POOLED,kev9b,,0.02,ltt_iid,inf,0.0,
+POOLED,kev9b,,0.02,ltt,inf,0.0,
+POOLED,kev9b,,0.02,oracle,inf,0.1253807382462197,0.0049698795180722
+POOLED,kev9b,,0.05,empirical,0.79878,0.2389294309953006,0.3613621322070588
+POOLED,kev9b,,0.05,cp,inf,0.165689624168315,0.0395051009333622
+POOLED,kev9b,,0.05,ltt_dec,inf,0.165689624168315,0.0395051009333622
+POOLED,kev9b,,0.05,ltt_iid,inf,0.1472037403344722,0.0282189103347178
+POOLED,kev9b,,0.05,ltt,inf,0.1341305520589822,0.0237297224829065
+POOLED,kev9b,,0.05,oracle,inf,0.1917191037712049,0.0221049200608516
+POOLED,kev9b,,0.1,empirical,0.7397,0.31264680946726,0.380679443432625
+POOLED,kev9b,,0.1,cp,inf,0.270127786418661,0.0906786510104071
+POOLED,kev9b,,0.1,ltt_dec,inf,0.1999820176227297,0.0883014117435482
+POOLED,kev9b,,0.1,ltt_iid,inf,0.1899658334831865,0.06900795153351
+POOLED,kev9b,,0.1,ltt,inf,0.1899658334831865,0.06900795153351
+POOLED,kev9b,,0.1,oracle,inf,0.2831682764171515,0.0669396438015137
+POOLED,kev27b,,0.02,empirical,0.88856,0.2958365356491704,0.0485575472215907
+POOLED,kev27b,,0.02,cp,inf,0.1301924114367919,0.0138121546961325
+POOLED,kev27b,,0.02,ltt_dec,inf,0.1297248696277648,0.0133074577210978
+POOLED,kev27b,,0.02,ltt_iid,inf,0.0,
+POOLED,kev27b,,0.02,ltt,inf,0.0,
+POOLED,kev27b,,0.02,oracle,0.91892,0.1816038035107377,0.0098349414456196
+POOLED,kev27b,,0.05,empirical,0.7852,0.4420158546789866,0.0748964525036588
+POOLED,kev27b,,0.05,cp,inf,0.2715578779383495,0.0385414294393214
+POOLED,kev27b,,0.05,ltt_dec,inf,0.2671756659154153,0.036972148878201
+POOLED,kev27b,,0.05,ltt_iid,inf,0.1643948930048552,0.0278932399912491
+POOLED,kev27b,,0.05,ltt,inf,0.1531559072109333,0.020781965480803
+POOLED,kev27b,,0.05,oracle,0.80884,0.3716950947255,0.0455705477106349
+POOLED,kev27b,,0.1,empirical,0.6340199999999999,0.639241448538506,0.1167382205898416
+POOLED,kev27b,,0.1,cp,inf,0.4348478152986363,0.0882025756930096
+POOLED,kev27b,,0.1,ltt_dec,inf,0.3996351043929604,0.0999021870305968
+POOLED,kev27b,,0.1,ltt_iid,inf,0.2,0.0683330336270455
+POOLED,kev27b,,0.1,ltt,inf,0.2,0.0683330336270455
+POOLED,kev27b,,0.1,oracle,0.6757799999999999,0.5706394608484702,0.0929687476721808
+POOLED,dm_committee,,0.02,empirical,0.8360144233875838,0.2417329613224041,0.057576693287895
+POOLED,dm_committee,,0.02,cp,inf,0.1375112389857939,0.0136001046161893
+POOLED,dm_committee,,0.02,ltt_dec,inf,0.1336450278726847,0.0123789020452099
+POOLED,dm_committee,,0.02,ltt_iid,inf,0.0,
+POOLED,dm_committee,,0.02,ltt,inf,0.0,
+POOLED,dm_committee,,0.02,oracle,0.8651298718761531,0.1808888061619036,0.0109364998754468
+POOLED,dm_committee,,0.05,empirical,0.755329901220464,0.3750051931874077,0.0783125428473596
+POOLED,dm_committee,,0.05,cp,inf,0.2406240064946796,0.0379965064869012
+POOLED,dm_committee,,0.05,ltt_dec,inf,0.1819996403524545,0.0407074399762869
+POOLED,dm_committee,,0.05,ltt_iid,inf,0.1689084696996942,0.0290641967422548
+POOLED,dm_committee,,0.05,ltt,inf,0.1689084696996942,0.0290641967422548
+POOLED,dm_committee,,0.05,oracle,0.7871780275113728,0.3094019719672279,0.0390890739689718
+POOLED,dm_committee,,0.1,empirical,0.5974881719789057,0.608716464988361,0.1071128683967758
+POOLED,dm_committee,,0.1,cp,inf,0.4291049977210027,0.1058960786603996
+POOLED,dm_committee,,0.1,ltt_dec,inf,0.2,0.0718395971947491
+POOLED,dm_committee,,0.1,ltt_iid,inf,0.2,0.0718395971947491
+POOLED,dm_committee,,0.1,ltt,inf,0.2,0.0718395971947491
+POOLED,dm_committee,,0.1,oracle,0.6443218918357936,0.5227419123928333,0.093987217536456
+POOLED,luna_sc-vote,,0.02,empirical,inf,0.0,
+POOLED,luna_sc-vote,,0.02,cp,inf,0.0,
+POOLED,luna_sc-vote,,0.02,ltt_dec,inf,0.0,
+POOLED,luna_sc-vote,,0.02,ltt_iid,inf,0.0,
+POOLED,luna_sc-vote,,0.02,ltt,inf,0.0,
+POOLED,luna_sc-vote,,0.02,oracle,inf,0.0,
+POOLED,luna_sc-vote,,0.05,empirical,inf,0.0,
+POOLED,luna_sc-vote,,0.05,cp,inf,0.0,
+POOLED,luna_sc-vote,,0.05,ltt_dec,inf,0.0,
+POOLED,luna_sc-vote,,0.05,ltt_iid,inf,0.0,
+POOLED,luna_sc-vote,,0.05,ltt,inf,0.0,
+POOLED,luna_sc-vote,,0.05,oracle,inf,0.0,
+POOLED,luna_sc-vote,,0.1,empirical,inf,0.1757291666666666,0.0829875518672199
+POOLED,luna_sc-vote,,0.1,cp,inf,0.1757291666666666,0.0829875518672199
+POOLED,luna_sc-vote,,0.1,ltt_dec,inf,0.1757291666666666,0.0829875518672199
+POOLED,luna_sc-vote,,0.1,ltt_iid,inf,0.0,
+POOLED,luna_sc-vote,,0.1,ltt,inf,0.0,
+POOLED,luna_sc-vote,,0.1,oracle,inf,0.1757291666666666,0.0829875518672199
+POOLED,qwen_big-verbal,,0.02,empirical,0.938,0.2389314529034078,0.0438043314136308
+POOLED,qwen_big-verbal,,0.02,cp,inf,0.0456284153005464,0.0029940119760479
+POOLED,qwen_big-verbal,,0.02,ltt_dec,inf,0.0,
+POOLED,qwen_big-verbal,,0.02,ltt_iid,inf,0.0,
+POOLED,qwen_big-verbal,,0.02,ltt,inf,0.0,
+POOLED,qwen_big-verbal,,0.02,oracle,inf,0.2427476765950648,0.0075839090194918
+POOLED,qwen_big-verbal,,0.05,empirical,0.8859999999999999,0.3794928609838897,0.0519900151648631
+POOLED,qwen_big-verbal,,0.05,cp,inf,0.1495901639344262,0.0255707762557077
+POOLED,qwen_big-verbal,,0.05,ltt_dec,inf,0.1495901639344262,0.0255707762557077
+POOLED,qwen_big-verbal,,0.05,ltt_iid,inf,0.0,
+POOLED,qwen_big-verbal,,0.05,ltt,inf,0.0,
+POOLED,qwen_big-verbal,,0.05,oracle,0.8959999999999999,0.3796338768678772,0.0288468283267886
+POOLED,qwen_big-verbal,,0.1,empirical,0.8400000000000001,0.4868171950644253,0.0888874316543082
+POOLED,qwen_big-verbal,,0.1,cp,inf,0.2370968035033452,0.0564468552421497
+POOLED,qwen_big-verbal,,0.1,ltt_dec,inf,0.1756830601092896,0.0715396578538102
+POOLED,qwen_big-verbal,,0.1,ltt_iid,inf,0.0,
+POOLED,qwen_big-verbal,,0.1,ltt,inf,0.0,
+POOLED,qwen_big-verbal,,0.1,oracle,0.85,0.4774151794508188,0.0667218384158862
+POOLED,qwen_big-logprob,,0.02,empirical,0.9999775189864,0.1046007386366606,0.0677771315172655
+POOLED,qwen_big-logprob,,0.02,cp,inf,0.0,
+POOLED,qwen_big-logprob,,0.02,ltt_dec,inf,0.0,
+POOLED,qwen_big-logprob,,0.02,ltt_iid,inf,0.0,
+POOLED,qwen_big-logprob,,0.02,ltt,inf,0.0,
+POOLED,qwen_big-logprob,,0.02,oracle,inf,0.1082524739607987,0.0043181468919044
+POOLED,qwen_big-logprob,,0.05,empirical,0.9999680522344572,0.189483645860226,0.0668801557917488
+POOLED,qwen_big-logprob,,0.05,cp,inf,0.0237704918032786,0.0402298850574712
+POOLED,qwen_big-logprob,,0.05,ltt_dec,inf,0.0,
+POOLED,qwen_big-logprob,,0.05,ltt_iid,inf,0.0,
+POOLED,qwen_big-logprob,,0.05,ltt,inf,0.0,
+POOLED,qwen_big-logprob,,0.05,oracle,inf,0.2173726874603693,0.0344458040338367
+POOLED,qwen_big-logprob,,0.1,empirical,0.999867904072089,0.523973654990489,0.1373780775440174
+POOLED,qwen_big-logprob,,0.1,cp,inf,0.1318306010928961,0.0766839378238342
+POOLED,qwen_big-logprob,,0.1,ltt_dec,inf,0.1318306010928961,0.0766839378238342
+POOLED,qwen_big-logprob,,0.1,ltt_iid,inf,0.0,
+POOLED,qwen_big-logprob,,0.1,ltt,inf,0.0,
+POOLED,qwen_big-logprob,,0.1,oracle,inf,0.3151943921239087,0.0896226206506589

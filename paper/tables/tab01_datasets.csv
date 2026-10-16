@@ -1,0 +1,7 @@
+task,source,unit,license,codebook,codes,calib segments,test segments,clusters,annotators/item (median),human α (multiply-coded items)
+MFRC,MFRC (Trager et al. 2022),Reddit comment,CC-BY-4.0,multi-label (yes/no per code),8,608,1392,2000,3.0,0.17425339455104427
+AnnoMI client,AnnoMI (Wu et al. 2022),client utterance (+ previous turn),public GitHub,mutually exclusive,3,569,931,128,1.0,0.4671406285787266
+AnnoMI therapist,AnnoMI (Wu et al. 2022),therapist utterance (+ previous turn),public GitHub,mutually exclusive,4,602,898,132,1.0,0.7366604776943635
+TalkMoves teacher,TalkMoves (Suresh et al. 2022),teacher sentence (+ previous turn),CC-BY-NC-SA,mutually exclusive,7,370,1130,444,1.0,
+TalkMoves student,TalkMoves (Suresh et al. 2022),student sentence (+ previous turn),CC-BY-NC-SA,mutually exclusive,5,383,1117,436,1.0,
+Dunivin,Dunivin (2025) replication,historical passage,OSF,multi-label (yes/no per code),9,34,86,120,1.0,

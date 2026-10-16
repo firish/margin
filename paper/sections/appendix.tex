@@ -1,0 +1,207 @@
+\section{Analysis plan, amendments and deviations}
+\label{app:deviations}
+
+The analysis plan (v1.0) fixed the tasks, splits, decision units, metrics, primary rule and contrasts before any test-split
+outcome was computed. Four amendments were each recorded before the data they govern. The plan was kept in the project
+repository rather than registered externally:
+\begin{itemize}
+  \item \textbf{v1.1} added OpenAI Decisions as a confirmatory coder, Qwen3.5-9B as a non-reasoning token-probability
+  comparator, and the A3 analyses (recalibration, per-code thresholds, risk control, cascades).
+  \item \textbf{v1.2} added Clef, Clef-flash, pplx-decider, Kev-9B and Kev-27B as a confirmatory family, with the
+  same-base contrasts pre-specified as secondary.
+  \item \textbf{v1.3} added the memorization probe.
+  \item \textbf{v1.4} added the prompt-sensitivity check.
+\end{itemize}
+The deviations log records eighteen entries; everything added or changed after results were seen is exploratory. In summary:
+\begin{enumerate}
+  \item A response-cache key ignored option order. It was fixed and the affected order arms were re-run before analysis.
+  \item Adjudication moved from a single human pass to a blinded two-family LLM panel plus the author on disputed items.
+  \item The author completed 48 of 72 assigned adjudications.
+  \item The RQ5 code-type labels were assigned by the assistant from definition text, after some per-code results had been seen.
+  \item OpenAI Decisions collection notes, including its exact invariance to question order on multi-label tasks.
+  \item The Qwen model was chosen by availability without third-party data sharing; Qwen3.8-2.4T was added on a subset; a
+  null-logprob parse fix was made before any full-run data.
+  \item The A3 implementation details were fixed after the primary results had been seen.
+  \item A3 was revised after its first output: a power-based LTT start, oracle thresholds and a restructured per-code
+  head-to-head. All A3 results are therefore exploratory.
+  \item Sonnet was extended from a nested subset to the full sample after the subset results had been seen.
+  \item The repeatability check, Sonnet's robustness arms and the Holm sensitivity analysis were added.
+  \item Kev-27B was limited to the main and format arms.
+  \item Kev-9B's robustness arms cover one to four tasks per arm: the hosting workspace was disabled partway through.
+  \item The decision-model committee and new cascades were added, exploratory, and fixed before computation.
+  \item A decoy-name control was added for flagged memorization cells.
+  \item The author later reviewed those labels and approved them unchanged, after the RQ5 results had been computed.
+  \item After an external review of the first draft: a cluster-level guarantee replaced LTT on decisions, with joint
+  certification for cascades and split samples for learned scores; the prevalence analysis, the category-only control,
+  adjudication by verdict source, the feasibility calculation and a text-free spend ledger were added; RQ3 point estimates
+  were design-weighted; three reporting errors were fixed.
+  \item After a second review: the guarantee was recast for a fixed corpus (corpus LTT), with the earlier test kept as LTT
+  on i.i.d.\ clusters; related tasks share bootstrap draws; the Sonnet subset contrast is the confirmatory one; the probability
+  floor moved to $10^{-12}$, and Platt maps became the recalibration yardstick.
+  \item After a third review: the betting tests average over random visiting orders; the budget curves, bootstrap streams and
+  prompt-sensitivity intervals were corrected; the feasibility bound and the single-utterance design were added; prose
+  intervals are generated from the results files.
+\end{enumerate}
+The full log, plan and amendments are in the released repository.
+
+\section{Guaranteed threshold rules}
+\label{app:ltt}
+
+\paragraph{LTT on decisions.} Thresholds are tested from the most confident tie block downwards with binomial tests of
+``risk $>\varepsilon$'' at level $\delta=0.05$, stopping at the first failure; the sequence starts at the first block with at least
+124 decisions. Errors are scaled to Kish's effective sample size \citep{kish1965survey}, which gives fractional counts. The test
+treats decisions as independent and fails when they are not (Table~\ref{tab:tab20_ltt_simulation}).
+
+\paragraph{Corpus LTT.} A corpus has $N$ clusters; $n$ of them, chosen uniformly at random, are hand-coded. Fix the scores, the
+grid $\{0.5, 0.55, \dots, 0.9, 0.925, 0.95, 0.97, 0.98, 0.99, 0.995, 1.0\}$ and $B$, the largest total weight of one cluster in
+the corpus. For threshold $t$, every cluster has a fixed value $Y_i=(Z_i+\varepsilon B)/B\in[0,1]$ with
+$Z_i=\sum_j w_{ij}\mathbf{1}\{c_{ij}\ge t\}(e_{ij}-\varepsilon)$; let $\mu$ be their corpus mean and $\bar Y$ the mean over the
+hand-coded clusters. The uncoded remainder has error at most $\varepsilon$ among its accepted decisions exactly when its
+$Z$-sum is at most 0, that is, when $\mu\le m^\ast=((N-n)\varepsilon+n\bar Y)/N$.
+
+To test ``$\mu\ge m$'', visit the hand-coded clusters in a uniformly random order, drawn independently of the labels; the
+clusters visited are then a uniformly random sample drawn without replacement, in draw order. Under that null, the $k$th
+cluster's value has conditional mean $(N\mu-S_{k-1})/(N-k+1)\ge \mu_k(m)=(Nm-S_{k-1})/(N-k+1)$, where $S_{k-1}$ is the sum of
+the values already seen. So $K_k=\prod_{i\le k}\bigl(1-\nu_i\,(Y_i-\operatorname{clip}(\mu_i(m),0,1))\bigr)$, with predictable
+bets $\nu_i=\min\{1,\sqrt{2\log(1/\delta')/(n\hat\sigma^2_{i-1})}\}\in[0,1]$, is a non-negative supermartingale
+\citep{waudbysmith2024betting}. The variance estimate is the plug-in rule with a pseudo-observation: $\hat\sigma^2_0=1/4$ and,
+for $i\ge1$, $\hat\mu_i=(1/2+\sum_{j\le i}Y_j)/(i+1)$ and $\hat\sigma^2_i=(1/4+\sum_{j\le i}(Y_j-\hat\mu_j)^2)/(i+1)$. The bets
+use only values already seen and do not depend on $m$; validity needs only that, but power, and hence the feasibility numbers
+below, depends on this choice. Its final value $K_n$ has expectation at most 1: it is an e-value. The order must be
+random: a random set visited in a fixed order does not have these conditional means. Rather than rely on one random order, we
+draw $R=100$ independent orders and average their final values, $\bar K(m)=R^{-1}\sum_r K_n^{(r)}$.
+An average of e-values is an e-value \citep{vovk2021evalues}, so $p(m)=\min(1,1/\bar K(m))$ satisfies $P(p(m)\le\delta')\le\delta'$
+under the null by Markov's inequality. Each $K_n^{(r)}$ increases with $m$, so $\bar K$ does too, and rejecting at $m^\ast$
+implies rejecting at every larger $m$. If the remainder's error exceeds $\varepsilon$, then $\mu>m^\ast$, so certifying $t$
+requires rejecting at $m=\mu$, a true null, which happens with probability at most $\delta'$. Testing each of the 16
+thresholds at $\delta'=\delta/16$ gives the proposition in Section~\ref{sec:rules}. The only randomness used is the choice of
+clusters to hand-code and the visiting orders; dependence among errors is unrestricted. The orders come from a
+pseudo-random generator with a recorded seed, fixed before this analysis and not chosen by any outcome.
+
+\paragraph{LTT on i.i.d. clusters.} For the population target, the same $Y_i$ are tested against the constant null mean
+$\varepsilon$ with the same betting process and the same averaging over orders. This is valid if clusters are independent draws whose weights never exceed $B$;
+exchangeability alone is not enough, because a shared latent cause can make every cluster right or every cluster wrong
+together. For MFRC, $B$ is a genuine bound (eight codes per comment at one weight); for transcripts of unbounded length it is not.
+
+\paragraph{Learned scores and pipelines.} Per-code maps and the prevalence baseline are fitted on half of the calibration
+clusters and frozen; corpus LTT runs on the other half, with the corpus taken as that half plus the test split, and the frozen
+scores are applied to the test split. A two-stage cascade is one hypothesis per combination of stage thresholds (8 per stage,
+plus ``off'' for the second), with Bonferroni over all 72 combinations; the certified combination with the largest calibration
+coverage is used.
+
+\paragraph{What the procedure needs.} For a coder that accepts everything and is never wrong, $Y_i=\varepsilon(1-r_i)$ with
+$r_i$ the unit's weight relative to $B$, and the conditional null mean at $m^\ast$ is at most $\varepsilon$. Since bets are capped at
+1, each unit can multiply the capital by at most $1+\varepsilon r_i$, whatever the order, and certification with the grid needs
+the capital to reach $16/0.05=320$. Hence $\sum_{\text{coded}}\log(1+\varepsilon r_i)\ge\log 320$ is necessary for any set of
+hand-coded units and any visiting order (Table~\ref{tab:tab21_ltt_feasibility}, ``lower bound''). For MFRC, whose comments
+all have the same weight, at least 119 comments are needed; our procedure first certifies after a median of 123. With whole
+transcripts as units, where a typical transcript carries 8--27\% of the largest one's weight, the bound rules out
+certification on AnnoMI (both tasks) and TalkMoves student even if every transcript but one were hand-coded, and on
+TalkMoves teacher it needs at least 388 of 444 lessons. These requirements belong to this procedure (capped bets, scaling by
+the largest unit, Bonferroni over the grid) under whole-transcript sampling. Because corpus LTT needs only random selection,
+not independence, the unit can be smaller: drawing single utterances or sentences at random, with their context, keeps every
+unit's weight close to $B$, and a perfect coder is then certified after a median of 139--163 hand-coded segments
+(Table~\ref{tab:tab21_ltt_feasibility}). Table~\ref{tab:tab21b_utterance_sampling} applies that design to the real coders.
+
+\section{Additional results}
+\label{app:results}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.85\linewidth]{fig03_reliability.pdf}
+  \caption{EQ1: reliability on the test split before (coloured) and after (dashed grey) a Platt map fitted per task on the
+  calibration split, for four decision models, Sonnet's verbalized confidence and Luna's token probabilities. Tasks are weighted equally; bins with fewer than 20 decisions are omitted.}
+  \label{fig:reliability}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{fig06_calibration_budget.pdf}
+  \caption{EQ2: calibration budget on MFRC. Left: mean share of test decisions accepted; right: share of draws whose held-out
+  error exceeds 5\%, when only $n$ randomly drawn comments are hand-coded (250 draws; 608 is the full calibration split).
+  Solid: naive rule; dashed: corpus LTT. Corpus LTT certifies nothing for any plotted coder with 200 or fewer comments, and 2\%
+  (Jev) to 75\% (pplx-decider) with 400. For each draw the corpus is the drawn comments plus the test split, whose decisions are
+  the ones scored. The dialogue tasks are omitted: with whole transcripts hand-coded, corpus LTT certifies nothing there.}
+  \label{fig:budget}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\linewidth]{fig10_per_code_recalibration.pdf}
+  \caption{EQ3: error AUROC with raw confidence (hollow) and with per-code Platt maps fitted on the calibration split
+  (filled), pooled over tasks, with cluster-bootstrap 95\% CIs for the gain, conditional on the fitted maps. Qwen3.8-2.4T ran
+  on a subset whose calibration split is too small for per-code maps.}
+  \label{fig:percode}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{fig11_repeatability.pdf}
+  \caption{EQ6: run-to-run repeatability. Identical requests were sent twice for 100 test segments per task. Left: share of
+  decisions whose label changes. Right: mean absolute change in confidence. 0: identical outputs in these repeats.}
+  \label{fig:repeat}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{fig14_memorization.pdf}
+  \caption{EQ6: memorization probe. Change in completion overlap (left, ROUGE-L) and label recall (right, accuracy) when
+  the dataset is named, relative to an unnamed prompt. Asterisks mark cells flagged by the pre-specified rule;
+  Table~\ref{tab:tab17_memorization_followups} gives the decoy control.}
+  \label{fig:mem}
+\end{figure}
+
+\clearpage
+\input{tables/tab05_rq2}
+\input{tables/tab05b_rq2_humans}
+\input{tables/tab06_rq3}
+\input{tables/tab06b_rq3_intervals}
+\input{tables/tab07_triage_rules}
+\input{tables/tab07c_threshold_rules}
+\input{tables/tab07b_resplits_by_task}
+\input{tables/tab07d_resplits_guaranteed}
+\input{tables/tab08_cascades}
+\clearpage
+\input{tables/tab08b_cascades_certified}
+\input{tables/tab09_cascade_contrasts}
+\input{tables/tab10_per_code_recalibration}
+\input{tables/tab11_repeatability}
+\input{tables/tab12_adjudication}
+\input{tables/tab13_top_blocks}
+\input{tables/tab15_memorization_completion}
+\input{tables/tab15b_memorization_verbatim}
+\input{tables/tab16_memorization_labels}
+\input{tables/tab17_memorization_followups}
+\input{tables/tab18_model_snapshot}
+\input{tables/tab19_prompt_sensitivity}
+\input{tables/tab20_ltt_simulation}
+\input{tables/tab21_ltt_feasibility}
+\input{tables/tab21b_utterance_sampling}
+\input{tables/tab22_category_only}
+\input{tables/tab23_ltt_single_threshold}
+\input{tables/tab24_temperature_floor}
+
+\clearpage
+\section{Requests}
+\label{app:prompts}
+
+\paragraph{LLM prompt} (canonical; AnnoMI client format; the exchange shown is invented for illustration, since AnnoMI's
+text is not redistributed). The system prompt carries the codebook; option letters and
+their order are shared with the decision-model request.
+{\footnotesize\verbatiminput{sections/prompt_llm.txt}}
+
+\paragraph{Decision-model request} (the same item). Jev, Clef, pplx-decider and Kev receive this exact JSON. OpenAI
+Decisions receives the same content mapped to its choice and predicate types.
+{\footnotesize\verbatiminput{sections/prompt_jev.txt}}
+
+\section{Memorization probe}
+\label{app:memorization}
+
+For each of MFRC, AnnoMI, TalkMoves and Dunivin we drew 100 items of at least 30 words (20 for TalkMoves), with a fixed
+seed. The model saw the first half of the words (plus the previous turn for dialogue). The \emph{guided} prompt named the
+dataset and its citation and asked for the exact original continuation. The \emph{general} prompt asked only for a
+continuation \citep{golchin2024time}. We scored word-level ROUGE-L \citep{lin2004rouge} and the longest common run of words,
+and called a completion near-verbatim if the run was at least 10 words and covered at least half of the true continuation.
+The label probe gave the item and the bare code labels, without definitions. The decoy control replaced the dataset name and
+citation with a fictitious one while keeping the description. Tables~\ref{tab:tab15_memorization_completion}--\ref{tab:tab17_memorization_followups}
+report all cells.

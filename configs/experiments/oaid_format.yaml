@@ -1,0 +1,7 @@
+# Amendment v1.1 (A1), oaid mirror of jev_format. Plan section 6: pre-registered secondary arm, exclusive tasks asked as one Noul per option.
+name: oaid_format
+sample: main
+split: all
+tasks: [annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student]
+coders: [oaid]
+variants: [canonical, noul_format]

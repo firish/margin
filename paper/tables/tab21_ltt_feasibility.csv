@@ -1,0 +1,10 @@
+task,sampling unit,units in corpus,mean unit weight / B,frozen split certifies it,lower bound,our procedure (median),lower bound ,our procedure (median) 
+MFRC,comment,2000,1.0,yes,119,123,62,64
+AnnoMI client,transcript,128,0.1226396805879276,no,unreachable,not reached,unreachable,not reached
+AnnoMI client,utterance,1500,0.8540434244571943,–,119,146.5,62,75
+AnnoMI therapist,transcript,132,0.1338309825440407,no,unreachable,not reached,unreachable,not reached
+AnnoMI therapist,utterance,1500,0.8670568678915136,–,119,145,62,75
+TalkMoves teacher,lesson,444,0.2688778820566289,no,388,not reached,114,not reached
+TalkMoves teacher,sentence,1500,0.7837642000798689,–,119,163,62,81.5
+TalkMoves student,lesson,436,0.078692071869712,no,unreachable,not reached,unreachable,not reached
+TalkMoves student,sentence,1500,0.9001786097897806,–,119,139,62,70.5

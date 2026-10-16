@@ -1,0 +1,87 @@
+name: talkmoves_student
+version: "1"
+dataset: talkmoves
+unit: student sentence
+mode: exclusive
+instructions: >-
+  Which student talk move is this sentence from a K-12 mathematics lesson? Student talk moves are
+  discourse actions such as making claims, using reasoning, reacting to other students' ideas, and
+  asking questions.
+source: >-
+  TalkMoves Coding Manual (Suresh et al., SumnerLab/TalkMoves, CC BY-NC-SA 4.0), sections 2.3-2.5,
+  verbatim. The manual has no explicit "not coded" section for students; None is defined as the
+  absence of the four moves.
+codes:
+  - id: relating
+    label: Relating to Another Student
+    definition: >-
+      When a student uses their classmate's idea as a basis for their own idea, these utterances are
+      coded as Relating to Another Student. This code is applied when a student comments on or asks
+      about another's work, a student answers another student's question, students agree/disagree
+      with another's ideas, or a student repeats another student's utterance.
+    include:
+      - Student comments on, adds on to, or asks about another student's utterance or work
+      - Student asks for confirmation or help on their own work from a peer
+      - Student answers another student's question
+      - Student agrees with/affirms or disagrees with/challenges what another student says
+      - Student rephrases or repeats another student's utterance
+    examples_pos:
+      - He drew the y-intercept.
+      - Her graph is different from mine.
+      - I agree with his answer.
+      - I don't think that is the way it goes.
+      - Did I do it right?
+      - "(after T: Do you agree with her?) Yes."
+  - id: asking_info
+    label: Asking for More Information
+    definition: >-
+      Student utterances that create an opportunity for more discussion about a math idea by saying
+      they want more information are coded as Asking for More Information. This code is also used
+      when students express confusion.
+    examples_pos:
+      - Why did you multiply?
+      - Where did you get the 5 from?
+      - What does Z mean?
+      - I don't understand.
+      - I need help.
+  - id: claim
+    label: Making a Claim
+    definition: >-
+      When a student makes a mathematical claim or makes a factual statement about a math concept or
+      idea, the utterance is coded as Making a Claim. This code is also used when a student shares
+      how they got their answer in a simple statement, defines an element or provides an equation as
+      an answer to a problem, disagrees with the teacher, or recognizes an error in their thinking.
+      If the student does any of the above and includes evidence or reasoning, it is coded as
+      Providing Evidence or Reasoning.
+    include:
+      - Student provides an answer to a problem or math question
+      - Student shares how they got their answer in a simple statement
+      - Student defines elements of an equation or provides an equation as an answer to a problem
+      - Student disagrees with a teacher, including elliptical responses
+      - Student recognizes an error in their thinking
+      - Student offers an answer in the form of a yes/no question
+    examples_pos:
+      - "(after T: What is 6 plus 6?) 12"
+      - It's the same as number 6.
+      - I multiplied 8 and 5.
+      - Y is the number of cars.
+      - Oh wait, my answer is wrong.
+      - Would I divide 10 by 2?
+  - id: evidence
+    label: Providing Evidence or Reasoning
+    definition: >-
+      Student utterances that suggest a deeper understanding of a math concept are coded as
+      Providing Evidence or Reasoning. This code is used when a student describes a procedure with
+      multiple steps, provides reasoning for their ideas, notices a pattern, answers a 'why'
+      question, uses an if/then statement, or compares two or more mathematical representations.
+    examples_pos:
+      - I divided 6 by 2 and got 3.
+      - I don't think so because you can't subtract 2 from zero.
+      - It is going up by 5 each time.
+      - "(after T: Why can't we add these?) Because the denominators are not the same."
+      - If you double it, the shape is going to get bigger.
+      - 2x plus 8 is going to be a positive line on the graph.
+none_option:
+  id: none
+  label: None
+  definition: The sentence is not one of the student talk moves above.

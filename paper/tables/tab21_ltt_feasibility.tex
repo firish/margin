@@ -1,0 +1,44 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Our corpus LTT procedure: hand-coded units needed before it certifies a coder that is never wrong}
+\label{tab:tab21_ltt_feasibility}
+\par\textit{A. Grid of 16 thresholds (as used throughout)}\par\smallskip
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llrrlll}
+\toprule
+task & \makecell[bl]{sampling \\{} unit} & \makecell[br]{units in \\{} corpus} & \makecell[br]{mean unit \\{} weight / B} & \makecell[bl]{frozen split \\{} certifies it} & lower bound & \makecell[bl]{our \\{} procedure \\{} (median)} \\
+\midrule
+MFRC & comment & 2000 & 1.00 & yes & 119 & 123 \\
+AnnoMI client & transcript & 128 & 0.12 & no & unreachable & not reached \\
+AnnoMI client & utterance & 1500 & 0.85 & -- & 119 & 146.5 \\
+AnnoMI therapist & transcript & 132 & 0.13 & no & unreachable & not reached \\
+AnnoMI therapist & utterance & 1500 & 0.87 & -- & 119 & 145 \\
+TalkMoves teacher & lesson & 444 & 0.27 & no & 388 & not reached \\
+TalkMoves teacher & sentence & 1500 & 0.78 & -- & 119 & 163 \\
+TalkMoves student & lesson & 436 & 0.08 & no & unreachable & not reached \\
+TalkMoves student & sentence & 1500 & 0.90 & -- & 119 & 139 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\medskip
+\par\textit{B. One threshold fixed in advance (0.95)}\par\smallskip
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llrll}
+\toprule
+task & \makecell[bl]{sampling \\{} unit} & \makecell[br]{units in \\{} corpus} & lower bound & \makecell[bl]{our \\{} procedure \\{} (median)} \\
+\midrule
+MFRC & comment & 2000 & 62 & 64 \\
+AnnoMI client & transcript & 128 & unreachable & not reached \\
+AnnoMI client & utterance & 1500 & 62 & 75 \\
+AnnoMI therapist & transcript & 132 & unreachable & not reached \\
+AnnoMI therapist & utterance & 1500 & 62 & 75 \\
+TalkMoves teacher & lesson & 444 & 114 & not reached \\
+TalkMoves teacher & sentence & 1500 & 62 & 81.5 \\
+TalkMoves student & lesson & 436 & unreachable & not reached \\
+TalkMoves student & sentence & 1500 & 62 & 70.5 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\par\smallskip\footnotesize\raggedright B: the largest unit's weight. Lower bound: a necessary number over every set of hand-coded units and every visiting order (each unit's bet can multiply the evidence by at most 1 + 0.05 $\times$ its weight / B, and certification needs a factor of 320 with the grid, 20 with one threshold); fewer units cannot suffice, and reaching the bound does not guarantee certification. Unreachable: not reached even with every unit but one hand-coded. Our procedure: median number of units at which it first certifies, over 20 random hand-coding sequences (a description of typical runs, not a bound). Transcripts and lessons are the units of our splits; utterances and sentences drawn at random are an alternative design.
+\end{table}

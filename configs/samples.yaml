@@ -1,0 +1,11 @@
+# One shared sample per task, drawn once (`margin sample`) and reused by every experiment.
+tag: main
+seed: 0
+floor: 60          # exclusive tasks: at least this many items per reference code (if available)
+n:
+  mfrc: 2000
+  annomi_client: 1500      # includes all 212 ten-annotator utterances
+  annomi_therapist: 1500   # includes all 216 ten-annotator utterances
+  talkmoves_teacher: 1500
+  talkmoves_student: 1500
+  dunivin: 120             # every gold-coded passage (ids 0-119)

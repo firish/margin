@@ -1,0 +1,47 @@
+name: mfrc
+version: "1"
+dataset: mfrc
+unit: Reddit comment
+mode: multi
+instructions: Which moral sentiments does this Reddit comment express? Several may apply.
+source: >-
+  Definitions verbatim from Trager et al. (2022), "The Moral Foundations Reddit Corpus",
+  arXiv:2208.05545 (foundation descriptions given to annotators). Non-Moral is the paper's
+  description of posts lacking moral sentiment.
+codes:
+  - id: care
+    label: Care
+    definition: >-
+      Intuitions about avoiding emotional and physical damage or harm to others. It underlies
+      virtues of kindness, gentleness, and nurturing, and vices of meanness, violence, and abuse.
+  - id: equality
+    label: Equality
+    definition: Intuitions about egalitarian treatment and equal outcome for all individuals and groups.
+  - id: proportionality
+    label: Proportionality
+    definition: >-
+      Intuitions about individuals getting rewarded in proportion to their merit (i.e., effort,
+      talent, or input).
+  - id: loyalty
+    label: Loyalty
+    definition: >-
+      Intuitions about in-group cooperation and out-group competition. It underlies virtues of
+      patriotism and self-sacrifice for the group.
+  - id: authority
+    label: Authority
+    definition: >-
+      Intuitions about deference toward legitimate authorities and high-status individuals. It
+      underlies virtues of leadership and respect for tradition.
+  - id: purity
+    label: Purity
+    definition: >-
+      Intuitions about avoiding bodily and spiritual contamination and degradation. It underlies
+      virtues of sanctity, nobility, and cleanliness.
+  - id: thin_morality
+    label: Thin Morality
+    definition: >-
+      A moral judgment or concern which is voiced without clearly referring to one of the six
+      moral domains.
+  - id: non_moral
+    label: Non-Moral
+    definition: The comment lacks moral sentiment.

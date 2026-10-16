@@ -1,0 +1,60 @@
+% Preprint layout close to TMLR's (single column, 10pt). For a TMLR submission, swap the preamble
+% for the official tmlr.sty and \usepackage[preprint]{tmlr}; nothing else needs to change.
+\documentclass[10pt]{article}
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{makecell}
+\usepackage{tikz}
+\usepackage{placeins}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage{xcolor}
+\usepackage[numbers, sort&compress]{natbib}
+\usepackage[colorlinks=true, linkcolor=blue!50!black, citecolor=blue!50!black, urlcolor=blue!50!black]{hyperref}
+\usepackage{url}
+\usepackage{caption}
+\captionsetup{font=small, labelfont=bf}
+\usepackage{enumitem}
+\usepackage{verbatim}
+\setlist{nosep, leftmargin=*}
+
+\graphicspath{{figures/}}
+% Let floats sit closer to their first mention.
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.8}
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{4}
+% Bootstrap estimates quoted in the prose, generated from the results files by `margin report`.
+\input{numbers}
+
+\title{Can Model Confidence Triage Qualitative Coding?\\[2pt]
+\large Decision Models, LLMs, and What a 5\% Error Guarantee Actually Costs}
+\author{Rishi Gulati\\ Independent researcher\thanks{Correspondence: \texttt{rg29.work@gmail.com}. Code, analysis plan, results and paper source: \url{https://github.com/firish/margin}.}}
+\date{October 2026 \quad (preprint; models called 10--12 October 2026, UTC)}
+
+\begin{document}
+\maketitle
+
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/related}
+\input{sections/setup}
+\input{sections/results}
+\input{sections/eqs}
+\input{sections/discussion}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\clearpage
+\appendix
+\input{sections/appendix}
+
+\end{document}

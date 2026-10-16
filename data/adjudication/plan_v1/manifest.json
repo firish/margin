@@ -1,0 +1,136 @@
+{
+  "config": {
+    "sources": [
+      [
+        "jev",
+        "jev_main",
+        "jev__canonical"
+      ],
+      [
+        "jev_noul",
+        "jev_format",
+        "jev__noul_format"
+      ],
+      [
+        "luna",
+        "llm_main",
+        "luna-verbal__canonical"
+      ],
+      [
+        "haiku",
+        "llm_main",
+        "haiku-verbal__canonical"
+      ],
+      [
+        "oss",
+        "llm_main",
+        "oss-verbal__canonical"
+      ],
+      [
+        "sonnet",
+        "llm_frontier",
+        "sonnet-verbal__canonical"
+      ]
+    ],
+    "tasks": [
+      "mfrc",
+      "annomi_client",
+      "annomi_therapist",
+      "talkmoves_teacher",
+      "talkmoves_student"
+    ],
+    "split": "test",
+    "n_per_task": 40,
+    "hi_conf": 0.9,
+    "control_share": 0.1,
+    "repeat_share": 0.1,
+    "seed": 0
+  },
+  "counts": {
+    "mfrc": {
+      "units": 11122,
+      "disagreements": 3115,
+      "high_conf_disagreements": 716,
+      "selected": {
+        "high_conf_disagreement": 36,
+        "control": 4
+      },
+      "sources": [
+        "haiku",
+        "jev",
+        "luna",
+        "oss",
+        "sonnet"
+      ]
+    },
+    "annomi_client": {
+      "units": 926,
+      "disagreements": 398,
+      "high_conf_disagreements": 207,
+      "selected": {
+        "high_conf_disagreement": 36,
+        "control": 4
+      },
+      "sources": [
+        "haiku",
+        "jev",
+        "jev_noul",
+        "luna",
+        "oss",
+        "sonnet"
+      ]
+    },
+    "annomi_therapist": {
+      "units": 896,
+      "disagreements": 316,
+      "high_conf_disagreements": 211,
+      "selected": {
+        "high_conf_disagreement": 36,
+        "control": 4
+      },
+      "sources": [
+        "haiku",
+        "jev",
+        "jev_noul",
+        "luna",
+        "oss",
+        "sonnet"
+      ]
+    },
+    "talkmoves_teacher": {
+      "units": 1130,
+      "disagreements": 561,
+      "high_conf_disagreements": 355,
+      "selected": {
+        "high_conf_disagreement": 36,
+        "control": 4
+      },
+      "sources": [
+        "haiku",
+        "jev",
+        "jev_noul",
+        "luna",
+        "oss",
+        "sonnet"
+      ]
+    },
+    "talkmoves_student": {
+      "units": 1117,
+      "disagreements": 714,
+      "high_conf_disagreements": 486,
+      "selected": {
+        "high_conf_disagreement": 36,
+        "control": 4
+      },
+      "sources": [
+        "haiku",
+        "jev",
+        "jev_noul",
+        "luna",
+        "oss",
+        "sonnet"
+      ]
+    }
+  },
+  "repeats": 20
+}

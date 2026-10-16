@@ -1,0 +1,7 @@
+task,unit,codebook,codes,calib,test,clusters,annot./item,human α
+MFRC,Reddit comment,multi-label,8,608,1392,2000,3,0.1742533945510442
+AnnoMI client,client utterance,exclusive,3,569,931,128,1 (10 on a subset),0.4671406285787266
+AnnoMI therapist,therapist utterance,exclusive,4,602,898,132,1 (10 on a subset),0.7366604776943635
+TalkMoves teacher,teacher sentence,exclusive,7,370,1130,444,1,
+TalkMoves student,student sentence,exclusive,5,383,1117,436,1,
+Dunivin,historical passage,multi-label,9,34,86,120,1,

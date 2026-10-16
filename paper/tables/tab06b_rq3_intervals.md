@@ -1,0 +1,53 @@
+**Table 6b. RQ3 primary outcomes with per-task 95% intervals (cluster bootstrap) for two arms**
+
+| arm | signal | task | flip rate [95% CI] | ΔAURC [95% CI] |
+|---|---|---|---|---|
+| no previous turn | Clef-flash (9B) | AnnoMI client | 0.130 [0.104, 0.161] | +0.031 [+0.011, +0.055] |
+| no previous turn | Clef-flash (9B) | AnnoMI therapist | 0.121 [0.090, 0.151] | +0.008 [-0.002, +0.020] |
+| no previous turn | Clef-flash (9B) | TalkMoves student | 0.306 [0.279, 0.336] | +0.117 [+0.085, +0.151] |
+| no previous turn | Clef-flash (9B) | TalkMoves teacher | 0.385 [0.356, 0.416] | -0.052 [-0.085, -0.013] |
+| no previous turn | Jev | AnnoMI client | 0.082 [0.065, 0.102] | +0.033 [+0.015, +0.051] |
+| no previous turn | Jev | AnnoMI therapist | 0.088 [0.068, 0.105] | -0.001 [-0.013, +0.013] |
+| no previous turn | Jev | TalkMoves student | 0.227 [0.204, 0.253] | +0.081 [+0.059, +0.105] |
+| no previous turn | Jev | TalkMoves teacher | 0.208 [0.184, 0.231] | +0.033 [+0.013, +0.051] |
+| no previous turn | Kev-9B | AnnoMI client | 0.216 [0.189, 0.246] | +0.005 [-0.027, +0.035] |
+| no previous turn | Kev-9B | AnnoMI therapist | 0.135 [0.112, 0.159] | +0.014 [-0.002, +0.031] |
+| no previous turn | OpenAI Decisions | AnnoMI client | 0.076 [0.059, 0.096] | +0.023 [+0.003, +0.044] |
+| no previous turn | OpenAI Decisions | AnnoMI therapist | 0.106 [0.085, 0.124] | +0.012 [+0.001, +0.024] |
+| no previous turn | OpenAI Decisions | TalkMoves student | 0.342 [0.315, 0.371] | +0.011 [-0.023, +0.045] |
+| no previous turn | OpenAI Decisions | TalkMoves teacher | 0.230 [0.203, 0.257] | -0.004 [-0.026, +0.019] |
+| no previous turn | pplx-decider | AnnoMI client | 0.086 [0.068, 0.110] | +0.032 [+0.010, +0.052] |
+| no previous turn | pplx-decider | AnnoMI therapist | 0.058 [0.041, 0.074] | +0.004 [-0.006, +0.014] |
+| no previous turn | pplx-decider | TalkMoves student | 0.311 [0.282, 0.345] | +0.061 [+0.037, +0.084] |
+| no previous turn | pplx-decider | TalkMoves teacher | 0.163 [0.141, 0.186] | -0.006 [-0.024, +0.013] |
+| options reversed | Clef-flash (9B) | AnnoMI client | 0.000 [0.000, 0.000] | +0.000 [+0.000, +0.000] |
+| options reversed | Clef-flash (9B) | AnnoMI therapist | 0.000 [0.000, 0.000] | +0.000 [+0.000, +0.000] |
+| options reversed | Clef-flash (9B) | MFRC | 0.040 [0.037, 0.043] | -0.001 [-0.002, -0.001] |
+| options reversed | Clef-flash (9B) | TalkMoves student | 0.000 [0.000, 0.000] | +0.000 [+0.000, +0.000] |
+| options reversed | Clef-flash (9B) | TalkMoves teacher | 0.000 [0.000, 0.000] | +0.000 [+0.000, +0.000] |
+| options reversed | Jev | AnnoMI client | 0.035 [0.023, 0.044] | +0.002 [-0.003, +0.008] |
+| options reversed | Jev | AnnoMI therapist | 0.021 [0.013, 0.029] | -0.008 [-0.015, -0.001] |
+| options reversed | Jev | MFRC | 0.009 [0.007, 0.011] | +0.000 [-0.000, +0.000] |
+| options reversed | Jev | TalkMoves student | 0.072 [0.057, 0.087] | +0.034 [+0.024, +0.044] |
+| options reversed | Jev | TalkMoves teacher | 0.072 [0.056, 0.088] | +0.001 [-0.007, +0.008] |
+| options reversed | Kev-9B | AnnoMI client | 0.444 [0.400, 0.483] | +0.180 [+0.137, +0.232] |
+| options reversed | Kev-9B | AnnoMI therapist | 0.224 [0.193, 0.255] | +0.067 [+0.038, +0.097] |
+| options reversed | Kev-9B | MFRC | 0.002 [0.001, 0.003] | -0.000 [-0.000, +0.000] |
+| options reversed | Kev-9B | TalkMoves teacher | 0.555 [0.522, 0.588] | +0.230 [+0.193, +0.268] |
+| options reversed | OpenAI Decisions | AnnoMI client | 0.064 [0.050, 0.079] | +0.014 [-0.011, +0.035] |
+| options reversed | OpenAI Decisions | AnnoMI therapist | 0.086 [0.067, 0.105] | +0.020 [+0.004, +0.035] |
+| options reversed | OpenAI Decisions | MFRC | 0.000 [0.000, 0.000] | +0.000 [+0.000, +0.000] |
+| options reversed | OpenAI Decisions | TalkMoves student | 0.212 [0.188, 0.236] | -0.047 [-0.070, -0.023] |
+| options reversed | OpenAI Decisions | TalkMoves teacher | 0.152 [0.129, 0.174] | -0.013 [-0.030, +0.004] |
+| options reversed | Sonnet verbal | AnnoMI client | 0.040 [0.005, 0.074] | -0.003 [-0.021, +0.019] |
+| options reversed | Sonnet verbal | AnnoMI therapist | 0.051 [0.012, 0.105] | +0.001 [-0.006, +0.014] |
+| options reversed | Sonnet verbal | MFRC | 0.050 [0.032, 0.069] | +0.003 [+0.001, +0.007] |
+| options reversed | Sonnet verbal | TalkMoves student | 0.038 [0.000, 0.084] | +0.001 [-0.018, +0.023] |
+| options reversed | Sonnet verbal | TalkMoves teacher | 0.082 [0.026, 0.145] | -0.017 [-0.050, +0.008] |
+| options reversed | pplx-decider | AnnoMI client | 0.027 [0.016, 0.042] | -0.006 [-0.014, +0.001] |
+| options reversed | pplx-decider | AnnoMI therapist | 0.039 [0.022, 0.057] | -0.001 [-0.005, +0.002] |
+| options reversed | pplx-decider | MFRC | 0.000 [0.000, 0.000] | +0.000 [+0.000, +0.000] |
+| options reversed | pplx-decider | TalkMoves student | 0.122 [0.104, 0.142] | -0.016 [-0.035, +0.003] |
+| options reversed | pplx-decider | TalkMoves teacher | 0.129 [0.113, 0.148] | -0.073 [-0.094, -0.051] |
+
+_Positive ΔAURC means a larger area under the risk–coverage curve for the perturbed run (worse selective risk); AURC reflects the error rate as well as the ranking of errors._

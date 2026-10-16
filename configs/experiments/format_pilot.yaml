@@ -1,0 +1,10 @@
+# Question-format test on the calib split: exclusive codebooks as one Choice (native) vs one Noul per
+# option combined by jev.exactly_one (odds normalization). Same 200 segments per task as `pilot`, so
+# the canonical arm comes from the cache.
+name: format_pilot
+sample: main
+split: calib
+limit: 200
+tasks: [annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student]
+coders: [jev]
+variants: [canonical, noul_format]

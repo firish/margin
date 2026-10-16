@@ -1,0 +1,36 @@
+relating:
+- An utterance is coded as Relating to Another Student when the speaker takes a classmate's idea and builds
+  their own idea on it. The code covers commenting on or asking about a peer's work, answering a peer's
+  question, agreeing or disagreeing with a peer's ideas, and repeating a peer's utterance.
+- Comments on or questions about a classmate's work, answers to a classmate's question, agreement or disagreement
+  with a classmate's ideas, and repetitions of a classmate's utterance are all coded as Relating to Another
+  Student, because in each case the student is using a peer's idea as the foundation for their own.
+asking_info:
+- Utterances in which a student states that they want more information, thereby opening up further discussion
+  of a math idea, are coded as Asking for More Information. Expressions of confusion by students also
+  receive this code.
+- Code a student utterance as Asking for More Information if it expresses confusion, or if it says the
+  student wants more information and so creates a chance for further discussion about a math idea.
+claim:
+- An utterance is coded as Making a Claim when a student asserts a mathematical claim or states a fact
+  about a math concept or idea. The code also covers a student describing how they reached an answer in
+  a simple statement, defining an element or giving an equation as the answer to a problem, disagreeing
+  with the teacher, or acknowledging an error in their own thinking. If any of these includes evidence
+  or reasoning, the code is Providing Evidence or Reasoning instead.
+- 'Whenever a student does any of the following with evidence or reasoning included, the code is Providing
+  Evidence or Reasoning rather than Making a Claim. Without evidence or reasoning, these are coded as
+  Making a Claim: stating a mathematical claim or a fact about a math concept or idea, explaining in a
+  simple statement how they got their answer, defining an element or giving an equation as an answer to
+  a problem, disagreeing with the teacher, or recognizing an error in their thinking.'
+evidence:
+- Student utterances that indicate a deeper understanding of a math concept are coded as Providing Evidence
+  or Reasoning. This includes describing a multi-step procedure, giving reasons for ideas, noticing a
+  pattern, answering a 'why' question, using an if/then statement, or comparing two or more mathematical
+  representations.
+- Code an utterance as Providing Evidence or Reasoning when it shows a deeper understanding of a math
+  concept, specifically when the student gives reasoning for their ideas, answers a 'why' question, notices
+  a pattern, uses an if/then statement, compares two or more mathematical representations, or describes
+  a procedure that has multiple steps.
+none:
+- The sentence does not match any of the student talk moves listed above.
+- A sentence that falls under none of the preceding student talk moves is coded as None.

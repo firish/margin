@@ -1,0 +1,41 @@
+signal,task,i.i.d.-cluster LTT: accepted,i.i.d.-cluster LTT: none accepted,i.i.d.-cluster LTT: error > 5%,corpus LTT: accepted,corpus LTT: none accepted,corpus LTT: error > 5%
+Clef (27B),AnnoMI client,0.0,100.0,0.0,0.0,100.0,0.0
+Clef (27B),AnnoMI therapist,0.0,100.0,0.0,0.0,100.0,0.0
+Clef (27B),MFRC,82.30206042854006,0.0,0.0,81.01802873347896,0.0,0.0
+Clef (27B),TalkMoves student,0.0,100.0,0.0,0.0,100.0,0.0
+Clef (27B),TalkMoves teacher,0.0,100.0,0.0,0.0,100.0,0.0
+Clef-flash (9B),AnnoMI client,0.0,100.0,0.0,0.0,100.0,0.0
+Clef-flash (9B),AnnoMI therapist,0.0,100.0,0.0,0.0,100.0,0.0
+Clef-flash (9B),MFRC,79.2038612071747,0.0,0.0,77.49626264322114,0.0,0.0
+Clef-flash (9B),TalkMoves student,0.0,100.0,0.0,0.0,100.0,0.0
+Clef-flash (9B),TalkMoves teacher,0.0,100.0,0.0,0.0,100.0,0.0
+Jev,AnnoMI client,0.0,100.0,0.0,0.0,100.0,0.0
+Jev,AnnoMI therapist,0.0,100.0,0.0,0.0,100.0,0.0
+Jev,MFRC,69.68493713412927,0.0,0.0,67.5376489004134,0.0,0.0
+Jev,TalkMoves student,0.0,100.0,0.0,0.0,100.0,0.0
+Jev,TalkMoves teacher,0.0,100.0,0.0,0.0,100.0,0.0
+Kev-27B,AnnoMI client,0.0,100.0,0.0,0.0,100.0,0.0
+Kev-27B,AnnoMI therapist,0.0,100.0,0.0,0.0,100.0,0.0
+Kev-27B,MFRC,84.81261222912872,0.0,0.0,82.40751282323849,0.0,0.0
+Kev-27B,TalkMoves student,0.0,100.0,0.0,0.0,100.0,0.0
+Kev-27B,TalkMoves teacher,0.0,100.0,0.0,0.0,100.0,0.0
+Kev-9B,AnnoMI client,0.0,100.0,0.0,0.0,100.0,0.0
+Kev-9B,AnnoMI therapist,0.0,100.0,0.0,0.0,100.0,0.0
+Kev-9B,MFRC,75.90433888711362,0.0,0.0,72.32432209569268,0.6,0.0
+Kev-9B,TalkMoves student,0.0,100.0,0.0,0.0,100.0,0.0
+Kev-9B,TalkMoves teacher,0.0,100.0,0.0,0.0,100.0,0.0
+OpenAI Decisions,AnnoMI client,0.0,100.0,0.0,0.0,100.0,0.0
+OpenAI Decisions,AnnoMI therapist,0.0,100.0,0.0,0.0,100.0,0.0
+OpenAI Decisions,MFRC,14.816037686468439,67.0,0.0,0.41896353608986,99.0,0.0
+OpenAI Decisions,TalkMoves student,0.0,100.0,0.0,0.0,100.0,0.0
+OpenAI Decisions,TalkMoves teacher,0.0,100.0,0.0,0.0,100.0,0.0
+pplx-decider,AnnoMI client,0.0,100.0,0.0,0.0,100.0,0.0
+pplx-decider,AnnoMI therapist,0.0,100.0,0.0,0.0,100.0,0.0
+pplx-decider,MFRC,82.6931984119503,0.0,0.0,81.07819946482016,0.0,0.0
+pplx-decider,TalkMoves student,0.0,100.0,0.0,0.0,100.0,0.0
+pplx-decider,TalkMoves teacher,0.0,100.0,0.0,0.0,100.0,0.0
+Sonnet verbal,AnnoMI client,0.0,100.0,0.0,0.0,100.0,0.0
+Sonnet verbal,AnnoMI therapist,0.0,100.0,0.0,0.0,100.0,0.0
+Sonnet verbal,MFRC,85.41162641801905,0.0,0.0,84.50616527605295,0.0,0.0
+Sonnet verbal,TalkMoves student,0.0,100.0,0.0,0.0,100.0,0.0
+Sonnet verbal,TalkMoves teacher,0.0,100.0,0.0,0.0,100.0,0.0

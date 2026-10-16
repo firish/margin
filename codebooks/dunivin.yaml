@@ -1,0 +1,95 @@
+name: dunivin
+version: "1"
+dataset: dunivin
+unit: news passage
+mode: multi
+instructions: >-
+  Apply qualitative codes to this passage from an article, book review, or opinion piece referencing
+  W.E.B. Du Bois. The purpose is to track how Du Bois is represented in news media over time.
+  Several codes may apply.
+source: >-
+  Dunivin (2025), "Scalable Qualitative Coding with LLMs", EPJ Data Science; OSF k4fg9,
+  automated_coding_workflow.ipynb (`codes_full`). Definitions verbatim, typos included. The
+  notebook's 10th code "Living Achievement" is absent from the gold standard and omitted. Examples
+  are omitted because the published prompts passed only title, category, and definition (zero-shot).
+  NOTE: the authors revised these definitions iteratively to improve GPT-4's coding.
+codes:
+  - id: scholar
+    label: Scholar
+    definition: >-
+      Applies when Du Bois is described as a scholar or intellectual, especially in connection to
+      Black politics, racial identity, or social theory. When Du Bois is invoked through his ideas on
+      social theory, he should be classified as a scholar, not an activist, unless it is call to
+      action, related to his organizing, or other non-scholarly political activity. Do not apply when
+      Du Bois is merely the focus the context of historical and academic study or his scholarship is
+      only implied by loose connections to other scholars.
+  - id: activist
+    label: Activist
+    definition: >-
+      Apply this code when Du Bois is explicitly called an "activist" or "leader", or when his
+      political or social activism is either explicitly noted or clearly implied through context.
+      Examples include being mentioned in the context of leadership, activism, developing activist
+      organizations, giving public speeches, participating in meetings with politicians and
+      organizers, running for office, or promoting a candidate, organization, or initiative.
+  - id: monumental_memorialization
+    label: Monumental Memorialization
+    definition: >-
+      When an enduring cultural object is named after Du Bois. Such objects include  prizes/awards,
+      named professorships, buildings or rooms, geographical features, institutes, schools, or
+      activist organizations. Do not apply when Du Bois is mentioned in the title of a book or
+      theater production.
+  - id: scholarly_work
+    label: Mention of Scholarly Work
+    definition: >-
+      Apply this code when academic works or major theoretical concepts by W.E.B. Du Bois are
+      mentioned or quoted. This includes explicit naming or direct quotations of his writings and
+      references to his key academic ideas, even if unnamed, provided they are clearly attributed to
+      him. Only use when a quote comes from a scholarly work; use context to determine whether a quote
+      comes from a scholarly work, such as a history or social theory, or some other piece, such as a
+      letter or speech. Avoid using this code for general references to Du Bois’s influence, body of
+      writings, or activities outside of his scholarly work. Do not apply it when discussing others'
+      work, unless Du Bois's scholarly concepts or writings are explicitly and centrally mentioned.
+  - id: advocacy
+    label: Social/Political Advocacy
+    definition: >-
+      This code applies when a passage mentions or implies any form of social or political activism,
+      advocacy, critique, or discourse, including discussions about current or historical social
+      problems. This includes not only direct activism of Du Bois and others, but also the framing and
+      challenging of social norms, historical narratives, and racial or cultural identities. Apply
+      this code when Du Bois's work, persona, or ideas are invoked in discussions that critically
+      engage with Black identity, positionality, or broader systemic circumstances of Black people.
+      Adjacency to other activists such as inclusion in a list, is insufficient; advocacy must be
+      explicitly mentioned in the passage.
+  - id: coalition_building
+    label: Coalition Building
+    definition: >-
+      Du Bois is described as an agent establishing his reputation through organizational and
+      institutional sponsorship.
+  - id: mouth_of_academics
+    label: Out of the Mouth of Academics
+    definition: >-
+      Apply this code when a specific member of an academic organization is engaging with Du Bois’s
+      work or Du Bois as representing a concept. Apply also when an activist organization has named
+      itself or a subdivision of itself after Du Bois, such as an institute or named professorship.
+      It is not sufficient to use this code when Du Bois is described as a member of an academic
+      organization. This code represents when a member of an academic organization discusses Du Bois.
+      It is not sufficient to pressume that the entity discussing or promoting Du Bois is academic.
+  - id: mouth_of_activists
+    label: Out of the Mouth of Activists
+    definition: >-
+      Apply this code when an individual described as a leader, activist, or politician, or as member
+      of a specific political or activist organization organization (e.g., political parties, the
+      NAACP, the Black church, Black Lives Matter) references or draws upon W.E.B. Du Bois’s work or
+      legacy. This includes instances where the person's role as a leader, activist, or politician is
+      implied through their actions or affiliations, even if not explicitly stated. The code also
+      applies when governments, political parties, or activist organizations connect their agenda to
+      Du Bois, such as commemorating Du Bois by naming initiatives (like foundations or prizes) after
+      him. Do not apply Du Bois is mentioned as a member of an organization, unless a representative
+      organization is referencing Du Bois' membership to connect their agenda to Du Bois.
+  - id: collective_synecdoche
+    label: Collective Synecdoche
+    definition: >-
+      Mentioned with other famous intellectuals, activists, or public figures in order to represent
+      some facet of a culture, era, or ideology. Examples include representing race scholarship, civil
+      rights activism, left political leaders, Black excellence, and 20th century political
+      commentators.

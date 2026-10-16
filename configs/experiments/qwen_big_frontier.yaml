@@ -1,0 +1,8 @@
+# Exploratory: Qwen3.8-2.4T (open weights, Together-hosted, thinking off) on the Sonnet subset.
+name: qwen_big_frontier
+sample: main
+split: all
+limit: 270
+tasks: [mfrc, annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student, dunivin]
+coders: [qwen_big]
+variants: [canonical]

@@ -1,0 +1,7 @@
+# Amendment v1.2 (A5): RQ3 robustness arms on the test split (Clef 27B excluded for budget).
+name: dm_robustness
+sample: main
+split: test
+tasks: [mfrc, annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student]
+coders: [clef_flash, pplx, kev9b]
+variants: [canonical, reversed, shuffle1, shuffle2, shuffle3, isolated, neutral_labels, no_context, paraphrase0, paraphrase1]

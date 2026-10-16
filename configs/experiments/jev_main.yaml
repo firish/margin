@@ -1,0 +1,8 @@
+# Plan section 5: Jev primary arm (Choice for exclusive, Noul per code for multi) on the full shared
+# sample, both splits (calib fits thresholds). Dunivin is included for the replication section.
+name: jev_main
+sample: main
+split: all
+tasks: [mfrc, annomi_client, annomi_therapist, talkmoves_teacher, talkmoves_student, dunivin]
+coders: [jev]
+variants: [canonical]
