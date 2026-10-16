@@ -5,19 +5,19 @@
 \label{tab:tab11_repeatability}
 \par\textit{A. How much the outputs change}\par\smallskip
 \begin{adjustbox}{max width=\linewidth}
-\begin{tabular}{lrrrrrr}
+\begin{tabular}{lrrlrrr}
 \toprule
-signal & segments & decisions & \makecell[br]{label flip \\{} rate} & \makecell[br]{share \\{} identical} & mean |$\Delta$p| & \makecell[br]{mean |$\Delta$ \\{} confidence|} \\
+signal & segments & decisions & \makecell[bl]{label flip \\{} rate} & \makecell[br]{share \\{} identical} & mean |$\Delta$p| & \makecell[br]{mean |$\Delta$ \\{} confidence|} \\
 \midrule
 Jev & 100 & 240 & 0.021 & 0.612 & 0.008 & 0.013 \\
-OpenAI Decisions & 100 & 240 & 0.000 & 1.000 & 0.000 & 0.000 \\
+OpenAI Decisions & 100 & 240 & 0 & 1.000 & 0.000 & 0.000 \\
 Luna verbal & 100 & 240 & 0.066 & 0.567 & 0.030 & 0.020 \\
 Luna logprob & 100 & 240 & 0.066 & 0.455 & 0.031 & 0.003 \\
-Haiku verbal & 100 & 240 & 0.000 & 0.989 & 0.001 & 0.001 \\
+Haiku verbal & 100 & 240 & <0.001 & 0.989 & 0.001 & 0.001 \\
 Sonnet verbal & 100 & 240 & 0.033 & 0.514 & 0.016 & 0.023 \\
-Clef (27B) & 100 & 240 & 0.000 & 1.000 & 0.000 & 0.000 \\
-Clef-flash (9B) & 100 & 240 & 0.000 & 1.000 & 0.000 & 0.000 \\
-pplx-decider & 100 & 240 & 0.000 & 1.000 & 0.000 & 0.000 \\
+Clef (27B) & 100 & 240 & 0 & 1.000 & 0.000 & 0.000 \\
+Clef-flash (9B) & 100 & 240 & 0 & 1.000 & 0.000 & 0.000 \\
+pplx-decider & 100 & 240 & 0 & 1.000 & 0.000 & 0.000 \\
 \bottomrule
 \end{tabular}
 \end{adjustbox}

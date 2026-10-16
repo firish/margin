@@ -105,8 +105,9 @@ are design-weighted, with per-task cluster-bootstrap intervals (Table~\ref{tab:t
 \begin{itemize}
   \item \textbf{Option order matters, differently by model.} Averaged over tasks, reversing or shuffling options changes 4\%
   of Jev's labels, 5--7\% of pplx-decider's and Sonnet's, 8--11\% of OpenAI Decisions' and Luna's, under 1\% of Clef-flash's,
-  and 13--31\% of Kev-9B's; in single tasks it reaches 55\% (Kev-9B, reversed options, TalkMoves teacher). Identical repeated requests already change 2.1\% of Jev's labels, 3.3\% of Sonnet's and 6.6\% of Luna's
-  (\S\ref{sec:eq6}), so part of each order effect is sampling noise.
+  and 13--31\% of Kev-9B's; in single tasks it reaches 55\% (Kev-9B, reversed options, TalkMoves teacher). For coders whose identical repeated requests already vary (2.1\% of Jev's labels, 3.3\% of Sonnet's, 6.6\% of Luna's;
+  \S\ref{sec:eq6}), some order flips may reflect that variation; the samples differ, so the rates cannot simply be
+  subtracted.
   \item \textbf{Wording matters a little.} Paraphrased definitions change 3--10\% of labels, and replacing code names with
   neutral identifiers 5--10\%. Asking for MFRC codes one at a time instead of together changes at most 4\% (Clef-flash);
   OpenAI Decisions' multi-label answers are exactly invariant to question order and batching.
@@ -115,8 +116,8 @@ are design-weighted, with per-task cluster-bootstrap intervals (Table~\ref{tab:t
   worse: $\kappa$ falls by 0.012--0.041 and AURC rises by 0.010--0.037. These flips are mostly a loss of relevant context, not
   instability, in line with the finding that added context can redirect decision models \citep{xu2026jevout}.
   \item \textbf{Question format has model-specific effects.} Asking each exclusive option as a separate yes/no question
-  improves error ranking for Clef-flash ($+$0.029) and pplx-decider ($+$0.022), hurts it for Kev-27B ($-$0.028), and leaves
-  Jev and OpenAI Decisions unchanged.
+  improves error ranking for Clef-flash ($+$0.029) and pplx-decider ($+$0.022), hurts it for Kev-27B ($-$0.028), and produces no
+  clear pooled change for Jev or OpenAI Decisions.
 \end{itemize}
 Changes in AURC under surface perturbations stay within $\pm$0.08 per task for every coder except Kev-9B, whose option-order
 sensitivity raises AURC by up to 0.23. Jev's flips concentrate on its low-confidence decisions (AUROC 0.82--0.99), so its

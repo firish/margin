@@ -23,9 +23,11 @@ teacher and student) plus a replication of Dunivin (2025). All models were calle
 | `paper/` | LaTeX source, figures and tables |
 | `deploy/` | The Modal deployment used to self-host Kev (vendored from [jaredpalmer/kev](https://github.com/jaredpalmer/kev), Apache-2.0) |
 
-Not included: the datasets themselves and the raw response cache, which contains dataset text. Download the datasets from
-their sources (below); the model outputs in `data/runs/` and the ledger are enough to recompute every number in the paper,
-including costs (`margin a3` reads costs from the ledger when there is no local cache). The guaranteed threshold rule is
+Not included: the datasets themselves and the raw response cache, which holds the text of every request and response and
+therefore quotes the datasets. Download the datasets from their sources (below). The coding decisions in `data/runs/` (one
+row per decision, with its probability), the item-level memorization-probe and decoy scores in `results/`, and the ledger
+are enough to recompute every number in the paper, including costs (`margin a3` reads costs from the ledger when there is no
+local cache). The raw completion text behind the probe scores is not released, so those scores cannot be re-derived from text. The guaranteed threshold rule is
 corpus LTT (`triage.cluster_ltt` with `n_pool`): a without-replacement betting test whose final capital is averaged over
 random visiting orders. `docs/ANALYSIS_PLAN.md` deviations 16-18 explain why it replaced decision-level LTT and why the
 visiting order must be random.
@@ -43,11 +45,12 @@ uv run margin replicate      # Dunivin replication
 uv run margin a3             # recalibration, threshold rules, risk control, budget, cascades
 uv run margin repeatability  # run-to-run stability
 uv run margin prompt-sensitivity  # second-prompt check (amendment v1.4)
+uv run margin decoy          # decoy-name control, from results/contamination_decoy_items.csv
 uv run margin prevalence     # MFRC: prevalence baseline and recall of applying codes
 uv run margin controls       # category-only control, LTT feasibility, simulation, utterance-sampling design
 uv run margin report         # figures and tables -> paper/figures, paper/tables
-cd paper && tectonic -X compile main.tex
-uv run pytest
+uv run pytest                # from the repository root
+(cd paper && tectonic -X compile main.tex)
 ```
 
 ## Re-run the models

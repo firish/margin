@@ -569,3 +569,9 @@ Approved by the author on 2026-10-11 and written before any call with the new pr
       certificate counts) are generated into paper/numbers.tex. `controls.utterance_evidence` records, for
       the first utterance-design re-split, the largest grid threshold whose hand-coded accepted set has
       error <= 5% (results/utterance_evidence.csv), which supports the evidence-size explanation.
+    - **After the fifth and sixth reviews (wording and release only; no result changed).** The decoy
+      control's item-level scores (300 rows, text-free) were rebuilt from the local response cache without
+      any API call and released as results/contamination_decoy_items.csv; `margin decoy` recomputes the
+      summary from them, identically. Rates that are nonzero but below display precision print as <0.001.
+      The paper's prompt example now uses an invented exchange instead of AnnoMI text, and the release
+      statements say that raw response text is withheld because it quotes the datasets.

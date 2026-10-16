@@ -74,6 +74,15 @@ def ci(lo: float, hi: float, digits: int = 3, plus: bool = False) -> str:
     return f"[{num(lo, digits, plus)}, {num(hi, digits, plus)}]"
 
 
+def rate(v: float, digits: int = 3) -> str:
+    """A rate for display: 0 only when nothing changed, '<0.001' when nonzero but below the displayed precision."""
+    if pd.isna(v):
+        return "–"
+    if v == 0:
+        return "0"
+    return f"<{10 ** -digits:.{digits}f}" if round(float(v), digits) == 0 else f"{float(v):.{digits}f}"
+
+
 def md_table(df: pd.DataFrame, digits: int = 3) -> str:
     cols = list(df.columns)
     lines = ["| " + " | ".join(map(str, cols)) + " |", "|" + "|".join("---" for _ in cols) + "|"]
@@ -495,7 +504,7 @@ def fig_repeatability() -> None:
     fig, axes = plt.subplots(1, 2, figsize=(10, 3))
     for ax, k, lab in [(axes[0], "flip_rate", "share of decisions whose label changes"), (axes[1], "mean_abs_dconf", "mean |Δ confidence|")]:
         bars = ax.bar(range(len(p)), p[k], color=[COLOR.get(s, "#555") for s in p.index])
-        ax.bar_label(bars, labels=["0" if v == 0 else f"{v:.3f}" for v in p[k]], fontsize=7)
+        ax.bar_label(bars, labels=[rate(v) for v in p[k]], fontsize=7)
         ax.set_xticks(range(len(p)), [SIG.get(s, s) for s in p.index], rotation=30, ha="right"); ax.set_ylabel(lab)
     save_fig(fig, "fig11_repeatability")
 
@@ -865,6 +874,7 @@ def table_repeatability() -> None:
     r = pd.read_csv(path)
     r = r[r.task == "POOLED"].drop(columns=["task"])
     r["signal"] = r.signal.map(SIG)
+    r["flip_rate"] = r.flip_rate.map(rate)
     r = r.rename(columns={"flip_rate": "label flip rate", "identical_p": "share identical", "mean_abs_dp": "mean |Δp|",
                           "mean_abs_dconf": "mean |Δ confidence|", "accuracy_1": "accuracy, run 1", "accuracy_2": "accuracy, run 2",
                           "flips_at_low_conf_auroc": "flips at low confidence (AUROC)"})
@@ -1139,8 +1149,8 @@ def main_tables() -> None:
                      "dialogue: cluster-level LTT": get("ltt", dia).test_coverage.mean()})
     pol = pd.DataFrame(rows)
     pol.columns = [c.replace("cluster-level LTT", "corpus LTT").replace("decision-level LTT", "LTT on decisions") for c in pol.columns]
-    num = pol.columns[1:]
-    pol[num] = pol[num] * 100
+    pct_cols = pol.columns[1:]
+    pol[pct_cols] = pol[pct_cols] * 100
     (TAB / "main_policies.tex").write_text(tex_table(pol, "Threshold policies at a 5% error target on the frozen split (percent): share of test decisions "
         "accepted, and error among them. Pooled columns average the five tasks; dialogue columns average the four dialogue tasks.", "tab:main_policies",
         "Naive: threshold with calibration error ≤ 5% (the pre-specified rule). Oracle: fitted on test, an unattainable upper bound. LTT on decisions treats "
@@ -1213,13 +1223,17 @@ def main_tables() -> None:
         comp = mem[(mem.probe == "completion") & (mem.model == m)] if m else None
         lab = mem[(mem.probe == "label") & (mem.model == m)] if m else None
         held = dec[(dec.model == m) & (dec["p (Bonferroni, 3 cells)"] < 0.05)] if m else None
-        rows.append({"coder": SIG[sig], "run-to-run label flips": rp.get(sig, np.nan), "flips under option order": order.get(sig, np.nan),
-                     "verbatim recall (completion)": ("no evidence" if not comp["flag"].any() else "yes") if m else "not assessed",
+        rows.append({"coder": SIG[sig], "run-to-run label flips": rate(rp.get(sig, np.nan)), "flips under option order": rate(order.get(sig, np.nan)),
+                     "completion-probe flag": ("not flagged" if not comp["flag"].any() else "flagged") if m else "not assessed",
                      "label recall beyond decoy": ((", ".join(TASK[t] for t in held.task) or "no evidence") if lab is not None and lab["flag"].any() else "no evidence") if m else "not assessed"})
-    tex(pd.DataFrame(rows), "main_validity", "EQ6: validity checks. Run-to-run flips: identical requests sent twice (100 test segments per task; 0 means identical outputs "
-        "in these repeats); option-order flips: reversed and shuffled options (RQ3 arms); memorization probe with decoy-name control (amendment v1.3, deviation 14). "
-        "Decision models return no text, so they could not be probed.",
-        "Prompt sensitivity (amendment v1.4): a verbalized-distribution prompt changes error AUROC by −0.034 [−0.056, −0.011] for Sonnet and −0.010 (n.s.) for Haiku.")
+    ps = pd.read_csv(RESULTS / "prompt_sensitivity.csv").query("task == 'POOLED'").set_index("signal")
+    psd = lambda s_: f"{num(ps.loc[s_, 'error_auroc_diff'], 3, True)} {ci(ps.loc[s_, 'lo'], ps.loc[s_, 'hi'], 3, True)}"  # noqa: E731
+    tex(pd.DataFrame(rows), "main_validity", "EQ6: validity checks. Run-to-run flips: identical requests sent twice (100 test segments per task; 0 means no "
+        "observed label changes in these repeats, <0.001 a nonzero rate below display precision); option-order flips: reversed and shuffled options (RQ3 "
+        "arms); memorization probe with decoy-name control (amendment v1.3, deviation 14). Decision models return no text, so they could not be probed.",
+        "Completion-probe flag: the pre-specified rule ([[tab:tab15b_memorization_verbatim]]); not flagged does not mean no literal matches, which "
+        "occurred rarely under both prompts. Prompt sensitivity (amendment v1.4): a verbalized-distribution prompt changes error AUROC by "
+        f"{psd('sonnet-verbal')} for Sonnet and {psd('haiku-verbal')} for Haiku.")
 
 
 def table_ltt_checks() -> None:

@@ -305,6 +305,33 @@ async def decoy_async(cells: list[tuple[str, str]] = FLAGGED) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def decoy_items_from_cache(cells: list[tuple[str, str]] = FLAGGED) -> pd.DataFrame:
+    """The decoy control's item-level scores, rebuilt from the local response cache only (no API calls; a cache miss
+    is an error). The output is text-free: model, task, segment id, condition and label accuracy."""
+    reg, cache = Registry.load(), Cache()
+    items = label_items()
+    rows = []
+    for name, task in cells:
+        coder = llm.CODERS[name]
+        spec = reg[coder.model]
+        for item in items[items.task == task].to_dict("records"):
+            call = Call("label", "decoy", item, decoy_prompt(item), 40)
+            resp = cache.get(request_key(spec.provider, spec.model, request(call, coder, spec)))
+            if resp is None:
+                raise RuntimeError(f"decoy response for {name}/{item['segment_id']} is not in the cache; this function makes no calls")
+            rows.append({"model": name, "kind": "label", "condition": "decoy", **score(call, resp["text"])})
+    return pd.DataFrame(rows)
+
+
+def decoy_from_items() -> pd.DataFrame:
+    """Recompute results/contamination_decoy.csv from the released item-level scores (no cache needed)."""
+    items = pd.read_csv(RESULTS / "contamination_items.csv")
+    decoy = pd.read_csv(RESULTS / "contamination_decoy_items.csv")
+    out = decoy_summary(items, decoy)
+    out.to_csv(RESULTS / "contamination_decoy.csv", index=False)
+    return out
+
+
 def decoy_summary(items_scores: pd.DataFrame, decoy: pd.DataFrame) -> pd.DataFrame:
     lab = pd.concat([items_scores[items_scores.kind == "label"], decoy])
     rows = []

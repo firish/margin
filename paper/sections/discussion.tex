@@ -58,7 +58,8 @@ sampling design.
   long-form interviews: public interview data with applied codes is rare, and a private dataset requires ethics approval.
   Pooled estimates describe these five tasks, not a population of codebooks.
   \item \textbf{A dated snapshot.} Several APIs were in public beta, and the models will change. We release the harness, the
-  analysis plan and every model output, so every number can be recomputed from the public datasets and the study re-run.
+  analysis plan and every coding decision, so every number can be recomputed from the public datasets and the study re-run;
+  the raw response text is withheld because it quotes the datasets.
   \item \textbf{Guarantees.} Corpus LTT assumes the hand-coded clusters are a uniformly random subset of the corpus and that
   the test visits them in random orders; our split assigns clusters by a hash of their id, which we treat as random, and the
   orders come from a recorded seed. Each certificate covers one configuration. The procedure is conservative (in simulation it
@@ -94,10 +95,13 @@ guarantee possible in principle, but at our budget the coders' confident dialogu
 decision-model configurations certified about as much as a frontier LLM on comments, at a small fraction of its cost.
 
 \section*{Data and code availability}
-The harness, the analysis plan with its amendments and deviations log, every model output (one row per decision, with the
-probability and the model version returned), the samples and splits, the adjudication verdicts, a text-free spend ledger (405,339
-requests; \$78.56 in API fees, plus GPU time for Kev) and the paper source are at \url{https://github.com/firish/margin}. The datasets are not redistributed; they are available from
-their authors under their own terms (MFRC: CC BY 4.0; TalkMoves: CC BY-NC-SA 4.0; AnnoMI and Dunivin: no licence stated).
+The harness, the analysis plan with its amendments and deviations log, every coding decision (one row per decision, with the
+probability and the model version returned), the item-level scores of the memorization probe and its decoy control, the
+samples and splits, the adjudication verdicts, a text-free spend ledger (405,339 requests; \$78.56 in API fees, plus GPU time
+for Kev) and the paper source are at \url{https://github.com/firish/margin}. The raw text of model requests and responses is
+not released, because it quotes the datasets; the probe's scores therefore cannot be re-derived from text. The datasets are
+not redistributed; they are available from their authors under their own terms (MFRC: CC BY 4.0; TalkMoves: CC BY-NC-SA 4.0;
+AnnoMI and Dunivin: no licence stated).
 
 \section*{Ethics statement}
 All data are public and were collected and annotated by their original authors; we used them only for evaluation. Only these

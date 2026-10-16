@@ -1,28 +1,28 @@
 \begin{table}[t]
 \centering
 \small
-\caption{EQ6: validity checks. Run-to-run flips: identical requests sent twice (100 test segments per task; 0 means identical outputs in these repeats); option-order flips: reversed and shuffled options (RQ3 arms); memorization probe with decoy-name control (amendment v1.3, deviation 14). Decision models return no text, so they could not be probed.}
+\caption{EQ6: validity checks. Run-to-run flips: identical requests sent twice (100 test segments per task; 0 means no observed label changes in these repeats, <0.001 a nonzero rate below display precision); option-order flips: reversed and shuffled options (RQ3 arms); memorization probe with decoy-name control (amendment v1.3, deviation 14). Decision models return no text, so they could not be probed.}
 \label{tab:main_validity}
 \begin{adjustbox}{max width=\linewidth}
-\begin{tabular}{lrrll}
+\begin{tabular}{lllll}
 \toprule
-coder & \makecell[br]{run-to-run \\{} label flips} & \makecell[br]{flips under \\{} option order} & \makecell[bl]{verbatim \\{} recall \\{} (completion)} & \makecell[bl]{label recall \\{} beyond decoy} \\
+coder & \makecell[bl]{run-to-run \\{} label flips} & \makecell[bl]{flips under \\{} option order} & \makecell[bl]{completion-probe \\{} flag} & \makecell[bl]{label recall \\{} beyond decoy} \\
 \midrule
 Jev & 0.021 & 0.042 & not assessed & not assessed \\
-OpenAI Decisions & 0.000 & 0.096 & not assessed & not assessed \\
-Clef (27B) & 0.000 & -- & not assessed & not assessed \\
-Clef-flash (9B) & 0.000 & 0.006 & not assessed & not assessed \\
-pplx-decider & 0.000 & 0.064 & not assessed & not assessed \\
+OpenAI Decisions & 0 & 0.096 & not assessed & not assessed \\
+Clef (27B) & 0 & -- & not assessed & not assessed \\
+Clef-flash (9B) & 0 & 0.006 & not assessed & not assessed \\
+pplx-decider & 0 & 0.064 & not assessed & not assessed \\
 Kev-9B & -- & 0.249 & not assessed & not assessed \\
 Kev-27B & -- & -- & not assessed & not assessed \\
-Luna verbal & 0.066 & 0.103 & no evidence & MFRC \\
-Haiku verbal & 0.000 & -- & no evidence & no evidence \\
-Sonnet verbal & 0.033 & 0.056 & no evidence & no evidence \\
-gpt-oss verbal & -- & -- & no evidence & no evidence \\
-Qwen3.5-9B verbal & -- & -- & no evidence & no evidence \\
-Qwen3.8-2.4T verbal & -- & -- & no evidence & no evidence \\
+Luna verbal & 0.066 & 0.103 & not flagged & MFRC \\
+Haiku verbal & <0.001 & -- & not flagged & no evidence \\
+Sonnet verbal & 0.033 & 0.056 & not flagged & no evidence \\
+gpt-oss verbal & -- & -- & not flagged & no evidence \\
+Qwen3.5-9B verbal & -- & -- & not flagged & no evidence \\
+Qwen3.8-2.4T verbal & -- & -- & not flagged & no evidence \\
 \bottomrule
 \end{tabular}
 \end{adjustbox}
-\par\smallskip\footnotesize\raggedright Prompt sensitivity (amendment v1.4): a verbalized-distribution prompt changes error AUROC by --0.034 [--0.056, --0.011] for Sonnet and --0.010 (n.s.) for Haiku.
+\par\smallskip\footnotesize\raggedright Completion-probe flag: the pre-specified rule (Table~\ref{tab:tab15b_memorization_verbatim}); not flagged does not mean no literal matches, which occurred rarely under both prompts. Prompt sensitivity (amendment v1.4): a verbalized-distribution prompt changes error AUROC by -0.034 [-0.056, -0.011] for Sonnet and -0.010 [-0.045, +0.022] for Haiku.
 \end{table}

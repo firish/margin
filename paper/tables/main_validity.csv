@@ -1,14 +1,14 @@
-coder,run-to-run label flips,flips under option order,verbatim recall (completion),label recall beyond decoy
-Jev,0.0209999999999999,0.04162952321543939,not assessed,not assessed
-OpenAI Decisions,0.0,0.09594929684983149,not assessed,not assessed
-Clef (27B),0.0,,not assessed,not assessed
-Clef-flash (9B),0.0,0.00611400827189353,not assessed,not assessed
-pplx-decider,0.0,0.0639587089408765,not assessed,not assessed
-Kev-9B,,0.24922715479088525,not assessed,not assessed
-Kev-27B,,,not assessed,not assessed
-Luna verbal,0.06625,0.10309179046970285,no evidence,MFRC
-Haiku verbal,0.00025,,no evidence,no evidence
-Sonnet verbal,0.03275,0.055509001715541295,no evidence,no evidence
-gpt-oss verbal,,,no evidence,no evidence
-Qwen3.5-9B verbal,,,no evidence,no evidence
-Qwen3.8-2.4T verbal,,,no evidence,no evidence
+coder,run-to-run label flips,flips under option order,completion-probe flag,label recall beyond decoy
+Jev,0.021,0.042,not assessed,not assessed
+OpenAI Decisions,0,0.096,not assessed,not assessed
+Clef (27B),0,–,not assessed,not assessed
+Clef-flash (9B),0,0.006,not assessed,not assessed
+pplx-decider,0,0.064,not assessed,not assessed
+Kev-9B,–,0.249,not assessed,not assessed
+Kev-27B,–,–,not assessed,not assessed
+Luna verbal,0.066,0.103,not flagged,MFRC
+Haiku verbal,<0.001,–,not flagged,no evidence
+Sonnet verbal,0.033,0.056,not flagged,no evidence
+gpt-oss verbal,–,–,not flagged,no evidence
+Qwen3.5-9B verbal,–,–,not flagged,no evidence
+Qwen3.8-2.4T verbal,–,–,not flagged,no evidence

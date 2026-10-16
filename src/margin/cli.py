@@ -284,6 +284,19 @@ def contamination(estimate_only: bool = typer.Option(False, "--estimate", help="
         typer.echo(f"results/{name}.csv  ({len(df)} rows)")
 
 
+@app.command()
+def decoy(from_cache: bool = typer.Option(False, "--from-cache", help="first rebuild the item scores from the local response cache")) -> None:
+    """Decoy-name control (deviation 14) -> results/contamination_decoy.csv, from results/contamination_decoy_items.csv."""
+    from margin import contamination as probe
+    from margin.analysis import RESULTS
+
+    if from_cache:
+        items = probe.decoy_items_from_cache()
+        items.to_csv(RESULTS / "contamination_decoy_items.csv", index=False)
+        typer.echo(f"results/contamination_decoy_items.csv  ({len(items)} rows)")
+    typer.echo(probe.decoy_from_items().to_string(index=False))
+
+
 @app.command("prompt-sensitivity")
 def prompt_sensitivity(reps: int = typer.Option(1000, help="bootstrap replicates")) -> None:
     """Amendment v1.4: distribution prompt vs canonical prompt for Sonnet and Haiku -> results/prompt_sensitivity.csv."""
