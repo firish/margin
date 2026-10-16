@@ -3,16 +3,17 @@
 
 \paragraph{LLMs for qualitative and content coding.} LLMs have been used to apply codebooks deductively
 \citep{xiao2023supporting,chew2023llm}, to replace or assist crowd annotation \citep{gilardi2023chatgpt,ziems2024can}, to
-code open-ended survey responses \citep{mellon2024ais} and to score classroom discourse \citep{wang2023chatgpt}.
-Best-practice guidance stresses validation against human labels \citep{pangakis2023automated,tornberg2024best}.
-\citet{dunivin2025scaling} showed that chain-of-thought prompting can match human coders on some hermeneutic codes; we
-recompute his reported agreement from his released predictions (\S\ref{sec:eq6}). Recent studies compare prompting strategies
-\citep{rodrigueztriana2026one}, benchmark many models against expert adjudication \citep{marston2026humanitarian}, design
-human--AI workflows for deductive coding \citep{li2025fallshort,matveyenko2025blended,yuan2026calico}, and add model
-self-critique \citep{dunivin2026selfreflection}. \citet{zhao2025confidence} combine self-confidence with inter-model
-diversity to route segments to review, auto-accepting 35\% at under 5\% error on their data; we ask whether such
-thresholds hold on held-out data and across codebooks. \citet{liu2026agreement} show that agreement with human consensus is not the same as
-coding quality: blind experts often prefer the model's code. Our adjudication finds the same (\S\ref{sec:eq6}).
+code open-ended survey responses \citep{mellon2024ais} and to score classroom discourse \citep{wang2023chatgpt}, and
+\citet{dunivin2025scaling} showed that chain-of-thought prompting can match human coders on some hermeneutic codes. Most of
+this work asks how well a model agrees with human coders, and best-practice guidance accordingly stresses validation against
+human labels \citep{pangakis2023automated,tornberg2024best}. Recent studies refine the workflow: they compare prompting
+strategies \citep{rodrigueztriana2026one}, benchmark many models against expert adjudication \citep{marston2026humanitarian},
+design human--AI workflows for deductive coding \citep{li2025fallshort,matveyenko2025blended,yuan2026calico} and add model
+self-critique \citep{dunivin2026selfreflection}. Fewer ask which of a model's labels can be trusted. \citet{zhao2025confidence}
+come closest: they combine self-confidence with inter-model diversity to route segments to review, auto-accepting 35\% at
+under 5\% error on their data. We ask whether such thresholds hold on held-out data and across codebooks, and what it takes
+to guarantee them. Agreement with human labels is itself an imperfect yardstick: \citet{liu2026agreement} show that blind
+experts often prefer the model's code to the human consensus, and our adjudication points the same way (\S\ref{sec:eq6}).
 
 \paragraph{Decision models.} Jev introduced the ``System One'' interface \citep{typesafe2026jev}. \citet{denney2026jev}
 compare Jev with LLMs on seven political-science replications for accuracy, cost and calibration. \citet{li2026jevjudge}
@@ -21,28 +22,32 @@ use it as an accept-or-escalate judge, and \citet{rafe2026crash} convert crash n
 recent studies show that short, natural-sounding context can flip decision models' answers \citep{xu2026jevout}, that
 rejection thresholds fitted on one dataset fail on another \citep{lu2026candidate}, and that decisions can be read from an
 ordinary LLM's next-token probabilities without retraining, with option-order bias reduced by averaging over rotations
-\citep{li2026llmasjev,zhang2026anyjev}. We add the newer hosted and open models
-\citep{openai2026decisions,cloudflare2026clef,perplexity2026decider,palmer2026kev}, qualitative codebooks with human
-disagreement, threshold validity and guarantees that respect how hand-coded samples are drawn, and a comparison of related
-9B systems.
+\citep{li2026llmasjev,zhang2026anyjev}. Relative to this work, we add the newer hosted and open models
+\citep{openai2026decisions,cloudflare2026clef,perplexity2026decider,palmer2026kev}, real qualitative codebooks with human
+disagreement, a test of whether thresholds keep their error targets, guarantees that respect how the hand-coded sample was
+drawn, and a comparison of related 9B systems.
 
-\paragraph{Confidence, calibration and selective prediction.} Neural classifiers are often miscalibrated, and temperature
-scaling \citep{guo2017calibration}, Platt scaling \citep{platt1999probabilistic} and isotonic regression
+\paragraph{Confidence and calibration.} Neural classifiers are often miscalibrated, and temperature scaling
+\citep{guo2017calibration}, Platt scaling \citep{platt1999probabilistic} and isotonic regression
 \citep{zadrozny2002transforming} are standard fixes. Whether confidence separates a model's correct from incorrect
-predictions is a separate question \citep{hendrycks2017baseline}. For LLMs, confidence can be read from token
-probabilities \citep{kadavath2022language} or elicited verbally \citep{tian2023just,xiong2024can}, and fast black-box
-estimators are being developed \citep{hayes2026pinocchio}. Selective classification accepts a prediction only above a
+predictions is a separate question \citep{hendrycks2017baseline}, and it is the one triage depends on. For LLMs, confidence
+can be read from token probabilities \citep{kadavath2022language} or elicited verbally \citep{tian2023just,xiong2024can}, and
+fast black-box estimators are being developed \citep{hayes2026pinocchio}. We compare these signals with decision models'
+probabilities and keep calibration and error ranking apart throughout (\S\ref{sec:eq1}).
+
+\paragraph{Selective prediction and error guarantees.} Selective classification accepts a prediction only above a
 confidence threshold \citep{geifman2017selective}, and cascades send the rest to a stronger model \citep{chen2024frugalgpt}.
-For such thresholds, conformal risk control \citep{angelopoulos2024crc} bounds an expected monotone loss under
-exchangeability, and standard Learn-then-Test \citep{angelopoulos2025ltt} gives a high-probability bound on population risk
-from valid tests under assumptions such as i.i.d.\ calibration data; when observations come in groups, the
-group becomes the unit of analysis \citep{dunn2023hierarchical}. For a fixed corpus, a finite-population betting test
-\citep{waudbysmith2024betting} needs only that the hand-coded units, and the order they are visited in, are random; we adapt it
-to coding decisions, and average over orders using e-values \citep{vovk2021evalues}. These guarantees have been applied to LLM judges
-\citep{jung2025trust,badshah2026judge,li2026localize}, hybrid LLM--human annotation \citep{zeng2026hypac}, human
-verification of LLM labels \citep{wang2024human} and calibrated grading \citep{raikote2026chillgrader}. We measure how often
-the usual non-guaranteed rule breaks its target on real codebooks, show that a guarantee which ignores clustering fails, and
-measure how much coverage a valid one costs at calibration sizes a research team can realistically hand-code.
+Two kinds of guarantee exist for such thresholds. Conformal risk control \citep{angelopoulos2024crc} bounds an expected
+monotone loss under exchangeability; standard Learn-then-Test \citep{angelopoulos2025ltt} gives a high-probability bound on
+population risk from valid tests, under assumptions such as i.i.d.\ calibration data. When observations come in groups, the
+group becomes the unit of analysis \citep{dunn2023hierarchical}, and for a fixed corpus a finite-population betting test
+\citep{waudbysmith2024betting} needs only that the hand-coded units, and the order they are visited in, are random. These
+guarantees have been applied to LLM judges \citep{jung2025trust,badshah2026judge,li2026localize}, hybrid LLM--human annotation
+\citep{zeng2026hypac}, human verification of LLM labels \citep{wang2024human} and calibrated grading
+\citep{raikote2026chillgrader}. We adapt the finite-population test to coding decisions, averaging over visiting orders with
+e-values \citep{vovk2021evalues}, and measure three things on real codebooks: how often the usual rule without a guarantee
+breaks its target, whether a guarantee that ignores clustering fails, and how much coverage a valid one costs at calibration
+sizes a research team can realistically hand-code.
 
 \paragraph{Human label variation and downstream inference.} Annotators disagree for principled reasons, so a single
 majority label is an imperfect target \citep{plank2022problem,uma2021learning}. \citet{baan2022stop} argue that

@@ -3,74 +3,90 @@
 
 Deductive qualitative coding applies a fixed codebook to text: each segment of an interview, dialogue or survey answer is
 read, compared with the code definitions and labelled, often twice to establish reliability \citep{krippendorff2019content}.
-Large language models (LLMs) can apply codebooks with useful accuracy
+Large language models (LLMs) can now apply codebooks with useful accuracy
 \citep{xiao2023supporting,chew2023llm,dunivin2024scalable,ziems2024can,gilardi2023chatgpt,matveyenko2025blended}, but
-accuracy alone does not tell a researcher which model labels to trust. The practical promise is \emph{triage}: accept the
-labels a model is confident about and send the rest to a person.
+accuracy alone does not tell a researcher which of a model's labels to trust. The practical promise is \emph{triage}: accept
+the labels the model is confident about, and send the rest to a person.
 
 Consider a researcher with 1,500 counselling utterances to code and time to check 400 by hand. A model labels every
-utterance and attaches a confidence; a threshold decides which labels are accepted. Three properties of the confidence then
-matter, and they are easy to conflate. \emph{Error ranking}: do the model's mistakes get lower confidence than its correct
-labels? \emph{Calibration}: does a stated 90\% mean 90\% correct? \emph{Selective risk and coverage}: at the chosen threshold,
-what share of labels is accepted, and what share of those is wrong? A well-calibrated model can rank its errors poorly, and a
-threshold chosen on 400 hand-coded utterances to give 5\% error can give more than 5\% on the remaining 1,100. Our question is
-whether model confidence can select low-error decisions reliably enough for this workflow.
+utterance with a confidence, and a threshold decides which labels to accept. Whether this works depends on three properties
+of the confidence that are easy to conflate. \emph{Error ranking}: do the model's mistakes receive lower confidence than its
+correct labels? \emph{Calibration}: does a stated 90\% mean 90\% correct? \emph{Selective risk and coverage}: at the chosen
+threshold, how many labels are accepted, and how many of those are wrong? The three can come apart. A well-calibrated model
+can rank its errors poorly, and a threshold chosen on the 400 hand-coded utterances to give 5\% error can exceed 5\% on the
+other 1,100. We ask whether model confidence can select low-error decisions reliably enough for this workflow.
 
-A new class of products is marketed for exactly this. We call them \emph{decision models}: an interface that takes typed
-questions (yes/no, multiple choice) with criteria and returns a probability for each option, without generating text.
+A new class of products is marketed for exactly this purpose. We call them \emph{decision models}: interfaces that take
+typed questions (yes/no, multiple choice) with criteria and return a probability for each option, without generating text.
 TypeSafe's Jev \citep{typesafe2026jev} was followed within weeks by OpenAI's Decisions API \citep{openai2026decisions},
 Cloudflare's Clef \citep{cloudflare2026clef}, Perplexity's pplx-decider \citep{perplexity2026decider} and the open Kev
-models \citep{palmer2026kev}. The interface is new; the underlying idea, probabilistic classification with abstention, is
-not \citep{geifman2017selective}. Whether these probabilities support triage on real codebooks, with human disagreement,
-dialogue context and rare codes, is an open question. We study it for the classification step of deductive coding on short
-segments (comments, utterances, sentences), not for inductive coding or long-form interviews.
+models \citep{palmer2026kev}. The interface is new, but the idea behind it, probabilistic classification with the option to
+abstain, is not \citep{geifman2017selective}. Whether these probabilities support triage on real codebooks, with human
+disagreement, dialogue context and rare codes, is an open question. We study it for the classification step of deductive
+coding on short segments (comments, utterances, sentences); inductive coding and long-form interviews are outside our scope.
 
-We ask three research questions, each with pre-specified contrasts:
+We compare seven decision models with twelve LLM confidence signals (verbalized confidence, token probabilities and
+agreement-based signals) on five human-coded tasks: moral foundations in Reddit comments, client and therapist talk in
+counselling dialogues, and teacher and student moves in K-12 mathematics lessons. A prospectively specified analysis plan
+fixes three research questions, each answered with pre-specified contrasts:
 \begin{itemize}
   \item \textbf{RQ1 (triage).} Do decision models' probabilities rank their own coding errors better than LLM confidence
   signals, and what share of decisions can be accepted at $\le$5\% error?
-  \item \textbf{RQ2 (disagreement).} Is model uncertainty high where human coders disagree, and how does model agreement with
-  annotators compare with annotators' agreement with each other?
-  \item \textbf{RQ3 (robustness).} How much do decisions change under surface changes to the codebook and request, and under
-  removal of context?
+  \item \textbf{RQ2 (disagreement).} Is model uncertainty high where human coders disagree, and how does a model's agreement
+  with annotators compare with annotators' agreement with each other?
+  \item \textbf{RQ3 (robustness).} How much do decisions change when the codebook or request is reworded or reordered, or
+  when context is removed?
 \end{itemize}
-Six experimental questions explain the answers: \textbf{EQ1}, does calibration error predict triage? \textbf{EQ2}, do
-threshold rules keep their error target, and what does a finite-sample guarantee cost? \textbf{EQ3}, what limits triage,
-ranking or ties at the top? \textbf{EQ4}, do related 9B decision models outperform a 9B instruct model's own confidence?
-\textbf{EQ5}, which configurations give the most guaranteed automation per dollar? \textbf{EQ6}, are the results artefacts
-of nondeterminism, prompt choice, memorization or label noise?
+The research questions say what happens; six experimental questions ask why, and what it means in practice. Three examine
+the answer to RQ1: whether low calibration error predicts useful triage (\textbf{EQ1}), whether threshold rules keep their
+error target and what a finite-sample guarantee costs (\textbf{EQ2}), and whether triage is limited by poor ranking or by
+large ties at the top of the confidence scale (\textbf{EQ3}). \textbf{EQ4} tests one explanation for decision models'
+advantage, by comparing two 9B decision models with the confidence of a 9B instruct model from the same family.
+\textbf{EQ5} turns the results into a practical choice: which configurations give the most guaranteed automation for their
+cost, and how much reading they actually save. \textbf{EQ6} checks whether the results are artefacts of nondeterminism,
+prompt choice, memorization or label noise.
 
-The short answer to the title is: on Reddit comments, yes, but much of what is accepted is the easy call that a code does
-not apply; on dialogue, with whole transcripts hand-coded, our guaranteed rule certified nothing. Two facts drive this. Coding
-decisions come in clusters (eight codes of one comment, many utterances of one transcript), so an error guarantee must respect
-how the hand-coded sample was drawn: a rule that treats the decisions of hand-coded transcripts as independent fails, and with
-whole transcripts of very unequal length as sampling units, our valid procedure cannot certify even a perfect coder at our
-calibration sizes; for three of the four dialogue tasks its necessary bound exceeds the available corpus. Sampling single
-utterances instead removes that obstacle, but at our budget the coders' confident dialogue decisions still give too little
-evidence of $\le$5\% error. And most decisions in a multi-label codebook are negatives, which a baseline that never reads the text accepts
-at low error.
+The short answer to our title is: on Reddit comments, yes, with caveats; on dialogue, not at the budgets we studied. Two
+facts drive both halves. Coding decisions come in clusters, such as the eight codes of one comment or the utterances of one
+transcript, so an error guarantee has to follow how the hand-coded sample was drawn. And most decisions in a multi-label
+codebook are easy calls that a code does not apply, so a high accepted share can mean little.
 
 \paragraph{Relation to concurrent work.} Two studies released in the weeks before ours also evaluate decision models:
-\citet{ibrahim2026decision} compare Jev and small open decision models with 19 LLMs on 15 computational-social-science labelling
-tasks (accuracy, calibration, coverage at fixed thresholds, cost and cascades), and TypedBench \citep{sharma2026typedbench} uses
-synthetic, rule-labelled tasks. Where the designs overlap, our findings agree: Jev trails the strongest LLMs in accuracy, its raw
-calibration beats most LLM signals but not the frontier models, and cascades save cost. Risk-controlled triage is not new
-either: HyPAC \citep{zeng2026hypac} routes items between models and humans with a PAC guarantee on annotation error, and
-\citet{zhao2025confidence} triage qualitative codes by confidence and inter-model diversity. Our contribution is an evaluation,
-not a new method.
+\citet{ibrahim2026decision} compare Jev and small open decision models with 19 LLMs on 15 computational-social-science
+labelling tasks (accuracy, calibration, coverage at fixed thresholds, cost and cascades), and TypedBench
+\citep{sharma2026typedbench} uses synthetic, rule-labelled tasks. Where the designs overlap, our findings agree: Jev trails
+the strongest LLMs in accuracy, its raw calibration beats most LLM signals but not the frontier models, and cascades save
+cost. Risk-controlled triage is not new either: HyPAC \citep{zeng2026hypac} routes items between models and humans with a
+PAC guarantee on annotation error, and \citet{zhao2025confidence} triage qualitative codes by confidence and inter-model
+diversity. Our contribution is an evaluation, not a new method, and it has four parts.
 
 \paragraph{Contributions.}
 \begin{enumerate}
-  \item \textbf{A multi-vendor evaluation.} Seven decision models and twelve LLM confidence signals on five human-coded
-  tasks, under a prospectively specified plan with a deviations log, with every coding decision released (\S\ref{sec:setup}).
-  \item \textbf{Ranking, not calibration error, separates coders.} Raw error ranking varies widely across decision models,
-  low calibration error does not predict it, and per-code recalibration narrows most differences (\S\ref{sec:rq1},
-  \S\ref{sec:eq1}--\S\ref{sec:eq3}).
-  \item \textbf{Guarantees that respect the sampling design.} The usual rule overshoots its target, and a guarantee that treats
-  decisions as independent fails. A corpus-level rule adapted from betting tests for sampling without replacement certified
-  most comment decisions and, with whole transcripts hand-coded, no dialogue decisions; we separate what the sampling design,
-  the procedure and the coders each contribute to that cost (\S\ref{sec:rules}, \S\ref{sec:eq2}).
-  \item \textbf{What automation means for coding.} A prevalence baseline, recall of applying codes, the share of segments still
-  read by a person and policy-specific cost give a more honest picture than accepted share alone (\S\ref{sec:eq5},
-  \S\ref{sec:discussion}).
+  \item \textbf{A multi-vendor evaluation} (all questions; \S\ref{sec:setup}). Seven decision models and twelve LLM
+  confidence signals on five human-coded tasks, under a prospectively specified plan with dated amendments and a deviations
+  log, with every coding decision released.
+  \item \textbf{Ranking, not calibration, separates coders} (RQ1, EQ1, EQ3, EQ4; \S\ref{sec:rq1}, \S\ref{sec:eq1}--\S\ref{sec:eq4}).
+  Decision models range from ranking their errors worse than a cheap LLM's verbalized confidence to nearly as well as a
+  frontier LLM's. Calibration error does not predict where a model falls: a task-level recalibration fixes calibration but
+  leaves ranking unchanged, while per-code recalibration narrows most of the differences. A comparison of related 9B systems
+  suggests that much of a decision model's advantage comes from reading out a probability rather than from its training.
+  \item \textbf{Guarantees that respect the sampling design} (RQ1, EQ2; \S\ref{sec:rules}, \S\ref{sec:eq2}). Tuning a
+  threshold to 5\% error on hand-coded comments overshoots in about half of re-splits, and a guarantee that treats decisions as
+  independent fails because decisions within a comment or transcript err together. A corpus-level rule, adapted from betting
+  tests for sampling without replacement, holds: after 30\% of comments are hand-coded, it certifies 60--83\% of the remaining
+  decisions for most coders. On dialogue it certifies nothing. We show why: with whole transcripts as sampling units, our
+  procedure could not certify even a perfect coder at our calibration sizes, and sampling single utterances removes that
+  obstacle but leaves too little evidence of $\le$5\% error among the coders' confident decisions.
+  \item \textbf{What automation means for coding} (EQ5; \S\ref{sec:eq5}, \S\ref{sec:discussion}). Accepted shares overstate
+  the work saved. Nearly all certified comment decisions say a code does not apply, a baseline that reads no text accepts 75\%
+  of comment decisions at 3.6\% error, and under every certified policy a person still reads most comments. Recall of applying
+  codes, the share of segments still read and policy-specific costs give a fuller picture, and we turn them into a recipe for
+  researchers.
 \end{enumerate}
+Beyond triage, model uncertainty is higher where human coders disagree (RQ2, \S\ref{sec:rq2}); option order and missing
+context change some models' labels substantially (RQ3, \S\ref{sec:rq3}); and the checks of EQ6 bound the main threats: an
+alternative prompt does not improve the LLM baselines, there is little evidence of memorization, and the contrasts barely
+change against an adjudicated reference, although adjudication also suggests that the human labels contain errors
+(\S\ref{sec:eq6}). Section~\ref{sec:related} reviews related work, Section~\ref{sec:setup} describes the
+design and the threshold rules, Sections~\ref{sec:results} and~\ref{sec:eqs} answer the research and experimental questions,
+and Section~\ref{sec:discussion} discusses what they mean for researchers.

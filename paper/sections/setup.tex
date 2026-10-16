@@ -13,7 +13,10 @@ We use five tasks from three public, human-coded datasets (Table~\ref{tab:main_d
   \item \textbf{TalkMoves} \citep{suresh2022talkmoves}: K-12 mathematics classroom transcripts coded with the dataset's
   manual, with mutually exclusive teacher moves (six plus none) and student moves (four plus none).
 \end{itemize}
-For dialogue tasks the coder also sees the previous turn. Dunivin's coded passages about W.~E.~B.~Du Bois
+Together the tasks vary what makes coding hard: a sparse multi-label codebook against exclusive ones, self-contained
+comments against utterances that depend on the previous turn, and low against moderate agreement among human coders
+(Krippendorff's $\alpha$ of 0.17 on MFRC, 0.47--0.74 on AnnoMI). For dialogue tasks the coder also sees the previous turn.
+Dunivin's coded passages about W.~E.~B.~Du Bois
 \citep{dunivin2025scaling} serve as a replication task. We draw stratified samples of 2,000 comments (MFRC) or 1,500
 segments (each dialogue task) that keep rare codes, and weight each segment by its inverse inclusion probability
 \citep{horvitz1952generalization}. A hash of the cluster id (comment, transcript or lesson) assigns about 30\% of clusters to a
@@ -55,7 +58,8 @@ several of them in public beta (Table~\ref{tab:tab18_model_snapshot} lists the v
 \subsection{Decisions and metrics}
 A \emph{decision} is one label to accept or reject: one per segment for exclusive codebooks, one per segment and code for
 multi-label ones. \textbf{Error AUROC} (RQ1, primary) is the probability that a correct decision has higher confidence than an
-incorrect one, with ties counted as one half \citep{hendrycks2017baseline}. \textbf{Coverage@5\%} (RQ1, primary) is the share of
+incorrect one, with ties counted as one half \citep{hendrycks2017baseline}: 0.5 is chance, and 1 means every error has lower
+confidence than every correct decision. \textbf{Coverage@5\%} (RQ1, primary) is the share of
 test decisions accepted by the threshold rule below, reported with the error among them. Secondary metrics are the area under
 the risk--coverage curve (AURC), expected calibration error (ECE, 10 bins), Cohen's $\kappa$ \citep{cohen1960coefficient} and
 cost. RQ1 and EQ1--EQ5 use design weights, as do RQ3's changes; RQ2's correlations and leave-one-annotator-out $\kappa$ are
@@ -86,8 +90,9 @@ refits thresholds in every replicate (1,000 replicates), unless stated otherwise
   of the remainder.}
   \label{fig:workflow}
 \end{figure}
-Each rule picks a confidence threshold $t$ from the hand-coded calibration clusters and accepts the other decisions with
-confidence $\ge t$. We distinguish two targets. The \emph{corpus target} is the design-weighted error among the accepted
+A researcher who has hand-coded a sample needs a rule that turns it into a threshold. Each rule below picks a confidence
+threshold $t$ from the hand-coded calibration clusters and accepts the other decisions with confidence $\ge t$; they range
+from common practice to a rule with a guarantee. We distinguish two targets. The \emph{corpus target} is the design-weighted error among the accepted
 decisions of the uncoded remainder of the corpus, the quantity a researcher coding their own data cares about. The
 \emph{population target} is the expected error among accepted decisions for new clusters from the same source. Whether one
 particular test set has error above 5\% is exactly the corpus target when that test set is the uncoded remainder of a
@@ -98,7 +103,9 @@ random split, and only a diagnostic for the population target.
   decision counts, fixed-sequence from the most confident tie block. With design weights the counts are Kish-effective and
   fractional, so the test is an approximation even for independent decisions. It treats decisions as independent; we show it
   only for comparison.
-  \item \textbf{Corpus LTT} (our guaranteed rule). For each threshold on a grid of 16 values from 0.5 to 1.0, cluster $i$
+  \item \textbf{Corpus LTT} (our guaranteed rule). Intuitively, the test gathers evidence, cluster by cluster, that the
+  accepted decisions are wrong less than 5\% of the time, and certifies a threshold only when that evidence is strong enough
+  to extend to the rest of the corpus. Formally, for each threshold on a grid of 16 values from 0.5 to 1.0, cluster $i$
   contributes $Z_i(t)=\sum_j w_{ij}\,\mathbf{1}\{c_{ij}\ge t\}\,(e_{ij}-0.05)$, so a set of clusters has error at most 5\% among
   its accepted decisions exactly when its $Z$-sum is at most 0. Rescaled by $B$, the largest total weight of one cluster in the
   corpus (known before anything is coded), $Y_i=(Z_i+0.05B)/B$ lies in $[0,1]$. A betting test for sampling without
@@ -119,18 +126,22 @@ it requires the unit to be a cluster: any unit can be sampled, such as a comment
 turns or a single utterance coded with its context, provided the hand-coded units are a random sample of the corpus's units
 and $B$ is the largest unit's weight. What the guarantee must respect is how the hand-coded sample was drawn.
 
-In our evaluation, each task's sample is the corpus, its calibration split the hand-coded clusters (assigned by a hash of the
-cluster id, which we treat as random) and its test split the remainder. The visiting orders come from a pseudo-random
-generator with a seed recorded before this analysis was run. The guarantee holds for each configuration on its
-own; picking the best of several certified configurations would need a further correction. Learned scores, such as per-code
-maps or the prevalence baseline below, are fitted on half of the calibration clusters, frozen, certified on the other half
-and applied unchanged to the remainder. Multi-stage cascades are certified jointly over all combinations of per-stage
-thresholds. For the population target we also report the same test with a constant null mean (\emph{LTT on i.i.d.
-clusters}); it needs clusters to be independent draws, which we assume rather than know, and $B$ to bound every future
-cluster's weight, which is true for MFRC (eight codes per comment at one weight) but not for transcripts of unbounded
-length. The \textbf{oracle} applies the naive rule to
-the test split itself: not deployable, an upper bound for comparison.
+\paragraph{How we apply it.} In our evaluation, each task's sample is the corpus, its calibration split the hand-coded
+clusters (assigned by a hash of the cluster id, which we treat as random) and its test split the remainder. The visiting
+orders come from a pseudo-random generator with a seed recorded before this analysis was run. The guarantee holds for each
+configuration on its own; picking the best of several certified configurations would need a further correction. Learned
+scores, such as per-code maps or the prevalence baseline, are fitted on half of the calibration clusters, frozen, certified
+on the other half and applied unchanged to the remainder. Multi-stage cascades are certified jointly over all combinations
+of per-stage thresholds.
 
+\paragraph{Two reference rules.} For the population target we also report the same test with a constant null mean
+(\emph{LTT on i.i.d.\ clusters}). It needs clusters to be independent draws, which we assume rather than know, and $B$ to
+bound every future cluster's weight, which is true for MFRC (eight codes per comment at one weight) but not for transcripts
+of unbounded length. The \textbf{oracle} applies the naive rule to the test split itself: it is not deployable, and serves
+as an upper bound for comparison.
+
+\subsection{Analysis plan and reference labels}
+\label{sec:plan}
 \paragraph{Analysis plan.} The plan fixed the tasks, splits, decision units, metrics, primary rule and RQ1 contrasts before
 any test-split outcome was computed. Four amendments, each dated before the data it governs, added OpenAI Decisions and a
 Qwen comparator (v1.1), five more decision models (v1.2), a memorization probe (v1.3) and a prompt-sensitivity check (v1.4).
@@ -140,13 +151,13 @@ zero; for the v1.2 family the plan also requires Holm's correction \citep{holm19
 families as a sensitivity analysis. Jev anchors the confirmatory contrasts because the original plan was written for it;
 the other decision models were added by amendment. Pooled intervals resample each corpus's clusters jointly, so AnnoMI's two
 tasks share transcript draws and TalkMoves' two share lesson draws. Sonnet was specified on a nested subset; that result is the
-confirmatory one, and its later full-sample run is a labelled extension. Everything changed after results were seen,
-including the corpus guarantee, which replaced decision-level LTT and was revised after external reviews, is labelled exploratory and
-logged (Appendix~\ref{app:deviations}).
+confirmatory one, and its later full-sample run is a labelled extension. Everything changed after results were seen is
+labelled exploratory and logged (Appendix~\ref{app:deviations}); this includes the corpus guarantee, which replaced
+decision-level LTT and was revised after external reviews.
 
 \paragraph{Adjudicated reference.} Human majority labels contain errors. We sampled 200 items for blinded adjudication from
 disagreements between the human label and six label sources (Jev in both question formats, Luna, Haiku, gpt-oss and Sonnet's
-subset run), oversampling high-confidence disagreements, plus hidden controls. A two-family LLM panel (Claude Opus 5.5 and GPT-6 Sol) judged each item. The author
-adjudicated 36 of the 52 items the panel disputed, plus a 12-item audit of panel-agreed items (agreement 10 of 12); a planned
+subset run), oversampling high-confidence disagreements, plus hidden controls. A two-family LLM panel (Claude Opus 5.5
+and GPT-6 Sol) judged each item. The author adjudicated 36 of the 52 items the panel disputed, plus a 12-item audit of panel-agreed items (agreement 10 of 12); a planned
 second sitting to measure the author's own consistency was not done. Of the 200 items, 184 were resolved; unresolved items
 keep the human label. We use this reference as a sensitivity analysis, not as a corrected gold standard.

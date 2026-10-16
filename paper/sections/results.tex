@@ -1,45 +1,95 @@
 \section{Results: research questions}
 \label{sec:results}
 
+Table~\ref{tab:answers} gives a short answer to each of the nine questions. This section gives the evidence for the three
+research questions, and Section~\ref{sec:eqs} for the six experimental ones. Each subsection starts with the answer, then
+gives the evidence and the reasons behind it, and ends with what it means for a researcher.
+
+\begin{table}[t]
+\centering
+\small
+\caption{The questions and their short answers.}
+\label{tab:answers}
+\begin{tabular}{@{}p{0.27\linewidth}p{0.63\linewidth}l@{}}
+\toprule
+question & short answer & \S \\
+\midrule
+RQ1: Does confidence triage coding? & Partly. Ranking quality varies widely across decision models (error AUROC 0.69--0.79;
+Sonnet's verbalized confidence 0.80), and how much can be accepted depends mostly on the task. & \ref{sec:rq1} \\
+RQ2: Is uncertainty high where humans disagree? & Yes, moderately, for most coders; no coder falls below the range of
+individual annotators. & \ref{sec:rq2} \\
+RQ3: How stable are decisions? & Mostly stable to rewording, less so to option order; removing context changes 15--24\% of
+dialogue labels. & \ref{sec:rq3} \\
+\midrule
+EQ1: Does calibration error predict triage? & No. Low calibration error does not imply good ranking, and recalibration fixes
+calibration without changing ranking. & \ref{sec:eq1} \\
+EQ2: Do threshold rules keep their target? & The usual rule overshoots in about half of re-splits. A corpus guarantee holds,
+certifying 60--83\% of comment decisions for most coders and none on dialogue at our budgets. & \ref{sec:eq2} \\
+EQ3: Ranking or ties at the top? & Both. Large, error-prone ties limit Jev and OpenAI Decisions; per-code maps split ties and
+improve ranking for every coder with enough data. & \ref{sec:eq3} \\
+EQ4: Do related 9B decision models beat a 9B instruct model? & Against its verbalized confidence, yes; against its token
+probabilities, barely. & \ref{sec:eq4} \\
+EQ5: What gives the most guaranteed automation per dollar? & pplx-decider per inference dollar; several decision-model
+configurations come within two points of Sonnet at a fraction of its cost, but a person still reads most comments. &
+\ref{sec:eq5} \\
+EQ6: Are the results artefacts? & The checks bound the main threats; the human labels themselves contain errors. &
+\ref{sec:eq6} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \subsection{RQ1: Does confidence triage qualitative coding?}
 \label{sec:rq1}
 
+\textbf{Answer: partly.} Confidence ranks coding errors well above chance for most coders, but how well depends on the coder
+more than on the interface, and how much can be accepted depends on the task more than on either.
 Table~\ref{tab:main_rq1} summarizes agreement and ranking for every signal, Table~\ref{tab:main_claims} gives the
 confirmatory contrasts, and Figures~\ref{fig:forest} and~\ref{fig:rc} show the contrasts and the per-task risk--coverage
 curves.
 
-\paragraph{Raw error ranking varies widely among decision models.} The open Kev-27B ranks its own errors best among the
-decision models (error AUROC 0.788), close to Sonnet's verbalized confidence (0.801). pplx-decider (0.764) and Jev (0.756)
+\paragraph{Decision models differ widely in how well they rank their errors.} The open Kev-27B ranks its own errors best among
+the decision models (error AUROC 0.788), close to Sonnet's verbalized confidence (0.801). pplx-decider (0.764) and Jev (0.756)
 follow; OpenAI Decisions, Clef, Clef-flash and Kev-9B rank errors worse (0.694--0.736). In the pre-specified contrasts, Jev
 ranks its errors better than four of the six other decision models: OpenAI Decisions by \res{rq1/jev/oaid/auroc/dci}, Clef by
 \res{rq1/jev/clef/auroc/d}, Clef-flash by \res{rq1/jev/clef_flash/auroc/d} and Kev-9B by \res{rq1/jev/kev9b/auroc/d}. Its
-difference from pplx-decider is not significant (\res{rq1/jev/pplx/auroc/dci}); pplx-decider accepts more decisions under the
-naive 5\%-target rule (\res{rq1/jev/pplx/cov/dci}). Kev-27B beats Jev on both primary metrics (\res{rq1/jev/kev27b/auroc/d}
-AUROC; \res{rq1/jev/kev27b/cov/d} coverage). Among LLM signals, Jev beats every token-probability signal, by 0.20 AUROC for
-Luna and gpt-oss and by 0.07 for the Qwen models, as well as 3-LLM agreement (\res{rq1/jev/agree3/auroc/d}), self-consistency
-(\res{rq1/jev/luna_sc-vote/auroc/d}) and gpt-oss's verbalized confidence (\res{rq1/jev/oss-verbal/auroc/d}). The verbalized
-confidence of Haiku (\res{rq1/jev/haiku-verbal/auroc/d}) and Sonnet beats it: \res{rq1/jev/sonnet_sub-verbal/auroc/dci} on the
-pre-specified Sonnet subset ($p=\res{rq1/jev/sonnet_sub-verbal/auroc/p}$) and \res{rq1/jev/sonnet-verbal/auroc/dci} on the
-full-sample extension. Jev's advantage over Luna's verbalized confidence is borderline (\res{rq1/jev/luna-verbal/auroc/dci},
-bootstrap $p=\res{rq1/jev/luna-verbal/auroc/p}$) and not a claim after Holm adjustment, and the exploratory Qwen3.8-2.4T's
-verbalized confidence edges out Jev (\res{rq1/jev/qwen_big-verbal/auroc/dci}). Token
-probabilities rank errors poorly because they saturate: 96--100\% of decisions carry confidence $\ge$0.99.
+difference from pplx-decider is not significant (\res{rq1/jev/pplx/auroc/dci}), though pplx-decider accepts more decisions
+under the naive 5\%-target rule (\res{rq1/jev/pplx/cov/dci}). Kev-27B beats Jev on both primary metrics
+(\res{rq1/jev/kev27b/auroc/d} AUROC; \res{rq1/jev/kev27b/cov/d} coverage).
 
-\paragraph{How much can be accepted, and what is it?} Under the naive rule, Kev-27B, Sonnet and pplx-decider accept 41--44\% of
-all decisions and Jev 33\% (Table~\ref{tab:main_policies}; equal-weight means over the five tasks), but 6.2--7.5\% of what they
-accept is wrong. Acceptance is far higher on MFRC, where these four accept 78--94\% of decisions, than on the four dialogue
-tasks (22--32\% on average). Most MFRC decisions are easy negatives: 89\% of MFRC test decisions are codes that do not apply. A
-prevalence baseline that reads no text, predicting ``absent'' for every code with confidence equal to that code's
-calibration share of absent labels, accepts 75\% of MFRC decisions at 3.6\% error under the naive rule
-(Table~\ref{tab:main_mfrc}), although it carries no certificate (\S\ref{sec:eq5}). The models differ in what the baseline
-cannot do: find the codes that apply. Among accepted
-decisions, pplx-decider labels 62\% of the applying codes correctly, Sonnet 53\% and Jev 35\%; the rest go to a human or are
-missed. On the four dialogue tasks, accepted shares are much smaller, and the naive rule's error targets mostly fail
-(\S\ref{sec:eq2}).
+\paragraph{Jev beats most LLM confidence signals, but not the strongest verbalized ones.} Jev ranks its errors
+better than every token-probability signal, by 0.20 AUROC for Luna and gpt-oss and by 0.07 for the Qwen models, and better than
+3-LLM agreement (\res{rq1/jev/agree3/auroc/d}), self-consistency (\res{rq1/jev/luna_sc-vote/auroc/d}) and gpt-oss's verbalized
+confidence (\res{rq1/jev/oss-verbal/auroc/d}). The verbalized confidence of Haiku (\res{rq1/jev/haiku-verbal/auroc/d}) and
+Sonnet beats it: \res{rq1/jev/sonnet_sub-verbal/auroc/dci} on the pre-specified Sonnet subset
+($p=\res{rq1/jev/sonnet_sub-verbal/auroc/p}$) and \res{rq1/jev/sonnet-verbal/auroc/dci} on the full-sample extension. Jev's
+advantage over Luna's verbalized confidence is borderline (\res{rq1/jev/luna-verbal/auroc/dci}, bootstrap
+$p=\res{rq1/jev/luna-verbal/auroc/p}$) and not a claim after Holm adjustment, and the exploratory Qwen3.8-2.4T's verbalized
+confidence edges out Jev (\res{rq1/jev/qwen_big-verbal/auroc/dci}). Token probabilities fail for a simple reason: they
+saturate. Read after a generated rationale, 96--100\% of decisions carry confidence $\ge$0.99, so there is almost nothing left
+to separate errors from correct labels. What drives the differences among the decision models themselves is the subject of
+EQ1, EQ3 and EQ4: calibration, ties at the top of the scale and the read-out.
+
+\paragraph{How much can be accepted depends on the task, and on what is being accepted.} Under the naive rule, Kev-27B, Sonnet
+and pplx-decider accept 41--44\% of all decisions and Jev 33\% (Table~\ref{tab:main_policies}; equal-weight means over the five
+tasks), but 6.2--7.5\% of what they accept is wrong. Acceptance is far higher on MFRC, where these four accept 78--94\% of
+decisions, than on the four dialogue tasks (22--32\% on average). The difference is mostly about what the decisions are. On
+MFRC, 89\% of test decisions are codes that do not apply, and most of those are easy: a prevalence baseline that reads no text,
+predicting ``absent'' for every code with confidence equal to that code's calibration share of absent labels, accepts 75\% of
+MFRC decisions at 3.6\% error under the naive rule (Table~\ref{tab:main_mfrc}), although it carries no certificate
+(\S\ref{sec:eq5}). The models differ in what the baseline cannot do, which is to find the codes that apply: among accepted
+decisions, pplx-decider labels 62\% of the applying codes correctly, Sonnet 53\% and Jev 35\%, and the rest go to a person or
+are missed. Dialogue decisions, by contrast, are choices between neighbouring codes, such as a reflection and a question, and
+there the naive rule's error targets mostly fail (\S\ref{sec:eq2}).
 
 \paragraph{Robustness.} Against the adjudicated reference, 39 of the 40 Jev contrasts (20 comparators, two metrics) keep their
 sign and significance. The exception is the borderline error-ranking contrast with Luna's verbalized confidence, whose interval
 moves from just above zero to just below it (\res{rq1_adj_plan_v1/jev/luna-verbal/auroc/dci}).
+
+\paragraph{What it means.} ``Decision model'' names an interface, not a level of quality: ranking has to be measured on the
+researcher's own hand-coded sample, and a strong LLM's verbalized confidence is a competitive alternative. A high accepted
+share is not evidence of a useful coder by itself; it should be compared with a baseline that reads nothing and with the
+share of applying codes found. And the naive rule's 5\% is a target, not a guarantee: the leading coders' accepted decisions
+are wrong 6--7.5\% of the time, which Section~\ref{sec:eq2} explains.
 
 \input{tables/main_rq1}
 \input{tables/main_claims}
@@ -66,25 +116,33 @@ moves from just above zero to just below it (\res{rq1_adj_plan_v1/jev/luna-verba
 \input{tables/main_policies}
 \input{tables/main_mfrc}
 
+\FloatBarrier
 \subsection{RQ2: Does uncertainty sit where humans disagree?}
 \label{sec:rq2}
 
-When annotators disagree, a single majority label is a weak target \citep{plank2022problem,baan2022stop}, so we ask whether
-model uncertainty is high where humans split. The evidence is limited: MFRC has 1,382 test comments with three annotators,
-but AnnoMI's multi-annotated test items (91 client and 93 therapist utterances) come from only four transcripts, so the
-AnnoMI results describe those conversations. With that caveat, model uncertainty rises where humans split
-(Figure~\ref{fig:rq2}). For every decision model and the Luna, Haiku, gpt-oss and Sonnet verbal signals, the Spearman
-correlation between model uncertainty and the entropy of the human labels is 0.24--0.43 on MFRC and 0.33--0.65 on AnnoMI,
-except Kev-9B on AnnoMI client (0.18). Token probabilities, vote-based agreement and Qwen3.5-9B's verbalized confidence track
-disagreement weakly or not at all; Luna's token-probability uncertainty is unrelated or inversely related to it ($-$0.10 and
-$-$0.03 on AnnoMI). Coders run on a subset (Qwen3.8-2.4T, self-consistency) have only 20--23 multi-annotated AnnoMI items and
-are not interpreted.
+\textbf{Answer: yes, moderately, for most coders.} When annotators disagree, a single majority label is a weak target
+\citep{plank2022problem,baan2022stop}, so we ask whether model uncertainty is high where humans split. The evidence has a
+clear limit: MFRC has 1,382 test comments with three annotators, but AnnoMI's multi-annotated test items (91 client and 93
+therapist utterances) come from only four transcripts, so the AnnoMI results describe those conversations.
 
-In a leave-one-annotator-out comparison, each annotator in turn is scored against the majority of the other annotators, and
-each coder is scored against the same references (the dot is its mean over references). No coder falls below the range of
-individual annotators, and some fall above it: on AnnoMI therapist, Jev's mean $\kappa$ (0.891) exceeds all ten annotators'
-(0.631--0.886), and on MFRC Sonnet exceeds five of six. This is a descriptive comparison with a broad human range, not a test
-of equivalence to a typical annotator.
+\paragraph{Uncertainty rises where humans split.} For every decision model and the Luna, Haiku, gpt-oss and Sonnet verbal
+signals, the Spearman correlation between model uncertainty and the entropy of the human labels is 0.24--0.43 on MFRC and
+0.33--0.65 on AnnoMI, except Kev-9B on AnnoMI client (0.18) (Figure~\ref{fig:rq2}). The signals that rank errors poorly also
+miss disagreement: token probabilities, vote-based agreement and Qwen3.5-9B's verbalized confidence track it weakly or not at
+all, and Luna's token-probability uncertainty is unrelated or inversely related to it ($-$0.10 and $-$0.03 on AnnoMI). This is
+consistent with RQ1: confidence that is spread out can register an item's ambiguity, while saturated confidence cannot.
+Coders run on a subset (Qwen3.8-2.4T, self-consistency) have only 20--23 multi-annotated AnnoMI items and are not
+interpreted.
+
+\paragraph{No coder falls below the range of individual annotators.} In a leave-one-annotator-out comparison, each annotator
+in turn is scored against the majority of the other annotators, and each coder is scored against the same references (the dot
+is its mean over references). No coder falls below the range of individual annotators, and some fall above it: on AnnoMI
+therapist, Jev's mean $\kappa$ (0.891) exceeds all ten annotators' (0.631--0.886), and on MFRC Sonnet exceeds five of six.
+This is a descriptive comparison with a broad human range, not a test of equivalence to a typical annotator.
+
+\paragraph{What it means.} Low model confidence is partly a signal of a contested item, not only of a likely model error. A
+triage rule that sends low-confidence items to a person therefore sends them, among others, the items where human judgement
+matters most. Agreement with annotators, which RQ2 measures, is not the same as interpretive validity, which it does not.
 
 \begin{figure}[tb]
   \centering
@@ -95,33 +153,43 @@ of equivalence to a typical annotator.
   \label{fig:rq2}
 \end{figure}
 
+\FloatBarrier
 \subsection{RQ3: How stable are decisions?}
 \label{sec:rq3}
 
-We perturbed the request on the test split (Figure~\ref{fig:rq3}). Jev, OpenAI Decisions, Clef-flash and pplx-decider ran
-every arm on all applicable tasks; Kev-9B ran one to four tasks per arm, because its hosting stopped; Luna and Sonnet ran the
-option-order and label arms on 85 test segments per task. Flip rates and changes in AURC, the two pre-specified outcomes,
-are design-weighted, with per-task cluster-bootstrap intervals (Table~\ref{tab:tab06_rq3}).
+\textbf{Answer: mostly stable to rewording, less so to option order, and dependent on context.} We perturbed the request on
+the test split (Figure~\ref{fig:rq3}). Jev, OpenAI Decisions, Clef-flash and pplx-decider ran every arm on all applicable
+tasks; Kev-9B ran one to four tasks per arm, because its hosting stopped; Luna and Sonnet ran the option-order and label arms
+on 85 test segments per task. Flip rates and changes in AURC, the two pre-specified outcomes, are design-weighted, with
+per-task cluster-bootstrap intervals (Table~\ref{tab:tab06_rq3}).
 \begin{itemize}
   \item \textbf{Option order matters, differently by model.} Averaged over tasks, reversing or shuffling options changes 4\%
   of Jev's labels, 5--7\% of pplx-decider's and Sonnet's, 8--11\% of OpenAI Decisions' and Luna's, under 1\% of Clef-flash's,
-  and 13--31\% of Kev-9B's; in single tasks it reaches 55\% (Kev-9B, reversed options, TalkMoves teacher). For coders whose identical repeated requests already vary (2.1\% of Jev's labels, 3.3\% of Sonnet's, 6.6\% of Luna's;
-  \S\ref{sec:eq6}), some order flips may reflect that variation; the samples differ, so the rates cannot simply be
-  subtracted.
+  and 13--31\% of Kev-9B's; in single tasks it reaches 55\% (Kev-9B, reversed options, TalkMoves teacher). For coders whose
+  identical repeated requests already vary (2.1\% of Jev's labels, 3.3\% of Sonnet's, 6.6\% of Luna's; \S\ref{sec:eq6}), some
+  order flips may reflect that variation; the samples differ, so the rates cannot simply be subtracted.
   \item \textbf{Wording matters a little.} Paraphrased definitions change 3--10\% of labels, and replacing code names with
   neutral identifiers 5--10\%. Asking for MFRC codes one at a time instead of together changes at most 4\% (Clef-flash);
   OpenAI Decisions' multi-label answers are exactly invariant to question order and batching.
   \item \textbf{Removing the previous turn removes information.} It changes 15--24\% of dialogue labels on average over tasks
-  (up to 39\% in one task) and makes the coders
-  worse: $\kappa$ falls by 0.012--0.041 and AURC rises by 0.010--0.037. These flips are mostly a loss of relevant context, not
-  instability, in line with the finding that added context can redirect decision models \citep{xu2026jevout}.
+  (up to 39\% in one task) and makes the coders worse: $\kappa$ falls by 0.012--0.041 and AURC rises by 0.010--0.037. These
+  flips are mostly a loss of relevant context, not instability, in line with the finding that added context can redirect
+  decision models \citep{xu2026jevout}.
   \item \textbf{Question format has model-specific effects.} Asking each exclusive option as a separate yes/no question
   improves error ranking for Clef-flash ($+$0.029) and pplx-decider ($+$0.022), hurts it for Kev-27B ($-$0.028), and produces no
   clear pooled change for Jev or OpenAI Decisions.
 \end{itemize}
-Changes in AURC under surface perturbations stay within $\pm$0.08 per task for every coder except Kev-9B, whose option-order
-sensitivity raises AURC by up to 0.23. Jev's flips concentrate on its low-confidence decisions (AUROC 0.82--0.99), so its
-instability mostly shows up as uncertainty.
+
+\paragraph{Unstable decisions are mostly uncertain ones.} For every coder, the decisions that flip under surface changes are
+mostly ones it was already unsure of: a stable decision has higher original confidence than a flipped one with
+probability 0.80 (Luna) to 0.96 (Jev), as the median over each coder's task--arm cells. Changes in AURC under surface
+perturbations stay within $\pm$0.08 per task for every coder except Kev-9B, whose option-order sensitivity raises AURC by up
+to 0.23.
+
+\paragraph{What it means.} Most instability shows up as uncertainty, so triage already sends most unstable decisions to a
+person. The exceptions matter in practice: the hand-coded sample and the rest of the corpus should be coded with the same
+request, the same option order and the previous turn, and a model with strong position bias, such as Kev-9B, needs its option
+order fixed or averaged over; averaging over option rotations \citep{zhang2026anyjev} is a cheap remedy we did not test.
 
 \begin{figure}[tb]
   \centering
