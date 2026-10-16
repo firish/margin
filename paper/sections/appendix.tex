@@ -1,3 +1,10 @@
+\section*{Guide to the appendices}
+Appendix~\ref{app:deviations} records the analysis plan, its amendments and the deviations log.
+Appendix~\ref{app:ltt} defines the guaranteed threshold rules and proves the proposition of Section~\ref{sec:rules}.
+Appendix~\ref{app:results} collects the supporting results, grouped by the question they support; each group opens with
+what was done, why, and what it shows. RQ1 and EQ4 are reported in full in the main text. Appendix~\ref{app:prompts} shows
+the requests sent to the models, and Appendix~\ref{app:memorization} describes the memorization probe.
+
 \section{Analysis plan, amendments and deviations}
 \label{app:deviations}
 
@@ -106,6 +113,32 @@ unit's weight close to $B$, and a perfect coder is then certified after a median
 \section{Additional results}
 \label{app:results}
 
+\subsection{RQ2: uncertainty and human disagreement, in detail}
+These tables give the per-coder numbers behind Figure~\ref{fig:rq2} (\S\ref{sec:rq2}): how strongly each coder's uncertainty
+tracks the spread of human labels, and how its agreement with annotators compares with each annotator's agreement with the
+others. The decision models and the verbalized signals track disagreement; token probabilities and vote shares do not. No
+coder falls below the human range, which is broad, so the comparison is descriptive.
+
+\input{tables/tab05_rq2}
+\input{tables/tab05b_rq2_humans}
+\FloatBarrier
+
+\subsection{RQ3: robustness by arm and task}
+Each perturbation was run on identical test items and compared with the canonical request (\S\ref{sec:rq3}). The first table
+gives every arm's flip rate and its effect on agreement, calibration and ranking; the second gives per-task intervals for
+the two pre-specified outcomes on the arms that matter most, reversed options and removed context. Option order moves
+Kev-9B far more than any other coder, and removing the previous turn lowers agreement for every coder.
+
+\input{tables/tab06_rq3}
+\input{tables/tab06b_rq3_intervals}
+\FloatBarrier
+
+\subsection{EQ1: calibration and recalibration}
+To separate calibration from ranking (\S\ref{sec:eq1}), we recalibrated every signal per task on the calibration split and
+re-scored it on the test split. Platt and isotonic maps bring calibration error down to 0.03--0.07, and Platt's map, being
+monotone, leaves the ranking of errors unchanged, while temperature scaling depends on how exact zeros and ones are floored, so we draw no conclusion
+from it. The fixed rule ``accept $\ge$0.95'' shows what raw probabilities do when taken at face value.
+
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.85\linewidth]{fig03_reliability.pdf}
@@ -113,7 +146,22 @@ unit's weight close to $B$, and a perfect coder is then certified after a median
   calibration split, for four decision models, Sonnet's verbalized confidence and Luna's token probabilities. Tasks are weighted equally; bins with fewer than 20 decisions are omitted.}
   \label{fig:reliability}
 \end{figure}
+\input{tables/tab07_triage_rules}
+\input{tables/tab24_temperature_floor}
+\FloatBarrier
 
+\subsection{EQ2: threshold rules and the cost of a guarantee}
+These analyses test whether each threshold rule keeps its 5\% target and what a valid guarantee costs (\S\ref{sec:eq2}). The
+re-split tables repeat the random calibration/test split 500 times per task: the naive rule exceeds 5\% in about half of
+them on MFRC and LTT on decisions in more than the nominal 5\%, while corpus LTT never does. The budget curves and the single-threshold variant show how
+much hand-coding a guarantee needs on MFRC. The simulation checks each rule against a known true risk under correlated
+errors, and the feasibility and utterance-sampling tables show why dialogue certifies nothing under whole-transcript
+sampling, and why sampling single utterances removes that obstacle yet still yields almost no certificates for the real
+coders.
+
+\input{tables/tab07c_threshold_rules}
+\input{tables/tab07b_resplits_by_task}
+\input{tables/tab07d_resplits_guaranteed}
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth]{fig06_calibration_budget.pdf}
@@ -124,7 +172,19 @@ unit's weight close to $B$, and a perfect coder is then certified after a median
   the ones scored. The dialogue tasks are omitted: with whole transcripts hand-coded, corpus LTT certifies nothing there.}
   \label{fig:budget}
 \end{figure}
+\input{tables/tab23_ltt_single_threshold}
+\input{tables/tab20_ltt_simulation}
+\input{tables/tab21_ltt_feasibility}
+\input{tables/tab21b_utterance_sampling}
+\FloatBarrier
 
+\subsection{EQ3: ties at the top and per-code recalibration}
+To find what limits triage (\S\ref{sec:eq3}), we measured how many decisions each coder places at its single highest
+confidence and how many of those are wrong, then fitted a separate map per predicted code. The per-code maps improve ranking
+for every coder with enough data; the category-only control shows how much of that gain comes from knowing which code was
+predicted, without any confidence at all.
+
+\input{tables/tab13_top_blocks}
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\linewidth]{fig10_per_code_recalibration.pdf}
@@ -133,6 +193,28 @@ unit's weight close to $B$, and a perfect coder is then certified after a median
   on a subset whose calibration split is too small for per-code maps.}
   \label{fig:percode}
 \end{figure}
+\input{tables/tab10_per_code_recalibration}
+\input{tables/tab22_category_only}
+\FloatBarrier
+
+\subsection{EQ5: configurations and cost}
+We compared single coders, two-stage cascades, agreement gates and a seven-model committee, each at the API cost of its own
+policy (\S\ref{sec:eq5}). The first table pools the naive and oracle rules over the five tasks; the second gives what corpus
+LTT certifies on MFRC, with the share of comments a person still reads; the third tests selected differences between
+configurations.
+
+\input{tables/tab08_cascades}
+\clearpage
+\input{tables/tab08b_cascades_certified}
+\input{tables/tab09_cascade_contrasts}
+\FloatBarrier
+
+\subsection{EQ6: validity checks}
+Four checks bound specific threats to the results (\S\ref{sec:eq6}). Repeatability sends identical requests twice;
+prompt sensitivity tries a second elicitation prompt for the LLM baselines; adjudication re-examines sampled disagreements
+between coders and the human labels; and the memorization probe, with its decoy-name control, tests whether the LLMs
+reproduce the public datasets. None of them proves validity; each addresses a particular alternative explanation. The model snapshot
+records exactly what was called.
 
 \begin{figure}[htbp]
   \centering
@@ -142,7 +224,9 @@ unit's weight close to $B$, and a perfect coder is then certified after a median
   a nonzero value below display precision.}
   \label{fig:repeat}
 \end{figure}
-
+\input{tables/tab11_repeatability}
+\input{tables/tab19_prompt_sensitivity}
+\input{tables/tab12_adjudication}
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth]{fig14_memorization.pdf}
@@ -151,36 +235,12 @@ unit's weight close to $B$, and a perfect coder is then certified after a median
   Table~\ref{tab:tab17_memorization_followups} gives the decoy control.}
   \label{fig:mem}
 \end{figure}
-
-\clearpage
-\input{tables/tab05_rq2}
-\input{tables/tab05b_rq2_humans}
-\input{tables/tab06_rq3}
-\input{tables/tab06b_rq3_intervals}
-\input{tables/tab07_triage_rules}
-\input{tables/tab07c_threshold_rules}
-\input{tables/tab07b_resplits_by_task}
-\input{tables/tab07d_resplits_guaranteed}
-\input{tables/tab08_cascades}
-\clearpage
-\input{tables/tab08b_cascades_certified}
-\input{tables/tab09_cascade_contrasts}
-\input{tables/tab10_per_code_recalibration}
-\input{tables/tab11_repeatability}
-\input{tables/tab12_adjudication}
-\input{tables/tab13_top_blocks}
 \input{tables/tab15_memorization_completion}
 \input{tables/tab15b_memorization_verbatim}
 \input{tables/tab16_memorization_labels}
 \input{tables/tab17_memorization_followups}
 \input{tables/tab18_model_snapshot}
-\input{tables/tab19_prompt_sensitivity}
-\input{tables/tab20_ltt_simulation}
-\input{tables/tab21_ltt_feasibility}
-\input{tables/tab21b_utterance_sampling}
-\input{tables/tab22_category_only}
-\input{tables/tab23_ltt_single_threshold}
-\input{tables/tab24_temperature_floor}
+\FloatBarrier
 
 \clearpage
 \section{Requests}

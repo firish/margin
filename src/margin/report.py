@@ -131,19 +131,22 @@ def tex_header(c, align: str, width: int = 13) -> str:
     return rf"\makecell[b{align}]{{" + r" \\{} ".join(tex_escape(x) for x in lines) + "}"  # {} stops "\\[" parsing as a skip
 
 
-def _tabular(df: pd.DataFrame, cols: list[str], breaks: tuple = (), width: int = 13) -> list[str]:
+def _tabular(df: pd.DataFrame, cols: list[str], breaks: tuple = (), width: int = 13, bold: pd.DataFrame | None = None) -> list[str]:
     align = "".join("r" if pd.api.types.is_numeric_dtype(df[c]) else "l" for c in cols)
     lines = [r"\begin{adjustbox}{max width=\linewidth}", rf"\begin{{tabular}}{{{align}}}", r"\toprule",
              " & ".join(tex_header(c, a, width) for c, a in zip(cols, align)) + r" \\", r"\midrule"]
-    for i, (_, r) in enumerate(df.iterrows()):
+    for i, (i_, r) in enumerate(df.iterrows()):
         if i in breaks:
             lines.append(r"\midrule")
-        lines.append(" & ".join(tex_escape(r[c]) for c in cols) + r" \\")
+        cells = [tex_escape(r[c]) for c in cols]
+        if bold is not None:
+            cells = [rf"\textbf{{{x}}}" if c in bold.columns and bool(bold.at[i_, c]) else x for x, c in zip(cells, cols)]
+        lines.append(" & ".join(cells) + r" \\")
     return lines + [r"\bottomrule", r"\end{tabular}", r"\end{adjustbox}"]
 
 
 def tex_table(df: pd.DataFrame, caption: str, label: str, note: str = "", digits: int = 3, breaks: tuple = (),
-              panels: list[tuple[str, list[str]]] | None = None, width: int = 13) -> str:
+              panels: list[tuple[str, list[str]]] | None = None, width: int = 13, bold: pd.DataFrame | None = None) -> str:
     """A booktabs table environment (no jinja2 needed); numbers formatted like the markdown tables. With panels,
     each (title, columns) group is set as its own tabular, stacked, so a wide table is split rather than shrunk."""
     global LATEX_DIGITS
@@ -152,7 +155,7 @@ def tex_table(df: pd.DataFrame, caption: str, label: str, note: str = "", digits
     for k, (title, cols) in enumerate(panels or [("", list(df.columns))]):
         if title:
             lines += ([r"\medskip"] if k else []) + [rf"\par\textit{{{tex_escape(title)}}}\par\smallskip"]
-        lines += _tabular(df, cols, breaks, width)
+        lines += _tabular(df, cols, breaks, width, bold)
     if note:
         lines.append(rf"\par\smallskip\footnotesize\raggedright {tex_refs(tex_escape(note))}")
     lines.append(r"\end{table}")
@@ -1122,10 +1125,19 @@ def main_tables() -> None:
     s = s.set_index("signal").reindex(order).reset_index()
     a1 = s[["signal", "sample", "κ (weighted)", "ECE", "error AUROC", "AURC", "share conf ≥ 0.99"]]
     a1.columns = ["signal", "sample", "κ (weighted)", "ECE", "error AUROC", "AURC", "conf ≥ 0.99"]
+    a1 = a1.reset_index(drop=True)
+    bold = pd.DataFrame(False, index=a1.index, columns=a1.columns)
+    edges = [0, *breaks, len(a1)]
+    for lo, hi in zip(edges, edges[1:]):
+        grp = a1.iloc[lo:hi]
+        full = grp[grp["sample"] == "full"]
+        if not full.empty:
+            bold.at[full["error AUROC"].idxmax(), "error AUROC"] = True
     (TAB / "main_rq1.tex").write_text(tex_table(a1, "RQ1: agreement, calibration and error ranking on the test split (mean over the five tasks, design-weighted). "
         "Groups: decision models, verbalized LLM confidence, token probabilities, agreement signals.", "tab:main_rq1",
         "Error AUROC: probability that a correct decision is more confident than an incorrect one (ties count half). AURC: area under the "
-        "risk-coverage curve, lower is better. conf ≥ 0.99: share of decisions with confidence ≥ 0.99.", 3, breaks))
+        "risk-coverage curve, lower is better. conf ≥ 0.99: share of decisions with confidence ≥ 0.99. Bold: the highest error AUROC among "
+        "full-sample signals in each group; [[tab:main_claims]] tests the differences.", 3, breaks, bold=bold))
     a1.to_csv(TAB / "main_rq1.csv", index=False)
 
     rc = read("a3_risk_control")
@@ -1151,11 +1163,15 @@ def main_tables() -> None:
     pol.columns = [c.replace("cluster-level LTT", "corpus LTT").replace("decision-level LTT", "LTT on decisions") for c in pol.columns]
     pct_cols = pol.columns[1:]
     pol[pct_cols] = pol[pct_cols] * 100
+    pol = pol.reset_index(drop=True)
+    pol_bold = pd.DataFrame(False, index=pol.index, columns=pol.columns)
+    pol_bold["naive: error"] = pol["naive: error"].round(1) > 5.0  # the overshoot the paper is about
     (TAB / "main_policies.tex").write_text(tex_table(pol, "Threshold policies at a 5% error target on the frozen split (percent): share of test decisions "
         "accepted, and error among them. Pooled columns average the five tasks; dialogue columns average the four dialogue tasks.", "tab:main_policies",
         "Naive: threshold with calibration error ≤ 5% (the pre-specified rule). Oracle: fitted on test, an unattainable upper bound. LTT on decisions treats "
-        "decisions as independent and is shown only for comparison; corpus LTT certifies the error of the uncoded remainder ([[sec:rules]]).",
-        1, (7,)))
+        "decisions as independent and is shown only for comparison; corpus LTT certifies the error of the uncoded remainder ([[sec:rules]]). "
+        "Bold: naive-rule error above the 5% target.",
+        1, (7,), bold=pol_bold))
     pol.to_csv(TAB / "main_policies.csv", index=False)
 
     mp = pd.read_csv(RESULTS / "mfrc_prevalence.csv")
