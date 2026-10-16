@@ -3,15 +3,16 @@ Language models can apply qualitative codebooks, but their labels save effort on
 We ask whether model confidence can tell, comparing seven decision models (APIs that return probabilities for typed
 questions) with twelve LLM confidence signals on five human-coded tasks spanning Reddit comments, counselling dialogue and
 classroom talk, under a prospectively specified analysis plan. Three findings stand out. First, low calibration error does
-not make confidence useful: decision models differ widely in how well they rank their own mistakes, and a task-level
-recalibration fixes calibration but leaves ranking unchanged. Second, error targets are hard to keep. A threshold tuned to
-5\% error on hand-coded comments exceeds 5\% on new comments in about half of re-splits, and a standard guarantee also fails,
-because a comment's codes and a transcript's utterances err together. A guarantee that respects how the hand-coded sample was
-drawn holds, at a price: after 30\% of Reddit comments are hand-coded, it certifies 60--83\% of the remaining code decisions
-for most coders. On dialogue, with whole transcripts hand-coded, it certifies nothing and could not even for a perfect coder
-at our calibration sizes; sampling single utterances instead still yields almost no certificates. Third, accepted shares
-overstate the work saved: nearly all certified decisions say a code does not apply, and a baseline that reads no text accepts
-75\% of comment decisions at 3.6\% error. Model uncertainty also rises where annotators disagree, and option order changes
-some models' labels. Confidence can triage coding, but only if researchers check ranking, sampling design and what the
-accepted labels are. Models were called on 10--12 October 2026; we release the harness and every coding decision.
+not make confidence useful: decision models differ widely in how well they rank their own mistakes, and calibration can be
+improved without improving ranking. Second, error targets are hard to keep. A threshold tuned to 5\% error on hand-coded
+comments exceeds 5\% on new comments in about half of re-splits, and applying an independence-based guarantee to clustered
+decisions breaks it, because a comment's codes and a transcript's utterances err together. A guarantee that respects how the
+hand-coded sample was drawn holds, at a price: after 30\% of Reddit comments are hand-coded, it certifies 60--83\% of the
+remaining code decisions for most coders. On dialogue, with whole transcripts hand-coded, it certifies nothing and could not
+even for a perfect coder at our calibration sizes; sampling single utterances instead still yields almost no certificates.
+Third, accepted shares overstate the work saved: nearly all certified decisions say a code does not apply, and a baseline
+that reads no text accepts 75\% of comment decisions at 3.6\% error. Model uncertainty also rises where annotators disagree,
+and option order changes some models' labels. Confidence can triage coding, but only if researchers check ranking, sampling
+design and what the accepted labels are. Models were called on 10--12 October 2026; we release the harness and every coding
+decision.
 \end{abstract}

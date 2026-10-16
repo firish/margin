@@ -135,8 +135,8 @@ Kev-9B far more than any other coder, and removing the previous turn lowers agre
 
 \subsection{EQ1: calibration and recalibration}
 To separate calibration from ranking (\S\ref{sec:eq1}), we recalibrated every signal per task on the calibration split and
-re-scored it on the test split. Platt and isotonic maps bring calibration error down to 0.03--0.07, and Platt's map, being
-monotone, leaves the ranking of errors unchanged, while temperature scaling depends on how exact zeros and ones are floored, so we draw no conclusion
+re-scored it on the test split. Platt and isotonic maps bring calibration error down to 0.03--0.07, and the fitted Platt map,
+which is increasing for every decision model and verbalized signal, leaves their ranking unchanged, while temperature scaling depends on how exact zeros and ones are floored, so we draw no conclusion
 from it. The fixed rule ``accept $\ge$0.95'' shows what raw probabilities do when taken at face value.
 
 \begin{figure}[htbp]

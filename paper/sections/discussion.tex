@@ -48,7 +48,7 @@ calibration beats most LLM signals but not the frontier models, and cascades sav
 coverage reported at fixed confidence thresholds, there and in confidence-based routing of qualitative codes
 \citep{zhao2025confidence}: such thresholds need to be checked on held-out data from the same corpus, or certified, because
 they overshoot and do not transfer. That they do not transfer matches \citet{lu2026candidate}; the read-out hypothesis is
-consistent with \citet{li2026llmasjev}; and the evidence that majority labels contain errors echoes \citet{liu2026agreement}.
+consistent with \citet{li2026llmasjev}; and the evidence of errors in some majority labels echoes \citet{liu2026agreement}.
 Guarantees for annotation already exist \citep{zeng2026hypac}; our contribution there is to show that, for coding data, which
 guarantee is valid depends on how the hand-coded sample is drawn.
 
@@ -66,8 +66,8 @@ only part of it by hand, the results suggest four steps.
   prevalence baseline that reads no text, and check how many applying codes the accepted decisions contain (\S\ref{sec:rq1}).
   \item Freeze the chosen coder, scores and threshold grid, then certify on the set-aside sample with a rule that respects how
   it was drawn, such as corpus LTT. Each certificate covers one configuration: choosing among configurations by their
-  certification results needs all of them in one testing family. Our version needed about 120 error-free units of similar
-  weight before it certified anything; with whole transcripts of very unequal length it could not certify even a perfect
+  certification results needs all of them in one testing family. With our 16-threshold grid, even in the best case it needed
+  about 120 error-free units of similar weight before it certified anything; with whole transcripts of very unequal length it could not certify even a perfect
   coder (\S\ref{sec:eq2}).
   \item Count what a person still has to read, including the hand-coded sample: in multi-label coding, a segment leaves the
   queue only when all its codes are accepted (\S\ref{sec:eq5}).

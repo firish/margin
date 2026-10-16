@@ -5,12 +5,12 @@ Table~\ref{tab:answers} gives a short answer to each of the nine questions. This
 research questions, and Section~\ref{sec:eqs} for the six experimental ones. Each subsection starts with the answer, then
 gives the evidence and the reasons behind it, and ends with what it means for a researcher.
 
-\begin{table}[t]
+\begin{table}[!ht]
 \centering
 \small
 \caption{The questions and their short answers.}
 \label{tab:answers}
-\begin{tabular}{@{}p{0.27\linewidth}p{0.63\linewidth}l@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.27\linewidth}>{\raggedright\arraybackslash}p{0.63\linewidth}l@{}}
 \toprule
 question & short answer & \S \\
 \midrule
@@ -19,12 +19,13 @@ Sonnet's verbalized confidence 0.80), and how much can be accepted depends mostl
 RQ2: Is uncertainty high where humans disagree? & Yes, moderately, for most coders; no coder falls below the range of
 individual annotators. & \ref{sec:rq2} \\
 RQ3: How stable are decisions? & Mostly stable to rewording, less so to option order; removing context changes 15--24\% of
-dialogue labels. & \ref{sec:rq3} \\
+dialogue labels on average. & \ref{sec:rq3} \\
 \midrule
-EQ1: Does calibration error predict triage? & No. Low calibration error does not imply good ranking, and recalibration fixes
-calibration without changing ranking. & \ref{sec:eq1} \\
+EQ1: Does calibration error predict triage? & No. Low calibration error does not imply good ranking, and calibration can be
+improved without improving ranking. & \ref{sec:eq1} \\
 EQ2: Do threshold rules keep their target? & The usual rule overshoots in about half of re-splits. A corpus guarantee holds,
-certifying 60--83\% of comment decisions for most coders and none on dialogue at our budgets. & \ref{sec:eq2} \\
+certifying 60--83\% of comment decisions for most coders; on dialogue, none with whole transcripts hand-coded and almost none
+with utterance sampling. & \ref{sec:eq2} \\
 EQ3: Ranking or ties at the top? & Both. Large, error-prone ties limit Jev and OpenAI Decisions; per-code maps split ties and
 improve ranking for every coder with enough data. & \ref{sec:eq3} \\
 EQ4: Do related 9B decision models beat a 9B instruct model? & Against its verbalized confidence, yes; against its token
@@ -32,7 +33,7 @@ probabilities, barely. & \ref{sec:eq4} \\
 EQ5: What gives the most guaranteed automation per dollar? & pplx-decider per inference dollar; several decision-model
 configurations come within two points of Sonnet at a fraction of its cost, but a person still reads most comments. &
 \ref{sec:eq5} \\
-EQ6: Are the results artefacts? & The checks bound the main threats; the human labels themselves contain errors. &
+EQ6: Are the results artefacts? & The checks bound the main threats; adjudication suggests errors in some human labels. &
 \ref{sec:eq6} \\
 \bottomrule
 \end{tabular}
@@ -64,9 +65,9 @@ Sonnet beats it: \res{rq1/jev/sonnet_sub-verbal/auroc/dci} on the pre-specified 
 ($p=\res{rq1/jev/sonnet_sub-verbal/auroc/p}$) and \res{rq1/jev/sonnet-verbal/auroc/dci} on the full-sample extension. Jev's
 advantage over Luna's verbalized confidence is borderline (\res{rq1/jev/luna-verbal/auroc/dci}, bootstrap
 $p=\res{rq1/jev/luna-verbal/auroc/p}$) and not a claim after Holm adjustment, and the exploratory Qwen3.8-2.4T's verbalized
-confidence edges out Jev (\res{rq1/jev/qwen_big-verbal/auroc/dci}). Token probabilities fail for a simple reason: they
-saturate. Read after a generated rationale, 96--100\% of decisions carry confidence $\ge$0.99, so there is almost nothing left
-to separate errors from correct labels. What drives the differences among the decision models themselves is the subject of
+confidence edges out Jev (\res{rq1/jev/qwen_big-verbal/auroc/dci}). In our rationale-first read-out, token probabilities
+concentrate near 1 and rank errors poorly: 96--100\% of their decisions carry confidence $\ge$0.99, and for Luna more than half
+are tied at exactly 1.0, which no threshold can split. EQ4 examines whether the read-out contributes. What drives the differences among the decision models themselves is the subject of
 EQ1, EQ3 and EQ4: calibration, ties at the top of the scale and the read-out.
 
 \paragraph{How much can be accepted depends on the task, and on what is being accepted.} Under the naive rule, Kev-27B, Sonnet
@@ -129,8 +130,8 @@ therapist utterances) come from only four transcripts, so the AnnoMI results des
 signals, the Spearman correlation between model uncertainty and the entropy of the human labels is 0.24--0.43 on MFRC and
 0.33--0.65 on AnnoMI, except Kev-9B on AnnoMI client (0.18) (Figure~\ref{fig:rq2}). The signals that rank errors poorly also
 miss disagreement: token probabilities, vote-based agreement and Qwen3.5-9B's verbalized confidence track it weakly or not at
-all, and Luna's token-probability uncertainty is unrelated or inversely related to it ($-$0.10 and $-$0.03 on AnnoMI). This is
-consistent with RQ1: confidence that is spread out can register an item's ambiguity, while saturated confidence cannot.
+all, and Luna's token-probability uncertainty is unrelated or inversely related to it ($-$0.10 and $-$0.03 on AnnoMI). The
+same signals that rank errors poorly also track human disagreement poorly.
 Coders run on a subset (Qwen3.8-2.4T, self-consistency) have only 20--23 multi-annotated AnnoMI items and are not
 interpreted.
 
@@ -186,8 +187,8 @@ probability 0.80 (Luna) to 0.96 (Jev), as the median over each coder's task--arm
 perturbations stay within $\pm$0.08 per task for every coder except Kev-9B, whose option-order sensitivity raises AURC by up
 to 0.23.
 
-\paragraph{What it means.} Most instability shows up as uncertainty, so triage already sends most unstable decisions to a
-person. The exceptions matter in practice: the hand-coded sample and the rest of the corpus should be coded with the same
+\paragraph{What it means.} Instability generally concentrates at lower confidence, where triage can catch it. The
+exceptions matter in practice: the hand-coded sample and the rest of the corpus should be coded with the same
 request, the same option order and the previous turn, and a model with strong position bias, such as Kev-9B, needs its option
 order fixed or averaged over; averaging over option rotations \citep{zhang2026anyjev} is a cheap remedy we did not test.
 

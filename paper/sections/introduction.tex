@@ -67,14 +67,15 @@ diversity. Our contribution is an evaluation, not a new method, and it has four 
   log, with every coding decision released.
   \item \textbf{Ranking, not calibration, separates coders} (RQ1, EQ1, EQ3, EQ4; \S\ref{sec:rq1}, \S\ref{sec:eq1}--\S\ref{sec:eq4}).
   Decision models range from ranking their errors worse than a cheap LLM's verbalized confidence to nearly as well as a
-  frontier LLM's. Calibration error does not predict where a model falls: a task-level recalibration fixes calibration but
-  leaves ranking unchanged, while per-code recalibration narrows most of the differences. A comparison of related 9B systems
+  frontier LLM's. Calibration error does not predict where a model falls: task-level recalibration improves calibration while
+  leaving the ranking of decision models and verbalized confidence unchanged, and per-code recalibration narrows most of the
+  differences. A comparison of related 9B systems
   suggests that much of a decision model's advantage comes from reading out a probability rather than from its training.
   \item \textbf{Guarantees that respect the sampling design} (RQ1, EQ2; \S\ref{sec:rules}, \S\ref{sec:eq2}). Tuning a
   threshold to 5\% error on hand-coded comments overshoots in about half of re-splits, and a guarantee that treats decisions as
   independent fails because decisions within a comment or transcript err together. A corpus-level rule, adapted from betting
   tests for sampling without replacement, holds: after 30\% of comments are hand-coded, it certifies 60--83\% of the remaining
-  decisions for most coders. On dialogue it certifies nothing. We show why: with whole transcripts as sampling units, our
+  decisions for most coders. On dialogue, with whole transcripts hand-coded, it certifies nothing. We show why: with whole transcripts as sampling units, our
   procedure could not certify even a perfect coder at our calibration sizes, and sampling single utterances removes that
   obstacle but leaves too little evidence of $\le$5\% error among the coders' confident decisions.
   \item \textbf{What automation means for coding} (EQ5; \S\ref{sec:eq5}, \S\ref{sec:discussion}). Accepted shares overstate
@@ -86,7 +87,7 @@ diversity. Our contribution is an evaluation, not a new method, and it has four 
 Beyond triage, model uncertainty is higher where human coders disagree (RQ2, \S\ref{sec:rq2}); option order and missing
 context change some models' labels substantially (RQ3, \S\ref{sec:rq3}); and the checks of EQ6 bound the main threats: an
 alternative prompt does not improve the LLM baselines, there is little evidence of memorization, and the contrasts barely
-change against an adjudicated reference, although adjudication also suggests that the human labels contain errors
+change against an adjudicated reference, although adjudication also suggests errors in some human labels
 (\S\ref{sec:eq6}). Section~\ref{sec:related} reviews related work, Section~\ref{sec:setup} describes the
 design and the threshold rules, Sections~\ref{sec:results} and~\ref{sec:eqs} answer the research and experimental questions,
 and Section~\ref{sec:discussion} discusses what they mean for researchers.

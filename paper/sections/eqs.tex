@@ -14,9 +14,9 @@ triage depends on.
 
 \paragraph{Calibration is cheap to fix.} Raw calibration errors range from 0.05 to 0.33 (Table~\ref{tab:main_rq1}). A Platt or
 isotonic map from confidence to accuracy, fitted per task on the calibration split, brings every signal's mean ECE over tasks
-to 0.03--0.07 (Figure~\ref{fig:reliability} and Table~\ref{tab:tab07_triage_rules}, appendix). Because Platt's map is
-monotone, it leaves error ranking unchanged for every decision model and verbalized signal; only for the near-saturated token
-probabilities and vote shares, whose confidence carries little signal, can the fitted map flatten or even reverse it.
+to 0.03--0.07 (Figure~\ref{fig:reliability} and Table~\ref{tab:tab07_triage_rules}, appendix). The fitted Platt map is
+increasing for every decision model and verbalized signal, so it leaves their ranking unchanged; for the token probabilities
+and vote shares, which concentrate near 1, the fitted map can flatten or even reverse it.
 Temperature scaling of the full probability distribution, by contrast, is fragile here: models that output exact zeros and
 ones make the fit depend on how those are floored before taking logarithms (Table~\ref{tab:tab24_temperature_floor}). With a
 floor of $10^{-4}$, temperature scaling calibrated Jev well and appeared to lower the token probabilities' error ranking (Luna
@@ -111,8 +111,8 @@ and LTT on i.i.d.\ clusters pooled over the other four tasks certifies nothing a
 who find that rejection thresholds of typed decision models do not carry across datasets.
 
 \paragraph{What it means.} If the error target must hold, a researcher should hand-code a random sample from their own
-corpus and use a rule whose unit matches how that sample was drawn. With this procedure, nothing is certified until about 120
-error-free units of similar weight have been hand-coded, so small units (single comments or utterances, or fixed-size blocks)
+corpus and use a rule whose unit matches how that sample was drawn. With our 16-threshold grid, even in the best case
+nothing is certified until about 120 error-free units of similar weight have been hand-coded, so small units (single comments or utterances, or fixed-size blocks)
 are far cheaper than whole transcripts of very unequal length. Thresholds borrowed from another codebook, or fixed in advance
 at a round number, should not be trusted.
 
@@ -193,11 +193,11 @@ training, read-out and request format, so this compares related systems, not a c
 \paragraph{Most of the gain is over verbalized confidence, little over token probabilities.} Both decision models rank errors better than the instruct
 model's verbalized confidence (\res{same_base/clef_flash/qwen-verbal/auroc/d} and \res{same_base/kev9b/qwen-verbal/auroc/d}
 AUROC). Against its answer-token probabilities the gain is small: \res{same_base/clef_flash/qwen-logprob/auroc/dci} for
-Clef-flash, and not significant for Kev-9B. Under the naive 5\%-target rule both accept 15--22 points more, because their
-probabilities do not pile up at 1.0. Clef-flash and Kev-9B do not differ significantly.
+Clef-flash, and not significant for Kev-9B. Under the naive 5\%-target rule both accept 15--22 points more, consistent with
+their less concentrated scores. Clef-flash and Kev-9B do not differ significantly.
 
-\paragraph{Why the read-out may matter.} Our token probabilities are read after a one-sentence rationale, which likely
-commits the model and contributes to the saturation. \citet{li2026llmasjev} read next-token probabilities over option
+\paragraph{Why the read-out may matter.} Our token probabilities are read after a one-sentence rationale, which may commit
+the model and push its token probabilities towards 1. \citet{li2026llmasjev} read next-token probabilities over option
 identifiers directly, without generated text, and find that a 4B base model matches decision models built on the same
 backbone. Together these results suggest, as a hypothesis, that much of a decision model's advantage comes from reading out a
 probability rather than from its training.
@@ -275,8 +275,8 @@ in, a more accurate but costlier coder can be the cheaper policy overall.
 \subsection{EQ6: Are the results artefacts?}
 \label{sec:eq6}
 
-\textbf{Answer: the checks bound the main threats rather than proving validity, and one of them shows that the human labels
-themselves contain errors.} Table~\ref{tab:main_validity} summarizes four checks.
+\textbf{Answer: the checks bound the main threats rather than proving validity, and one of them suggests errors in some
+human labels.} Table~\ref{tab:main_validity} summarizes four checks.
 \begin{itemize}
   \item \textbf{Repeatability.} In the repeated requests we tested (100 test segments per task, sent twice), OpenAI Decisions,
   Clef, Clef-flash and pplx-decider returned identical outputs, and Haiku changed 0.03\% of labels. Jev changed 2.1\%, almost
@@ -303,8 +303,8 @@ themselves contain errors.} Table~\ref{tab:main_validity} summarizes four checks
 \end{itemize}
 
 \paragraph{What it means.} Some coders change a few labels when the same request is sent again, so the model version and its
-outputs should be recorded with the coded data. And because the majority labels contain errors, part of every measured
-``model error'' is a disagreement the model may be right about; Section~\ref{sec:discussion} returns to what this means for a
+outputs should be recorded with the coded data. And because some majority labels appear to be wrong, part of a measured
+``model error'' may be a disagreement the model is right about; Section~\ref{sec:discussion} returns to what this means for a
 5\% target.
 
 \input{tables/main_validity}
