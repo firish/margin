@@ -2,6 +2,56 @@
 \section{Discussion}
 \label{sec:discussion}
 
+Whether model confidence can triage qualitative coding turns out to depend less on which model is used than on three choices
+a researcher makes: how the confidence is judged, how the hand-coded sample is drawn, and how automation is counted. We take
+each in turn, add what the results say about the human labels themselves, and then place the findings in prior work and
+draw out what they mean for researchers and for the builders of decision models.
+
+\paragraph{Judge confidence by its ranking, on your own data.} Calibration error was the wrong yardstick throughout. It is
+cheap to fix after the fact (\S\ref{sec:eq1}), and it says little about what triage needs, which is that a coder's mistakes
+receive lower confidence than its correct labels. That ranking varied widely within the decision-model category, from worse
+than a cheap LLM's verbalized confidence to close to a frontier LLM's (\S\ref{sec:rq1}), and it varied across tasks for the
+same coder. Two mechanisms appear to be at work. Large ties at the top of the scale, which no threshold can split, limit
+some coders (\S\ref{sec:eq3}). And the read-out may matter: two decision models rank errors clearly better than the
+verbalized confidence of a related instruct model, though only slightly better than its token probabilities, which is
+consistent with the hypothesis that reading out a probability is much of the advantage (\S\ref{sec:eq4}). Per-code recalibration narrows
+most of the remaining differences, partly by learning which codes are hard. None of this can be read off a product
+description; it has to be measured on the researcher's own codebook.
+
+\paragraph{A guarantee is a property of the sampling design.} The usual practice, tuning a threshold to 5\% error on
+hand-coded data, misses its target about half the time, and a standard guarantee that treats decisions as independent fails
+because decisions within a comment or a transcript err together (\S\ref{sec:eq2}). What made a guarantee valid was not a
+better model but a better account of how the hand-coded sample was drawn: our corpus rule needs only that the hand-coded
+units are a random sample of the corpus. The same account explains its cost. Whole transcripts of very unequal length carry
+little evidence each, so on dialogue nothing could be certified at our budgets. Sampling single utterances removed that
+obstacle, although the coders' confident dialogue decisions then gave too little evidence. Hand-coding for a guarantee is therefore a sampling-design decision, of the kind survey methodology has long
+studied \citep{horvitz1952generalization}, and it should be planned before coding starts.
+
+\paragraph{Count reading saved and codes found, not decisions accepted.} In a sparse multi-label codebook most decisions are
+easy calls that a code does not apply. A coder can accept most of them, and a baseline that reads no text accepts 75\% at low
+error, while finding few of the codes that apply and leaving most comments for a person to read (\S\ref{sec:rq1},
+\S\ref{sec:eq5}). Accepted share is a convenient number, but the quantities a researcher feels are the codes found and the
+segments still read. On those, the differences between coders are larger than on accepted share, and a more accurate,
+costlier coder can save more work than a cheaper one.
+
+\paragraph{Low confidence partly marks contested items.} Model uncertainty was higher where human coders disagreed
+(\S\ref{sec:rq2}), no coder fell below the range of individual annotators, and adjudication often sided with the model on
+sampled disagreements (\S\ref{sec:eq6}). Error measured against a single majority label may therefore overstate some model
+errors, and a 5\% target against such a reference is partly a target against annotator noise
+\citep{plank2022problem,uma2021learning}. Triage then has a useful side effect: the items it sends to a person include many
+on which human judgement is genuinely needed. Agreement with annotators, which we measure, is still not the same as
+interpretive validity, which we do not.
+
+\paragraph{Relation to prior work.} Where our design overlaps with the concurrent evaluations of decision models
+\citep{ibrahim2026decision,sharma2026typedbench}, the findings agree: Jev trails the strongest LLMs in accuracy, its raw
+calibration beats most LLM signals but not the frontier models, and cascades save cost. Our results add a caution to
+coverage reported at fixed confidence thresholds, there and in confidence-based routing of qualitative codes
+\citep{zhao2025confidence}: such thresholds need to be checked on held-out data from the same corpus, or certified, because
+they overshoot and do not transfer. That they do not transfer matches \citet{lu2026candidate}; the read-out hypothesis is
+consistent with \citet{li2026llmasjev}; and the evidence that majority labels contain errors echoes \citet{liu2026agreement}.
+Guarantees for annotation already exist \citep{zeng2026hypac}; our contribution there is to show that, for coding data, which
+guarantee is valid depends on how the hand-coded sample is drawn.
+
 \paragraph{A recipe for model-assisted coding.} For a researcher who wants to code a corpus with a fixed codebook and check
 only part of it by hand, the results suggest four steps.
 \begin{enumerate}
@@ -22,77 +72,71 @@ only part of it by hand, the results suggest four steps.
   \item Count what a person still has to read, including the hand-coded sample: in multi-label coding, a segment leaves the
   queue only when all its codes are accepted (\S\ref{sec:eq5}).
 \end{enumerate}
-In our data, pplx-decider alone gave the most certified automation per inference dollar on comments, and Clef, the pplx-decider +
-Kev-27B gate and the decision-model committee certified within two points of Sonnet, at 5--21\% of its inference cost; the
-intervals do not resolve those differences. Once human reading is priced in, the ranking can change (\S\ref{sec:eq5}).
 
-\paragraph{What decision models are, and are not.} Decision models are marketed as calibrated. In our data four of the seven
-have raw ECEs of 0.05--0.07 and Jev, OpenAI Decisions and Kev-9B 0.10--0.12; a Platt map per task reduces all of them to
-0.03--0.07. What separates them raw is error ranking and resolution at the top of the scale, where the category ranges from
-worse than a cheap LLM's verbalized confidence (Kev-9B, Clef-flash) to near-frontier (Kev-27B). Per-code recalibration narrows
-most of the ranking differences, partly by using which code was predicted, and leaves accuracy as the main differentiator.
-The comparison with a 9B instruct model, together with \citet{li2026llmasjev}, is consistent with the hypothesis that much
-of a decision model's advantage comes from reading out probabilities rather than generating them. Option order still
-changes up to 31\% of a decision model's labels on average over tasks, and 55\% in one task (\S\ref{sec:rq3}); averaging over option rotations \citep{zhang2026anyjev} is
-a cheap remedy we did not test.
-
-\paragraph{Human labels are not gold.} No coder fell below the range of individual annotators, and adjudication often sided
-with the model on sampled disagreements. Error measured against a single majority label may therefore overstate some model
-errors, and a 5\% target against such a reference is partly a target against annotator noise
-\citep{plank2022problem,uma2021learning}. Agreement with annotators, which we measure, is not the same as interpretive
-validity, which we do not.
+\paragraph{For builders of decision models.} Decision models are marketed as calibrated, and most of the seven are close to
+it, or can cheaply be made so. The results point to what would make them more useful for coding: reporting error ranking and
+risk--coverage on human-coded data, not only calibration; resolving the top of the confidence scale instead of placing many
+decisions at exactly 1.0 (\S\ref{sec:eq3}); making outputs invariant to option order, or averaging over orders, since order
+changed up to 55\% of one model's labels in a single task (\S\ref{sec:rq3}); and documenting which outputs are deterministic
+(\S\ref{sec:eq6}).
 
 \paragraph{From labels to estimates.} Triage bounds the error rate among the labels a researcher accepts, in aggregate; it
-says nothing about any one label. Many
-qualitative studies go on to report code frequencies or associations between codes. Prediction-powered and design-based
-estimators correct such quantities using a hand-coded subsample, without per-item guarantees
-\citep{angelopoulos2023ppi,egami2023using}, and model confidence can decide which items to hand-code
+says nothing about any one label. Many qualitative studies go on to report code frequencies or associations between codes.
+Prediction-powered and design-based estimators correct such quantities using a hand-coded subsample, without per-item
+guarantees \citep{angelopoulos2023ppi,egami2023using}, and model confidence can decide which items to hand-code
 \citep{gligoric2025unconfident}. The calibration sample that triage needs can serve these estimators too, and they do not
 need a certified threshold, which makes them attractive on dialogue data, where we could certify almost nothing under either
 sampling design.
 
 \section{Limitations and follow-ups}
 \label{sec:limitations}
+Each limitation below comes with what would address it.
 \begin{itemize}
-  \item \textbf{Scope.} Five tasks on short segments (comments, utterances, sentences) from three public datasets. We have no
-  long-form interviews: public interview data with applied codes is rare, and a private dataset requires ethics approval.
-  Pooled estimates describe these five tasks, not a population of codebooks.
+  \item \textbf{Scope.} Five tasks on short segments (comments, utterances, sentences) from three public datasets, and pooled
+  estimates describe these tasks, not a population of codebooks. We have no long-form interviews: public interview data with
+  applied codes is rare, and a private dataset requires ethics approval. A coded interview corpus, used with consent for
+  third-party processing, would test whether the results carry over to the setting where qualitative coding is most common.
   \item \textbf{A dated snapshot.} Several APIs were in public beta, and the models will change. We release the harness, the
-  analysis plan and every coding decision, so every number can be recomputed from the public datasets and the study re-run;
-  the raw response text is withheld because it quotes the datasets.
-  \item \textbf{Guarantees.} Corpus LTT assumes the hand-coded clusters are a uniformly random subset of the corpus and that
-  the test visits them in random orders; our split assigns clusters by a hash of their id, which we treat as random, and the
-  orders come from a recorded seed. Each certificate covers one configuration. The procedure is conservative (in simulation it
-  accepted less than the best safe threshold), and its cost on dialogue comes from hand-coding whole transcripts and scaling
-  every transcript by the largest one. Sampling single utterances avoids most of that, although at our budget the coders'
-  confident dialogue decisions then still gave too little evidence. The population version additionally needs independent clusters and a true
-  bound on cluster weight. For the corpus guarantee, random re-splits are a direct check (the test split is the uncoded
-  remainder); for the population version they are only a diagnostic.
-  \item \textbf{Post-hoc analysis.} The plan was not externally registered. Sonnet was extended to the full sample after subset
-  results were seen, the A3 analyses were revised after their first output, and the corpus guarantee, the prevalence
-  analysis and several controls were added or revised after external reviews. All are labelled exploratory.
+  analysis plan and every coding decision, so every number can be recomputed from the public datasets and the study re-run
+  on newer models; the raw response text is withheld because it quotes the datasets.
+  \item \textbf{Guarantees.} Corpus LTT assumes that the hand-coded clusters are a uniformly random subset of the corpus and
+  that the test visits them in random orders; our split assigns clusters by a hash of their id, which we treat as random, and
+  the orders come from a recorded seed. Each certificate covers one configuration. The procedure is conservative (in
+  simulation it accepted less than the best safe threshold), and much of its cost on dialogue comes from scaling every
+  transcript by the largest one. Sampling single utterances avoids most of that, although at our budget the coders' confident
+  dialogue decisions still gave too little evidence. Procedures that handle unequal unit weights more efficiently, or larger
+  hand-coded samples of small units, could certify more. The population version additionally needs independent clusters and
+  a true bound on cluster weight; for it, random re-splits are only a diagnostic, while for the corpus guarantee they are a
+  direct check.
+  \item \textbf{Post-hoc analysis.} The plan was kept in the project repository, not externally registered. Sonnet was extended
+  to the full sample after subset results were seen, the A3 analyses were revised after their first output, and the corpus
+  guarantee, the prevalence analysis and several controls were added or revised after external reviews. All are labelled
+  exploratory; a registered replication on new codebooks would confirm or correct them.
   \item \textbf{LLM read-out.} Token probabilities were read after a generated rationale, and multi-label verbalized
   probabilities were converted under a reading the prompt did not fix (\S\ref{sec:setup}); both may disadvantage the LLM
-  baselines. We tested one alternative prompt.
-  \item \textbf{Adjudication} covered a stratified, high-confidence-enriched sample of 200 items drawn from disagreements
-  with six label sources; it relied partly on an LLM panel whose families overlap with the coders it judged (Claude Opus with Haiku and
-  Sonnet; GPT-6 Sol with Luna and OpenAI Decisions), and the author, the only human adjudicator, did not repeat a sitting to
-  measure their own consistency.
+  baselines. We tested one alternative prompt; reading option probabilities directly, without a rationale, would test the
+  read-out hypothesis of \S\ref{sec:eq4}.
+  \item \textbf{Adjudication} covered a stratified, high-confidence-enriched sample of 200 items drawn from disagreements with
+  six label sources. It relied partly on an LLM panel whose families overlap with the coders it judged (Claude Opus with Haiku
+  and Sonnet; GPT-6 Sol with Luna and OpenAI Decisions), and the author, the only human adjudicator, did not repeat a sitting to
+  measure their own consistency. Independent expert adjudicators would make the label-noise estimate firmer.
   \item \textbf{Measurement.} RQ2 rests on four AnnoMI transcripts and is unweighted. ECE is top-label calibration against the
-  majority label. Costs are October 2026 list prices for inference only; Kev's are estimated warm-serving costs.
+  majority label. Costs are October 2026 list prices for inference only, Kev's are estimated warm-serving costs, and human
+  reading is counted in segments, not timed; a timing study would turn the reading counts into hours.
   \item \textbf{Coverage gaps.} Kev-9B's robustness arms cover one to four tasks, and Kev-27B was run on the main and format
-  arms only. Decision models cannot be probed for memorization; Kev's published training data excludes our datasets.
+  arms only. Decision models return no text and could not be probed for memorization; Kev's published training data excludes
+  our datasets.
 \end{itemize}
 
 \section{Conclusion}
 \label{sec:conclusion}
-Model confidence can select low-error coding decisions, but less than accepted-decision shares suggest. Low calibration error
-is not enough: what matters is how well confidence ranks errors and whether the top of the scale is resolved, and per-code
-recalibration helps with both. Error targets need a guarantee, and a valid guarantee must respect how the hand-coded sample
-was drawn. With one, models certified most decisions on Reddit comments, nearly all of them calls that a code does not
-apply. On dialogue they certified nothing when whole transcripts were hand-coded; sampling single utterances made a
-guarantee possible in principle, but at our budget the coders' confident dialogue decisions gave too little evidence for it. The best
-decision-model configurations certified about as much as a frontier LLM on comments, at a small fraction of its cost.
+Model confidence can triage qualitative coding, but its value is easy to overstate. What matters is how well a coder's
+confidence ranks its own errors, which calibration error does not reveal and which has to be measured on the researcher's own
+codebook. An error target holds only under a rule that follows how the hand-coded sample was drawn: with one, models certified
+most decisions on Reddit comments, almost all of them calls that a code does not apply, and almost none on dialogue at our
+budgets. Decision models make confidence cheap to obtain, and the best configurations came within two points of a frontier LLM's
+certified automation on comments at a fraction of its cost. Whether that automation saves real work depends on what is left
+for a person to read.
 
 \section*{Data and code availability}
 The harness, the analysis plan with its amendments and deviations log, every coding decision (one row per decision, with the
